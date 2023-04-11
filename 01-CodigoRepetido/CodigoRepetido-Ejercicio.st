@@ -49,126 +49,167 @@ test02RemovingCustomerShouldNotTakeMoreThan100Milliseconds
 	
 ! !
 
-!CustomerBookTest methodsFor: 'testing' stamp: 'HernanWilkinson 5/9/2012 18:12'!
+!CustomerBookTest methodsFor: 'testing' stamp: 'Pau 4/11/2023 15:45:21'!
 test03CanNotAddACustomerWithEmptyName 
 
-	| customerBook |
+	| customerBook addEmptyCustomer customerBookIsEmpty errorMessageTextIsCustomerCanNotBeEmptyErrorMessage |
 			
 	customerBook := CustomerBook new.
+	
+	addEmptyCustomer := [ customerBook addCustomerNamed: ''.].
+	" fletamos el error mess????" 
+	errorMessageTextIsCustomerCanNotBeEmptyErrorMessage := 
+		[:anError | anError messageText = CustomerBook customerCanNotBeEmptyErrorMessage.]. 
+		
+	customerBookIsEmpty := [customerBook isEmpty ].
+	
+	self assertIfExeptionRaisedBy: addEmptyCustomer 
+		isOfType: Error 
+		andVerifyIf:  errorMessageTextIsCustomerCanNotBeEmptyErrorMessage 
+		and: customerBookIsEmpty.  
+	 
+! !
 
-	[ customerBook addCustomerNamed: ''.
-	self fail ]
-		on: Error 
-		do: [ :anError | 
-			self assert: anError messageText = CustomerBook customerCanNotBeEmptyErrorMessage.
-			self assert: customerBook isEmpty ]! !
-
-!CustomerBookTest methodsFor: 'testing' stamp: 'HAW 8/28/2017 08:57:25'!
+!CustomerBookTest methodsFor: 'testing' stamp: 'Pau 4/11/2023 15:55:17'!
 test04CanNotRemoveAnInvalidCustomer
 	
-	| customerBook johnLennon |
+	| customerBook removeCustomerPaulMcCartney customerBookHasOnlyOneCustomer johnLennonIsCustomer |
 			
 	customerBook := CustomerBook new.
-	johnLennon := 'John Lennon'.
-	customerBook addCustomerNamed: johnLennon.
+	customerBook addCustomerNamed: 'John Lennon'.
+	removeCustomerPaulMcCartney := [customerBook removeCustomerNamed: 'Paul McCartney'.].
+	"queremos no tener este parametro"
+	customerBookHasOnlyOneCustomer := [:anError | customerBook numberOfCustomers = 1].
+	johnLennonIsCustomer := [customerBook includesCustomerNamed: 'John Lennon'].
 	
-	[ customerBook removeCustomerNamed: 'Paul McCartney'.
-	self fail ]
-		on: NotFound 
-		do: [ :anError | 
-			self assert: customerBook numberOfCustomers = 1.
-			self assert: (customerBook includesCustomerNamed: johnLennon) ]
+	self assertIfExeptionRaisedBy:  removeCustomerPaulMcCartney 
+		isOfType:  NotFound 
+		andVerifyIf:  (customerBookHasOnlyOneCustomer)
+		and: johnLennonIsCustomer.
+	
+	
 ! !
 
-!CustomerBookTest methodsFor: 'testing' stamp: 'NR 4/3/2019 10:50:25'!
+!CustomerBookTest methodsFor: 'testing' stamp: 'Pau 4/11/2023 16:16:03'!
 test05SuspendingACustomerShouldNotRemoveItFromCustomerBook
 
-	| customerBook paulMcCartney|
+	| customerBook|
 	
 	customerBook := CustomerBook new.
-	paulMcCartney := 'Paul McCartney'.
 	
-	customerBook addCustomerNamed: paulMcCartney.
-	customerBook suspendCustomerNamed: paulMcCartney.
+	self addAndSuspendCustomer: 'Paul McCartney' from: customerBook. 
 	
-	self assert: 0 equals: customerBook numberOfActiveCustomers.
-	self assert: 1 equals: customerBook numberOfSuspendedCustomers.
-	self assert: 1 equals: customerBook numberOfCustomers.
-	self assert: (customerBook includesCustomerNamed: paulMcCartney).
+	self assertIfCustomerBook: customerBook 
+		hasNumberOfActiveCustomers: 0 
+		NumberOfSuspendedCustomers: 1 
+		NumberOfTotalCustomers: 1.
+
+	self assertIfPaulMcCartneyInCustomerBook: customerBook.
 	
 
 	
 ! !
 
-!CustomerBookTest methodsFor: 'testing' stamp: 'NR 4/3/2019 10:50:28'!
+!CustomerBookTest methodsFor: 'testing' stamp: 'Pau 4/11/2023 16:16:16'!
 test06RemovingASuspendedCustomerShouldRemoveItFromCustomerBook
 
-	| customerBook paulMcCartney|
+	| customerBook |
 	
 	customerBook := CustomerBook new.
-	paulMcCartney := 'Paul McCartney'.
 	
-	customerBook addCustomerNamed: paulMcCartney.
-	customerBook suspendCustomerNamed: paulMcCartney.
-	customerBook removeCustomerNamed: paulMcCartney.
+	self addAndSuspendCustomer: 'Paul McCartney' from: customerBook. 
+	customerBook removeCustomerNamed: 'Paul McCartney'.
 	
-	self assert: 0 equals: customerBook numberOfActiveCustomers.
-	self assert: 0 equals: customerBook numberOfSuspendedCustomers.
-	self assert: 0 equals: customerBook numberOfCustomers.
-	self deny: (customerBook includesCustomerNamed: paulMcCartney).
+	self assertIfCustomerBook: customerBook 
+		hasNumberOfActiveCustomers:  0
+		NumberOfSuspendedCustomers:  0
+		NumberOfTotalCustomers: 0.
+		
+	self assertIfPaulMcCartneyNotInCustomerBook: customerBook.
 
 
 	
 ! !
 
-!CustomerBookTest methodsFor: 'testing' stamp: 'NR 9/17/2020 06:03:47'!
+!CustomerBookTest methodsFor: 'testing' stamp: 'Pau 4/11/2023 16:27:52'!
 test07CanNotSuspendAnInvalidCustomer
 	
-	| customerBook johnLennon |
+	| customerBook johnLennonInCustomerBook suspendGeorgeHarrison customerBookHasOnlyOneCustomer |
 			
 	customerBook := CustomerBook new.
-	johnLennon := 'John Lennon'.
-	customerBook addCustomerNamed: johnLennon.
+	customerBook addCustomerNamed: 'John Lennon'.
+	suspendGeorgeHarrison := [ customerBook suspendCustomerNamed: 'George Harrison'.].
+	customerBookHasOnlyOneCustomer := [:a | customerBook numberOfCustomers = 1].
+	johnLennonInCustomerBook := [customerBook includesCustomerNamed: 'John Lennon'.].
 	
-	[ customerBook suspendCustomerNamed: 'George Harrison'.
-	self fail ]
-		on: CantSuspend 
-		do: [ :anError | 
-			self assert: customerBook numberOfCustomers = 1.
-			self assert: (customerBook includesCustomerNamed: johnLennon) ]
-! !
+	self assertIfExeptionRaisedBy: suspendGeorgeHarrison
+		isOfType: CantSuspend 
+		andVerifyIf:  customerBookHasOnlyOneCustomer 
+		and: johnLennonInCustomerBook. 
+		! !
 
-!CustomerBookTest methodsFor: 'testing' stamp: 'NR 9/19/2018 17:57:11'!
+!CustomerBookTest methodsFor: 'testing' stamp: 'Pau 4/11/2023 16:28:03'!
 test08CanNotSuspendAnAlreadySuspendedCustomer
 	
-	| customerBook johnLennon |
+	| customerBook customerBookHasOnlyOneCustomer johnLennonInCustomerBook suspendJohnLennon |
 			
 	customerBook := CustomerBook new.
-	johnLennon := 'John Lennon'.
-	customerBook addCustomerNamed: johnLennon.
-	customerBook suspendCustomerNamed: johnLennon.
+	self addAndSuspendCustomer: 'John Lennon' from: customerBook .
 	
-	[ customerBook suspendCustomerNamed: johnLennon.
-	self fail ]
-		on: CantSuspend 
-		do: [ :anError | 
-			self assert: customerBook numberOfCustomers = 1.
-			self assert: (customerBook includesCustomerNamed: johnLennon) ]
+	suspendJohnLennon := [ customerBook suspendCustomerNamed: 'John Lennon'.].
+	customerBookHasOnlyOneCustomer := [:a | customerBook numberOfCustomers = 1].
+	johnLennonInCustomerBook := [customerBook includesCustomerNamed: 'John Lennon'.].
+	
+	self assertIfExeptionRaisedBy: suspendJohnLennon
+		isOfType: CantSuspend 
+		andVerifyIf:  customerBookHasOnlyOneCustomer 
+		and: johnLennonInCustomerBook. 
+		
 ! !
 
+
+!CustomerBookTest methodsFor: 'xxx' stamp: 'Pau 4/11/2023 16:01:53'!
+addAndSuspendCustomer: customerName from: customerBook
+	customerBook addCustomerNamed: customerName.
+	customerBook suspendCustomerNamed: customerName.! !
+
+!CustomerBookTest methodsFor: 'xxx' stamp: 'Pau 4/11/2023 16:09:09'!
+assertIfCustomerBook: customerBook hasNumberOfActiveCustomers: nActive NumberOfSuspendedCustomers: nSuspended NumberOfTotalCustomers: nTotal
+	
+	self assert: nActive equals: customerBook numberOfActiveCustomers.
+	self assert: nSuspended equals: customerBook numberOfSuspendedCustomers.
+	self assert: nTotal equals: customerBook numberOfCustomers.
+	
+	
+	"self deny: (customerBook includesCustomerNamed: 'Paul McCartney')."! !
+
+!CustomerBookTest methodsFor: 'xxx' stamp: 'Pau 4/11/2023 16:38:30'!
+assertIfExeptionRaisedBy: closure isOfType: errorType andVerifyIf: condition1 and: condition2  
+
+	(self forceExceptionIfActionDindtFail: closure) 
+		on: errorType 
+		do: [ :anError |  
+				self assert: (condition1 value: anError).
+				self assert: condition2 ]! !
+
+!CustomerBookTest methodsFor: 'xxx' stamp: 'Pau 4/11/2023 16:15:24'!
+assertIfPaulMcCartneyInCustomerBook: customerBook
+
+	^ self assert: (customerBook includesCustomerNamed: 'Paul McCartney')! !
+
+!CustomerBookTest methodsFor: 'xxx' stamp: 'Pau 4/11/2023 16:15:49'!
+assertIfPaulMcCartneyNotInCustomerBook: customerBook
+
+	^ self deny: (customerBook includesCustomerNamed: 'Paul McCartney')! !
 
 !CustomerBookTest methodsFor: 'xxx' stamp: 'Pau 4/10/2023 21:47:22'!
 assertIfValueOf: closure takesLessThan: amount 
 	^ self assert: ((self measureExecutionTime: closure) < amount). ! !
 
-!CustomerBookTest methodsFor: 'xxx' stamp: 'Pau 4/10/2023 21:52:46'!
-dajhsashja: customerBook
-	[ customerBook addCustomerNamed: ''.
-		self fail ]
-			on: Error 
-			do: [ :anError | 
-				self assert: anError messageText = CustomerBook customerCanNotBeEmptyErrorMessage.
-				self assert: customerBook isEmpty ]! !
+!CustomerBookTest methodsFor: 'xxx' stamp: 'Pau 4/11/2023 15:32:18'!
+forceExceptionIfActionDindtFail: action
+"che esto deberia ser algo forceItToFailIf ANDA MAL "
+	^[action value. [self fail.] value].! !
 
 !CustomerBookTest methodsFor: 'xxx' stamp: 'Pau 4/10/2023 21:08:29'!
 measureExecutionTime: closure
