@@ -286,6 +286,15 @@ setUp
 	fiveHalfs := five / two.
 	! !
 
+
+!NumeroTest methodsFor: 'testNuestros' stamp: 'Pau 4/18/2023 16:33:41'!
+test01ochomenostres
+	self assert: (eight - three) equals: five. ! !
+
+!NumeroTest methodsFor: 'testNuestros' stamp: 'Pau 4/18/2023 16:34:19'!
+test02unomenosuno
+	self assert: (one - one) equals: zero. ! !
+
 
 !classDefinition: #Numero category: 'Numero-Exercise'!
 Object subclass: #Numero
@@ -359,7 +368,7 @@ invalidNumberTypeErrorDescription
 
 !classDefinition: #Entero category: 'Numero-Exercise'!
 Numero subclass: #Entero
-	instanceVariableNames: 'value'
+	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Numero-Exercise'!
@@ -386,15 +395,15 @@ Numero subclass: #Entero
 / aDivisor 
 	^aDivisor divideEntero: self! !
 
-!Entero methodsFor: 'arithmetic operations' stamp: 'HernanWilkinson 5/7/2016 21:55'!
+!Entero methodsFor: 'arithmetic operations' stamp: 'Pau 4/18/2023 16:45:01'!
 // aDivisor 
 	
-	^self class with: value // aDivisor integerValue! !
+	^Entero with: (self integerValue) // aDivisor integerValue! !
 
-!Entero methodsFor: 'arithmetic operations' stamp: 'Pau 4/17/2023 21:12:21'!
+!Entero methodsFor: 'arithmetic operations' stamp: 'Pau 4/18/2023 16:45:11'!
 addToEntero: anEnteroToBeAddedTo
 	
-	^self class with: value + anEnteroToBeAddedTo integerValue.
+	^Entero with: (self integerValue) + anEnteroToBeAddedTo integerValue.
 ! !
 
 !Entero methodsFor: 'arithmetic operations' stamp: 'Pau 4/17/2023 21:18:31'!
@@ -416,29 +425,15 @@ divideFraccion: aFraccionToBeDivided
 
 	^aFraccionToBeDivided  numerator / (aFraccionToBeDivided  denominator * self)! !
 
-!Entero methodsFor: 'arithmetic operations' stamp: 'HAW 9/24/2018 08:47:50'!
-fibonacci
-
-	| one two |
-	
-	one := Entero with: 1.
-	two := Entero with: 2.
-	
-	self isNegative ifTrue: [self error: Entero negativeFibonacciErrorDescription ].	
-	(self isZero or: [self isOne]) ifTrue: [^one].
-	
-	^ (self - one) fibonacci + (self - two) fibonacci
-		! !
-
-!Entero methodsFor: 'arithmetic operations' stamp: 'HernanWilkinson 5/7/2016 21:00'!
+!Entero methodsFor: 'arithmetic operations' stamp: 'Pau 4/18/2023 16:45:22'!
 greatestCommonDivisorWith: anEntero 
 	
-	^self class with: (value gcd: anEntero integerValue)! !
+	^Entero with: ((self integerValue) gcd: anEntero integerValue)! !
 
-!Entero methodsFor: 'arithmetic operations' stamp: 'Pau 4/17/2023 21:21:18'!
+!Entero methodsFor: 'arithmetic operations' stamp: 'Pau 4/18/2023 16:45:29'!
 multiplyToEntero: anEnteroToMultiplied 
 	
-	^self class with: value * anEnteroToMultiplied integerValue
+	^Entero with: (self integerValue) * anEnteroToMultiplied integerValue
 	! !
 
 !Entero methodsFor: 'arithmetic operations' stamp: 'Pau 4/17/2023 21:26:44'!
@@ -454,58 +449,60 @@ subtractFromFraccion: aFraccionToBeSubtractedFrom
 	
 	^newNumerator / newDenominator ! !
 
-!Entero methodsFor: 'arithmetic operations' stamp: 'Pau 4/17/2023 21:33:12'!
+!Entero methodsFor: 'arithmetic operations' stamp: 'Pau 4/18/2023 16:40:00'!
 subtractToEntero: anEnteroToBeSubtractedFrom
 	
-	^self class with: anEnteroToBeSubtractedFrom integerValue - value 
+	^Entero with: (anEnteroToBeSubtractedFrom integerValue - (self integerValue))
 	! !
 
 
-!Entero methodsFor: 'comparing' stamp: 'HernanWilkinson 5/7/2016 21:01'!
+!Entero methodsFor: 'comparing' stamp: 'Pau 4/18/2023 16:11:59'!
 = anObject
 
-	^(anObject isKindOf: self class) and: [ value = anObject integerValue ]! !
+	^(anObject isKindOf: self class) and: [ (self integerValue) = anObject integerValue ]! !
 
-!Entero methodsFor: 'comparing' stamp: 'HernanWilkinson 5/7/2016 20:17'!
+!Entero methodsFor: 'comparing' stamp: 'Pau 4/18/2023 16:12:03'!
 hash
 
-	^value hash! !
+	^(self integerValue) hash! !
 
 
-!Entero methodsFor: 'initialization' stamp: 'HernanWilkinson 5/7/2016 20:09'!
-initalizeWith: aValue 
-	
-	value := aValue! !
 
-
-!Entero methodsFor: 'value' stamp: 'HernanWilkinson 5/7/2016 21:02'!
+!Entero methodsFor: 'value' stamp: 'Pau 4/18/2023 16:10:14'!
 integerValue
 
 	"Usamos integerValue en vez de value para que no haya problemas con el mensaje value implementado en Object - Hernan"
 	
-	^value! !
+	^self subclassResponsibility.! !
 
 
-!Entero methodsFor: 'printing' stamp: 'HAW 9/24/2018 08:53:19'!
+!Entero methodsFor: 'printing' stamp: 'Pau 4/18/2023 16:12:17'!
 printOn: aStream
 
-	aStream print: value ! !
+	aStream print: (self integerValue) ! !
 
 
-!Entero methodsFor: 'testing' stamp: 'NR 9/23/2018 22:17:55'!
+!Entero methodsFor: 'testing' stamp: 'Pau 4/18/2023 16:12:22'!
 isNegative
 	
-	^value < 0! !
+	^(self integerValue) < 0! !
 
-!Entero methodsFor: 'testing' stamp: 'HernanWilkinson 5/7/2016 20:14'!
+!Entero methodsFor: 'testing' stamp: 'Pau 4/18/2023 16:12:28'!
 isOne
 	
-	^value = 1! !
+	^(self integerValue) = 1! !
 
-!Entero methodsFor: 'testing' stamp: 'HernanWilkinson 5/7/2016 20:12'!
+!Entero methodsFor: 'testing' stamp: 'Pau 4/18/2023 16:12:32'!
 isZero
 	
-	^value = 0! !
+	^(self integerValue) = 0! !
+
+
+!Entero methodsFor: 'fibo' stamp: 'Pau 4/18/2023 15:56:35'!
+fibonacci
+	
+	self subclassResponsibility.
+		! !
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
@@ -517,13 +514,21 @@ Entero class
 negativeFibonacciErrorDescription
 	^ ' Fibonacci no está definido aquí para Enteros Negativos!!!!!!'! !
 
-!Entero class methodsFor: 'instance creation' stamp: 'HernanWilkinson 5/7/2016 22:53'!
+!Entero class methodsFor: 'instance creation' stamp: 'Pau 4/18/2023 16:22:00'!
 with: aValue 
 	
 	"Esta verificacion esta puesta por si se equivocan y quieren crear un Entero pasando otra cosa que un Integer - Hernan"
+	
+	"Creo que esto se va al usar polimorfismo"
 	aValue isInteger ifFalse: [  self error: 'aValue debe ser anInteger' ].
 	
-	^self new initalizeWith: aValue! !
+	aValue isZero ifTrue: [^Cero with: aValue].
+	aValue = 1 ifTrue: [^Uno with: aValue].
+	aValue negative  ifTrue: [^Negativos with: aValue].
+	^PositivosMayoresAUno with: aValue. 
+	
+	"self subclassResponsibility."
+	"^self new initalizeWith: aValue"! !
 
 
 !classDefinition: #Cero category: 'Numero-Exercise'!
@@ -533,21 +538,88 @@ Entero subclass: #Cero
 	poolDictionaries: ''
 	category: 'Numero-Exercise'!
 
+!Cero methodsFor: 'as yet unclassified' stamp: 'Pau 4/18/2023 16:46:48'!
+fibonacci
+"esto devolver un UNO de la subclase lo que pasa que no lo sabemos crear aun" 
+	^Uno with: 1.! !
+
+!Cero methodsFor: 'as yet unclassified' stamp: 'Pau 4/18/2023 16:09:37'!
+integerValue
+	^0.! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'Cero class' category: 'Numero-Exercise'!
+Cero class
+	instanceVariableNames: ''!
+
+!Cero class methodsFor: 'as yet unclassified' stamp: 'Pau 4/18/2023 16:22:28'!
+with: aValue
+	^self new! !
+
 
 !classDefinition: #Negativos category: 'Numero-Exercise'!
 Entero subclass: #Negativos
-	instanceVariableNames: ''
+	instanceVariableNames: 'value'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Numero-Exercise'!
 
+!Negativos methodsFor: 'as yet unclassified' stamp: 'Pau 4/18/2023 15:51:12'!
+fibonacci
+	self error: Entero negativeFibonacciErrorDescription! !
+
+!Negativos methodsFor: 'as yet unclassified' stamp: 'Pau 4/18/2023 16:14:54'!
+initializeWith: aValue
+	value := aValue.! !
+
+!Negativos methodsFor: 'as yet unclassified' stamp: 'Pau 4/18/2023 16:14:13'!
+integerValue
+	^value! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'Negativos class' category: 'Numero-Exercise'!
+Negativos class
+	instanceVariableNames: ''!
+
+!Negativos class methodsFor: 'as yet unclassified' stamp: 'Pau 4/18/2023 16:16:51'!
+with: aValue
+	^ (self new) initializeWith: aValue! !
+
 
 !classDefinition: #PositivosMayoresAUno category: 'Numero-Exercise'!
 Entero subclass: #PositivosMayoresAUno
-	instanceVariableNames: ''
+	instanceVariableNames: 'value'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Numero-Exercise'!
+
+!PositivosMayoresAUno methodsFor: 'as yet unclassified' stamp: 'Pau 4/18/2023 16:25:21'!
+fibonacci
+	|one two|
+	one := Uno with: 1. 
+	two := PositivosMayoresAUno with: 2.
+	
+	^(self - one) fibonacci + (self - two) fibonacci! !
+
+!PositivosMayoresAUno methodsFor: 'as yet unclassified' stamp: 'Pau 4/18/2023 16:15:26'!
+initializeWith: aValue
+	value := aValue.! !
+
+!PositivosMayoresAUno methodsFor: 'as yet unclassified' stamp: 'Pau 4/18/2023 16:14:04'!
+integerValue
+	^value! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'PositivosMayoresAUno class' category: 'Numero-Exercise'!
+PositivosMayoresAUno class
+	instanceVariableNames: ''!
+
+!PositivosMayoresAUno class methodsFor: 'as yet unclassified' stamp: 'Pau 4/18/2023 16:16:44'!
+with: aValue
+	^ (self new) initializeWith: aValue! !
 
 
 !classDefinition: #Uno category: 'Numero-Exercise'!
@@ -556,6 +628,25 @@ Entero subclass: #Uno
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Numero-Exercise'!
+
+!Uno methodsFor: 'as yet unclassified' stamp: 'Pau 4/18/2023 15:53:35'!
+fibonacci
+"esto devolver un UNO de la subclase lo que pasa que no lo sabemos crear aun" 
+	^self! !
+
+!Uno methodsFor: 'as yet unclassified' stamp: 'Pau 4/18/2023 16:09:50'!
+integerValue
+	^1.! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'Uno class' category: 'Numero-Exercise'!
+Uno class
+	instanceVariableNames: ''!
+
+!Uno class methodsFor: 'as yet unclassified' stamp: 'Pau 4/18/2023 16:22:34'!
+with: aValue
+	^self new.! !
 
 
 !classDefinition: #Fraccion category: 'Numero-Exercise'!
