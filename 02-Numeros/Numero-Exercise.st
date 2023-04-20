@@ -493,6 +493,11 @@ isZero
 	
 	^(self integerValue) = 0! !
 
+
+!Entero methodsFor: 'as yet unclassified' stamp: 'Pau 4/20/2023 16:29:12'!
+asDivisor: aDIvidend
+	self subclassResponsibility! !
+
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
 !classDefinition: 'Entero class' category: 'Numero-Exercise'!
@@ -523,12 +528,8 @@ Entero subclass: #Cero
 	poolDictionaries: ''
 	category: 'Numero-Exercise'!
 
-!Cero methodsFor: 'as yet unclassified' stamp: 'Pau 4/19/2023 18:51:06'!
-assertIfDivisorCero
-	self error: Numero canNotDivideByZeroErrorDescription! !
-
-!Cero methodsFor: 'as yet unclassified' stamp: 'Pau 4/20/2023 08:44:11'!
-isDivisor
+!Cero methodsFor: 'as yet unclassified' stamp: 'Pau 4/20/2023 16:25:31'!
+asDivisor: aDividend
 	self error: Numero canNotDivideByZeroErrorDescription! !
 
 
@@ -549,9 +550,10 @@ Entero subclass: #Negativos
 	poolDictionaries: ''
 	category: 'Numero-Exercise'!
 
-!Negativos methodsFor: 'as yet unclassified' stamp: 'Pau 4/20/2023 09:52:42'!
-divideNegative: aDivident
-	^aDivident negated / (self negated)! !
+!Negativos methodsFor: 'as yet unclassified' stamp: 'Pau 4/20/2023 16:51:20'!
+asDivisor: aDividend
+
+	^(aDividend negated)/ self negated! !
 
 !Negativos methodsFor: 'as yet unclassified' stamp: 'Pau 4/18/2023 16:14:54'!
 initializeWith: aValue
@@ -574,6 +576,17 @@ Entero subclass: #PositivosMayoresAUno
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Numero-Exercise'!
+
+!PositivosMayoresAUno methodsFor: 'as yet unclassified' stamp: 'Pau 4/20/2023 16:54:57'!
+asDivisor: aDividend
+	|greatestCommonDivisor numerator denominator |
+	
+	greatestCommonDivisor := aDividend greatestCommonDivisorWith: self. 
+	numerator := aDividend // greatestCommonDivisor.
+	denominator := self // greatestCommonDivisor.
+	
+	
+	^Fraccion new initializeWith: numerator over: denominator ! !
 
 !PositivosMayoresAUno methodsFor: 'as yet unclassified' stamp: 'Pau 4/18/2023 16:15:26'!
 initializeWith: aValue
@@ -610,6 +623,11 @@ integerValue
 fibonacci
 
 	^self! !
+
+
+!Uno methodsFor: 'as yet unclassified' stamp: 'Pau 4/20/2023 16:32:19'!
+asDivisor: aDividend
+	^aDividend! !
 
 
 !classDefinition: #Fraccion category: 'Numero-Exercise'!
@@ -757,18 +775,15 @@ printOn: aStream
 Fraccion class
 	instanceVariableNames: ''!
 
-!Fraccion class methodsFor: 'intance creation' stamp: 'Pau 4/20/2023 15:49:41'!
+!Fraccion class methodsFor: 'intance creation' stamp: 'Pau 4/20/2023 16:57:32'!
 with: aDividend over: aDivisor
-
+	
+	"lo arrancamos a hacer con esto pero nos quedo solucionar que pasen los test porque no llegamos a crear los metodos
+	para que ande bien lo de las simplificaciones. Aca quedaria esto
+	^ aDivisor asDivisor: aDividend."
 	| greatestCommonDivisor numerator denominator |
 	
-	"lo arrancamos pero no llegamos a terminarlo. Dejamos en un comentario la idea pq hay modificaciones que 
-	como no terminamos que replicar en todos lados hacen que no corran los tests"
-	"Tenemos en Entero las clases necesarias creadas, queriamos implementar algun tipo de métodos para"
-	"aDivisor assertIfDivisorCero"
-	
 	aDivisor isZero ifTrue: [ self error: self canNotDivideByZeroErrorDescription ].
-	
 	aDividend isZero ifTrue: [ ^aDividend ].
 	
 	aDivisor isNegative ifTrue:[ ^aDividend negated / aDivisor negated].
@@ -779,4 +794,5 @@ with: aDividend over: aDivisor
 	
 	denominator isOne ifTrue: [ ^numerator ].
 
-	^self new initializeWith: numerator over: denominator.! !
+	^self new initializeWith: numerator over: denominator
+	! !
