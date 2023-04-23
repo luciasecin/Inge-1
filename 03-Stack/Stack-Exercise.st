@@ -147,40 +147,45 @@ TestCase subclass: #SentenceFinderByPrefixTest
 
 !classDefinition: #OOStack category: 'Stack-Exercise'!
 Object subclass: #OOStack
-	instanceVariableNames: 'elements state'
+	instanceVariableNames: 'topElement size'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
-!OOStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/20/2023 21:47:03'!
+!OOStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/23/2023 11:02:17'!
 initialize
-	elements := OrderedCollection new.
-	state  := true.! !
+	topElement := OOStackBase new.
+	size := 0.
+	! !
 
-!OOStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/20/2023 21:47:03'!
+!OOStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/23/2023 11:07:22'!
 isEmpty
-	^state 
+	^ size =0
 	! !
 
-!OOStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/20/2023 21:50:16'!
+!OOStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/23/2023 11:21:58'!
 pop
-	state ifTrue: [self error: (self class stackEmptyErrorDescription)].
-	^elements removeFirst
+	|elementToPop|
+	elementToPop := topElement.
+	topElement := topElement previous.
+	size := size-1.
+	^elementToPop elementValue.
+	
 	! !
 
-!OOStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/20/2023 21:47:03'!
-push: aValue
-	elements addFirst: aValue.
-	state := false.! !
+!OOStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/23/2023 11:02:11'!
+push: anElement
+	topElement := OOStackElement withElement: anElement andPrevious: topElement.
+	size := size+1
+	! !
 
-!OOStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/20/2023 21:24:57'!
+!OOStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/23/2023 11:01:58'!
 size 
-	^ elements size! !
+	^size! !
 
-!OOStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/20/2023 21:49:46'!
+!OOStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/23/2023 11:16:21'!
 top
-	state ifTrue: [self error: (self class stackEmptyErrorDescription)].
-	^elements at:1.
+	^topElement elementValue.
 	
 	! !
 
@@ -196,32 +201,58 @@ stackEmptyErrorDescription
 	^ 'stack is empty!!!!!!'! !
 
 
-!classDefinition: #OOStateNoVacioStack category: 'Stack-Exercise'!
-OOStack subclass: #OOStateNoVacioStack
+!classDefinition: #OOStackBase category: 'Stack-Exercise'!
+OOStack subclass: #OOStackBase
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
-!OOStateNoVacioStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/20/2023 21:52:48'!
-initialize 
-	state := false! !
+!OOStackBase methodsFor: 'as yet unclassified' stamp: 'Pau 4/23/2023 11:16:44'!
+elementValue
+	self error: (self class stackEmptyErrorDescription)! !
 
-!OOStateNoVacioStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/20/2023 21:53:06'!
-m 
-	state := false! !
+!OOStackBase methodsFor: 'as yet unclassified' stamp: 'Pau 4/23/2023 11:05:52'!
+initialize! !
+
+!OOStackBase methodsFor: 'as yet unclassified' stamp: 'Pau 4/23/2023 11:14:40'!
+previous
+	self error: (self class stackEmptyErrorDescription)! !
 
 
-!classDefinition: #OOStateVacioStack category: 'Stack-Exercise'!
-OOStack subclass: #OOStateVacioStack
-	instanceVariableNames: ''
+!classDefinition: #OOStackElement category: 'Stack-Exercise'!
+OOStack subclass: #OOStackElement
+	instanceVariableNames: 'elementValue previousElement'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
-!OOStateVacioStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/20/2023 21:53:01'!
-m
-	state := true! !
+!OOStackElement methodsFor: 'as yet unclassified' stamp: 'Pau 4/23/2023 11:16:32'!
+elementValue
+	^elementValue! !
+
+!OOStackElement methodsFor: 'as yet unclassified' stamp: 'Pau 4/23/2023 10:57:50'!
+initializeWithElement: anElement andPrevious: aPreviousStackElement
+	elementValue := anElement.
+	previousElement := aPreviousStackElement! !
+
+!OOStackElement methodsFor: 'as yet unclassified' stamp: 'Pau 4/23/2023 11:13:14'!
+previous
+	
+	^previousElement.
+	! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'OOStackElement class' category: 'Stack-Exercise'!
+OOStackElement class
+	instanceVariableNames: ''!
+
+!OOStackElement class methodsFor: 'as yet unclassified' stamp: 'Pau 4/23/2023 11:23:12'!
+withElement: anElement andPrevious: aPreviousStackElement
+	^self new initializeWithElement: anElement andPrevious: aPreviousStackElement
+	
+	! !
 
 
 !classDefinition: #SentenceFinderByPrefix category: 'Stack-Exercise'!
