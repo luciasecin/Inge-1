@@ -153,9 +153,9 @@ assertIfSearchedStack: searchedStack isEqualTo: originalStack
 		assertCondition :=assertCondition and: [searchedStack pop = (originalStack pop)]].
 	self assert: assertCondition.! !
 
-!SentenceFinderByPrefixTest methodsFor: 'assert-conditions' stamp: 'Pau 4/24/2023 16:41:30'!
+!SentenceFinderByPrefixTest methodsFor: 'assert-conditions' stamp: 'Pau 4/24/2023 17:21:19'!
 assertIfSentencesInAStack: stack thatStartWith: prefix are: resultCollection
-	self assert: (SentenceFinderByPrefix new find: prefix in: stack) equals: resultCollection.! !
+	self assert: (SentenceFinderByPrefix new findSentenceThatStartWith: prefix in: stack) equals: resultCollection.! !
 
 
 !SentenceFinderByPrefixTest methodsFor: 'test' stamp: 'Pau 4/24/2023 16:34:00'!
@@ -210,7 +210,7 @@ test05prefixIsInSomeElementsOfTheStack
 
 	self assertIfSentencesInAStack: aStack thatStartWith: aPrefix are: aResultCollection.! !
 
-!SentenceFinderByPrefixTest methodsFor: 'test' stamp: 'Pau 4/24/2023 16:51:45'!
+!SentenceFinderByPrefixTest methodsFor: 'test' stamp: 'Pau 4/24/2023 17:21:19'!
 test06StackPreserveElements
 
 	| originalStack |
@@ -219,7 +219,7 @@ test06StackPreserveElements
 		push: badBlood.
 
 	originalStack := aStack copy.
-	SentenceFinderByPrefix new find: aPrefix in: aStack.
+	SentenceFinderByPrefix new findSentenceThatStartWith: aPrefix in: aStack.
 
 	self assertIfSearchedStack: aStack isEqualTo: originalStack.! !
 
@@ -337,9 +337,9 @@ previous
 OOStackTopElement class
 	instanceVariableNames: ''!
 
-!OOStackTopElement class methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 17:15:01'!
+!OOStackTopElement class methodsFor: 'error description' stamp: 'Pau 4/24/2023 17:22:03'!
 noPreviousElementErrorMessage
-	^'el stack vacio no tiene previous'! !
+	^'la base no tiene previous'! !
 
 
 !classDefinition: #OOStackBase category: 'Stack-Exercise'!
@@ -359,7 +359,7 @@ elementValue
 	self error: (OOStack stackEmptyErrorDescription)! !
 
 
-!OOStackBase methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 17:15:42'!
+!OOStackBase methodsFor: 'previous' stamp: 'Pau 4/24/2023 17:15:42'!
 previous
 	self error: self class noPreviousElementErrorMessage.! !
 
@@ -371,22 +371,25 @@ OOStackTopElement subclass: #OOStackElement
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
-!OOStackElement methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:10:00'!
-elementValue
-	^elementValue ! !
-
-!OOStackElement methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:12:34'!
+!OOStackElement methodsFor: 'initialize' stamp: 'Pau 4/24/2023 16:12:34'!
 initializeWithElement: anElement andPrevious: aPreviousStackElement
 	previous := aPreviousStackElement.
 	elementValue := anElement ! !
 
-!OOStackElement methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:12:47'!
-previous
-	^previous ! !
 
-!OOStackElement methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:13:28'!
+!OOStackElement methodsFor: 'size' stamp: 'Pau 4/24/2023 16:13:28'!
 size 
 	^ 1 + (previous size)! !
+
+
+!OOStackElement methodsFor: 'value' stamp: 'Pau 4/24/2023 16:10:00'!
+elementValue
+	^elementValue ! !
+
+
+!OOStackElement methodsFor: 'previous' stamp: 'Pau 4/24/2023 16:12:47'!
+previous
+	^previous ! !
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
@@ -394,7 +397,7 @@ size
 OOStackElement class
 	instanceVariableNames: ''!
 
-!OOStackElement class methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:11:21'!
+!OOStackElement class methodsFor: 'instance creation' stamp: 'Pau 4/24/2023 16:11:21'!
 withElement: anElement andPrevious: aPreviousStackElement
 	^self new initializeWithElement: anElement andPrevious: aPreviousStackElement! !
 
@@ -434,8 +437,8 @@ reconstructStack: anOOStack withCollection: anElementOrderedCollection
 	anElementOrderedCollection do: [:anElement | anOOStack push: anElement].! !
 
 
-!SentenceFinderByPrefix methodsFor: 'find' stamp: 'Pau 4/24/2023 16:49:23'!
-find: aPrefix in: aOOSctack
+!SentenceFinderByPrefix methodsFor: 'find' stamp: 'Pau 4/24/2023 17:21:19'!
+findSentenceThatStartWith: aPrefix in: aOOSctack
 	|collectionWithSentencesThatStartWithPrefix|
 	self checkIfStringHasWhitespaces: aPrefix. 
 	
