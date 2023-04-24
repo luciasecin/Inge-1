@@ -144,7 +144,7 @@ TestCase subclass: #SentenceFinderByPrefixTest
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
-!SentenceFinderByPrefixTest methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:41:17'!
+!SentenceFinderByPrefixTest methodsFor: 'assert-conditions' stamp: 'Pau 4/24/2023 16:41:17'!
 assertIfSearchedStack: searchedStack isEqualTo: originalStack
 	| assertCondition |
 
@@ -153,24 +153,9 @@ assertIfSearchedStack: searchedStack isEqualTo: originalStack
 		assertCondition :=assertCondition and: [searchedStack pop = (originalStack pop)]].
 	self assert: assertCondition.! !
 
-!SentenceFinderByPrefixTest methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:41:30'!
+!SentenceFinderByPrefixTest methodsFor: 'assert-conditions' stamp: 'Pau 4/24/2023 16:41:30'!
 assertIfSentencesInAStack: stack thatStartWith: prefix are: resultCollection
 	self assert: (SentenceFinderByPrefix new find: prefix in: stack) equals: resultCollection.! !
-
-!SentenceFinderByPrefixTest methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:40:52'!
-setUp
-	aStack :=OOStack new.
-	aResultCollection  := OrderedCollection new.
-	aPrefix := 'Time'.
-
-	theLastGreatAmericanDinasty := 'I had a marvelous time ruining everything'.
-	tisTheDamnSeason:= 'Time flies, messy as the mud on your truck tires'.
-	invisibleString := 'Time, mystical time, cutting me open then healing me fine'.
-	badBlood := 'time can heal but this won’t'.
-	pictureTuBurn := 'So watch me strike a match on all my wasted time'.
-	allTooWell :='Time wont fly, its like Im paralyzed by it'.
-	lavanderHaze := 'I feel the lavender haze creeping up on me'.
-	youReOwnYourOwnKid := 'I gave my blood, sweat, and tears for this'.! !
 
 
 !SentenceFinderByPrefixTest methodsFor: 'test' stamp: 'Pau 4/24/2023 16:34:00'!
@@ -248,6 +233,32 @@ test07PrefixWithWhitespacesRaisesError
 	[SentenceFinderByPrefix new findSentencesIn: aStack thatStartWith: 'Time '.] on: Error do: 
 		[:anError | anError messageText = SentenceFinderByPrefix prefixHasWhitespacesErrorMessage ]! !
 
+!SentenceFinderByPrefixTest methodsFor: 'test' stamp: 'Pau 4/24/2023 17:06:33'!
+test08PrefixEmptyRaisesError
+
+	aStack push: theLastGreatAmericanDinasty; 
+		push: invisibleString; 
+		push: badBlood.
+
+	[SentenceFinderByPrefix new findSentencesIn: aStack thatStartWith: ''.] on: Error do: 
+		[:anError | anError messageText = SentenceFinderByPrefix prefixIsEmptyErrorMessage ]! !
+
+
+!SentenceFinderByPrefixTest methodsFor: 'setup' stamp: 'Pau 4/24/2023 16:40:52'!
+setUp
+	aStack :=OOStack new.
+	aResultCollection  := OrderedCollection new.
+	aPrefix := 'Time'.
+
+	theLastGreatAmericanDinasty := 'I had a marvelous time ruining everything'.
+	tisTheDamnSeason:= 'Time flies, messy as the mud on your truck tires'.
+	invisibleString := 'Time, mystical time, cutting me open then healing me fine'.
+	badBlood := 'time can heal but this won’t'.
+	pictureTuBurn := 'So watch me strike a match on all my wasted time'.
+	allTooWell :='Time wont fly, its like Im paralyzed by it'.
+	lavanderHaze := 'I feel the lavender haze creeping up on me'.
+	youReOwnYourOwnKid := 'I gave my blood, sweat, and tears for this'.! !
+
 
 !classDefinition: #OOStack category: 'Stack-Exercise'!
 Object subclass: #OOStack
@@ -256,15 +267,7 @@ Object subclass: #OOStack
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
-!OOStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:19:49'!
-initialize
-	topElement  := OOStackBase new.! !
-
-!OOStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:28:36'!
-isEmpty
-	^ topElement size = 0! !
-
-!OOStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:26:46'!
+!OOStack methodsFor: 'operations' stamp: 'Pau 4/24/2023 16:26:46'!
 pop
 	|previousTop|
 	previousTop := topElement elementValue.
@@ -272,18 +275,28 @@ pop
 	^previousTop 
 	! !
 
-!OOStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:29:45'!
+!OOStack methodsFor: 'operations' stamp: 'Pau 4/24/2023 16:29:45'!
 push: anElement
 	topElement := OOStackElement withElement: anElement andPrevious: topElement.
 	^topElement elementValue! !
 
-!OOStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:31:32'!
+!OOStack methodsFor: 'operations' stamp: 'Pau 4/24/2023 16:31:32'!
 size
 	^topElement size! !
 
-!OOStack methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:30:07'!
+!OOStack methodsFor: 'operations' stamp: 'Pau 4/24/2023 16:30:07'!
 top
 	^topElement elementValue ! !
+
+
+!OOStack methodsFor: 'initialize' stamp: 'Pau 4/24/2023 16:19:49'!
+initialize
+	topElement  := OOStackBase new.! !
+
+
+!OOStack methodsFor: 'testing' stamp: 'Pau 4/24/2023 16:28:36'!
+isEmpty
+	^ topElement size = 0! !
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
@@ -304,17 +317,29 @@ Object subclass: #OOStackTopElement
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
-!OOStackTopElement methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:09:33'!
+!OOStackTopElement methodsFor: 'size' stamp: 'Pau 4/24/2023 16:10:43'!
+size
+	self subclassResponsibility! !
+
+
+!OOStackTopElement methodsFor: 'value' stamp: 'Pau 4/24/2023 16:09:33'!
 elementValue
 	self subclassResponsibility! !
 
-!OOStackTopElement methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:10:56'!
+
+!OOStackTopElement methodsFor: 'previous' stamp: 'Pau 4/24/2023 16:10:56'!
 previous
 	self subclassResponsibility! !
 
-!OOStackTopElement methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:10:43'!
-size
-	self subclassResponsibility! !
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'OOStackTopElement class' category: 'Stack-Exercise'!
+OOStackTopElement class
+	instanceVariableNames: ''!
+
+!OOStackTopElement class methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 17:15:01'!
+noPreviousElementErrorMessage
+	^'el stack vacio no tiene previous'! !
 
 
 !classDefinition: #OOStackBase category: 'Stack-Exercise'!
@@ -324,13 +349,19 @@ OOStackTopElement subclass: #OOStackBase
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
-!OOStackBase methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:10:30'!
+!OOStackBase methodsFor: 'size' stamp: 'Pau 4/24/2023 16:13:09'!
+size
+	^0! !
+
+
+!OOStackBase methodsFor: 'value' stamp: 'Pau 4/24/2023 16:10:30'!
 elementValue
 	self error: (OOStack stackEmptyErrorDescription)! !
 
-!OOStackBase methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:13:09'!
-size
-	^0! !
+
+!OOStackBase methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 17:15:42'!
+previous
+	self error: self class noPreviousElementErrorMessage.! !
 
 
 !classDefinition: #OOStackElement category: 'Stack-Exercise'!
@@ -375,27 +406,13 @@ Object subclass: #SentenceFinderByPrefix
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
-!SentenceFinderByPrefix methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:43:37'!
-assertIfSentencesInAStack: stack thatStartWith: prefix are: resultCollection
-	
-	self assert: (SentenceFinderByPrefix new findSentencesIn: stack thatStartWith: prefix) equals: resultCollection.! !
-
-!SentenceFinderByPrefix methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:39:16'!
+!SentenceFinderByPrefix methodsFor: 'test conditions-private' stamp: 'Pau 4/24/2023 16:39:16'!
 checkIfStringHasWhitespaces: aString
 	| assertCondition |
 	assertCondition := aString anySatisfy: [:char | (char isSeparator)].
 	^assertCondition! !
 
-!SentenceFinderByPrefix methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:49:23'!
-find: aPrefix in: aOOSctack
-	|collectionWithSentencesThatStartWithPrefix|
-	self checkIfStringHasWhitespaces: aPrefix. 
-	
-	collectionWithSentencesThatStartWithPrefix := OrderedCollection new.
-	self findSentencesInStack:  aOOSctack thatStartWith:  aPrefix andStoreFoundSentencesIn: collectionWithSentencesThatStartWithPrefix. 
-	^ collectionWithSentencesThatStartWithPrefix.! !
-
-!SentenceFinderByPrefix methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:42:37'!
+!SentenceFinderByPrefix methodsFor: 'test conditions-private' stamp: 'Pau 4/24/2023 16:42:37'!
 findSentencesInStack: anOOStack thatStartWith: aPrefixToFind andStoreFoundSentencesIn: elementsThatContainPrefix
 	|elementsPopped|
 
@@ -411,15 +428,31 @@ findSentencesInStack: anOOStack thatStartWith: aPrefixToFind andStoreFoundSenten
 
 	^elementsPopped ! !
 
-!SentenceFinderByPrefix methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:14:35'!
+!SentenceFinderByPrefix methodsFor: 'test conditions-private' stamp: 'Pau 4/24/2023 16:14:22'!
+reconstructStack: anOOStack withCollection: anElementOrderedCollection
+
+	anElementOrderedCollection do: [:anElement | anOOStack push: anElement].! !
+
+
+!SentenceFinderByPrefix methodsFor: 'find' stamp: 'Pau 4/24/2023 16:49:23'!
+find: aPrefix in: aOOSctack
+	|collectionWithSentencesThatStartWithPrefix|
+	self checkIfStringHasWhitespaces: aPrefix. 
+	
+	collectionWithSentencesThatStartWithPrefix := OrderedCollection new.
+	self findSentencesInStack:  aOOSctack thatStartWith:  aPrefix andStoreFoundSentencesIn: collectionWithSentencesThatStartWithPrefix. 
+	^ collectionWithSentencesThatStartWithPrefix.! !
+
+
+!SentenceFinderByPrefix methodsFor: 'errors' stamp: 'Pau 4/24/2023 16:14:35'!
 raiseErrorIfPrefixHasWhitespaces: aPrefix
 	(self checkIfStringHasWhitespaces: aPrefix) 
 		ifTrue: [self error: self class prefixHasWhitespacesErrorMessage]! !
 
-!SentenceFinderByPrefix methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 16:14:22'!
-reconstructStack: anOOStack withCollection: anElementOrderedCollection
-
-	anElementOrderedCollection do: [:anElement | anOOStack push: anElement].! !
+!SentenceFinderByPrefix methodsFor: 'errors' stamp: 'Pau 4/24/2023 17:05:44'!
+raiseErrorIfPrefixIsEmpty: aPrefix
+	(aPrefix isEmpty ) 
+		ifTrue: [self error: self class prefixIsEmptyErrorMessage ]! !
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
@@ -431,3 +464,8 @@ SentenceFinderByPrefix class
 prefixHasWhitespacesErrorMessage
 
 	^ 'El prefijo no puede tener whitespaces'.! !
+
+!SentenceFinderByPrefix class methodsFor: 'as yet unclassified' stamp: 'Pau 4/24/2023 17:04:55'!
+prefixIsEmptyErrorMessage
+
+	^ 'El prefijo no puede ser vacio'.! !
