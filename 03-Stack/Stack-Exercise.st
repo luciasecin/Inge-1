@@ -151,7 +151,7 @@ test01prefixIsNotInAnElementOfTheStack
 	
 	self assertIfSentencesInAStack: aStack thatStartWith: aPrefix are: aResultCollection.! !
 
-!SentenceFinderByPrefixTest methodsFor: 'tests' stamp: 'Pau 4/23/2023 13:49:16'!
+!SentenceFinderByPrefixTest methodsFor: 'tests' stamp: 'lucy 4/23/2023 21:36:41'!
 test02prefixIsInAllElementsOfTheStack
 
 	aStack push: tisTheDamnSeason; 
@@ -161,6 +161,7 @@ test02prefixIsInAllElementsOfTheStack
 	aResultCollection addFirst: tisTheDamnSeason; 
 					addFirst: invisibleString ;
 					addFirst: allTooWell.
+					
 	self assertIfSentencesInAStack: aStack thatStartWith: aPrefix are: aResultCollection.! !
 
 !SentenceFinderByPrefixTest methodsFor: 'tests' stamp: 'Pau 4/23/2023 13:49:22'!
@@ -196,18 +197,32 @@ test05prefixIsInSomeElementsOfTheStack
 	
 	self assertIfSentencesInAStack: aStack thatStartWith: aPrefix are: aResultCollection.! !
 
-!SentenceFinderByPrefixTest methodsFor: 'tests' stamp: 'Pau 4/23/2023 13:41:55'!
-test06StackPreserveElements
+!SentenceFinderByPrefixTest methodsFor: 'tests' stamp: 'lucy 4/23/2023 21:37:43'!
+test06StackPreservesElements
 	
 	| originalStack |
 	aStack push: theLastGreatAmericanDinasty; 
 		push: invisibleString; 
 		push: badBlood.
 		
-	originalStack := aStack copy.
-	SentenceFinderByPrefix new find: aPrefix in: aStack.
+	originalStack := OOStack new.
+	originalStack push: theLastGreatAmericanDinasty; 
+		push: invisibleString; 
+		push: badBlood.
+		
+	SentenceFinderByPrefix new findSentencesIn: aStack thatStartWith: aPrefix.
 	
 	self assertIfSearchedStack: aStack isEqualTo: originalStack.! !
+
+!SentenceFinderByPrefixTest methodsFor: 'tests' stamp: 'lucy 4/23/2023 21:11:01'!
+test07PrefixWithWhitespacesRaisesError
+
+	aStack push: theLastGreatAmericanDinasty; 
+		push: invisibleString; 
+		push: badBlood.
+		
+	[SentenceFinderByPrefix new findSentencesIn: aStack thatStartWith: 'Time '.] on: Error do: 
+		[:anError | anError messageText = SentenceFinderByPrefix prefixHasWhitespacesErrorMessage ]! !
 
 
 !SentenceFinderByPrefixTest methodsFor: 'setUp' stamp: 'Pau 4/23/2023 12:38:56'!
@@ -239,9 +254,9 @@ assertIfSearchedStack: searchedStack isEqualTo: originalStack
 		assertCondition :=assertCondition and: [searchedStack pop = (originalStack pop)]].
 	self assert: assertCondition.! !
 
-!SentenceFinderByPrefixTest methodsFor: 'assertConditions-private' stamp: 'Pau 4/23/2023 13:48:26'!
+!SentenceFinderByPrefixTest methodsFor: 'assertConditions-private' stamp: 'lucy 4/23/2023 20:44:56'!
 assertIfSentencesInAStack: stack thatStartWith: prefix are: resultCollection
-	self assert: (SentenceFinderByPrefix new find: prefix in: stack) equals: resultCollection.	! !
+	self assert: (SentenceFinderByPrefix new findSentencesIn: stack thatStartWith: prefix) equals: resultCollection.	! !
 
 
 !classDefinition: #OOStack category: 'Stack-Exercise'!
@@ -364,17 +379,61 @@ Object subclass: #SentenceFinderByPrefix
 	poolDictionaries: ''
 	category: 'Stack-Exercise'!
 
-!SentenceFinderByPrefix methodsFor: 'find' stamp: 'Pau 4/23/2023 13:14:12'!
-find: aPrefixToFind in: anOOStack
+!SentenceFinderByPrefix methodsFor: 'find' stamp: 'lucy 4/23/2023 21:26:22'!
+findSentencesIn: anOOStack thatStartWith: aPrefixToFind
 
-	|elementsThatContainPrefix copiedStack |
+	|elementsThatContainPrefix elementsPopped |
 	
+	self raiseErrorIfPrefixHasWhitespaces: aPrefixToFind.
+		
 	elementsThatContainPrefix := OrderedCollection new.
-	copiedStack := anOOStack copy.
-	anOOStack size timesRepeat: [
-		|currentElement|
-		currentElement := copiedStack pop.
-		(currentElement is: aPrefixToFind substringAt: 1)
-			ifTrue: [ elementsThatContainPrefix add: currentElement. ]].
+	
+	elementsPopped := self findSentencesInStack: anOOStack thatStartWith: aPrefixToFind andStoreFoundSentencesIn: elementsThatContainPrefix.
+		
+	self reconstructStack: anOOStack withCollection: elementsPopped.
 	
 	^elementsThatContainPrefix.! !
+
+
+!SentenceFinderByPrefix methodsFor: 'find - private' stamp: 'lucy 4/23/2023 21:03:03'!
+checkIfStringHasWhitespaces: aString
+	| assertCondition |
+	assertCondition := aString anySatisfy: [:char | (char isSeparator)].
+	^assertCondition.! !
+
+!SentenceFinderByPrefix methodsFor: 'find - private' stamp: 'lucy 4/23/2023 21:31:53'!
+findSentencesInStack: anOOStack thatStartWith: aPrefixToFind andStoreFoundSentencesIn: elementsThatContainPrefix
+	|elementsPopped|
+	
+	elementsPopped := OrderedCollection new.
+	
+	anOOStack size timesRepeat: [
+		|currentElement|
+		currentElement := anOOStack pop.
+		elementsPopped addFirst: currentElement .
+		
+		(currentElement is: aPrefixToFind substringAt: 1)
+			ifTrue: [ elementsThatContainPrefix add: currentElement. ]].
+		
+	^elementsPopped ! !
+
+!SentenceFinderByPrefix methodsFor: 'find - private' stamp: 'lucy 4/23/2023 21:08:46'!
+raiseErrorIfPrefixHasWhitespaces: aPrefix
+	(self checkIfStringHasWhitespaces: aPrefix) 
+		ifTrue: [self error: self class prefixHasWhitespacesErrorMessage]! !
+
+!SentenceFinderByPrefix methodsFor: 'find - private' stamp: 'lucy 4/23/2023 20:39:08'!
+reconstructStack: anOOStack withCollection: anElementOrderedCollection
+
+	anElementOrderedCollection do: [:anElement | anOOStack push: anElement].! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'SentenceFinderByPrefix class' category: 'Stack-Exercise'!
+SentenceFinderByPrefix class
+	instanceVariableNames: ''!
+
+!SentenceFinderByPrefix class methodsFor: 'errors' stamp: 'lucy 4/23/2023 21:08:05'!
+prefixHasWhitespacesErrorMessage
+
+	^ 'El prefijo no puede tener whitespaces'! !
