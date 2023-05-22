@@ -442,21 +442,23 @@ Object subclass: #BankAccount
 	poolDictionaries: ''
 	category: 'Portfolio-Ejercicio'!
 
-!BankAccount methodsFor: 'as yet unclassified' stamp: 'pau 5/22/2023 15:48:51'!
+!BankAccount methodsFor: 'balance' stamp: 'pau 5/22/2023 15:48:51'!
 balance
 	self subclassResponsibility ! !
 
-!BankAccount methodsFor: 'as yet unclassified' stamp: 'pau 5/22/2023 16:02:55'!
+
+!BankAccount methodsFor: 'transactions' stamp: 'pau 5/22/2023 15:49:12'!
+transactions
+	self subclassResponsibility ! !
+
+
+!BankAccount methodsFor: 'testing' stamp: 'pau 5/22/2023 16:02:55'!
 contains: anAccountOrPortfolio
 	self subclassResponsibility ! !
 
-!BankAccount methodsFor: 'as yet unclassified' stamp: 'pau 5/22/2023 15:48:13'!
+!BankAccount methodsFor: 'testing' stamp: 'pau 5/22/2023 15:48:13'!
 hasRegistered: aTransaction
 	self subclassResponsibility.! !
-
-!BankAccount methodsFor: 'as yet unclassified' stamp: 'pau 5/22/2023 15:49:12'!
-transactions
-	self subclassResponsibility ! !
 
 
 !classDefinition: #Portfolio category: 'Portfolio-Ejercicio'!
