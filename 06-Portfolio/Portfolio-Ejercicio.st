@@ -5,7 +5,7 @@ TestCase subclass: #PortfolioTest
 	poolDictionaries: ''
 	category: 'Portfolio-Ejercicio'!
 
-!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/21/2023 22:03:30'!
+!PortfolioTest methodsFor: 'tests' stamp: 'pau 5/21/2023 22:03:30'!
 test01PortfolioWithEmptyAccountHasBalanceZero
 
 	|portfolio account|
@@ -16,7 +16,7 @@ test01PortfolioWithEmptyAccountHasBalanceZero
 	
 	self assert:  portfolio balance equals: 0.! !
 
-!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/21/2023 22:04:57'!
+!PortfolioTest methodsFor: 'tests' stamp: 'pau 5/21/2023 22:04:57'!
 test02PortfolioWithAccountHasItsBalance
 	
 	|portfolio account|
@@ -28,7 +28,7 @@ test02PortfolioWithAccountHasItsBalance
 	
 	self assert:  portfolio balance equals: 50.! !
 
-!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/21/2023 22:10:48'!
+!PortfolioTest methodsFor: 'tests' stamp: 'pau 5/21/2023 22:10:48'!
 test03PortfolioWithTwoAccountsHasTheSumOfTheirBalances
 	
 	|portfolio account account2|
@@ -41,7 +41,7 @@ test03PortfolioWithTwoAccountsHasTheSumOfTheirBalances
 	portfolio := Portfolio new.
 	portfolio add: account;add: account2.! !
 
-!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/21/2023 22:11:10'!
+!PortfolioTest methodsFor: 'tests' stamp: 'pau 5/21/2023 22:11:10'!
 test04PortfolioWithEmptyPortfolioHasBalanceZero
 	
 	|portfolio |
@@ -52,7 +52,7 @@ test04PortfolioWithEmptyPortfolioHasBalanceZero
 	
 	self assert:  portfolio balance equals: 0.! !
 
-!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/21/2023 22:14:26'!
+!PortfolioTest methodsFor: 'tests' stamp: 'pau 5/21/2023 22:14:26'!
 test05PortfolioWithEmptyAccountHasNoTransactionsRegistered 
 	|portfolio |
 		
@@ -62,7 +62,7 @@ test05PortfolioWithEmptyAccountHasNoTransactionsRegistered
 	
 	self deny:  (portfolio hasRegistered: (Deposit for: 50)).! !
 
-!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/21/2023 22:16:26'!
+!PortfolioTest methodsFor: 'tests' stamp: 'pau 5/21/2023 22:16:26'!
 test06PortfolioWithAccountHasRegisteredItsTransactions
 	|portfolio account transaction|
 		
@@ -74,7 +74,7 @@ test06PortfolioWithAccountHasRegisteredItsTransactions
 	
 	self assert:  (portfolio hasRegistered: transaction).! !
 
-!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/21/2023 22:19:34'!
+!PortfolioTest methodsFor: 'tests' stamp: 'pau 5/21/2023 22:19:34'!
 test07PortfolioWithTwoAccountsHasRegisteredTheirTransactions
 	
 	|portfolio account transaction account2 transaction2 |
@@ -90,7 +90,7 @@ test07PortfolioWithTwoAccountsHasRegisteredTheirTransactions
 	self assert:  (portfolio hasRegistered: transaction).
 	self assert:  (portfolio hasRegistered: transaction2).! !
 
-!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/21/2023 22:25:38'!
+!PortfolioTest methodsFor: 'tests' stamp: 'pau 5/21/2023 22:25:38'!
 test08PortfolioWithEmptyAccountHasEmptyTransactions
 
 	|portfolio|
@@ -101,7 +101,7 @@ test08PortfolioWithEmptyAccountHasEmptyTransactions
 	
 	self assert: (portfolio transactions isEmpty).! !
 
-!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/21/2023 22:27:13'!
+!PortfolioTest methodsFor: 'tests' stamp: 'pau 5/21/2023 22:27:13'!
 test09PortfolioWithAccountHasItsTransactions
 
 	|portfolio account transaction transactions|
@@ -115,7 +115,7 @@ test09PortfolioWithAccountHasItsTransactions
 	
 	self assert: (portfolio transactions) equals: transactions.! !
 
-!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/21/2023 22:30:56'!
+!PortfolioTest methodsFor: 'tests' stamp: 'pau 5/21/2023 22:30:56'!
 test10PortfolioWithTwoAccountHasTheirTransactions
 
 	|portfolio account transaction1 account2 transaction2 transactions|
@@ -131,7 +131,7 @@ test10PortfolioWithTwoAccountHasTheirTransactions
 	
 	self assert: (portfolio transactions) equals: transactions.! !
 
-!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/21/2023 23:05:37'!
+!PortfolioTest methodsFor: 'tests' stamp: 'pau 5/21/2023 23:05:37'!
 test11CantAddAccountAlreadyInCurrentPortofolio
 	
 	|portfolio account|
@@ -146,7 +146,7 @@ test11CantAddAccountAlreadyInCurrentPortofolio
 	withExceptionDo: [:anError| self assert: (anError messageText) equals: (ReceptiveAccount cannotAddTwice)]
 ! !
 
-!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/21/2023 23:05:31'!
+!PortfolioTest methodsFor: 'tests' stamp: 'pau 5/21/2023 23:05:31'!
 test12CantAddAccountAlreadyInChildPortfolio
 	
 	|portfolioParent portfolioChild account|
@@ -164,7 +164,7 @@ test12CantAddAccountAlreadyInChildPortfolio
 	withExceptionDo: [:anError| self assert: (anError messageText) equals:  (ReceptiveAccount cannotAddTwice)]
 ! !
 
-!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/21/2023 23:05:23'!
+!PortfolioTest methodsFor: 'tests' stamp: 'pau 5/21/2023 23:05:23'!
 test13CantAddAccountAlreadyInParentPortfolio
 	
 	|portfolioParent portfolioChild account|
@@ -182,7 +182,7 @@ test13CantAddAccountAlreadyInParentPortfolio
 	withExceptionDo: [:anError| self assert: (anError messageText) equals: (ReceptiveAccount cannotAddTwice)]
 	! !
 
-!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/21/2023 23:04:48'!
+!PortfolioTest methodsFor: 'tests' stamp: 'pau 5/21/2023 23:04:48'!
 test14CantAddPortfolioAlreadyInCurrentPortfolio
 	
 	|portfolio portfolioToBeAdded |
@@ -196,7 +196,7 @@ test14CantAddPortfolioAlreadyInCurrentPortfolio
 	raise: Error
 	withExceptionDo: [:anError| self assert: (anError messageText) equals: (Portfolio cannotAddTwice)]! !
 
-!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/21/2023 23:24:56'!
+!PortfolioTest methodsFor: 'tests' stamp: 'pau 5/21/2023 23:24:56'!
 test15CannotAddAccountAlreadyInOtherParent
 	
 	|portfolioDad  portfolioMom portfolioChild account |
@@ -211,6 +211,31 @@ test15CannotAddAccountAlreadyInOtherParent
 	portfolioDad add: portfolioChild .
 
 	self should: [portfolioChild add:account.] 
+	raise: Error
+	withExceptionDo: [:anError| self assert: (anError messageText) equals: (ReceptiveAccount cannotAddTwice)]! !
+
+!PortfolioTest methodsFor: 'tests' stamp: 'pau 5/22/2023 16:02:20'!
+test16CannotAddAnAccountThatIsAlreadyInAGrandparentPortfolio
+	
+	|portfolioGrandparent  portfolioParent portfolioChild account account2 |
+		
+	portfolioGrandparent  := Portfolio new.
+	portfolioParent := Portfolio new.
+	portfolioChild:= Portfolio new.
+	
+	account := ReceptiveAccount new.
+	
+	portfolioChild add:account.
+	
+	portfolioParent add: portfolioChild.
+	
+	portfolioGrandparent  add: portfolioParent.
+	
+	account2 := ReceptiveAccount new.
+	
+	portfolioGrandparent add:account2.
+	 
+	self should: [portfolioChild add: account2. ] 
 	raise: Error
 	withExceptionDo: [:anError| self assert: (anError messageText) equals: (ReceptiveAccount cannotAddTwice)]! !
 
@@ -410,20 +435,43 @@ for: aValue
 	^ self new initializeFor: aValue ! !
 
 
+!classDefinition: #BankAccount category: 'Portfolio-Ejercicio'!
+Object subclass: #BankAccount
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Portfolio-Ejercicio'!
+
+!BankAccount methodsFor: 'as yet unclassified' stamp: 'pau 5/22/2023 15:48:51'!
+balance
+	self subclassResponsibility ! !
+
+!BankAccount methodsFor: 'as yet unclassified' stamp: 'pau 5/22/2023 16:02:55'!
+contains: anAccountOrPortfolio
+	self subclassResponsibility ! !
+
+!BankAccount methodsFor: 'as yet unclassified' stamp: 'pau 5/22/2023 15:48:13'!
+hasRegistered: aTransaction
+	self subclassResponsibility.! !
+
+!BankAccount methodsFor: 'as yet unclassified' stamp: 'pau 5/22/2023 15:49:12'!
+transactions
+	self subclassResponsibility ! !
+
+
 !classDefinition: #Portfolio category: 'Portfolio-Ejercicio'!
-Object subclass: #Portfolio
+BankAccount subclass: #Portfolio
 	instanceVariableNames: 'content roots'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'Portfolio-Ejercicio'!
 
-!Portfolio methodsFor: 'add' stamp: 'pau 5/21/2023 23:29:20'!
+!Portfolio methodsFor: 'add' stamp: 'pau 5/22/2023 16:07:47'!
 add: anAccountOrAPortfolio 
 	
-	(anAccountOrAPortfolio isKindOf: Portfolio ) ifTrue: [anAccountOrAPortfolio setRootPortfolio: roots.].
+	(anAccountOrAPortfolio isKindOf: Portfolio) ifTrue: [anAccountOrAPortfolio setRootPortfolio: roots.].
 	 
-	roots do: [:root| (root contains: anAccountOrAPortfolio)
-					ifTrue: [self error: anAccountOrAPortfolio class cannotAddTwice].].
+	self anyRootPortfolioHas: anAccountOrAPortfolio.
 				
 	content add: anAccountOrAPortfolio! !
 
@@ -442,11 +490,11 @@ hasRegistered: aTransaction
 	^content anySatisfy: [:anAccountOrPortfolio| anAccountOrPortfolio hasRegistered: aTransaction]! !
 
 
-!Portfolio methodsFor: 'transactions' stamp: 'pau 5/21/2023 22:32:03'!
+!Portfolio methodsFor: 'transactions' stamp: 'pau 5/22/2023 15:29:47'!
 transactions
 	|transactions|
 	transactions := OrderedCollection new.
-	content do: [:anAccount | transactions addAll: anAccount transactions].
+	content do: [:anAccountOrPortfolio | transactions addAll: anAccountOrPortfolio transactions].
 	^transactions 
 	 ! !
 
@@ -456,17 +504,31 @@ balance
 	^content sum:[:anAccountOrAPortfolio| anAccountOrAPortfolio balance]ifEmpty: [0]! !
 
 
-!Portfolio methodsFor: 'initialize' stamp: 'pau 5/21/2023 23:21:06'!
+!Portfolio methodsFor: 'initialize' stamp: 'pau 5/22/2023 15:56:42'!
 initialize
 	content := OrderedCollection new.
-	roots := OrderedCollection  with: self.! !
+	roots := Set  with: self.! !
 
-!Portfolio methodsFor: 'initialize' stamp: 'pau 5/21/2023 23:32:39'!
+!Portfolio methodsFor: 'initialize' stamp: 'pau 5/22/2023 16:02:02'!
 setRootPortfolio: rootPortfolios
-	(roots first = self)
+	(roots = (Set with: self))
 		ifTrue:[roots := rootPortfolios.]
-		ifFalse: [roots addAll: rootPortfolios]
+		ifFalse: [roots addAll: rootPortfolios].
+		
+	content do:[:anAccountOrPortfolio|  anAccountOrPortfolio setRootPortfolio: rootPortfolios].
 	! !
+
+
+!Portfolio methodsFor: 'add-private' stamp: 'pau 5/22/2023 16:06:11'!
+anyRootPortfolioHas: anAccountOrAPortfolio
+
+	^ roots do: [:root| (root contains: anAccountOrAPortfolio)
+					ifTrue: [self assertCannotAdd: anAccountOrAPortfolio].]! !
+
+!Portfolio methodsFor: 'add-private' stamp: 'pau 5/22/2023 16:05:23'!
+assertCannotAdd: anAccountOrAPortfolio
+
+	^ self error: anAccountOrAPortfolio class cannotAddTwice! !
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
@@ -480,7 +542,7 @@ cannotAddTwice
 
 
 !classDefinition: #ReceptiveAccount category: 'Portfolio-Ejercicio'!
-Object subclass: #ReceptiveAccount
+BankAccount subclass: #ReceptiveAccount
 	instanceVariableNames: 'transactions'
 	classVariableNames: ''
 	poolDictionaries: ''
@@ -510,14 +572,19 @@ balance
 	^transactions inject: 0 into: [:balance :aTransaction | aTransaction addMyselfToBalance: balance ].! !
 
 
-!ReceptiveAccount methodsFor: 'testing' stamp: 'pau 5/21/2023 22:53:57'!
-contains: anAccountOrPortfolio
-	^ self = anAccountOrPortfolio! !
+!ReceptiveAccount methodsFor: 'testing' stamp: 'pau 5/22/2023 15:51:31'!
+contains: anAccount
+	^ self = anAccount! !
 
 !ReceptiveAccount methodsFor: 'testing' stamp: 'NR 10/17/2019 03:28:43'!
 hasRegistered: aTransaction
 
 	^ transactions includes: aTransaction 
+! !
+
+
+!ReceptiveAccount methodsFor: 'add-private' stamp: 'pau 5/22/2023 15:25:23'!
+setRootPortfolio: rootPortfolios
 ! !
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
@@ -526,6 +593,6 @@ hasRegistered: aTransaction
 ReceptiveAccount class
 	instanceVariableNames: ''!
 
-!ReceptiveAccount class methodsFor: 'as yet unclassified' stamp: 'pau 5/21/2023 23:03:35'!
+!ReceptiveAccount class methodsFor: 'error description' stamp: 'pau 5/21/2023 23:03:35'!
 cannotAddTwice
 	^ 'Account already in portfolio'! !

@@ -3089,3 +3089,1242 @@ PASSED!
 ----SNAPSHOT----(21 May 2023 23:34:15) CuisUniversity-5706.image priorSource: 8713120!
 
 ----QUIT----(21 May 2023 23:34:21) CuisUniversity-5706.image priorSource: 8713208!
+
+----STARTUP---- (22 May 2023 14:59:59) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/withdraw/portfolio1coleccion/linux64/CuisUniversity-5706.image!
+
+!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/22/2023 15:02:11'!
+test16
+	
+	|portfolioDad  portfolioMom portfolioChild account account2 |
+		
+	portfolioDad := Portfolio new.
+	
+	portfolioMom := Portfolio new.
+	portfolioChild:= Portfolio new.
+	account := ReceptiveAccount new.
+	
+	portfolioChild add:account.
+	
+	portfolioMom add: portfolioChild.
+	
+	portfolioDad add: portfolioMom.
+	
+	account2 := ReceptiveAccount new.
+	
+	portfolioChild add: account2.
+	 
+	self should: [portfolioDad add:account2 ] 
+	raise: Error
+	withExceptionDo: [:anError| self assert: (anError messageText) equals: (ReceptiveAccount cannotAddTwice)]! !
+
+!testRun: #PortfolioTest #test16 stamp: 'pau 5/22/2023 15:02:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test01PortfolioWithEmptyAccountHasBalanceZero stamp: 'pau 5/22/2023 15:02:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test02PortfolioWithAccountHasItsBalance stamp: 'pau 5/22/2023 15:02:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test03PortfolioWithTwoAccountsHasTheSumOfTheirBalances stamp: 'pau 5/22/2023 15:02:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test04PortfolioWithEmptyPortfolioHasBalanceZero stamp: 'pau 5/22/2023 15:02:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test05PortfolioWithEmptyAccountHasNoTransactionsRegistered stamp: 'pau 5/22/2023 15:02:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test06PortfolioWithAccountHasRegisteredItsTransactions stamp: 'pau 5/22/2023 15:02:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test07PortfolioWithTwoAccountsHasRegisteredTheirTransactions stamp: 'pau 5/22/2023 15:02:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test08PortfolioWithEmptyAccountHasEmptyTransactions stamp: 'pau 5/22/2023 15:02:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test09PortfolioWithAccountHasItsTransactions stamp: 'pau 5/22/2023 15:02:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test10PortfolioWithTwoAccountHasTheirTransactions stamp: 'pau 5/22/2023 15:02:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test11CantAddAccountAlreadyInCurrentPortofolio stamp: 'pau 5/22/2023 15:02:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test12CantAddAccountAlreadyInChildPortfolio stamp: 'pau 5/22/2023 15:02:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test13CantAddAccountAlreadyInParentPortfolio stamp: 'pau 5/22/2023 15:02:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test14CantAddPortfolioAlreadyInCurrentPortfolio stamp: 'pau 5/22/2023 15:02:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test15CannotAddAccountAlreadyInOtherParent stamp: 'pau 5/22/2023 15:02:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test16 stamp: 'pau 5/22/2023 15:02:14'!
+PASSED!
+!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/22/2023 15:03:39' prior: 50603949!
+test16
+	
+	|portfolioGrandparent  portfolioParent portfolioChild account account2 |
+		
+	portfolioGrandparent  := Portfolio new.
+	
+	portfolioParent := Portfolio new.
+	portfolioChild:= Portfolio new.
+	account := ReceptiveAccount new.
+	
+	portfolioChild add:account.
+	
+	portfolioParent add: portfolioChild.
+	
+	portfolioGrandparent  add: portfolioParent.
+	
+	account2 := ReceptiveAccount new.
+	
+	portfolioChild add: account2.
+	 
+	self should: [portfolioGrandparent add:account2 ] 
+	raise: Error
+	withExceptionDo: [:anError| self assert: (anError messageText) equals: (ReceptiveAccount cannotAddTwice)]! !
+
+!testRun: #PortfolioTest #test16 stamp: 'pau 5/22/2023 15:03:40'!
+PASSED!
+
+!testRun: #PortfolioTest #test01PortfolioWithEmptyAccountHasBalanceZero stamp: 'pau 5/22/2023 15:03:40'!
+PASSED!
+
+!testRun: #PortfolioTest #test02PortfolioWithAccountHasItsBalance stamp: 'pau 5/22/2023 15:03:40'!
+PASSED!
+
+!testRun: #PortfolioTest #test03PortfolioWithTwoAccountsHasTheSumOfTheirBalances stamp: 'pau 5/22/2023 15:03:40'!
+PASSED!
+
+!testRun: #PortfolioTest #test04PortfolioWithEmptyPortfolioHasBalanceZero stamp: 'pau 5/22/2023 15:03:40'!
+PASSED!
+
+!testRun: #PortfolioTest #test05PortfolioWithEmptyAccountHasNoTransactionsRegistered stamp: 'pau 5/22/2023 15:03:40'!
+PASSED!
+
+!testRun: #PortfolioTest #test06PortfolioWithAccountHasRegisteredItsTransactions stamp: 'pau 5/22/2023 15:03:40'!
+PASSED!
+
+!testRun: #PortfolioTest #test07PortfolioWithTwoAccountsHasRegisteredTheirTransactions stamp: 'pau 5/22/2023 15:03:40'!
+PASSED!
+
+!testRun: #PortfolioTest #test08PortfolioWithEmptyAccountHasEmptyTransactions stamp: 'pau 5/22/2023 15:03:40'!
+PASSED!
+
+!testRun: #PortfolioTest #test09PortfolioWithAccountHasItsTransactions stamp: 'pau 5/22/2023 15:03:40'!
+PASSED!
+
+!testRun: #PortfolioTest #test10PortfolioWithTwoAccountHasTheirTransactions stamp: 'pau 5/22/2023 15:03:40'!
+PASSED!
+
+!testRun: #PortfolioTest #test11CantAddAccountAlreadyInCurrentPortofolio stamp: 'pau 5/22/2023 15:03:40'!
+PASSED!
+
+!testRun: #PortfolioTest #test12CantAddAccountAlreadyInChildPortfolio stamp: 'pau 5/22/2023 15:03:40'!
+PASSED!
+
+!testRun: #PortfolioTest #test13CantAddAccountAlreadyInParentPortfolio stamp: 'pau 5/22/2023 15:03:40'!
+PASSED!
+
+!testRun: #PortfolioTest #test14CantAddPortfolioAlreadyInCurrentPortfolio stamp: 'pau 5/22/2023 15:03:40'!
+PASSED!
+
+!testRun: #PortfolioTest #test15CannotAddAccountAlreadyInOtherParent stamp: 'pau 5/22/2023 15:03:40'!
+PASSED!
+
+!testRun: #PortfolioTest #test16 stamp: 'pau 5/22/2023 15:03:40'!
+PASSED!
+!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/22/2023 15:04:16' prior: 50604029!
+test16
+	
+	|portfolioGrandparent  portfolioParent portfolioChild account account2 |
+		
+	portfolioGrandparent  := Portfolio new.
+	
+	portfolioParent := Portfolio new.
+	portfolioChild:= Portfolio new.
+	account := ReceptiveAccount new.
+	
+	portfolioChild add:account.
+	
+	portfolioParent add: portfolioChild.
+	
+	portfolioGrandparent  add: portfolioParent.
+	
+	account2 := ReceptiveAccount new.
+	
+	portfolioGrandparent add:account2.
+	 
+	self should: [portfolioChild add: account2. ] 
+	raise: Error
+	withExceptionDo: [:anError| self assert: (anError messageText) equals: (ReceptiveAccount cannotAddTwice)]! !
+
+!testRun: #PortfolioTest #test16 stamp: 'pau 5/22/2023 15:04:17'!
+FAILURE!
+
+!testRun: #PortfolioTest #test16 stamp: 'pau 5/22/2023 15:05:00'!
+FAILURE!
+
+portfolioGrandparent!
+
+!classDefinition: #Portfolio category: 'Portfolio-Ejercicio' stamp: 'pau 5/22/2023 15:07:29'!
+Object subclass: #Portfolio
+	instanceVariableNames: 'content roots namePort'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Portfolio-Ejercicio'!
+!Portfolio methodsFor: 'nil' stamp: 'pau 5/22/2023 15:07:27'!
+setName: name
+	namePort := name! !
+!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/22/2023 15:08:24' prior: 50604111!
+test16
+	
+	|portfolioGrandparent  portfolioParent portfolioChild account account2 |
+		
+	portfolioGrandparent  := Portfolio new.
+	portfolioGrandparent setName: 'grandparent'. 
+	
+	portfolioParent := Portfolio new.
+	portfolioParent setName: 'parent'. 
+	
+	portfolioChild:= Portfolio new.
+	portfolioChild setName: 'child'. 
+	
+	account := ReceptiveAccount new.
+	
+	portfolioChild add:account.
+	
+	portfolioParent add: portfolioChild.
+	
+	portfolioGrandparent  add: portfolioParent.
+	
+	account2 := ReceptiveAccount new.
+	
+	portfolioGrandparent add:account2.
+	 
+	self should: [portfolioChild add: account2. ] 
+	raise: Error
+	withExceptionDo: [:anError| self assert: (anError messageText) equals: (ReceptiveAccount cannotAddTwice)]! !
+
+!testRun: #PortfolioTest #test16 stamp: 'pau 5/22/2023 15:08:25'!
+FAILURE!
+
+portfolioChild!
+
+portfolioGrandparent!
+
+portfolioChild!
+!Portfolio methodsFor: 'add' stamp: 'pau 5/22/2023 15:13:00' prior: 50607631!
+add: aPortfolioOrAnAccount
+	(aPortfolioOrAnAccount isKindOf: Portfolio) ifTrue: [ aPortfolioOrAnAccount setRootPortfolio: roots ].
+	
+	roots do: [ :argm1_2 |
+		(argm1_2 contains: aPortfolioOrAnAccount) ifTrue: [ self error: aPortfolioOrAnAccount class cannotAddTwice ]].
+	content add: aPortfolioOrAnAccount.! !
+!Portfolio methodsFor: 'add' stamp: 'pau 5/22/2023 15:13:51' prior: 50604180!
+add: aPortfolioOrAnAccount
+	(aPortfolioOrAnAccount isKindOf: Portfolio) ifTrue: [ aPortfolioOrAnAccount setRootPortfolio: roots ].
+	
+	roots do: [ :root |
+		(root contains: aPortfolioOrAnAccount) ifTrue: [ self error: aPortfolioOrAnAccount class cannotAddTwice ]].
+	content add: aPortfolioOrAnAccount.! !
+!Portfolio methodsFor: 'add' stamp: 'pau 5/22/2023 15:14:13' prior: 50606038!
+contains: anAccountOrPortfolio
+	self = anAccountOrPortfolio ifTrue: [ ^ true ].
+	^ content anySatisfy: [ :argm1_2 |
+		argm1_2 contains: anAccountOrPortfolio ].! !
+!Portfolio methodsFor: 'add' stamp: 'pau 5/22/2023 15:14:30' prior: 50604205!
+contains: anAccountOrPortfolio
+	self = anAccountOrPortfolio ifTrue: [ ^ true ].
+	^ content anySatisfy: [ :anAccountOrPortfolioAlreadyInPortfolio |
+		anAccountOrPortfolioAlreadyInPortfolio contains: anAccountOrPortfolio ].! !
+
+!testRun: #PortfolioTest #test01PortfolioWithEmptyAccountHasBalanceZero stamp: 'pau 5/22/2023 15:14:35'!
+PASSED!
+
+!testRun: #PortfolioTest #test02PortfolioWithAccountHasItsBalance stamp: 'pau 5/22/2023 15:14:35'!
+PASSED!
+
+!testRun: #PortfolioTest #test03PortfolioWithTwoAccountsHasTheSumOfTheirBalances stamp: 'pau 5/22/2023 15:14:36'!
+PASSED!
+
+!testRun: #PortfolioTest #test04PortfolioWithEmptyPortfolioHasBalanceZero stamp: 'pau 5/22/2023 15:14:36'!
+PASSED!
+
+!testRun: #PortfolioTest #test05PortfolioWithEmptyAccountHasNoTransactionsRegistered stamp: 'pau 5/22/2023 15:14:36'!
+PASSED!
+
+!testRun: #PortfolioTest #test06PortfolioWithAccountHasRegisteredItsTransactions stamp: 'pau 5/22/2023 15:14:36'!
+PASSED!
+
+!testRun: #PortfolioTest #test07PortfolioWithTwoAccountsHasRegisteredTheirTransactions stamp: 'pau 5/22/2023 15:14:36'!
+PASSED!
+
+!testRun: #PortfolioTest #test08PortfolioWithEmptyAccountHasEmptyTransactions stamp: 'pau 5/22/2023 15:14:36'!
+PASSED!
+
+!testRun: #PortfolioTest #test09PortfolioWithAccountHasItsTransactions stamp: 'pau 5/22/2023 15:14:36'!
+PASSED!
+
+!testRun: #PortfolioTest #test10PortfolioWithTwoAccountHasTheirTransactions stamp: 'pau 5/22/2023 15:14:36'!
+PASSED!
+
+!testRun: #PortfolioTest #test11CantAddAccountAlreadyInCurrentPortofolio stamp: 'pau 5/22/2023 15:14:36'!
+PASSED!
+
+!testRun: #PortfolioTest #test12CantAddAccountAlreadyInChildPortfolio stamp: 'pau 5/22/2023 15:14:36'!
+PASSED!
+
+!testRun: #PortfolioTest #test13CantAddAccountAlreadyInParentPortfolio stamp: 'pau 5/22/2023 15:14:36'!
+PASSED!
+
+!testRun: #PortfolioTest #test14CantAddPortfolioAlreadyInCurrentPortfolio stamp: 'pau 5/22/2023 15:14:36'!
+PASSED!
+
+!testRun: #PortfolioTest #test15CannotAddAccountAlreadyInOtherParent stamp: 'pau 5/22/2023 15:14:36'!
+PASSED!
+
+!testRun: #PortfolioTest #test16 stamp: 'pau 5/22/2023 15:14:36'!
+FAILURE!
+
+!testRun: #PortfolioTest #test16 stamp: 'pau 5/22/2023 15:14:36'!
+FAILURE!
+!Portfolio methodsFor: 'testing' stamp: 'pau 5/22/2023 15:14:47' prior: 50604692!
+hasRegistered: arg1
+	^ content anySatisfy: [ :anAccountOrPortfolioAlreadyInPortfolio |
+		anAccountOrPortfolioAlreadyInPortfolio hasRegistered: arg1 ].! !
+!Portfolio methodsFor: 'testing' stamp: 'pau 5/22/2023 15:14:58' prior: 50604283!
+hasRegistered: anAccountOrPortfolio
+	^ content anySatisfy: [ :anAccountOrPortfolioAlreadyInPortfolio |
+		anAccountOrPortfolioAlreadyInPortfolio hasRegistered: anAccountOrPortfolio ].! !
+!Portfolio methodsFor: 'transactions' stamp: 'pau 5/22/2023 15:15:15' prior: 50605135!
+transactions
+	| temp1 |
+	temp1 := OrderedCollection new.
+	content do: [ :anAccountOrPortfolioAlreadyInPortfolio |
+		temp1 addAll: anAccountOrPortfolioAlreadyInPortfolio transactions ].
+	^ temp1.! !
+!Portfolio methodsFor: 'transactions' stamp: 'pau 5/22/2023 15:15:25' prior: 50604300!
+transactions
+	| isAlreadyInPortfolio |
+	isAlreadyInPortfolio := OrderedCollection new.
+	content do: [ :anAccountOrPortfolioAlreadyInPortfolio |
+		isAlreadyInPortfolio addAll: anAccountOrPortfolioAlreadyInPortfolio transactions ].
+	^ isAlreadyInPortfolio.! !
+!Portfolio methodsFor: 'transactions' stamp: 'pau 5/22/2023 15:15:53' prior: 50604309!
+transactions
+	| transactions |
+	transactions := OrderedCollection new.
+	content do: [ :anAccountOrPortfolioAlreadyInPortfolio |
+		transactions addAll: anAccountOrPortfolioAlreadyInPortfolio transactions ].
+	^ transactions.! !
+!Portfolio methodsFor: 'balance' stamp: 'pau 5/22/2023 15:16:05' prior: 50604406!
+balance
+	^ content
+		sum: [ :anAccountOrPortfolioAlreadyInPortfolio |
+			anAccountOrPortfolioAlreadyInPortfolio balance ]
+		ifEmpty: [ 0 ].! !
+!Portfolio methodsFor: 'initialize' stamp: 'pau 5/22/2023 15:16:17' prior: 50607771!
+setRootPortfolio: anAccountOrPortfolio
+	roots first = self
+		ifTrue: [ roots := anAccountOrPortfolio ]
+		ifFalse: [ roots addAll: anAccountOrPortfolio ].! !
+
+----End fileIn of /home/paula/Documents/COMPUTACION/Inge1-1c2023/Inge-1/06-Portfolio/Portfolio-Ejercicio.st----!
+
+!testRun: #PortfolioTest #test01PortfolioWithEmptyAccountHasBalanceZero stamp: 'pau 5/22/2023 15:21:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test02PortfolioWithAccountHasItsBalance stamp: 'pau 5/22/2023 15:21:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test03PortfolioWithTwoAccountsHasTheSumOfTheirBalances stamp: 'pau 5/22/2023 15:21:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test04PortfolioWithEmptyPortfolioHasBalanceZero stamp: 'pau 5/22/2023 15:21:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test05PortfolioWithEmptyAccountHasNoTransactionsRegistered stamp: 'pau 5/22/2023 15:21:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test06PortfolioWithAccountHasRegisteredItsTransactions stamp: 'pau 5/22/2023 15:21:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test07PortfolioWithTwoAccountsHasRegisteredTheirTransactions stamp: 'pau 5/22/2023 15:21:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test08PortfolioWithEmptyAccountHasEmptyTransactions stamp: 'pau 5/22/2023 15:21:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test09PortfolioWithAccountHasItsTransactions stamp: 'pau 5/22/2023 15:21:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test10PortfolioWithTwoAccountHasTheirTransactions stamp: 'pau 5/22/2023 15:21:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test11CantAddAccountAlreadyInCurrentPortofolio stamp: 'pau 5/22/2023 15:21:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test12CantAddAccountAlreadyInChildPortfolio stamp: 'pau 5/22/2023 15:21:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test13CantAddAccountAlreadyInParentPortfolio stamp: 'pau 5/22/2023 15:21:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test14CantAddPortfolioAlreadyInCurrentPortfolio stamp: 'pau 5/22/2023 15:21:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test15CannotAddAccountAlreadyInOtherParent stamp: 'pau 5/22/2023 15:21:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test16 stamp: 'pau 5/22/2023 15:21:15'!
+FAILURE!
+
+!testRun: #PortfolioTest #test16 stamp: 'pau 5/22/2023 15:21:15'!
+FAILURE!
+
+!testRun: #ReceptiveAccountTest #test01ReceptiveAccountHaveZeroAsBalanceWhenCreated stamp: 'pau 5/22/2023 15:21:20'!
+PASSED!
+
+!testRun: #ReceptiveAccountTest #test02DepositIncreasesBalanceOnTransactionValue stamp: 'pau 5/22/2023 15:21:20'!
+PASSED!
+
+!testRun: #ReceptiveAccountTest #test03WithdrawDecreasesBalanceOnTransactionValue stamp: 'pau 5/22/2023 15:21:20'!
+PASSED!
+
+!testRun: #ReceptiveAccountTest #test04WithdrawValueMustBePositive stamp: 'pau 5/22/2023 15:21:20'!
+PASSED!
+
+!testRun: #ReceptiveAccountTest #test05ReceptiveAccountKnowsRegisteredTransactions stamp: 'pau 5/22/2023 15:21:20'!
+PASSED!
+
+!testRun: #ReceptiveAccountTest #test06ReceptiveAccountDoNotKnowNotRegisteredTransactions stamp: 'pau 5/22/2023 15:21:20'!
+PASSED!
+
+!testRun: #ReceptiveAccountTest #test07AccountKnowsItsTransactions stamp: 'pau 5/22/2023 15:21:20'!
+PASSED!
+!Portfolio methodsFor: 'initialize' stamp: 'pau 5/22/2023 15:24:11' prior: 50604839!
+setRootPortfolio: rootPortfolios
+	(roots first = self)
+		ifTrue:[roots := rootPortfolios.]
+		ifFalse: [roots addAll: rootPortfolios].
+		
+	content do:[:anAccountOrPortfolio|  anAccountOrPortfolio setRootPortfolio: rootPortfolios].
+	! !
+
+!testRun: #PortfolioTest #test01PortfolioWithEmptyAccountHasBalanceZero stamp: 'pau 5/22/2023 15:24:32'!
+PASSED!
+
+!testRun: #PortfolioTest #test02PortfolioWithAccountHasItsBalance stamp: 'pau 5/22/2023 15:24:32'!
+PASSED!
+
+!testRun: #PortfolioTest #test03PortfolioWithTwoAccountsHasTheSumOfTheirBalances stamp: 'pau 5/22/2023 15:24:32'!
+PASSED!
+
+!testRun: #PortfolioTest #test04PortfolioWithEmptyPortfolioHasBalanceZero stamp: 'pau 5/22/2023 15:24:32'!
+PASSED!
+
+!testRun: #PortfolioTest #test05PortfolioWithEmptyAccountHasNoTransactionsRegistered stamp: 'pau 5/22/2023 15:24:32'!
+PASSED!
+
+!testRun: #PortfolioTest #test06PortfolioWithAccountHasRegisteredItsTransactions stamp: 'pau 5/22/2023 15:24:32'!
+PASSED!
+
+!testRun: #PortfolioTest #test07PortfolioWithTwoAccountsHasRegisteredTheirTransactions stamp: 'pau 5/22/2023 15:24:32'!
+PASSED!
+
+!testRun: #PortfolioTest #test08PortfolioWithEmptyAccountHasEmptyTransactions stamp: 'pau 5/22/2023 15:24:32'!
+PASSED!
+
+!testRun: #PortfolioTest #test09PortfolioWithAccountHasItsTransactions stamp: 'pau 5/22/2023 15:24:32'!
+PASSED!
+
+!testRun: #PortfolioTest #test10PortfolioWithTwoAccountHasTheirTransactions stamp: 'pau 5/22/2023 15:24:32'!
+PASSED!
+
+!testRun: #PortfolioTest #test11CantAddAccountAlreadyInCurrentPortofolio stamp: 'pau 5/22/2023 15:24:32'!
+PASSED!
+
+!testRun: #PortfolioTest #test12CantAddAccountAlreadyInChildPortfolio stamp: 'pau 5/22/2023 15:24:32'!
+ERROR!
+
+!testRun: #PortfolioTest #test13CantAddAccountAlreadyInParentPortfolio stamp: 'pau 5/22/2023 15:24:32'!
+PASSED!
+
+!testRun: #PortfolioTest #test14CantAddPortfolioAlreadyInCurrentPortfolio stamp: 'pau 5/22/2023 15:24:32'!
+PASSED!
+
+!testRun: #PortfolioTest #test15CannotAddAccountAlreadyInOtherParent stamp: 'pau 5/22/2023 15:24:32'!
+PASSED!
+
+!testRun: #PortfolioTest #test16 stamp: 'pau 5/22/2023 15:24:32'!
+ERROR!
+
+!testRun: #PortfolioTest #test12CantAddAccountAlreadyInChildPortfolio stamp: 'pau 5/22/2023 15:24:37'!
+ERROR!
+!ReceptiveAccount methodsFor: 'nil' stamp: 'pau 5/22/2023 15:25:23'!
+setRootPortfolio: rootPortfolios
+! !
+
+!testRun: #ReceptiveAccountTest #test01ReceptiveAccountHaveZeroAsBalanceWhenCreated stamp: 'pau 5/22/2023 15:25:24'!
+PASSED!
+
+!testRun: #ReceptiveAccountTest #test02DepositIncreasesBalanceOnTransactionValue stamp: 'pau 5/22/2023 15:25:24'!
+PASSED!
+
+!testRun: #ReceptiveAccountTest #test03WithdrawDecreasesBalanceOnTransactionValue stamp: 'pau 5/22/2023 15:25:24'!
+PASSED!
+
+!testRun: #ReceptiveAccountTest #test04WithdrawValueMustBePositive stamp: 'pau 5/22/2023 15:25:24'!
+PASSED!
+
+!testRun: #ReceptiveAccountTest #test05ReceptiveAccountKnowsRegisteredTransactions stamp: 'pau 5/22/2023 15:25:24'!
+PASSED!
+
+!testRun: #ReceptiveAccountTest #test06ReceptiveAccountDoNotKnowNotRegisteredTransactions stamp: 'pau 5/22/2023 15:25:24'!
+PASSED!
+
+!testRun: #ReceptiveAccountTest #test07AccountKnowsItsTransactions stamp: 'pau 5/22/2023 15:25:24'!
+PASSED!
+
+!testRun: #PortfolioTest #test01PortfolioWithEmptyAccountHasBalanceZero stamp: 'pau 5/22/2023 15:25:27'!
+PASSED!
+
+!testRun: #PortfolioTest #test02PortfolioWithAccountHasItsBalance stamp: 'pau 5/22/2023 15:25:27'!
+PASSED!
+
+!testRun: #PortfolioTest #test03PortfolioWithTwoAccountsHasTheSumOfTheirBalances stamp: 'pau 5/22/2023 15:25:27'!
+PASSED!
+
+!testRun: #PortfolioTest #test04PortfolioWithEmptyPortfolioHasBalanceZero stamp: 'pau 5/22/2023 15:25:27'!
+PASSED!
+
+!testRun: #PortfolioTest #test05PortfolioWithEmptyAccountHasNoTransactionsRegistered stamp: 'pau 5/22/2023 15:25:27'!
+PASSED!
+
+!testRun: #PortfolioTest #test06PortfolioWithAccountHasRegisteredItsTransactions stamp: 'pau 5/22/2023 15:25:27'!
+PASSED!
+
+!testRun: #PortfolioTest #test07PortfolioWithTwoAccountsHasRegisteredTheirTransactions stamp: 'pau 5/22/2023 15:25:27'!
+PASSED!
+
+!testRun: #PortfolioTest #test08PortfolioWithEmptyAccountHasEmptyTransactions stamp: 'pau 5/22/2023 15:25:27'!
+PASSED!
+
+!testRun: #PortfolioTest #test09PortfolioWithAccountHasItsTransactions stamp: 'pau 5/22/2023 15:25:27'!
+PASSED!
+
+!testRun: #PortfolioTest #test10PortfolioWithTwoAccountHasTheirTransactions stamp: 'pau 5/22/2023 15:25:27'!
+PASSED!
+
+!testRun: #PortfolioTest #test11CantAddAccountAlreadyInCurrentPortofolio stamp: 'pau 5/22/2023 15:25:27'!
+PASSED!
+
+!testRun: #PortfolioTest #test12CantAddAccountAlreadyInChildPortfolio stamp: 'pau 5/22/2023 15:25:27'!
+PASSED!
+
+!testRun: #PortfolioTest #test13CantAddAccountAlreadyInParentPortfolio stamp: 'pau 5/22/2023 15:25:27'!
+PASSED!
+
+!testRun: #PortfolioTest #test14CantAddPortfolioAlreadyInCurrentPortfolio stamp: 'pau 5/22/2023 15:25:27'!
+PASSED!
+
+!testRun: #PortfolioTest #test15CannotAddAccountAlreadyInOtherParent stamp: 'pau 5/22/2023 15:25:27'!
+PASSED!
+
+!testRun: #PortfolioTest #test16 stamp: 'pau 5/22/2023 15:25:27'!
+PASSED!
+
+!testRun: #PortfolioTest #test01PortfolioWithEmptyAccountHasBalanceZero stamp: 'pau 5/22/2023 15:25:32'!
+PASSED!
+
+!testRun: #PortfolioTest #test02PortfolioWithAccountHasItsBalance stamp: 'pau 5/22/2023 15:25:33'!
+PASSED!
+
+!testRun: #PortfolioTest #test03PortfolioWithTwoAccountsHasTheSumOfTheirBalances stamp: 'pau 5/22/2023 15:25:33'!
+PASSED!
+
+!testRun: #PortfolioTest #test04PortfolioWithEmptyPortfolioHasBalanceZero stamp: 'pau 5/22/2023 15:25:33'!
+PASSED!
+
+!testRun: #PortfolioTest #test05PortfolioWithEmptyAccountHasNoTransactionsRegistered stamp: 'pau 5/22/2023 15:25:33'!
+PASSED!
+
+!testRun: #PortfolioTest #test06PortfolioWithAccountHasRegisteredItsTransactions stamp: 'pau 5/22/2023 15:25:33'!
+PASSED!
+
+!testRun: #PortfolioTest #test07PortfolioWithTwoAccountsHasRegisteredTheirTransactions stamp: 'pau 5/22/2023 15:25:33'!
+PASSED!
+
+!testRun: #PortfolioTest #test08PortfolioWithEmptyAccountHasEmptyTransactions stamp: 'pau 5/22/2023 15:25:33'!
+PASSED!
+
+!testRun: #PortfolioTest #test09PortfolioWithAccountHasItsTransactions stamp: 'pau 5/22/2023 15:25:33'!
+PASSED!
+
+!testRun: #PortfolioTest #test10PortfolioWithTwoAccountHasTheirTransactions stamp: 'pau 5/22/2023 15:25:33'!
+PASSED!
+
+!testRun: #PortfolioTest #test11CantAddAccountAlreadyInCurrentPortofolio stamp: 'pau 5/22/2023 15:25:33'!
+PASSED!
+
+!testRun: #PortfolioTest #test12CantAddAccountAlreadyInChildPortfolio stamp: 'pau 5/22/2023 15:25:33'!
+PASSED!
+
+!testRun: #PortfolioTest #test13CantAddAccountAlreadyInParentPortfolio stamp: 'pau 5/22/2023 15:25:33'!
+PASSED!
+
+!testRun: #PortfolioTest #test14CantAddPortfolioAlreadyInCurrentPortfolio stamp: 'pau 5/22/2023 15:25:33'!
+PASSED!
+
+!testRun: #PortfolioTest #test15CannotAddAccountAlreadyInOtherParent stamp: 'pau 5/22/2023 15:25:33'!
+PASSED!
+
+!testRun: #PortfolioTest #test16 stamp: 'pau 5/22/2023 15:25:33'!
+PASSED!
+!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/22/2023 15:26:24'!
+test16CannotAddAnAccountThatIsAlreadyInAGrandparentPortfolio
+	
+	|portfolioGrandparent  portfolioParent portfolioChild account account2 |
+		
+	portfolioGrandparent  := Portfolio new.
+	portfolioGrandparent setName: 'grandparent'. 
+	
+	portfolioParent := Portfolio new.
+	portfolioParent setName: 'parent'. 
+	
+	portfolioChild:= Portfolio new.
+	portfolioChild setName: 'child'. 
+	
+	account := ReceptiveAccount new.
+	
+	portfolioChild add:account.
+	
+	portfolioParent add: portfolioChild.
+	
+	portfolioGrandparent  add: portfolioParent.
+	
+	account2 := ReceptiveAccount new.
+	
+	portfolioGrandparent add:account2.
+	 
+	self should: [portfolioChild add: account2. ] 
+	raise: Error
+	withExceptionDo: [:anError| self assert: (anError messageText) equals: (ReceptiveAccount cannotAddTwice)]! !
+
+!methodRemoval: PortfolioTest #test16 stamp: 'pau 5/22/2023 15:26:27'!
+test16
+	
+	|portfolioGrandparent  portfolioParent portfolioChild account account2 |
+		
+	portfolioGrandparent  := Portfolio new.
+	portfolioGrandparent setName: 'grandparent'. 
+	
+	portfolioParent := Portfolio new.
+	portfolioParent setName: 'parent'. 
+	
+	portfolioChild:= Portfolio new.
+	portfolioChild setName: 'child'. 
+	
+	account := ReceptiveAccount new.
+	
+	portfolioChild add:account.
+	
+	portfolioParent add: portfolioChild.
+	
+	portfolioGrandparent  add: portfolioParent.
+	
+	account2 := ReceptiveAccount new.
+	
+	portfolioGrandparent add:account2.
+	 
+	self should: [portfolioChild add: account2. ] 
+	raise: Error
+	withExceptionDo: [:anError| self assert: (anError messageText) equals: (ReceptiveAccount cannotAddTwice)]!
+!Portfolio methodsFor: 'transactions' stamp: 'pau 5/22/2023 15:29:47' prior: 50604818!
+transactions
+	|transactions|
+	transactions := OrderedCollection new.
+	content do: [:anAccountOrPortfolio | transactions addAll: anAccountOrPortfolio transactions].
+	^transactions 
+	 ! !
+
+!testRun: #PortfolioTest #test01PortfolioWithEmptyAccountHasBalanceZero stamp: 'pau 5/22/2023 15:29:51'!
+PASSED!
+
+!testRun: #PortfolioTest #test02PortfolioWithAccountHasItsBalance stamp: 'pau 5/22/2023 15:29:51'!
+PASSED!
+
+!testRun: #PortfolioTest #test03PortfolioWithTwoAccountsHasTheSumOfTheirBalances stamp: 'pau 5/22/2023 15:29:51'!
+PASSED!
+
+!testRun: #PortfolioTest #test04PortfolioWithEmptyPortfolioHasBalanceZero stamp: 'pau 5/22/2023 15:29:51'!
+PASSED!
+
+!testRun: #PortfolioTest #test05PortfolioWithEmptyAccountHasNoTransactionsRegistered stamp: 'pau 5/22/2023 15:29:51'!
+PASSED!
+
+!testRun: #PortfolioTest #test06PortfolioWithAccountHasRegisteredItsTransactions stamp: 'pau 5/22/2023 15:29:51'!
+PASSED!
+
+!testRun: #PortfolioTest #test07PortfolioWithTwoAccountsHasRegisteredTheirTransactions stamp: 'pau 5/22/2023 15:29:51'!
+PASSED!
+
+!testRun: #PortfolioTest #test08PortfolioWithEmptyAccountHasEmptyTransactions stamp: 'pau 5/22/2023 15:29:51'!
+PASSED!
+
+!testRun: #PortfolioTest #test09PortfolioWithAccountHasItsTransactions stamp: 'pau 5/22/2023 15:29:51'!
+PASSED!
+
+!testRun: #PortfolioTest #test10PortfolioWithTwoAccountHasTheirTransactions stamp: 'pau 5/22/2023 15:29:51'!
+PASSED!
+
+!testRun: #PortfolioTest #test11CantAddAccountAlreadyInCurrentPortofolio stamp: 'pau 5/22/2023 15:29:51'!
+PASSED!
+
+!testRun: #PortfolioTest #test12CantAddAccountAlreadyInChildPortfolio stamp: 'pau 5/22/2023 15:29:51'!
+PASSED!
+
+!testRun: #PortfolioTest #test13CantAddAccountAlreadyInParentPortfolio stamp: 'pau 5/22/2023 15:29:51'!
+PASSED!
+
+!testRun: #PortfolioTest #test14CantAddPortfolioAlreadyInCurrentPortfolio stamp: 'pau 5/22/2023 15:29:51'!
+PASSED!
+
+!testRun: #PortfolioTest #test15CannotAddAccountAlreadyInOtherParent stamp: 'pau 5/22/2023 15:29:51'!
+PASSED!
+
+!testRun: #PortfolioTest #test16CannotAddAnAccountThatIsAlreadyInAGrandparentPortfolio stamp: 'pau 5/22/2023 15:29:51'!
+PASSED!
+
+----SNAPSHOT----(22 May 2023 15:42:36) CuisUniversity-5706.image priorSource: 8713296!
+
+!classDefinition: #BankAccount category: 'Portfolio-Ejercicio' stamp: 'pau 5/22/2023 15:46:38'!
+Object subclass: #BankAccount
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Portfolio-Ejercicio'!
+
+!classDefinition: #Portfolio category: 'Portfolio-Ejercicio' stamp: 'pau 5/22/2023 15:46:38'!
+BankAccount subclass: #Portfolio
+	instanceVariableNames: 'content roots'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Portfolio-Ejercicio'!
+
+BankAccount subclass: #ReceptiveAccount
+	instanceVariableNames: 'transactions'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Portfolio-Ejercicio'!
+
+!classDefinition: #ReceptiveAccount category: 'Portfolio-Ejercicio' stamp: 'pau 5/22/2023 15:47:41'!
+BankAccount subclass: #ReceptiveAccount
+	instanceVariableNames: 'transactions'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Portfolio-Ejercicio'!
+!BankAccount methodsFor: 'nil' stamp: 'pau 5/22/2023 15:48:05'!
+hasRegistered: aTransaction! !
+!BankAccount methodsFor: 'as yet unclassified' stamp: 'pau 5/22/2023 15:48:13' prior: 50605377!
+hasRegistered: aTransaction
+	self subclassResponsibility.! !
+!BankAccount methodsFor: 'nil' stamp: 'pau 5/22/2023 15:48:51'!
+balance
+	self subclassResponsibility ! !
+!BankAccount methodsFor: 'nil' stamp: 'pau 5/22/2023 15:49:12'!
+transactions
+	self subclassResponsibility ! !
+
+!testRun: #PortfolioTest #test01PortfolioWithEmptyAccountHasBalanceZero stamp: 'pau 5/22/2023 15:49:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test02PortfolioWithAccountHasItsBalance stamp: 'pau 5/22/2023 15:49:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test03PortfolioWithTwoAccountsHasTheSumOfTheirBalances stamp: 'pau 5/22/2023 15:49:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test04PortfolioWithEmptyPortfolioHasBalanceZero stamp: 'pau 5/22/2023 15:49:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test05PortfolioWithEmptyAccountHasNoTransactionsRegistered stamp: 'pau 5/22/2023 15:49:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test06PortfolioWithAccountHasRegisteredItsTransactions stamp: 'pau 5/22/2023 15:49:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test07PortfolioWithTwoAccountsHasRegisteredTheirTransactions stamp: 'pau 5/22/2023 15:49:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test08PortfolioWithEmptyAccountHasEmptyTransactions stamp: 'pau 5/22/2023 15:49:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test09PortfolioWithAccountHasItsTransactions stamp: 'pau 5/22/2023 15:49:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test10PortfolioWithTwoAccountHasTheirTransactions stamp: 'pau 5/22/2023 15:49:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test11CantAddAccountAlreadyInCurrentPortofolio stamp: 'pau 5/22/2023 15:49:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test12CantAddAccountAlreadyInChildPortfolio stamp: 'pau 5/22/2023 15:49:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test13CantAddAccountAlreadyInParentPortfolio stamp: 'pau 5/22/2023 15:49:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test14CantAddPortfolioAlreadyInCurrentPortfolio stamp: 'pau 5/22/2023 15:49:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test15CannotAddAccountAlreadyInOtherParent stamp: 'pau 5/22/2023 15:49:14'!
+PASSED!
+
+!testRun: #PortfolioTest #test16CannotAddAnAccountThatIsAlreadyInAGrandparentPortfolio stamp: 'pau 5/22/2023 15:49:14'!
+PASSED!
+!BankAccount methodsFor: 'nil' stamp: 'pau 5/22/2023 15:50:23'!
+contains: something! !
+!ReceptiveAccount methodsFor: 'testing' stamp: 'pau 5/22/2023 15:51:31' prior: 50604896 overrides: 50605452!
+contains: anAccount
+	^ self = anAccount! !
+
+!testRun: #ReceptiveAccountTest #test01ReceptiveAccountHaveZeroAsBalanceWhenCreated stamp: 'pau 5/22/2023 15:51:35'!
+PASSED!
+
+!testRun: #ReceptiveAccountTest #test02DepositIncreasesBalanceOnTransactionValue stamp: 'pau 5/22/2023 15:51:35'!
+PASSED!
+
+!testRun: #ReceptiveAccountTest #test03WithdrawDecreasesBalanceOnTransactionValue stamp: 'pau 5/22/2023 15:51:35'!
+PASSED!
+
+!testRun: #ReceptiveAccountTest #test04WithdrawValueMustBePositive stamp: 'pau 5/22/2023 15:51:35'!
+PASSED!
+
+!testRun: #ReceptiveAccountTest #test05ReceptiveAccountKnowsRegisteredTransactions stamp: 'pau 5/22/2023 15:51:35'!
+PASSED!
+
+!testRun: #ReceptiveAccountTest #test06ReceptiveAccountDoNotKnowNotRegisteredTransactions stamp: 'pau 5/22/2023 15:51:35'!
+PASSED!
+
+!testRun: #ReceptiveAccountTest #test07AccountKnowsItsTransactions stamp: 'pau 5/22/2023 15:51:35'!
+PASSED!
+!Portfolio methodsFor: 'initialize' stamp: 'pau 5/22/2023 15:56:42' prior: 50604833 overrides: 16920235!
+initialize
+	content := OrderedCollection new.
+	roots := Set  with: self.! !
+
+!testRun: #PortfolioTest #test01PortfolioWithEmptyAccountHasBalanceZero stamp: 'pau 5/22/2023 15:56:45'!
+PASSED!
+
+!testRun: #PortfolioTest #test02PortfolioWithAccountHasItsBalance stamp: 'pau 5/22/2023 15:56:45'!
+PASSED!
+
+!testRun: #PortfolioTest #test03PortfolioWithTwoAccountsHasTheSumOfTheirBalances stamp: 'pau 5/22/2023 15:56:45'!
+PASSED!
+
+!testRun: #PortfolioTest #test04PortfolioWithEmptyPortfolioHasBalanceZero stamp: 'pau 5/22/2023 15:56:45'!
+ERROR!
+
+!testRun: #PortfolioTest #test05PortfolioWithEmptyAccountHasNoTransactionsRegistered stamp: 'pau 5/22/2023 15:56:45'!
+PASSED!
+
+!testRun: #PortfolioTest #test06PortfolioWithAccountHasRegisteredItsTransactions stamp: 'pau 5/22/2023 15:56:45'!
+PASSED!
+
+!testRun: #PortfolioTest #test07PortfolioWithTwoAccountsHasRegisteredTheirTransactions stamp: 'pau 5/22/2023 15:56:45'!
+PASSED!
+
+!testRun: #PortfolioTest #test08PortfolioWithEmptyAccountHasEmptyTransactions stamp: 'pau 5/22/2023 15:56:45'!
+PASSED!
+
+!testRun: #PortfolioTest #test09PortfolioWithAccountHasItsTransactions stamp: 'pau 5/22/2023 15:56:45'!
+PASSED!
+
+!testRun: #PortfolioTest #test10PortfolioWithTwoAccountHasTheirTransactions stamp: 'pau 5/22/2023 15:56:45'!
+PASSED!
+
+!testRun: #PortfolioTest #test11CantAddAccountAlreadyInCurrentPortofolio stamp: 'pau 5/22/2023 15:56:45'!
+PASSED!
+
+!testRun: #PortfolioTest #test12CantAddAccountAlreadyInChildPortfolio stamp: 'pau 5/22/2023 15:56:45'!
+ERROR!
+
+!testRun: #PortfolioTest #test13CantAddAccountAlreadyInParentPortfolio stamp: 'pau 5/22/2023 15:56:45'!
+ERROR!
+
+!testRun: #PortfolioTest #test14CantAddPortfolioAlreadyInCurrentPortfolio stamp: 'pau 5/22/2023 15:56:45'!
+ERROR!
+
+!testRun: #PortfolioTest #test15CannotAddAccountAlreadyInOtherParent stamp: 'pau 5/22/2023 15:56:45'!
+ERROR!
+
+!testRun: #PortfolioTest #test16CannotAddAnAccountThatIsAlreadyInAGrandparentPortfolio stamp: 'pau 5/22/2023 15:56:45'!
+ERROR!
+
+Set with:1!
+
+s := Set with:1!
+
+s add: 2!
+
+s add: 2!
+
+s!
+
+s do:[:i | i]!
+
+s do:[:i | i+1]!
+
+a := 0.!
+
+s do:[:i |a:= i+1]!
+
+a!
+
+s add: 2.!
+
+s!
+
+s addAll: (Set with: 2 with:3 )!
+
+!testRun: #PortfolioTest #test01PortfolioWithEmptyAccountHasBalanceZero stamp: 'pau 5/22/2023 16:00:00'!
+PASSED!
+
+!testRun: #PortfolioTest #test02PortfolioWithAccountHasItsBalance stamp: 'pau 5/22/2023 16:00:00'!
+PASSED!
+
+!testRun: #PortfolioTest #test03PortfolioWithTwoAccountsHasTheSumOfTheirBalances stamp: 'pau 5/22/2023 16:00:00'!
+PASSED!
+
+!testRun: #PortfolioTest #test04PortfolioWithEmptyPortfolioHasBalanceZero stamp: 'pau 5/22/2023 16:00:00'!
+ERROR!
+
+!testRun: #PortfolioTest #test05PortfolioWithEmptyAccountHasNoTransactionsRegistered stamp: 'pau 5/22/2023 16:00:00'!
+PASSED!
+
+!testRun: #PortfolioTest #test06PortfolioWithAccountHasRegisteredItsTransactions stamp: 'pau 5/22/2023 16:00:00'!
+PASSED!
+
+!testRun: #PortfolioTest #test07PortfolioWithTwoAccountsHasRegisteredTheirTransactions stamp: 'pau 5/22/2023 16:00:00'!
+PASSED!
+
+!testRun: #PortfolioTest #test08PortfolioWithEmptyAccountHasEmptyTransactions stamp: 'pau 5/22/2023 16:00:00'!
+PASSED!
+
+!testRun: #PortfolioTest #test09PortfolioWithAccountHasItsTransactions stamp: 'pau 5/22/2023 16:00:00'!
+PASSED!
+
+!testRun: #PortfolioTest #test10PortfolioWithTwoAccountHasTheirTransactions stamp: 'pau 5/22/2023 16:00:00'!
+PASSED!
+
+!testRun: #PortfolioTest #test11CantAddAccountAlreadyInCurrentPortofolio stamp: 'pau 5/22/2023 16:00:00'!
+PASSED!
+
+!testRun: #PortfolioTest #test12CantAddAccountAlreadyInChildPortfolio stamp: 'pau 5/22/2023 16:00:00'!
+ERROR!
+
+!testRun: #PortfolioTest #test13CantAddAccountAlreadyInParentPortfolio stamp: 'pau 5/22/2023 16:00:00'!
+ERROR!
+
+!testRun: #PortfolioTest #test14CantAddPortfolioAlreadyInCurrentPortfolio stamp: 'pau 5/22/2023 16:00:00'!
+ERROR!
+
+!testRun: #PortfolioTest #test15CannotAddAccountAlreadyInOtherParent stamp: 'pau 5/22/2023 16:00:00'!
+ERROR!
+
+!testRun: #PortfolioTest #test16CannotAddAnAccountThatIsAlreadyInAGrandparentPortfolio stamp: 'pau 5/22/2023 16:00:00'!
+ERROR!
+
+!testRun: #PortfolioTest #test04PortfolioWithEmptyPortfolioHasBalanceZero stamp: 'pau 5/22/2023 16:00:07'!
+ERROR!
+
+!methodRemoval: Portfolio #setName: stamp: 'pau 5/22/2023 16:00:28'!
+setName: name
+	namePort := name!
+
+s first!
+
+s!
+
+s = (Set with:2 with:1 with: 3)!
+!Portfolio methodsFor: 'initialize' stamp: 'pau 5/22/2023 16:02:02' prior: 50605011!
+setRootPortfolio: rootPortfolios
+	(roots = (Set with: self))
+		ifTrue:[roots := rootPortfolios.]
+		ifFalse: [roots addAll: rootPortfolios].
+		
+	content do:[:anAccountOrPortfolio|  anAccountOrPortfolio setRootPortfolio: rootPortfolios].
+	! !
+
+!testRun: #PortfolioTest #test01PortfolioWithEmptyAccountHasBalanceZero stamp: 'pau 5/22/2023 16:02:03'!
+PASSED!
+
+!testRun: #PortfolioTest #test02PortfolioWithAccountHasItsBalance stamp: 'pau 5/22/2023 16:02:03'!
+PASSED!
+
+!testRun: #PortfolioTest #test03PortfolioWithTwoAccountsHasTheSumOfTheirBalances stamp: 'pau 5/22/2023 16:02:03'!
+PASSED!
+
+!testRun: #PortfolioTest #test04PortfolioWithEmptyPortfolioHasBalanceZero stamp: 'pau 5/22/2023 16:02:03'!
+PASSED!
+
+!testRun: #PortfolioTest #test05PortfolioWithEmptyAccountHasNoTransactionsRegistered stamp: 'pau 5/22/2023 16:02:03'!
+PASSED!
+
+!testRun: #PortfolioTest #test06PortfolioWithAccountHasRegisteredItsTransactions stamp: 'pau 5/22/2023 16:02:03'!
+PASSED!
+
+!testRun: #PortfolioTest #test07PortfolioWithTwoAccountsHasRegisteredTheirTransactions stamp: 'pau 5/22/2023 16:02:03'!
+PASSED!
+
+!testRun: #PortfolioTest #test08PortfolioWithEmptyAccountHasEmptyTransactions stamp: 'pau 5/22/2023 16:02:03'!
+PASSED!
+
+!testRun: #PortfolioTest #test09PortfolioWithAccountHasItsTransactions stamp: 'pau 5/22/2023 16:02:03'!
+PASSED!
+
+!testRun: #PortfolioTest #test10PortfolioWithTwoAccountHasTheirTransactions stamp: 'pau 5/22/2023 16:02:03'!
+PASSED!
+
+!testRun: #PortfolioTest #test11CantAddAccountAlreadyInCurrentPortofolio stamp: 'pau 5/22/2023 16:02:03'!
+PASSED!
+
+!testRun: #PortfolioTest #test12CantAddAccountAlreadyInChildPortfolio stamp: 'pau 5/22/2023 16:02:03'!
+PASSED!
+
+!testRun: #PortfolioTest #test13CantAddAccountAlreadyInParentPortfolio stamp: 'pau 5/22/2023 16:02:03'!
+PASSED!
+
+!testRun: #PortfolioTest #test14CantAddPortfolioAlreadyInCurrentPortfolio stamp: 'pau 5/22/2023 16:02:03'!
+PASSED!
+
+!testRun: #PortfolioTest #test15CannotAddAccountAlreadyInOtherParent stamp: 'pau 5/22/2023 16:02:03'!
+PASSED!
+
+!testRun: #PortfolioTest #test16CannotAddAnAccountThatIsAlreadyInAGrandparentPortfolio stamp: 'pau 5/22/2023 16:02:03'!
+ERROR!
+
+!testRun: #PortfolioTest #test16CannotAddAnAccountThatIsAlreadyInAGrandparentPortfolio stamp: 'pau 5/22/2023 16:02:03'!
+ERROR!
+!PortfolioTest methodsFor: 'as yet unclassified' stamp: 'pau 5/22/2023 16:02:20' prior: 50605227!
+test16CannotAddAnAccountThatIsAlreadyInAGrandparentPortfolio
+	
+	|portfolioGrandparent  portfolioParent portfolioChild account account2 |
+		
+	portfolioGrandparent  := Portfolio new.
+	portfolioParent := Portfolio new.
+	portfolioChild:= Portfolio new.
+	
+	account := ReceptiveAccount new.
+	
+	portfolioChild add:account.
+	
+	portfolioParent add: portfolioChild.
+	
+	portfolioGrandparent  add: portfolioParent.
+	
+	account2 := ReceptiveAccount new.
+	
+	portfolioGrandparent add:account2.
+	 
+	self should: [portfolioChild add: account2. ] 
+	raise: Error
+	withExceptionDo: [:anError| self assert: (anError messageText) equals: (ReceptiveAccount cannotAddTwice)]! !
+
+!testRun: #PortfolioTest #test16CannotAddAnAccountThatIsAlreadyInAGrandparentPortfolio stamp: 'pau 5/22/2023 16:02:21'!
+PASSED!
+
+!testRun: #PortfolioTest #test01PortfolioWithEmptyAccountHasBalanceZero stamp: 'pau 5/22/2023 16:02:21'!
+PASSED!
+
+!testRun: #PortfolioTest #test02PortfolioWithAccountHasItsBalance stamp: 'pau 5/22/2023 16:02:21'!
+PASSED!
+
+!testRun: #PortfolioTest #test03PortfolioWithTwoAccountsHasTheSumOfTheirBalances stamp: 'pau 5/22/2023 16:02:21'!
+PASSED!
+
+!testRun: #PortfolioTest #test04PortfolioWithEmptyPortfolioHasBalanceZero stamp: 'pau 5/22/2023 16:02:21'!
+PASSED!
+
+!testRun: #PortfolioTest #test05PortfolioWithEmptyAccountHasNoTransactionsRegistered stamp: 'pau 5/22/2023 16:02:21'!
+PASSED!
+
+!testRun: #PortfolioTest #test06PortfolioWithAccountHasRegisteredItsTransactions stamp: 'pau 5/22/2023 16:02:21'!
+PASSED!
+
+!testRun: #PortfolioTest #test07PortfolioWithTwoAccountsHasRegisteredTheirTransactions stamp: 'pau 5/22/2023 16:02:21'!
+PASSED!
+
+!testRun: #PortfolioTest #test08PortfolioWithEmptyAccountHasEmptyTransactions stamp: 'pau 5/22/2023 16:02:21'!
+PASSED!
+
+!testRun: #PortfolioTest #test09PortfolioWithAccountHasItsTransactions stamp: 'pau 5/22/2023 16:02:21'!
+PASSED!
+
+!testRun: #PortfolioTest #test10PortfolioWithTwoAccountHasTheirTransactions stamp: 'pau 5/22/2023 16:02:21'!
+PASSED!
+
+!testRun: #PortfolioTest #test11CantAddAccountAlreadyInCurrentPortofolio stamp: 'pau 5/22/2023 16:02:21'!
+PASSED!
+
+!testRun: #PortfolioTest #test12CantAddAccountAlreadyInChildPortfolio stamp: 'pau 5/22/2023 16:02:21'!
+PASSED!
+
+!testRun: #PortfolioTest #test13CantAddAccountAlreadyInParentPortfolio stamp: 'pau 5/22/2023 16:02:21'!
+PASSED!
+
+!testRun: #PortfolioTest #test14CantAddPortfolioAlreadyInCurrentPortfolio stamp: 'pau 5/22/2023 16:02:21'!
+PASSED!
+
+!testRun: #PortfolioTest #test15CannotAddAccountAlreadyInOtherParent stamp: 'pau 5/22/2023 16:02:21'!
+PASSED!
+
+!testRun: #PortfolioTest #test16CannotAddAnAccountThatIsAlreadyInAGrandparentPortfolio stamp: 'pau 5/22/2023 16:02:21'!
+PASSED!
+!BankAccount methodsFor: 'as yet unclassified' stamp: 'pau 5/22/2023 16:02:55' prior: 50605452!
+contains: anAccountOrPortfolio
+	self subclassResponsibility ! !
+!Portfolio methodsFor: 'add' stamp: 'pau 5/22/2023 16:05:23'!
+assertCannotAdd: anAccountOrAPortfolio
+
+	^ self error: anAccountOrAPortfolio class cannotAddTwice! !
+!Portfolio methodsFor: 'add' stamp: 'pau 5/22/2023 16:05:23' prior: 50604788!
+add: anAccountOrAPortfolio 
+	
+	(anAccountOrAPortfolio isKindOf: Portfolio ) ifTrue: [anAccountOrAPortfolio setRootPortfolio: roots.].
+	 
+	roots do: [:root| (root contains: anAccountOrAPortfolio)
+					ifTrue: [self assertCannotAdd: anAccountOrAPortfolio].].
+				
+	content add: anAccountOrAPortfolio! !
+
+!testRun: #PortfolioTest #test01PortfolioWithEmptyAccountHasBalanceZero stamp: 'pau 5/22/2023 16:05:28'!
+PASSED!
+
+!testRun: #PortfolioTest #test02PortfolioWithAccountHasItsBalance stamp: 'pau 5/22/2023 16:05:28'!
+PASSED!
+
+!testRun: #PortfolioTest #test03PortfolioWithTwoAccountsHasTheSumOfTheirBalances stamp: 'pau 5/22/2023 16:05:28'!
+PASSED!
+
+!testRun: #PortfolioTest #test04PortfolioWithEmptyPortfolioHasBalanceZero stamp: 'pau 5/22/2023 16:05:28'!
+PASSED!
+
+!testRun: #PortfolioTest #test05PortfolioWithEmptyAccountHasNoTransactionsRegistered stamp: 'pau 5/22/2023 16:05:28'!
+PASSED!
+
+!testRun: #PortfolioTest #test06PortfolioWithAccountHasRegisteredItsTransactions stamp: 'pau 5/22/2023 16:05:28'!
+PASSED!
+
+!testRun: #PortfolioTest #test07PortfolioWithTwoAccountsHasRegisteredTheirTransactions stamp: 'pau 5/22/2023 16:05:28'!
+PASSED!
+
+!testRun: #PortfolioTest #test08PortfolioWithEmptyAccountHasEmptyTransactions stamp: 'pau 5/22/2023 16:05:28'!
+PASSED!
+
+!testRun: #PortfolioTest #test09PortfolioWithAccountHasItsTransactions stamp: 'pau 5/22/2023 16:05:28'!
+PASSED!
+
+!testRun: #PortfolioTest #test10PortfolioWithTwoAccountHasTheirTransactions stamp: 'pau 5/22/2023 16:05:28'!
+PASSED!
+
+!testRun: #PortfolioTest #test11CantAddAccountAlreadyInCurrentPortofolio stamp: 'pau 5/22/2023 16:05:28'!
+PASSED!
+
+!testRun: #PortfolioTest #test12CantAddAccountAlreadyInChildPortfolio stamp: 'pau 5/22/2023 16:05:28'!
+PASSED!
+
+!testRun: #PortfolioTest #test13CantAddAccountAlreadyInParentPortfolio stamp: 'pau 5/22/2023 16:05:28'!
+PASSED!
+
+!testRun: #PortfolioTest #test14CantAddPortfolioAlreadyInCurrentPortfolio stamp: 'pau 5/22/2023 16:05:28'!
+PASSED!
+
+!testRun: #PortfolioTest #test15CannotAddAccountAlreadyInOtherParent stamp: 'pau 5/22/2023 16:05:28'!
+PASSED!
+
+!testRun: #PortfolioTest #test16CannotAddAnAccountThatIsAlreadyInAGrandparentPortfolio stamp: 'pau 5/22/2023 16:05:28'!
+PASSED!
+!Portfolio methodsFor: 'add' stamp: 'pau 5/22/2023 16:06:11'!
+anyRootPortfolioHas: anAccountOrAPortfolio
+
+	^ roots do: [:root| (root contains: anAccountOrAPortfolio)
+					ifTrue: [self assertCannotAdd: anAccountOrAPortfolio].]! !
+!Portfolio methodsFor: 'add' stamp: 'pau 5/22/2023 16:06:11' prior: 50605797!
+add: anAccountOrAPortfolio 
+	
+	(anAccountOrAPortfolio isKindOf: Portfolio ) ifTrue: [anAccountOrAPortfolio setRootPortfolio: roots.].
+	 
+	self anyRootPortfolioHas: anAccountOrAPortfolio.
+				
+	content add: anAccountOrAPortfolio! !
+
+!testRun: #PortfolioTest #test01PortfolioWithEmptyAccountHasBalanceZero stamp: 'pau 5/22/2023 16:06:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test02PortfolioWithAccountHasItsBalance stamp: 'pau 5/22/2023 16:06:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test03PortfolioWithTwoAccountsHasTheSumOfTheirBalances stamp: 'pau 5/22/2023 16:06:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test04PortfolioWithEmptyPortfolioHasBalanceZero stamp: 'pau 5/22/2023 16:06:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test05PortfolioWithEmptyAccountHasNoTransactionsRegistered stamp: 'pau 5/22/2023 16:06:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test06PortfolioWithAccountHasRegisteredItsTransactions stamp: 'pau 5/22/2023 16:06:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test07PortfolioWithTwoAccountsHasRegisteredTheirTransactions stamp: 'pau 5/22/2023 16:06:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test08PortfolioWithEmptyAccountHasEmptyTransactions stamp: 'pau 5/22/2023 16:06:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test09PortfolioWithAccountHasItsTransactions stamp: 'pau 5/22/2023 16:06:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test10PortfolioWithTwoAccountHasTheirTransactions stamp: 'pau 5/22/2023 16:06:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test11CantAddAccountAlreadyInCurrentPortofolio stamp: 'pau 5/22/2023 16:06:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test12CantAddAccountAlreadyInChildPortfolio stamp: 'pau 5/22/2023 16:06:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test13CantAddAccountAlreadyInParentPortfolio stamp: 'pau 5/22/2023 16:06:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test14CantAddPortfolioAlreadyInCurrentPortfolio stamp: 'pau 5/22/2023 16:06:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test15CannotAddAccountAlreadyInOtherParent stamp: 'pau 5/22/2023 16:06:15'!
+PASSED!
+
+!testRun: #PortfolioTest #test16CannotAddAnAccountThatIsAlreadyInAGrandparentPortfolio stamp: 'pau 5/22/2023 16:06:15'!
+PASSED!
+
+----SNAPSHOT----(22 May 2023 16:07:19) CuisUniversity-5706.image priorSource: 8758264!
+!Portfolio methodsFor: 'add' stamp: 'pau 5/22/2023 16:07:47' prior: 50605876!
+add: anAccountOrAPortfolio 
+	
+	(anAccountOrAPortfolio isKindOf: Portfolio) ifTrue: [anAccountOrAPortfolio setRootPortfolio: roots.].
+	 
+	self anyRootPortfolioHas: anAccountOrAPortfolio.
+				
+	content add: anAccountOrAPortfolio! !
+
+----SNAPSHOT----(22 May 2023 16:16:45) CuisUniversity-5706.image priorSource: 8777413!
