@@ -1,0 +1,4002 @@
+
+
+----QUIT----(20 March 2023 11:15:29) CuisUniversity-5706.image priorSource: 4313282!
+
+----STARTUP---- (20 March 2023 11:15:29) as /Users/hernan/Documents/Cuis/5.0-64Bits/Cuis-University-Installer/CuisUniversity-5706.image!
+
+
+----QUIT----(20 March 2023 11:15:30) CuisUniversity-5706.image priorSource: 8712809!
+
+----STARTUP---- (27 April 2023 17:55:47) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/CuisUniversity-5706.image!
+
+
+----End fileIn of /home/paula/Documents/COMPUTACION/Inge1-1c2023/2023-1c/04-BabySteps/TDDBabyStepsGame.st----!
+
+TDDBabyStepsGameContador start!
+
+!classDefinition: #TDDBabyStepsContadorTest category: 'TDDBabyStepsGameContador' stamp: 'pau 4/27/2023 17:57:59'!
+TestCase subclass: #TDDBabyStepsContadorTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGameContador'!
+!TDDBabyStepsContadorTest methodsFor: 'tests' stamp: 'pau 4/27/2023 18:00:21'!
+test01UnNuevoContadorEmpiezaConValorCero
+
+	| contador |
+		
+	contador := Contador new.
+	self assert: 0 equals: contador valor.
+	! !
+
+!testRun: #TDDBabyStepsContadorTest #test01UnNuevoContadorEmpiezaConValorCero stamp: 'pau 4/27/2023 18:00:46'!
+ERROR!
+
+!testRun: #TDDBabyStepsContadorTest #test01UnNuevoContadorEmpiezaConValorCero stamp: 'pau 4/27/2023 18:00:46'!
+ERROR!
+
+Object subclass: #Contador
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGameContador'!
+
+!classDefinition: #Contador category: 'TDDBabyStepsGameContador' stamp: 'pau 4/27/2023 18:01:29'!
+Object subclass: #Contador
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGameContador'!
+!Contador methodsFor: 'nil' stamp: 'pau 4/27/2023 18:01:41'!
+valor
+	^0! !
+!Contador methodsFor: 'as yet unclassified' stamp: 'pau 4/27/2023 18:01:46' prior: 50605775!
+valor
+	^0
+	! !
+
+!testRun: #TDDBabyStepsContadorTest #test01UnNuevoContadorEmpiezaConValorCero stamp: 'pau 4/27/2023 18:01:49'!
+PASSED!
+
+!testRun: #TDDBabyStepsContadorTest #test01UnNuevoContadorEmpiezaConValorCero stamp: 'pau 4/27/2023 18:01:59'!
+PASSED!
+
+!testRun: #TDDBabyStepsContadorTest #test01UnNuevoContadorEmpiezaConValorCero stamp: 'pau 4/27/2023 18:02:33'!
+PASSED!
+!TDDBabyStepsContadorTest methodsFor: 'tests' stamp: 'pau 4/27/2023 18:02:33'!
+test02AlIncrementarUnaVezElContadorSuValorSubeUno
+
+	| contador |
+
+	contador := Contador new.
+	contador incrementar.
+	self assert: 1 equals: contador valor.
+	! !
+
+!testRun: #TDDBabyStepsContadorTest #test02AlIncrementarUnaVezElContadorSuValorSubeUno stamp: 'pau 4/27/2023 18:02:33'!
+ERROR!
+
+!methodRemoval: TDDBabyStepsContadorTest #test02AlIncrementarUnaVezElContadorSuValorSubeUno stamp: 'pau 4/27/2023 18:02:33'!
+test02AlIncrementarUnaVezElContadorSuValorSubeUno
+
+	| contador |
+
+	contador := Contador new.
+	contador incrementar.
+	self assert: 1 equals: contador valor.
+	!
+!TDDBabyStepsContadorTest methodsFor: 'tests' stamp: 'pau 4/27/2023 18:02:33'!
+test02AlIncrementarUnaVezElContadorSuValorSubeUno
+
+	| contador |
+
+	contador := Contador new.
+	contador incrementar.
+	self assert: 1 equals: contador valor.
+	! !
+
+!testRun: #TDDBabyStepsContadorTest #test02AlIncrementarUnaVezElContadorSuValorSubeUno stamp: 'pau 4/27/2023 18:02:33'!
+ERROR!
+!Contador methodsFor: 'nil' stamp: 'pau 4/27/2023 18:03:00'!
+incrementar
+! !
+!Contador methodsFor: 'as yet unclassified' stamp: 'pau 4/27/2023 18:04:24' prior: 50605826!
+incrementar
+	| valor |
+	valor := 1.! !
+
+Object subclass: #Contador
+	instanceVariableNames: 'valor'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGameContador'!
+
+Object subclass: #Contador
+	instanceVariableNames: 'valor'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGameContador'!
+
+Object subclass: #Contador
+	instanceVariableNames: 'valor'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGameContador'!
+
+Object subclass: #Contador
+	instanceVariableNames: 'valor'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGameContador'!
+
+Object subclass: #Contador
+	instanceVariableNames: 'valor1'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGameContador'!
+
+!classDefinition: #Contador category: 'TDDBabyStepsGameContador' stamp: 'pau 4/27/2023 18:06:49'!
+Object subclass: #Contador
+	instanceVariableNames: 'valor1'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGameContador'!
+!Contador methodsFor: 'as yet unclassified' stamp: 'pau 4/27/2023 18:07:05' prior: 50605830!
+incrementar
+	"valor := 1."! !
+
+Object subclass: #Contador
+	instanceVariableNames: 'valor'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGameContador'!
+
+!classDefinition: #Contador category: 'TDDBabyStepsGameContador' stamp: 'pau 4/27/2023 18:07:08'!
+Object subclass: #Contador
+	instanceVariableNames: 'valor'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGameContador'!
+!Contador methodsFor: 'as yet unclassified' stamp: 'pau 4/27/2023 18:07:14' prior: 50605865!
+incrementar
+	valor := 1.! !
+!Contador methodsFor: 'as yet unclassified' stamp: 'pau 4/27/2023 18:07:19' prior: 50605779!
+valor
+	^valor.
+	! !
+
+!testRun: #TDDBabyStepsContadorTest #test01UnNuevoContadorEmpiezaConValorCero stamp: 'pau 4/27/2023 18:07:26'!
+FAILURE!
+
+!testRun: #TDDBabyStepsContadorTest #test02AlIncrementarUnaVezElContadorSuValorSubeUno stamp: 'pau 4/27/2023 18:07:26'!
+PASSED!
+
+!testRun: #TDDBabyStepsContadorTest #test01UnNuevoContadorEmpiezaConValorCero stamp: 'pau 4/27/2023 18:07:26'!
+FAILURE!
+!Contador methodsFor: 'nil' stamp: 'pau 4/27/2023 18:07:54' overrides: 16920235!
+initialize
+	valor := 0.! !
+
+!testRun: #TDDBabyStepsContadorTest #test01UnNuevoContadorEmpiezaConValorCero stamp: 'pau 4/27/2023 18:07:59'!
+PASSED!
+
+!testRun: #TDDBabyStepsContadorTest #test02AlIncrementarUnaVezElContadorSuValorSubeUno stamp: 'pau 4/27/2023 18:07:59'!
+PASSED!
+
+!testRun: #TDDBabyStepsContadorTest #test01UnNuevoContadorEmpiezaConValorCero stamp: 'pau 4/27/2023 18:08:44'!
+PASSED!
+
+!testRun: #TDDBabyStepsContadorTest #test02AlIncrementarUnaVezElContadorSuValorSubeUno stamp: 'pau 4/27/2023 18:08:44'!
+PASSED!
+!TDDBabyStepsContadorTest methodsFor: 'tests' stamp: 'pau 4/27/2023 18:08:44'!
+test03SePuedeIncrementarVariasVecesElContadorYSuValorIncrementaEnUnoEsaCantidadDeVeces
+
+	| contador |
+
+	contador := Contador new.
+	contador incrementar.
+	contador incrementar.
+	contador incrementar.
+	self assert: 3 equals: contador valor.
+	! !
+
+!testRun: #TDDBabyStepsContadorTest #test03SePuedeIncrementarVariasVecesElContadorYSuValorIncrementaEnUnoEsaCantidadDeVeces stamp: 'pau 4/27/2023 18:08:44'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsContadorTest #test03SePuedeIncrementarVariasVecesElContadorYSuValorIncrementaEnUnoEsaCantidadDeVeces stamp: 'pau 4/27/2023 18:08:44'!
+test03SePuedeIncrementarVariasVecesElContadorYSuValorIncrementaEnUnoEsaCantidadDeVeces
+
+	| contador |
+
+	contador := Contador new.
+	contador incrementar.
+	contador incrementar.
+	contador incrementar.
+	self assert: 3 equals: contador valor.
+	!
+!TDDBabyStepsContadorTest methodsFor: 'tests' stamp: 'pau 4/27/2023 18:08:44'!
+test03SePuedeIncrementarVariasVecesElContadorYSuValorIncrementaEnUnoEsaCantidadDeVeces
+
+	| contador |
+
+	contador := Contador new.
+	contador incrementar.
+	contador incrementar.
+	contador incrementar.
+	self assert: 3 equals: contador valor.
+	! !
+
+!testRun: #TDDBabyStepsContadorTest #test03SePuedeIncrementarVariasVecesElContadorYSuValorIncrementaEnUnoEsaCantidadDeVeces stamp: 'pau 4/27/2023 18:08:44'!
+FAILURE!
+!Contador methodsFor: 'as yet unclassified' stamp: 'pau 4/27/2023 18:08:59' prior: 50605881!
+incrementar
+	valor := valor +1.! !
+
+!testRun: #TDDBabyStepsContadorTest #test01UnNuevoContadorEmpiezaConValorCero stamp: 'pau 4/27/2023 18:09:01'!
+PASSED!
+
+!testRun: #TDDBabyStepsContadorTest #test02AlIncrementarUnaVezElContadorSuValorSubeUno stamp: 'pau 4/27/2023 18:09:01'!
+PASSED!
+
+!testRun: #TDDBabyStepsContadorTest #test03SePuedeIncrementarVariasVecesElContadorYSuValorIncrementaEnUnoEsaCantidadDeVeces stamp: 'pau 4/27/2023 18:09:01'!
+PASSED!
+
+!testRun: #TDDBabyStepsContadorTest #test01UnNuevoContadorEmpiezaConValorCero stamp: 'pau 4/27/2023 18:09:28'!
+PASSED!
+
+!testRun: #TDDBabyStepsContadorTest #test02AlIncrementarUnaVezElContadorSuValorSubeUno stamp: 'pau 4/27/2023 18:09:28'!
+PASSED!
+
+!testRun: #TDDBabyStepsContadorTest #test03SePuedeIncrementarVariasVecesElContadorYSuValorIncrementaEnUnoEsaCantidadDeVeces stamp: 'pau 4/27/2023 18:09:28'!
+PASSED!
+
+!testRun: #TDDBabyStepsContadorTest #test01UnNuevoContadorEmpiezaConValorCero stamp: 'pau 4/27/2023 18:09:34'!
+PASSED!
+
+!testRun: #TDDBabyStepsContadorTest #test02AlIncrementarUnaVezElContadorSuValorSubeUno stamp: 'pau 4/27/2023 18:09:34'!
+PASSED!
+
+!testRun: #TDDBabyStepsContadorTest #test03SePuedeIncrementarVariasVecesElContadorYSuValorIncrementaEnUnoEsaCantidadDeVeces stamp: 'pau 4/27/2023 18:09:34'!
+PASSED!
+!TDDBabyStepsContadorTest methodsFor: 'tests' stamp: 'pau 4/27/2023 18:09:34'!
+extraTest
+	
+	self assert: true.
+	! !
+
+!testRun: #TDDBabyStepsContadorTest #test01UnNuevoContadorEmpiezaConValorCero stamp: 'pau 4/27/2023 18:09:34'!
+PASSED!
+
+!testRun: #TDDBabyStepsContadorTest #test02AlIncrementarUnaVezElContadorSuValorSubeUno stamp: 'pau 4/27/2023 18:09:34'!
+PASSED!
+
+!testRun: #TDDBabyStepsContadorTest #test03SePuedeIncrementarVariasVecesElContadorYSuValorIncrementaEnUnoEsaCantidadDeVeces stamp: 'pau 4/27/2023 18:09:34'!
+PASSED!
+
+!classRemoval: #Contador stamp: 'pau 4/27/2023 18:11:31'!
+Object subclass: #Contador
+	instanceVariableNames: 'valor'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGameContador'!
+
+!classRemoval: #TDDBabyStepsContadorTest stamp: 'pau 4/27/2023 18:11:32'!
+TestCase subclass: #TDDBabyStepsContadorTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGameContador'!
+
+TDDBabyStepsGameRot13 start!
+
+!classDefinition: #TDDBabyStepsRot13Test category: 'TDDBabyStepsGameRot13' stamp: 'pau 4/27/2023 18:11:50'!
+TestCase subclass: #TDDBabyStepsRot13Test
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGameRot13'!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 18:14:03'!
+test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet
+	
+	self assert: $n equals: $a asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:15:13'!
+ERROR!
+
+Object subclass: #Rot13
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGameRot13'!
+
+!classDefinition: #Rot13 category: 'TDDBabyStepsGameRot13' stamp: 'pau 4/27/2023 18:15:42'!
+Object subclass: #Rot13
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGameRot13'!
+
+!classRemoval: #Rot13 stamp: 'pau 4/27/2023 18:16:03'!
+Object subclass: #Rot13
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGameRot13'!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:16:10'!
+ERROR!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:16:10'!
+ERROR!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:17:15'!
+ERROR!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:17:35'!
+ERROR!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:17:35'!
+ERROR!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:18:16'!
+asRot13
+	self shouldBeImplemented.! !
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:18:38' prior: 50606096!
+asRot13
+	^$ n! !
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:18:44'!
+ERROR!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:18:44'!
+ERROR!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:19:15' prior: 50606100!
+asRot13
+	^ $ a.! !
+
+$ a !
+
+$ A!
+
+----End fileIn of /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/Packages/TerseGuide.pck.st----!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:20:43' prior: 50606113!
+asRot13
+	^ $n.! !
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:20:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:20:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:21:05'!
+PASSED!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 18:21:05'!
+test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet
+	
+	self assert: $z equals: $m asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:21:05'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:21:05'!
+test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet
+	
+	self assert: $z equals: $m asRot13
+	!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 18:21:05'!
+test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet
+	
+	self assert: $z equals: $m asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:21:05'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:21:26'!
+FAILURE!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:22:52' prior: 50609038!
+asRot13
+	self = $m ifTrue: [^$z] 
+	^ $n.! !
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:23:26' prior: 50609089!
+asRot13
+	self = $z ifTrue: [^$m] 
+	^ $n.! !
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:23:37' prior: 50609094!
+asRot13
+	self = $m ifTrue: [^$z].
+	^$n.! !
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:23:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:23:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:23:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:23:53'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:23:53'!
+PASSED!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 18:23:53'!
+test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet
+	
+	self assert: $a equals: $n asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:23:53'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:23:53'!
+test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet
+	
+	self assert: $a equals: $n asRot13
+	!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 18:23:53'!
+test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet
+	
+	self assert: $a equals: $n asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:23:53'!
+FAILURE!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:24:59' prior: 50609099!
+asRot13
+	self = $m ifTrue: [^$z].
+	self = $a ifTrue:[^$n]
+	^$n.! !
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:25:09' prior: 50609155!
+asRot13
+	self = $m ifTrue: [^$z].
+	self = $n ifTrue:[^$a].
+	^$n.! !
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:25:13'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:25:13'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:25:13'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:25:13'!
+PASSED!
+
+($a) asciiValue !
+
+97 mod: 13!
+
+6 asCharacter !
+
+97 mod: 13!
+
+6 asCharacter !
+
+Character asciiValue: 6!
+
+Character asciiValue: 6!
+
+Character asciiValue: 6!
+
+($a) asciiValue  !
+
+($a) asciiValue!
+
+Character asciiValue: 97!
+
+97 mod: 13.!
+
+Character asciiValue: 97+6!
+
+Character asciiValue: 97+13!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:34:05' prior: 50609160!
+asRot13
+	|assiVal|
+	assiVal := self asciiValue.
+	self = $m ifTrue: [^$z].
+	self = $n ifTrue:[^$a].
+	^Character asciiValue: assiVal + 13.! !
+
+($m) asciiValue!
+
+Character asciiValue: 109+13!
+
+($n) asciiValue!
+
+char := ($n) asciiValue. !
+
+Character asciiValue: char +13!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:40:28' prior: 50609192!
+asRot13
+	|assiVal asciiVal |
+	asciiVal := self asciiValue.
+	((self asciiValue) between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: assiVal + 13].
+	
+	self = $m ifTrue: [^$z]. "Estoy en la segunda mitad"
+	self = $n ifTrue:[^$a]. "Estoy al final"
+	^Character asciiValue: assiVal + 13.! !
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:41:01' prior: 50609204!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	((self asciiValue) between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	self = $m ifTrue: [^$z]. "Estoy en la segunda mitad"
+	self = $n ifTrue:[^$a]. "Estoy al final"
+	^Character asciiValue: asciiVal + 13.! !
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:41:43' prior: 50609217!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	((self asciiValue) between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	self = $m ifTrue: [^$z]. "Estoy en la segunda mitad"
+	self = $n ifTrue:[^$a]. "Estoy al final"! !
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:41:56' prior: 50609230!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	self = $m ifTrue: [^$z]. "Estoy en la segunda mitad"
+	self = $n ifTrue:[^$a]. "Estoy al final"! !
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:43:12' prior: 50609242!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: ((asciiVal + 13) mod: 13)].
+
+	"self = $n ifTrue:[^$a]. Estoy al final" ! !
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:43:25'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:43:28'!
+PASSED!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:44:09' prior: 50609253!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	"(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: ((asciiVal + 13) mod: 13)]."
+
+	self = $n ifTrue:[^$a]. ! !
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:44:22'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:44:22'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:44:22'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:44:22'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:44:35'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:44:35'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:44:35'!
+PASSED!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 18:44:35'!
+test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet
+	
+	self assert: $m equals: $z asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:44:35'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:44:35'!
+test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet
+	
+	self assert: $m equals: $z asRot13
+	!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 18:44:35'!
+test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet
+	
+	self assert: $m equals: $z asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:44:35'!
+FAILURE!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:45:09' prior: 50609275!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	"(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: ((asciiVal + 13) mod: 13)]."
+
+	self = $n ifTrue:[^$a]. 
+	self = $m ifTrue:[^$z].! !
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:45:13'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:45:18'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:45:18'!
+FAILURE!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:45:25' prior: 50609349!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	"(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: ((asciiVal + 13) mod: 13)]."
+
+	self = $n ifTrue:[^$a]. 
+	self = $z ifTrue:[^$m].! !
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:45:28'!
+PASSED!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:45:40' prior: 50609376!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: ((asciiVal + 13) mod: 13)].
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:45:50'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:45:50'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:45:50'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:45:50'!
+FAILURE!
+
+Character asciiValue: (char +13 mod:13)!
+
+Character asciiValue: char +13!
+
+Character asciiValue: (char mod: 13)!
+
+Character asciiValue: (char mod: 13)!
+
+Character asciiValue: char -13!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:47:22' prior: 50609394!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:47:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:47:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:47:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:47:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:47:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:47:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:47:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:47:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:47:53'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:47:53'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:47:53'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:47:53'!
+PASSED!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 18:47:53'!
+test05CharOnTheBelowRangeDoesntChange
+	
+	self assert: $` equals: $` asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:47:53'!
+PASSED!
+
+!methodRemoval: TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:47:53'!
+test05CharOnTheBelowRangeDoesntChange
+	
+	self assert: $` equals: $` asRot13
+	!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:50:43' prior: 50609430!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	^'2121'
+! !
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:50:58' prior: 50609510!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	^${
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:51:02'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:51:02'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:51:02'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:51:02'!
+PASSED!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 18:51:02'!
+test05CharOnTheBelowRangeDoesntChange
+	
+	self assert: $` equals: $` asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:51:02'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:51:02'!
+test05CharOnTheBelowRangeDoesntChange
+	
+	self assert: $` equals: $` asRot13
+	!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 18:51:02'!
+test05CharOnTheBelowRangeDoesntChange
+	
+	self assert: $` equals: $` asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:51:02'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:51:23'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:51:23'!
+FAILURE!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:51:33' prior: 50609522!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	^self
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:51:41'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:51:41'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:51:41'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:51:41'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:51:41'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:51:41'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:51:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:51:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:51:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:51:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:51:48'!
+PASSED!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 18:51:48'!
+test06CharOnTheUpperRangeDoesntChange
+	
+	self assert: ${ equals: ${ asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:51:48'!
+PASSED!
+
+!methodRemoval: TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:51:48'!
+test06CharOnTheUpperRangeDoesntChange
+	
+	self assert: ${ equals: ${ asRot13
+	!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:52:58' prior: 50609583!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	(self = $s) ifTrue: [^self ].
+	
+	^'ñ'
+! !
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:53:25' prior: 50609656!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	(self = $`) ifTrue: [^self ].
+	
+	^'ñ'
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:53:27'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:53:27'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:53:27'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:53:27'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:53:27'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:53:27'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:53:30'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:53:30'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:53:30'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:53:30'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:53:30'!
+PASSED!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 18:53:30'!
+test06CharOnTheUpperRangeDoesntChange
+	
+	self assert: ${ equals: ${ asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:53:30'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:53:30'!
+test06CharOnTheUpperRangeDoesntChange
+	
+	self assert: ${ equals: ${ asRot13
+	!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 18:53:30'!
+test06CharOnTheUpperRangeDoesntChange
+	
+	self assert: ${ equals: ${ asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:53:30'!
+FAILURE!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:54:15' prior: 50609669!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	(asciiVal < ($a asciiValue)) ifTrue: [^self ].
+	
+	^'ñ'
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:54:20'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:54:20'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:54:20'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:54:20'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:54:20'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:54:20'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:54:20'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:54:20'!
+FAILURE!
+
+char := ($a) asciiValue. !
+
+$a asciiValue!
+
+	(asciiVal < ($a asciiValue)) ifTrue: [^self ].!
+
+asciiVal!
+
+$a asciiValue!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:56:46'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:56:49'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:56:49'!
+FAILURE!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:57:15' prior: 50609752!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	(asciiVal < ($a asciiValue)) ifTrue: [^self ].
+	
+	(self == ${) ifTrue: [^self].
+	^'ñ'
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:57:20'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:57:20'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:57:20'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:57:20'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:57:20'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:57:20'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:57:20'!
+PASSED!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:57:37' prior: 50609812!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	(asciiVal < ($a asciiValue)) ifTrue: [^self ].
+	
+	(asciiVal  > $z) ifTrue: [^self].
+	^'ñ'
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:57:42'!
+ERROR!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:57:51'!
+ERROR!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:57:51'!
+ERROR!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:58:10' prior: 50609855!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	(asciiVal < ($a asciiValue)) ifTrue: [^self ].
+	
+	(asciiVal  > ($z asciiValue )) ifTrue: [^self].
+	^'ñ'
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:58:16'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:58:16'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:58:16'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:58:16'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:58:16'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:58:16'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:58:16'!
+PASSED!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:58:23' prior: 50609880!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	(asciiVal < ($a asciiValue)) ifTrue: [^self ].
+	
+	(asciiVal  > ($z asciiValue )) ifTrue: [^self].
+	
+	^'ñ'
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:58:25'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:58:25'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:58:25'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:58:25'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:58:25'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:58:25'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:58:33'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:58:33'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:58:33'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:58:33'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:58:33'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:58:33'!
+PASSED!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 18:58:33'!
+test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet
+	
+	self assert: $N equals: $A asRot13.
+	self assert: $Z equals: $M asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:58:33'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:58:33'!
+test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet
+	
+	self assert: $N equals: $A asRot13.
+	self assert: $Z equals: $M asRot13
+	!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 18:58:33'!
+test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet
+	
+	self assert: $N equals: $A asRot13.
+	self assert: $Z equals: $M asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:58:33'!
+FAILURE!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 18:59:13' prior: 50609924!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	((asciiVal < ($a asciiValue)) or: [(asciiVal  > ($z asciiValue ))]) ifTrue: [^self ].
+	
+	^'ñ'
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:59:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:59:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:59:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:59:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:59:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:59:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:59:23'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:59:23'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:59:29'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:59:29'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:59:29'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 18:59:29'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 18:59:29'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 18:59:29'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:59:29'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 18:59:29'!
+FAILURE!
+
+char := ($A) asciiValue. !
+
+Character asciiValue: char +13!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:01:12' prior: 50610022!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	((asciiVal < ($a asciiValue)) or: [(asciiVal  > ($z asciiValue ))]) ifTrue: [^self ].
+	
+	((self = $A) or:[self = $M]) ifTrue: [^ asciiVal +13]. 
+	
+	^'ñ'
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:01:20'!
+FAILURE!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:02:21' prior: 50610107!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	((asciiVal < ($a asciiValue)) or: [(asciiVal  > ($z asciiValue ))]) ifTrue: [^self ].
+	
+
+	((self = $A) or:[self = $M]) ifTrue: [^ Character asciiValue: (asciiVal +13)]. 
+	^'ñ'
+! !
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:02:26' prior: 50610128!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	((asciiVal < ($a asciiValue)) or: [(asciiVal  > ($z asciiValue ))]) ifTrue: [^self ].
+	
+	((self = $A) or:[self = $M]) ifTrue: [^ Character asciiValue: (asciiVal +13)]. 
+	^'ñ'
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:02:28'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:03:33'!
+FAILURE!
+
+Character asciiValue: char +13!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:03:48' prior: 50610145!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	((asciiVal < ($a asciiValue)) or: [(asciiVal  > ($z asciiValue ))]) ifTrue: [^self ].
+	
+	((self = $A) or:[self = $M]) ifTrue: [^ Character asciiValue: asciiVal +13]. 
+	^'ñ'
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:03:53'!
+FAILURE!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:04:12' prior: 50610172!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	((asciiVal < ($a asciiValue)) or: [(asciiVal  > ($z asciiValue ))]) ifTrue: [^self ].
+	
+	((self = $A) or:[self = $M]) ifTrue: [^ Character asciiValue: asciiVal + 13]. 
+	^'ñ'
+! !
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:04:32' prior: 50610194!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	((self = $A) or:[self = $M]) ifTrue: [^ Character asciiValue: asciiVal + 13]. 
+	
+	((asciiVal < ($a asciiValue)) or: [(asciiVal  > ($z asciiValue ))]) ifTrue: [^self ].
+	^'ñ'
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:04:34'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:04:34'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:04:34'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:04:34'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:04:34'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:04:34'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:04:34'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:04:34'!
+PASSED!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:05:22' prior: 50610211!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	(asciiVal between: ($A asciiValue) and: ($M asciiValue)) ifTrue: [^ Character asciiValue: asciiVal + 13]. 
+	
+	((asciiVal < ($a asciiValue)) or: [(asciiVal  > ($z asciiValue ))]) ifTrue: [^self ].
+	^'ñ'
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:27'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:27'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:27'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:27'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:27'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:05:27'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:05:27'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:27'!
+PASSED!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:05:33' prior: 50610262!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	(asciiVal between: ($A asciiValue) and: ($M asciiValue)) 
+	ifTrue: [^ Character asciiValue: asciiVal + 13]. 
+	
+	((asciiVal < ($a asciiValue)) or: [(asciiVal  > ($z asciiValue ))]) ifTrue: [^self ].
+	^'ñ'
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:05:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:05:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:52'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:52'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:52'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:52'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:05:52'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:05:52'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:52'!
+PASSED!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 19:05:52'!
+test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet
+	
+	self assert: $A equals: $N asRot13.
+	self assert: $M equals: $Z asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:52'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:52'!
+test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet
+	
+	self assert: $A equals: $N asRot13.
+	self assert: $M equals: $Z asRot13
+	!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 19:05:52'!
+test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet
+	
+	self assert: $A equals: $N asRot13.
+	self assert: $M equals: $Z asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:05:52'!
+FAILURE!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:06:19' prior: 50610314!
+asRot13
+	| asciiVal |
+	asciiVal := self asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	(asciiVal between: ($A asciiValue) and: ($M asciiValue)) 
+	ifTrue: [^ Character asciiValue: asciiVal + 13]. 
+	
+	(asciiVal between: ($N asciiValue) and: ($Z asciiValue)) 
+	ifTrue: [^ Character asciiValue: asciiVal - 13].
+	((asciiVal < ($a asciiValue)) or: [(asciiVal  > ($z asciiValue ))]) ifTrue: [^self ].
+	^'ñ'
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:06:24'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:06:24'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:06:24'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:06:24'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:06:24'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:06:24'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:06:24'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:06:24'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:06:29'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:06:29'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:06:29'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:06:29'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:06:29'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:06:29'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:06:29'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:06:29'!
+PASSED!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 19:06:29'!
+test09TheEmptyStringDoesntChange
+	
+	self assert: '' equals: '' asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:06:29'!
+ERROR!
+
+!methodRemoval: TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:06:29'!
+test09TheEmptyStringDoesntChange
+	
+	self assert: '' equals: '' asRot13
+	!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 19:06:29'!
+test09TheEmptyStringDoesntChange
+	
+	self assert: '' equals: '' asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:06:29'!
+ERROR!
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:06:43'!
+ERROR!
+!String methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:08:53'!
+asRot13
+	self shouldBeImplemented.! !
+!String methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:09:36' prior: 50610543!
+asRot13
+	self isEmpty ifTrue:[^self.].
+	^'sasjajsah'! !
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:09:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:09:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:09:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:09:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:09:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:09:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:09:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:09:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:09:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:09:43'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:09:50'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:09:50'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:09:50'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:09:50'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:09:50'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:09:50'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:09:50'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:09:50'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:09:50'!
+PASSED!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 19:09:50'!
+test10CorrectlyEncodesAOneCharString
+	
+	self assert: 'n' equals: 'a' asRot13.
+	self assert: 'Z' equals: 'M' asRot13.
+	self assert: 'a' equals: 'n' asRot13.
+	self assert: '{' equals: '{' asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:09:50'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:09:50'!
+test10CorrectlyEncodesAOneCharString
+	
+	self assert: 'n' equals: 'a' asRot13.
+	self assert: 'Z' equals: 'M' asRot13.
+	self assert: 'a' equals: 'n' asRot13.
+	self assert: '{' equals: '{' asRot13
+	!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 19:09:50'!
+test10CorrectlyEncodesAOneCharString
+	
+	self assert: 'n' equals: 'a' asRot13.
+	self assert: 'Z' equals: 'M' asRot13.
+	self assert: 'a' equals: 'n' asRot13.
+	self assert: '{' equals: '{' asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:09:51'!
+FAILURE!
+!String methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:11:46' prior: 50610547!
+asRot13
+	self isEmpty ifTrue:[^self.].
+	self size = 1 ifTrue:[^(self at: 1) asRot13]
+	^'sasjajsah'! !
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:12:01'!
+ERROR!
+
+self size!
+
+self size = 1!
+!String methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:12:42' prior: 50610665!
+asRot13
+	self isEmpty ifTrue:[^self.].
+	self size = 1 ifTrue:[^(self at: 1) asRot13].
+	^'sasjajsah'! !
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:12:52'!
+FAILURE!
+
+$a asString!
+!String methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:13:43' prior: 50610676!
+asRot13
+	self isEmpty ifTrue:[^self.].
+	self size = 1 ifTrue:[^(self at: 1) asRot13 asString].
+	^'sasjajsah'! !
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:13:47'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:13:47'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:13:47'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:13:47'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:13:47'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:13:47'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:13:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:13:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:13:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:13:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:13:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:14:09'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:14:09'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:14:09'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:14:09'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:14:09'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:14:09'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:14:09'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:14:09'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:14:09'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:14:09'!
+PASSED!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 19:14:09'!
+test11CorrectlyEncodesATwoCharString
+	
+	self assert: 'nm' equals: 'az' asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:14:09'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:14:09'!
+test11CorrectlyEncodesATwoCharString
+	
+	self assert: 'nm' equals: 'az' asRot13
+	!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 19:14:09'!
+test11CorrectlyEncodesATwoCharString
+	
+	self assert: 'nm' equals: 'az' asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:14:09'!
+FAILURE!
+!String methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:15:26' prior: 50610686!
+asRot13
+	|res|
+	res := ''.
+	self isEmpty ifTrue:[^self.].
+	self size = 1 ifTrue:[^(self at: 1) asRot13 asString].
+	self size = 2 ifTrue:[
+		self size timesRepeat: [
+			(self at: 1) asRot13 asString]].
+	^'sasjajsah'! !
+!String methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:15:55' prior: 50610802!
+asRot13
+	|res|
+	res := ''.
+	self isEmpty ifTrue:[^self.].
+	self size = 1 ifTrue:[^(self at: 1) asRot13 asString].
+	self size = 2 ifTrue:[
+		self size timesRepeat: [:i|
+			res add: (self at: i) asRot13 asString]].
+	^'sasjajsah'! !
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:15:58'!
+ERROR!
+!String methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:16:40' prior: 50610812!
+asRot13
+	|res|
+	res := ''.
+	self isEmpty ifTrue:[^self.].
+	self size = 1 ifTrue:[^(self at: 1) asRot13 asString].
+	self size = 2 ifTrue:[
+		self size timesRepeat: [:i|
+			res add: (self at: i) asRot13 asString].
+		^res].
+	^'sasjajsah'! !
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:16:49'!
+ERROR!
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:17:21'!
+ERROR!
+!String methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:19:05' prior: 50610826!
+asRot13
+	|res|
+	res := ''.
+	self isEmpty ifTrue:[^self.].
+	self size = 1 ifTrue:[^(self at: 1) asRot13 asString].
+	self size = 2 ifTrue:[
+		1 to: self size do: [:i | res add: (self at: i) asRot13 asString].			
+		^res].
+	^'sasjajsah'! !
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:19:09'!
+ERROR!
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:20:05'!
+ERROR!
+!String methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:20:56' prior: 50610844!
+asRot13
+	|res|
+	res := ''.
+	self isEmpty ifTrue:[^self.].
+	self size = 1 ifTrue:[^(self at: 1) asRot13 asString].
+	self size = 2 ifTrue:[
+		1 to: self size do: [:i | res +( ((self at: i) asRot13) asString) ].			
+		^res].
+	^'sasjajsah'! !
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:20:59'!
+ERROR!
+!String methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:22:56' prior: 50610862!
+asRot13
+	|res|
+	res := ''.
+	self isEmpty ifTrue:[^self.].
+	self size = 1 ifTrue:[^(self at: 1) asRot13 asString].
+	self size = 2 ifTrue:[
+		1 to: self size do: [:i | res, ( ((self at: i) asRot13) asString) ].			
+		^res].
+	^'sasjajsah'! !
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:22:59'!
+FAILURE!
+
+( ((self at: i) asRot13) asString)!
+!String methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:24:33' prior: 50610876!
+asRot13
+	|res|
+	res := ''.
+	self isEmpty ifTrue:[^self.].
+	self size = 1 ifTrue:[^(self at: 1) asRot13 asString].
+	self size = 2 ifTrue:[
+		1 to: self size do: [:i | res := res, ( ((self at: i) asRot13) asString) ].			
+		^res].
+	^'sasjajsah'! !
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:24:52'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:24:52'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:24:52'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:24:52'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:24:52'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:24:52'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:24:52'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:24:52'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:24:52'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:24:52'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:24:52'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:24:52'!
+PASSED!
+!String methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:25:04' prior: 50610891!
+asRot13
+	|res|
+	res := ''.
+	self isEmpty ifTrue:[^self.].
+	self size = 1 ifTrue:[^(self at: 1) asRot13 asString].
+	self size = 2 ifTrue:[
+		1 to: self size do: [:i | res := res, ( ((self at: i) asRot13) asString) ].			
+		^res].
+	^'sasjajsah'.! !
+
+----SNAPSHOT----(27 April 2023 19:25:42) CuisUniversity-5706.image priorSource: 8713034!
+
+String streamContents: [:str | 'salsaksjka']!
+
+String streamContents: [:str | 'salsaksjka']!
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:27:22'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:27:22'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:27:22'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:27:22'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:27:22'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:27:22'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:27:22'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:27:22'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:27:22'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:27:22'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:27:22'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:27:22'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:27:59'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:27:59'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:27:59'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:27:59'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:27:59'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:27:59'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:27:59'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:27:59'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:27:59'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:27:59'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:27:59'!
+PASSED!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 19:27:59'!
+test12CorrectlyEncodesMoreThanTwoCharString
+	
+	self assert: 'uByN!!' equals: 'hOlA!!' asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test12CorrectlyEncodesMoreThanTwoCharString stamp: 'pau 4/27/2023 19:27:59'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsRot13Test #test12CorrectlyEncodesMoreThanTwoCharString stamp: 'pau 4/27/2023 19:27:59'!
+test12CorrectlyEncodesMoreThanTwoCharString
+	
+	self assert: 'uByN!!' equals: 'hOlA!!' asRot13
+	!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 19:27:59'!
+test12CorrectlyEncodesMoreThanTwoCharString
+	
+	self assert: 'uByN!!' equals: 'hOlA!!' asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #test12CorrectlyEncodesMoreThanTwoCharString stamp: 'pau 4/27/2023 19:27:59'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test12CorrectlyEncodesMoreThanTwoCharString stamp: 'pau 4/27/2023 19:28:13'!
+FAILURE!
+!String methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:28:44' prior: 50610950!
+asRot13
+	|res|
+	res := ''.
+	self isEmpty ifTrue:[^self.].
+	self size = 1 ifTrue:[^(self at: 1) asRot13 asString].
+	
+	1 to: self size do: [:i | res := res, ( ((self at: i) asRot13) asString) ].			
+	
+	^res! !
+
+!testRun: #TDDBabyStepsRot13Test #test12CorrectlyEncodesMoreThanTwoCharString stamp: 'pau 4/27/2023 19:28:51'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:28:51'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:28:51'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:28:51'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:28:51'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:28:51'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:28:51'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:28:51'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:28:51'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:28:51'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:28:51'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:28:51'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test12CorrectlyEncodesMoreThanTwoCharString stamp: 'pau 4/27/2023 19:28:51'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:31:03'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:31:03'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:31:03'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:31:03'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:31:03'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:31:03'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:31:03'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:31:03'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:31:03'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:31:03'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:31:03'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test12CorrectlyEncodesMoreThanTwoCharString stamp: 'pau 4/27/2023 19:31:03'!
+PASSED!
+!String methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:31:28' prior: 50611089!
+asRot13
+	|res|
+	res := ''.
+	self isEmpty ifTrue:[^self.].
+	
+	1 to: self size do: [:i | res := res, ( ((self at: i) asRot13) asString) ].			
+	
+	^res! !
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:31:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:31:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:31:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:31:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:31:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:31:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:31:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:31:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:31:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:31:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:31:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test12CorrectlyEncodesMoreThanTwoCharString stamp: 'pau 4/27/2023 19:31:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:32:28'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:32:28'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:32:28'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:32:28'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:32:28'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:32:28'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:32:28'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:32:28'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:32:28'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:32:28'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:32:28'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test12CorrectlyEncodesMoreThanTwoCharString stamp: 'pau 4/27/2023 19:32:28'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:32:37'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:32:37'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:32:37'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:32:37'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:32:37'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:32:37'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:32:37'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:32:37'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:32:37'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:32:37'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:32:37'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test12CorrectlyEncodesMoreThanTwoCharString stamp: 'pau 4/27/2023 19:32:37'!
+PASSED!
+!TDDBabyStepsRot13Test methodsFor: 'tests' stamp: 'pau 4/27/2023 19:32:37'!
+testExtraToCheckGeneralizationOnKata
+		
+	self assert: 'Ju3er j3 4e3 t01at j3 q0ag a3rq e04q$...' equals: 'Wh3re w3 4r3 g01ng w3 d0nt n3ed r04d$...' asRot13
+	! !
+
+!testRun: #TDDBabyStepsRot13Test #testExtraToCheckGeneralizationOnKata stamp: 'pau 4/27/2023 19:32:37'!
+PASSED!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:40:14' prior: 50610428!
+asRot13
+	| asciiVal |
+	asciiVal := self asLowercase asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	(asciiVal between: ($A asciiValue) and: ($M asciiValue)) 
+	ifTrue: [^ Character asciiValue: asciiVal + 13]. 
+	
+	(asciiVal between: ($N asciiValue) and: ($Z asciiValue)) 
+	ifTrue: [^ Character asciiValue: asciiVal - 13].
+	((asciiVal < ($a asciiValue)) or: [(asciiVal  > ($z asciiValue ))]) ifTrue: [^self ].
+	^'ñ'
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:40:24'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:40:24'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:40:24'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:40:24'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:40:24'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:40:24'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:40:24'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:40:24'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:40:24'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:40:24'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:40:24'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test12CorrectlyEncodesMoreThanTwoCharString stamp: 'pau 4/27/2023 19:40:24'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #testExtraToCheckGeneralizationOnKata stamp: 'pau 4/27/2023 19:40:24'!
+FAILURE!
+
+TDDBabyStepsGamePrimeFactors start!
+
+!classDefinition: #TDDBabyStepsPrimeFactorsTest category: 'TDDBabyStepsGamePrimeFactors' stamp: 'pau 4/27/2023 19:47:08'!
+TestCase subclass: #TDDBabyStepsPrimeFactorsTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGamePrimeFactors'!
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:50:15'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:50:15'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:50:15'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:50:15'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:50:15'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:50:15'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:50:15'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:50:15'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:50:15'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:50:15'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:50:15'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test12CorrectlyEncodesMoreThanTwoCharString stamp: 'pau 4/27/2023 19:50:15'!
+FAILURE!
+
+!testRun: #TDDBabyStepsRot13Test #testExtraToCheckGeneralizationOnKata stamp: 'pau 4/27/2023 19:50:15'!
+FAILURE!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:50:31' prior: 50611363!
+asRot13
+	| asciiVal |
+	asciiVal := (self asLowercase) asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: asciiVal - 13].
+	
+	(asciiVal between: ($A asciiValue) and: ($M asciiValue)) 
+	ifTrue: [^ Character asciiValue: asciiVal + 13]. 
+	
+	(asciiVal between: ($N asciiValue) and: ($Z asciiValue)) 
+	ifTrue: [^ Character asciiValue: asciiVal - 13].
+	((asciiVal < ($a asciiValue)) or: [(asciiVal  > ($z asciiValue ))]) ifTrue: [^self ].
+	^'ñ'
+! !
+
+self asLowercase asciiValue!
+
+$A asLowercase asciiValue!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:53:46' prior: 50611499!
+asRot13
+	| asciiVal |
+	asciiVal := self asLowercase asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: (self asciiValue) + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: (self asciiValue) - 13].
+	
+	(asciiVal between: ($A asciiValue) and: ($M asciiValue)) 
+	ifTrue: [^ Character asciiValue: asciiVal + 13]. 
+	
+	(asciiVal between: ($N asciiValue) and: ($Z asciiValue)) 
+	ifTrue: [^ Character asciiValue: asciiVal - 13].
+	((asciiVal < ($a asciiValue)) or: [(asciiVal  > ($z asciiValue ))]) ifTrue: [^self ].
+	^'ñ'
+! !
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:54:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:54:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:54:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:54:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:54:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:54:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:54:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:54:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:54:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:54:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:54:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test12CorrectlyEncodesMoreThanTwoCharString stamp: 'pau 4/27/2023 19:54:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #testExtraToCheckGeneralizationOnKata stamp: 'pau 4/27/2023 19:54:23'!
+PASSED!
+!Character methodsFor: 'rot13-methods' stamp: 'pau 4/27/2023 19:54:48' prior: 50611523!
+asRot13
+	| asciiVal |
+	asciiVal := self asLowercase asciiValue.
+	
+	(asciiVal between: ($a asciiValue) and: ($m asciiValue)) 
+	ifTrue:[^Character asciiValue: (self asciiValue) + 13].
+	
+	(asciiVal between: ($n asciiValue) and: ($z asciiValue)) 
+	ifTrue:[^Character asciiValue: (self asciiValue) - 13].
+	
+	^self! !
+
+!testRun: #TDDBabyStepsRot13Test #test01CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:54:56'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test02CorrectlyEncodesALowercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:54:56'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test03CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:54:56'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test04CorrectlyEncodesALowercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:54:56'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test05CharOnTheBelowRangeDoesntChange stamp: 'pau 4/27/2023 19:54:56'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test06CharOnTheUpperRangeDoesntChange stamp: 'pau 4/27/2023 19:54:56'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test07CorrectlyEncodesAnUppercaseCharFromTheFirstPartOfTheAlphabet stamp: 'pau 4/27/2023 19:54:56'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test08CorrectlyEncodesAnUppercaseCharFromTheSecondPartOfTheAlphabet stamp: 'pau 4/27/2023 19:54:56'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test09TheEmptyStringDoesntChange stamp: 'pau 4/27/2023 19:54:56'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test10CorrectlyEncodesAOneCharString stamp: 'pau 4/27/2023 19:54:56'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test11CorrectlyEncodesATwoCharString stamp: 'pau 4/27/2023 19:54:56'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #test12CorrectlyEncodesMoreThanTwoCharString stamp: 'pau 4/27/2023 19:54:56'!
+PASSED!
+
+!testRun: #TDDBabyStepsRot13Test #testExtraToCheckGeneralizationOnKata stamp: 'pau 4/27/2023 19:54:56'!
+PASSED!
+!TDDBabyStepsPrimeFactorsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 19:55:53'!
+test01OneHasNoPrimeFactors
+	
+	self assert: Bag new equals: 1 factorize
+	! !
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 19:58:02'!
+factorize
+	self shouldBeImplemented.! !
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 19:58:16' prior: 50611666!
+factorize
+	^1.! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 19:58:25'!
+FAILURE!
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 19:58:59' prior: 50611671!
+factorize
+	^Bag new.! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 19:59:05'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 19:59:05'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 20:10:03'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 20:10:03'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 20:10:06'!
+PASSED!
+!TDDBabyStepsPrimeFactorsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 20:10:06'!
+test02FactorsOfAPrimeNumberAreThePrimeNumber
+
+	self assert: (Bag with: 2) equals: 2 factorize
+	! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:10:06'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:10:06'!
+test02FactorsOfAPrimeNumberAreThePrimeNumber
+
+	self assert: (Bag with: 2) equals: 2 factorize
+	!
+!TDDBabyStepsPrimeFactorsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 20:10:06'!
+test02FactorsOfAPrimeNumberAreThePrimeNumber
+
+	self assert: (Bag with: 2) equals: 2 factorize
+	! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:10:06'!
+FAILURE!
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:16:03' prior: 50611678!
+factorize
+	
+	self = 1 ifTrue: [^Bag new].
+	self = 2 ifTrue: [^Bag with: 2].! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:16:13'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 20:16:13'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:16:13'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 20:16:22'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:16:22'!
+PASSED!
+!TDDBabyStepsPrimeFactorsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 20:16:22'!
+test03FactorsOfAPrimeNumberAreThePrimeNumber
+
+	self assert: (Bag with: 3) equals: 3 factorize
+	! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test03FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:16:22'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsPrimeFactorsTest #test03FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:16:22'!
+test03FactorsOfAPrimeNumberAreThePrimeNumber
+
+	self assert: (Bag with: 3) equals: 3 factorize
+	!
+!TDDBabyStepsPrimeFactorsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 20:16:22'!
+test03FactorsOfAPrimeNumberAreThePrimeNumber
+
+	self assert: (Bag with: 3) equals: 3 factorize
+	! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test03FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:16:22'!
+FAILURE!
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:18:17' prior: 50611727!
+factorize
+	
+	self = 1 ifTrue: [^Bag new].
+	(self = 2 or: [self = 3]) ifTrue: [^Bag with: self].! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test03FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:18:20'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 20:18:20'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:18:20'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test03FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:18:20'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 20:18:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:18:23'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test03FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:18:23'!
+PASSED!
+!TDDBabyStepsPrimeFactorsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 20:18:23'!
+test04CorrectlyFactorizesACompositeNumberWithTwoFactors2
+	
+	self assert: (Bag with: 2 with: 2) equals: 4 factorize
+	! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 20:18:23'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 20:18:23'!
+test04CorrectlyFactorizesACompositeNumberWithTwoFactors2
+	
+	self assert: (Bag with: 2 with: 2) equals: 4 factorize
+	!
+!TDDBabyStepsPrimeFactorsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 20:18:23'!
+test04CorrectlyFactorizesACompositeNumberWithTwoFactors2
+	
+	self assert: (Bag with: 2 with: 2) equals: 4 factorize
+	! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 20:18:23'!
+FAILURE!
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:18:38' prior: 50611779!
+factorize
+	
+	self = 1 ifTrue: [^Bag new].
+	(self isPrime) ifTrue: [^Bag with: self].! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 20:18:40'!
+FAILURE!
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:22:17' prior: 50611843!
+factorize
+	
+	self = 1 ifTrue: [^Bag new].
+	(self isPrime) ifTrue: [^Bag with: self].
+! !
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:26:21' prior: 50611854!
+factorize
+	
+	self = 1 ifTrue: [^Bag new].
+	^Bag with: self
+	
+! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 20:26:28'!
+FAILURE!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 20:26:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:26:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test03FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:26:32'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 20:26:32'!
+FAILURE!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 20:26:32'!
+FAILURE!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test03FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:26:35'!
+PASSED!
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:26:44' prior: 50611860!
+factorize
+	
+	self = 1 ifTrue: [^Bag new].
+	^Bag with: self.
+	
+! !
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:27:41' prior: 50611894!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	1 to: self do: [].
+	^Bag with: self.
+	
+! !
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:30:07' prior: 50611899!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	2 to: self do: [:i|
+		 (self isDivisibleBy:i ) ifTrue: [bag:= bag union: (i factorize)]].
+	^Bag with: self.
+	
+! !
+
+----SNAPSHOT----(27 April 2023 20:31:49) CuisUniversity-5706.image priorSource: 8937909!
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:33:50' prior: 50611906!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	
+	2 to: self do: [:i|
+		 (self isDivisibleBy:i ) ifTrue: [bag:= bag union: (i factorize)]].
+	
+	^Bag with: self.
+	
+! !
+
+self isDivisibleBy:i !
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:38:45' prior: 50611918!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	
+	2 to: self do: [:i|
+		 (self isDivisibleBy:i) ifTrue: [bag:= bag addAll: (i factorize)]].
+	
+	^Bag with: self.
+	
+! !
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:45:49' prior: 50611928!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	self = 3 ifTrue: [^Bag with: 3].
+	self / 2 = 0 ifTrue: [bag := Bag with: 2]. 
+	self / 2 = 0 ifTrue: [bag := bag add: 2].
+	^bag
+	
+	"2 to: self do: [:i|
+		 (self isDivisibleBy:i) ifTrue: [bag:= bag addAll: (i factorize)]]."
+	
+! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 20:45:58'!
+FAILURE!
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:46:42' prior: 50611937!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	self = 3 ifTrue: [^Bag with: 3].
+	self / 2 = 0 ifTrue: [bag add: 2]. 
+	self / 2 = 0 ifTrue: [bag add: 2].
+	^bag
+	
+	"2 to: self do: [:i|
+		 (self isDivisibleBy:i) ifTrue: [bag:= bag addAll: (i factorize)]]."
+	
+! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 20:46:45'!
+FAILURE!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 20:47:11'!
+FAILURE!
+
+self / 2 = 0 !
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:49:41' prior: 50611954!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	self = 3 ifTrue: [^Bag with: 3].
+	(self mod: 2 = 0 ) ifTrue: [bag add: 2]. 
+	(self mod: 2 = 0 ) ifTrue: [bag add: 2].
+	^bag
+	
+	"2 to: self do: [:i|
+		 (self isDivisibleBy:i) ifTrue: [bag:= bag addAll: (i factorize)]]."
+	
+! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 20:50:34'!
+ERROR!
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:51:26' prior: 50611975!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	self = 3 ifTrue: [^Bag with: 3].
+	(self isDivisibleBy: 2) ifTrue: [bag add: 2]. 
+	(self  isDivisibleBy: 2 ) ifTrue: [bag add: 2].
+	^bag
+	
+	"2 to: self do: [:i|
+		 (self isDivisibleBy:i) ifTrue: [bag:= bag addAll: (i factorize)]]."
+	
+! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 20:51:30'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 20:51:30'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:51:30'!
+FAILURE!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test03FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:51:30'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 20:51:30'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:51:30'!
+FAILURE!
+
+Bag with: 2!
+
+Bag with: 2 with: 2!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 20:52:56'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 20:52:56'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:52:56'!
+FAILURE!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test03FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:52:56'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 20:52:56'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 20:52:56'!
+FAILURE!
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:55:15' prior: 50611992!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	self = 3 ifTrue: [^Bag with: 3].
+	(self isDivisibleBy: 2) ifTrue: [(self /2 factorize) add: 2].
+	^bag
+	
+	"2 to: self do: [:i|
+		 (self isDivisibleBy:i) ifTrue: [bag:= bag addAll: (i factorize)]]."
+	
+! !
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:56:24' prior: 50612054!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	self = 3 ifTrue: [^Bag with: 3].
+	(self isDivisibleBy: 2) ifTrue: [(bag add: 2) addAll: (self /2 factorize)].
+	^bag
+	
+	"2 to: self do: [:i|
+		 (self isDivisibleBy:i) ifTrue: [bag:= bag addAll: (i factorize)]]."
+	
+! !
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:56:44' prior: 50612066!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	self = 3 ifTrue: [^Bag with: 3].
+	(self isDivisibleBy: 2) ifTrue: [(bag add: 2) addAll: (self/2 factorize)].
+	^bag
+	
+	"2 to: self do: [:i|
+		 (self isDivisibleBy:i) ifTrue: [bag:= bag addAll: (i factorize)]]."
+	
+! !
+
+(bag add: 2)!
+
+self/2!
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:57:37' prior: 50612078!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	self >= 3 ifTrue: [^Bag with: 3].
+	(self isDivisibleBy: 2) ifTrue: [(bag add: 2) addAll: (self/2 factorize)].
+	^bag
+	
+	"2 to: self do: [:i|
+		 (self isDivisibleBy:i) ifTrue: [bag:= bag addAll: (i factorize)]]."
+	
+! !
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:57:42' prior: 50612091!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	self >= 3 ifTrue: [^Bag with: self].
+	(self isDivisibleBy: 2) ifTrue: [(bag add: 2) addAll: (self/2 factorize)].
+	^bag
+	
+	"2 to: self do: [:i|
+		 (self isDivisibleBy:i) ifTrue: [bag:= bag addAll: (i factorize)]]."
+	
+! !
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:57:45' prior: 50612103!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	self <= 3 ifTrue: [^Bag with: self].
+	(self isDivisibleBy: 2) ifTrue: [(bag add: 2) addAll: (self/2 factorize)].
+	^bag
+	
+	"2 to: self do: [:i|
+		 (self isDivisibleBy:i) ifTrue: [bag:= bag addAll: (i factorize)]]."
+	
+! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 20:57:49'!
+ERROR!
+
+!testRun: #IntegerTest #test01readFromWithEmptyStringRaisesAnError stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #test02readFromWithInvalidStringRaisesAnError stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBackslashBackslashLnLn stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBackslashBackslashLnLp stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBackslashBackslashLnSn stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBackslashBackslashLnSp stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBackslashBackslashLpLn stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBackslashBackslashLpLp stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBackslashBackslashLpSn stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBackslashBackslashLpSp stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBackslashBackslashSnLn stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBackslashBackslashSnLp stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBackslashBackslashSnSn stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBackslashBackslashSnSp stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBackslashBackslashSpLn stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBackslashBackslashSpLp stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBackslashBackslashSpSn stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBackslashBackslashSpSp stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBenchFib stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBigReceiverInexactNthRoot stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBigReceiverInexactSqrt stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBitAt stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBitLogic stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBitReversal stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testBitReversalCorrectClass stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testCrossSumBase stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testDifferentBases stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testDivLnLn stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testDivLnLp stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testDivLnSn stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testDivLnSp stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testDivLpLn stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testDivLpLp stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testDivLpSn stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testDivLpSp stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testDivSnLn stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testDivSnLp stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testDivSnSn stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testDivSnSp stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testDivSpLn stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testDivSpLp stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testDivSpSn stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testDivSpSp stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testEven stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testExactRaisedTo stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testExactSqrt stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testFloorLog stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testFloorLogExactness stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testGCDAndLCM stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testGCDExample stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testGCDProperties stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testHighBit stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testHighBitOfMagnitude stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testIntegerDivision stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testIntegerPadding stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testIntegerReadFrom stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testIsInteger stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testIsPowerOfTwo stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testIsPowerOfTwoM6873 stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testIsPrime stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testIsProbablyPrime stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testLCMExample stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testLCMProperties stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testLargePrimesUpTo stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testLn stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testLog stamp: 'pau 4/27/2023 20:58:17'!
+PASSED!
+
+!testRun: #IntegerTest #testLowBit stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testModLnLn stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testModLnLp stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testModLnSn stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testModLnSp stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testModLpLn stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testModLpLp stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testModLpSn stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testModLpSp stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testModSnLn stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testModSnLp stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testModSnSn stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testModSnSp stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testModSpLn stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testModSpLp stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testModSpSn stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testModSpSp stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testMontgomeryMultiplication stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testNegativeIntegerPrinting stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testNew stamp: 'pau 4/27/2023 20:58:18'!
+ERROR!
+
+!testRun: #IntegerTest #testNew stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testNthRoot stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testNthRootErrorConditions stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testNthRootExactness stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testNthRootExactnessForHugeValue stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testNthRootImmuneToDoubleRounding stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testNthRootTruncated stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testNumberOfDigits stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testPositiveIntegerPrinting stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testPrimesUpTo stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testPrintOnBaseShowRadix stamp: 'pau 4/27/2023 20:58:18'!
+PASSED!
+
+!testRun: #IntegerTest #testPrintStringBase stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testQuoLnLn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testQuoLnLp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testQuoLnSn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testQuoLnSp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testQuoLpLn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testQuoLpLp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testQuoLpSn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testQuoLpSp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testQuoRem stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testQuoSnLn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testQuoSnLp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testQuoSnSn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testQuoSnSp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testQuoSpLn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testQuoSpLp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testQuoSpSn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testQuoSpSp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRaisedToModulo stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRange stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testReadFrom stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRemLnLn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRemLnLp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRemLnSn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRemLnSp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRemLpLn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRemLpLp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRemLpSn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRemLpSp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRemSnLn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRemSnLp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRemSnSn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRemSnSp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRemSpLn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRemSpLp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRemSpSn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRemSpSp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testRomanPrinting stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testSlashSlashLnLn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testSlashSlashLnLp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testSlashSlashLnSn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testSlashSlashLnSp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testSlashSlashLpLn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testSlashSlashLpLp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testSlashSlashLpSn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testSlashSlashLpSp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testSlashSlashSnLn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testSlashSlashSnLp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testSlashSlashSnSn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testSlashSlashSnSp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testSlashSlashSpLn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testSlashSlashSpLp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testSlashSlashSpSn stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testSlashSlashSpSp stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testSqrtFloor stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testStringAsNumber stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testTwoComplementBitLogicWithCarry stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #IntegerTest #testTwoComplementRightShift stamp: 'pau 4/27/2023 20:58:19'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 20:58:23'!
+ERROR!
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 20:58:43' prior: 50612115!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	self <= 3 ifTrue: [^Bag with: self].
+	(self isDivisibleBy: 2) ifTrue: [(bag add: 2) addAll: ((self/2) factorize)].
+	^bag
+	
+	"2 to: self do: [:i|
+		 (self isDivisibleBy:i) ifTrue: [bag:= bag addAll: (i factorize)]]."
+	
+! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 20:58:47'!
+ERROR!
+
+self/2!
+
+self!
+
+Bag with: 2 !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 21:01:19'!
+ERROR!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 21:01:25'!
+ERROR!
+
+(bag add: 2)!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 21:03:03'!
+ERROR!
+
+self isDivisibleBy: 2!
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 21:03:53' prior: 50612538!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	self <= 3 ifTrue: [^Bag with: self].
+	(self isDivisibleBy: 2) ifTrue: [(bag add: 2). bag addAll: ((self/2) factorize)].
+	^bag
+	
+	"2 to: self do: [:i|
+		 (self isDivisibleBy:i) ifTrue: [bag:= bag addAll: (i factorize)]]."
+	
+! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 21:03:59'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 21:03:59'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 21:03:59'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test03FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 21:03:59'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 21:03:59'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 21:05:01'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 21:05:01'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test03FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 21:05:01'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 21:05:01'!
+PASSED!
+!TDDBabyStepsPrimeFactorsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 21:05:01'!
+test08CorrectlyFactorizesACompositeNumberWithMoreThanTwoFactors2
+	
+	self assert: (Bag with: 2 with: 2 with: 2) equals: 8 factorize
+	! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test08CorrectlyFactorizesACompositeNumberWithMoreThanTwoFactors2 stamp: 'pau 4/27/2023 21:05:01'!
+PASSED!
+
+!methodRemoval: TDDBabyStepsPrimeFactorsTest #test08CorrectlyFactorizesACompositeNumberWithMoreThanTwoFactors2 stamp: 'pau 4/27/2023 21:05:01'!
+test08CorrectlyFactorizesACompositeNumberWithMoreThanTwoFactors2
+	
+	self assert: (Bag with: 2 with: 2 with: 2) equals: 8 factorize
+	!
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 21:05:24' prior: 50612570!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	self <= 3 ifTrue: [^Bag with: self].
+	self == 4 ifTrue: [(self isDivisibleBy: 2) ifTrue: [(bag add: 2). bag addAll: ((self/2) factorize)] ].
+	^bag
+	
+	"2 to: self do: [:i|
+		 (self isDivisibleBy:i) ifTrue: [bag:= bag addAll: (i factorize)]]."
+	
+! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 21:05:29'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 21:05:29'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 21:05:29'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test03FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 21:05:29'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 21:05:29'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 21:05:33'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 21:05:33'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test03FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 21:05:33'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 21:05:33'!
+PASSED!
+!TDDBabyStepsPrimeFactorsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 21:05:33'!
+test08CorrectlyFactorizesACompositeNumberWithMoreThanTwoFactors2
+	
+	self assert: (Bag with: 2 with: 2 with: 2) equals: 8 factorize
+	! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test08CorrectlyFactorizesACompositeNumberWithMoreThanTwoFactors2 stamp: 'pau 4/27/2023 21:05:33'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsPrimeFactorsTest #test08CorrectlyFactorizesACompositeNumberWithMoreThanTwoFactors2 stamp: 'pau 4/27/2023 21:05:33'!
+test08CorrectlyFactorizesACompositeNumberWithMoreThanTwoFactors2
+	
+	self assert: (Bag with: 2 with: 2 with: 2) equals: 8 factorize
+	!
+!TDDBabyStepsPrimeFactorsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 21:05:33'!
+test08CorrectlyFactorizesACompositeNumberWithMoreThanTwoFactors2
+	
+	self assert: (Bag with: 2 with: 2 with: 2) equals: 8 factorize
+	! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test08CorrectlyFactorizesACompositeNumberWithMoreThanTwoFactors2 stamp: 'pau 4/27/2023 21:05:33'!
+FAILURE!
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 21:05:47' prior: 50612639!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	self <= 3 ifTrue: [^Bag with: self].
+	(self isDivisibleBy: 2) ifTrue: [(bag add: 2). bag addAll: ((self/2) factorize)].
+	^bag
+	
+	"2 to: self do: [:i|
+		 (self isDivisibleBy:i) ifTrue: [bag:= bag addAll: (i factorize)]]."
+	
+! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test08CorrectlyFactorizesACompositeNumberWithMoreThanTwoFactors2 stamp: 'pau 4/27/2023 21:06:00'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 21:06:00'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 21:06:00'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test03FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 21:06:00'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 21:06:00'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test08CorrectlyFactorizesACompositeNumberWithMoreThanTwoFactors2 stamp: 'pau 4/27/2023 21:06:00'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 21:06:05'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 21:06:05'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test03FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 21:06:05'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 21:06:05'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test08CorrectlyFactorizesACompositeNumberWithMoreThanTwoFactors2 stamp: 'pau 4/27/2023 21:06:05'!
+PASSED!
+!TDDBabyStepsPrimeFactorsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 21:06:05'!
+test09CorrectlyFactorizesACompositeNumberWithMoreThanOneFactorsDifferentThan2
+	
+	self assert: (Bag with: 3 with: 3) equals: 9 factorize
+	! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test09CorrectlyFactorizesACompositeNumberWithMoreThanOneFactorsDifferentThan2 stamp: 'pau 4/27/2023 21:06:05'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsPrimeFactorsTest #test09CorrectlyFactorizesACompositeNumberWithMoreThanOneFactorsDifferentThan2 stamp: 'pau 4/27/2023 21:06:05'!
+test09CorrectlyFactorizesACompositeNumberWithMoreThanOneFactorsDifferentThan2
+	
+	self assert: (Bag with: 3 with: 3) equals: 9 factorize
+	!
+!TDDBabyStepsPrimeFactorsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 21:06:05'!
+test09CorrectlyFactorizesACompositeNumberWithMoreThanOneFactorsDifferentThan2
+	
+	self assert: (Bag with: 3 with: 3) equals: 9 factorize
+	! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test09CorrectlyFactorizesACompositeNumberWithMoreThanOneFactorsDifferentThan2 stamp: 'pau 4/27/2023 21:06:05'!
+FAILURE!
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 21:06:33' prior: 50612721!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	self <= 3 ifTrue: [^Bag with: self].
+	(self isDivisibleBy: 2) ifTrue: [(bag add: 2). bag addAll: ((self/2) factorize)].
+	(self isDivisibleBy: 3) ifTrue: [(bag add: 3). bag addAll: ((self/3) factorize)].
+	^bag
+	
+	"2 to: self do: [:i|
+		 (self isDivisibleBy:i) ifTrue: [bag:= bag addAll: (i factorize)]]."
+	
+! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test09CorrectlyFactorizesACompositeNumberWithMoreThanOneFactorsDifferentThan2 stamp: 'pau 4/27/2023 21:06:40'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 21:06:40'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 21:06:40'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test03FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 21:06:40'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 21:06:40'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test08CorrectlyFactorizesACompositeNumberWithMoreThanTwoFactors2 stamp: 'pau 4/27/2023 21:06:40'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test09CorrectlyFactorizesACompositeNumberWithMoreThanOneFactorsDifferentThan2 stamp: 'pau 4/27/2023 21:06:40'!
+PASSED!
+
+----SNAPSHOT----(27 April 2023 21:07:30) CuisUniversity-5706.image priorSource: 8968435!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test01OneHasNoPrimeFactors stamp: 'pau 4/27/2023 21:07:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test02FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 21:07:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test03FactorsOfAPrimeNumberAreThePrimeNumber stamp: 'pau 4/27/2023 21:07:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test04CorrectlyFactorizesACompositeNumberWithTwoFactors2 stamp: 'pau 4/27/2023 21:07:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test08CorrectlyFactorizesACompositeNumberWithMoreThanTwoFactors2 stamp: 'pau 4/27/2023 21:07:48'!
+PASSED!
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #test09CorrectlyFactorizesACompositeNumberWithMoreThanOneFactorsDifferentThan2 stamp: 'pau 4/27/2023 21:07:48'!
+PASSED!
+!TDDBabyStepsPrimeFactorsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 21:07:48'!
+testExtraToCheckGeneralizationOnKata
+	
+	self assert: (Bag with: 2 with: 2 with: 3 with: 3 with: 5 with: 13) equals: (2*2*3*3*5*13) factorize
+	! !
+
+!testRun: #TDDBabyStepsPrimeFactorsTest #testExtraToCheckGeneralizationOnKata stamp: 'pau 4/27/2023 21:07:48'!
+FAILURE!
+!Integer methodsFor: 'primeFactors-methods' stamp: 'pau 4/27/2023 21:14:06' prior: 50612814!
+factorize
+	|bag|
+	bag := Bag new. 
+	self = 1 ifTrue: [^Bag new].
+	self <= 3 ifTrue: [^Bag with: self]. "Esto es un for"
+	"Esto es un for"
+	(self isDivisibleBy: 2) ifTrue: [(bag add: 2). bag addAll: ((self/2) factorize)].
+	(self isDivisibleBy: 3) ifTrue: [(bag add: 3). bag addAll: ((self/3) factorize)].
+	^bag
+	
+	"2 to: self do: [:i|
+		 (self isDivisibleBy:i) ifTrue: [bag:= bag addAll: (i factorize)]]."
+	
+! !
+
+TDDBabyStepsGameAnagrams start!
+
+!classDefinition: #TDDBabyStepsAnagramsTest category: 'TDDBabyStepsGameAnagrams' stamp: 'pau 4/27/2023 21:15:07'!
+TestCase subclass: #TDDBabyStepsAnagramsTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TDDBabyStepsGameAnagrams'!
+!TDDBabyStepsAnagramsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 21:15:24'!
+test01EmptyStringAnagramIsJustACollectionWithTheEmptyString
+
+	self assert: (Set with: '') equals: '' anagrams
+	! !
+!String methodsFor: 'anagram-methods' stamp: 'pau 4/27/2023 21:20:15'!
+anagrams
+	self shouldBeImplemented.! !
+!String methodsFor: 'anagram-methods' stamp: 'pau 4/27/2023 21:22:21' prior: 50612931!
+anagrams
+	self = '' ifTrue:[^''].! !
+
+!testRun: #TDDBabyStepsAnagramsTest #test01EmptyStringAnagramIsJustACollectionWithTheEmptyString stamp: 'pau 4/27/2023 21:22:25'!
+FAILURE!
+!String methodsFor: 'anagram-methods' stamp: 'pau 4/27/2023 21:22:48' prior: 50612935!
+anagrams
+	self = '' ifTrue:[^Set with: ''].! !
+
+!testRun: #TDDBabyStepsAnagramsTest #test01EmptyStringAnagramIsJustACollectionWithTheEmptyString stamp: 'pau 4/27/2023 21:22:51'!
+PASSED!
+
+!testRun: #TDDBabyStepsAnagramsTest #test01EmptyStringAnagramIsJustACollectionWithTheEmptyString stamp: 'pau 4/27/2023 21:22:51'!
+PASSED!
+
+!testRun: #TDDBabyStepsAnagramsTest #test01EmptyStringAnagramIsJustACollectionWithTheEmptyString stamp: 'pau 4/27/2023 21:22:55'!
+PASSED!
+!TDDBabyStepsAnagramsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 21:22:55'!
+test02OneCharStringAnagramReturnsACollectionWithTheSameOneCharString
+
+	self assert: (Set with:'a') equals: 'a' anagrams
+	! !
+
+!testRun: #TDDBabyStepsAnagramsTest #test02OneCharStringAnagramReturnsACollectionWithTheSameOneCharString stamp: 'pau 4/27/2023 21:22:56'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsAnagramsTest #test02OneCharStringAnagramReturnsACollectionWithTheSameOneCharString stamp: 'pau 4/27/2023 21:22:56'!
+test02OneCharStringAnagramReturnsACollectionWithTheSameOneCharString
+
+	self assert: (Set with:'a') equals: 'a' anagrams
+	!
+!TDDBabyStepsAnagramsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 21:22:56'!
+test02OneCharStringAnagramReturnsACollectionWithTheSameOneCharString
+
+	self assert: (Set with:'a') equals: 'a' anagrams
+	! !
+
+!testRun: #TDDBabyStepsAnagramsTest #test02OneCharStringAnagramReturnsACollectionWithTheSameOneCharString stamp: 'pau 4/27/2023 21:22:56'!
+FAILURE!
+!String methodsFor: 'anagram-methods' stamp: 'pau 4/27/2023 21:23:43' prior: 50612944!
+anagrams
+	self = '' ifTrue:[^Set with: ''].
+	self size = 1 ifTrue: [^Set with: self]! !
+
+!testRun: #TDDBabyStepsAnagramsTest #test02OneCharStringAnagramReturnsACollectionWithTheSameOneCharString stamp: 'pau 4/27/2023 21:24:03'!
+PASSED!
+
+!testRun: #TDDBabyStepsAnagramsTest #test01EmptyStringAnagramIsJustACollectionWithTheEmptyString stamp: 'pau 4/27/2023 21:24:03'!
+PASSED!
+
+!testRun: #TDDBabyStepsAnagramsTest #test02OneCharStringAnagramReturnsACollectionWithTheSameOneCharString stamp: 'pau 4/27/2023 21:24:03'!
+PASSED!
+
+!testRun: #TDDBabyStepsAnagramsTest #test01EmptyStringAnagramIsJustACollectionWithTheEmptyString stamp: 'pau 4/27/2023 21:24:07'!
+PASSED!
+
+!testRun: #TDDBabyStepsAnagramsTest #test02OneCharStringAnagramReturnsACollectionWithTheSameOneCharString stamp: 'pau 4/27/2023 21:24:07'!
+PASSED!
+!TDDBabyStepsAnagramsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 21:24:07'!
+test03TwoCharStringAnagramReturnsTheOriginalStringAndAnotherOneFlipped
+
+	self assert: (Set with:'ab' with: 'ba') equals: 'ab' anagrams
+	! !
+
+!testRun: #TDDBabyStepsAnagramsTest #test03TwoCharStringAnagramReturnsTheOriginalStringAndAnotherOneFlipped stamp: 'pau 4/27/2023 21:24:07'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsAnagramsTest #test03TwoCharStringAnagramReturnsTheOriginalStringAndAnotherOneFlipped stamp: 'pau 4/27/2023 21:24:07'!
+test03TwoCharStringAnagramReturnsTheOriginalStringAndAnotherOneFlipped
+
+	self assert: (Set with:'ab' with: 'ba') equals: 'ab' anagrams
+	!
+!TDDBabyStepsAnagramsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 21:24:07'!
+test03TwoCharStringAnagramReturnsTheOriginalStringAndAnotherOneFlipped
+
+	self assert: (Set with:'ab' with: 'ba') equals: 'ab' anagrams
+	! !
+
+!testRun: #TDDBabyStepsAnagramsTest #test03TwoCharStringAnagramReturnsTheOriginalStringAndAnotherOneFlipped stamp: 'pau 4/27/2023 21:24:07'!
+FAILURE!
+!String methodsFor: 'anagram-methods' stamp: 'pau 4/27/2023 21:28:38' prior: 50612993!
+anagrams
+	self = '' ifTrue:[^Set with: ''].
+	self size = 1 ifTrue: [^Set with: self].
+	self size = 2 ifTrue: [^Set with: self with: (self reverse)].! !
+
+!testRun: #TDDBabyStepsAnagramsTest #test03TwoCharStringAnagramReturnsTheOriginalStringAndAnotherOneFlipped stamp: 'pau 4/27/2023 21:28:45'!
+PASSED!
+
+!testRun: #TDDBabyStepsAnagramsTest #test01EmptyStringAnagramIsJustACollectionWithTheEmptyString stamp: 'pau 4/27/2023 21:28:45'!
+PASSED!
+
+!testRun: #TDDBabyStepsAnagramsTest #test02OneCharStringAnagramReturnsACollectionWithTheSameOneCharString stamp: 'pau 4/27/2023 21:28:45'!
+PASSED!
+
+!testRun: #TDDBabyStepsAnagramsTest #test03TwoCharStringAnagramReturnsTheOriginalStringAndAnotherOneFlipped stamp: 'pau 4/27/2023 21:28:45'!
+PASSED!
+
+!testRun: #TDDBabyStepsAnagramsTest #test01EmptyStringAnagramIsJustACollectionWithTheEmptyString stamp: 'pau 4/27/2023 21:29:04'!
+PASSED!
+
+!testRun: #TDDBabyStepsAnagramsTest #test02OneCharStringAnagramReturnsACollectionWithTheSameOneCharString stamp: 'pau 4/27/2023 21:29:04'!
+PASSED!
+
+!testRun: #TDDBabyStepsAnagramsTest #test03TwoCharStringAnagramReturnsTheOriginalStringAndAnotherOneFlipped stamp: 'pau 4/27/2023 21:29:04'!
+PASSED!
+!TDDBabyStepsAnagramsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 21:29:04'!
+test04ThreeCharStringAnagramReturnsAllThe6PossibleOrderCombinations
+
+	| anagrams |
+	
+	anagrams := Set new.
+	anagrams add: 'abc'.
+	anagrams add: 'acb'.
+	anagrams add: 'bac'.
+	anagrams add: 'bca'.
+	anagrams add: 'cab'.
+	anagrams add: 'cba'.
+
+	self assert: anagrams equals: 'abc' anagrams
+	! !
+
+!testRun: #TDDBabyStepsAnagramsTest #test04ThreeCharStringAnagramReturnsAllThe6PossibleOrderCombinations stamp: 'pau 4/27/2023 21:29:04'!
+FAILURE!
+
+!methodRemoval: TDDBabyStepsAnagramsTest #test04ThreeCharStringAnagramReturnsAllThe6PossibleOrderCombinations stamp: 'pau 4/27/2023 21:29:04'!
+test04ThreeCharStringAnagramReturnsAllThe6PossibleOrderCombinations
+
+	| anagrams |
+	
+	anagrams := Set new.
+	anagrams add: 'abc'.
+	anagrams add: 'acb'.
+	anagrams add: 'bac'.
+	anagrams add: 'bca'.
+	anagrams add: 'cab'.
+	anagrams add: 'cba'.
+
+	self assert: anagrams equals: 'abc' anagrams
+	!
+!TDDBabyStepsAnagramsTest methodsFor: 'tests' stamp: 'pau 4/27/2023 21:29:04'!
+test04ThreeCharStringAnagramReturnsAllThe6PossibleOrderCombinations
+
+	| anagrams |
+	
+	anagrams := Set new.
+	anagrams add: 'abc'.
+	anagrams add: 'acb'.
+	anagrams add: 'bac'.
+	anagrams add: 'bca'.
+	anagrams add: 'cab'.
+	anagrams add: 'cba'.
+
+	self assert: anagrams equals: 'abc' anagrams
+	! !
+
+!testRun: #TDDBabyStepsAnagramsTest #test04ThreeCharStringAnagramReturnsAllThe6PossibleOrderCombinations stamp: 'pau 4/27/2023 21:29:04'!
+FAILURE!
+!String methodsFor: 'anagram-methods' stamp: 'pau 4/27/2023 21:41:48' prior: 50613054!
+anagrams
+	self = '' ifTrue:[^Set with: ''].
+	self size = 1 ifTrue: [^Set with: self].
+	self size = 2 ifTrue: [^Set with: self with: (self reverse)].
+	self size = 3 ifTrue: [
+		|set|
+		set := Set new.
+		set := set add: self.
+		self do: [:a| set := set collect: [:str| str,a]].
+		^self.
+		]! !
+!String methodsFor: 'anagram-methods' stamp: 'pau 4/27/2023 21:41:51' prior: 50613141!
+anagrams
+	self = '' ifTrue:[^Set with: ''].
+	self size = 1 ifTrue: [^Set with: self].
+	self size = 2 ifTrue: [^Set with: self with: (self reverse)].
+	self size = 3 ifTrue: [
+		|set|
+		set := Set new.
+		set := set add: self.
+		self do: [:a| set := set collect: [:str| str,a]].
+		^set.
+		]! !
+
+!testRun: #TDDBabyStepsAnagramsTest #test04ThreeCharStringAnagramReturnsAllThe6PossibleOrderCombinations stamp: 'pau 4/27/2023 21:42:20'!
+ERROR!
+
+'hola'do: [:i | i]!
+!String methodsFor: 'anagram-methods' stamp: 'pau 4/27/2023 21:49:28' prior: 50613153!
+anagrams
+	self = '' ifTrue:[^Set with: ''].
+	self size = 1 ifTrue: [^Set with: self].
+	self size = 2 ifTrue: [^Set with: self with: (self reverse)].
+	self size = 3 ifTrue: [
+		|set anagrams letter|
+		set := Set new.
+		set := set add: self.
+		anagrams := self copyFrom: 2 to: (self size) anagrams.
+		letter := self copyFrom: 1 to: 2.
+		
+		set := anagrams collect: [:anagram| letter,anagram ]
+		^set.
+		]! !
+!String methodsFor: 'anagram-methods' stamp: 'pau 4/27/2023 21:54:35' prior: 50613171!
+anagrams
+	self = '' ifTrue:[^Set with: ''].
+	self size = 1 ifTrue: [^Set with: self].
+	self size = 2 ifTrue: [^Set with: self with: (self reverse)].
+	self size = 3 ifTrue: [
+		|set anagrams letter|
+		set := Set new.
+		set := set add: self.
+		anagrams := self copyFrom: 2 to: (self size) anagrams.
+		letter := self copyFrom: 1 to: 2.
+		
+		set := anagrams collect: [:anagram| letter,anagram ].
+		^set.
+		]! !
+
+!testRun: #TDDBabyStepsAnagramsTest #test04ThreeCharStringAnagramReturnsAllThe6PossibleOrderCombinations stamp: 'pau 4/27/2023 21:54:41'!
+ERROR!
+!String methodsFor: 'anagram-methods' stamp: 'pau 4/27/2023 21:55:03' prior: 50613187!
+anagrams
+	self = '' ifTrue:[^Set with: ''].
+	self size = 1 ifTrue: [^Set with: self].
+	self size = 2 ifTrue: [^Set with: self with: (self reverse)].
+	self size = 3 ifTrue: [
+		|set anagrams letter|
+		set := Set new.
+		set := set add: self.
+		anagrams := (self copyFrom: 2 to: (self size)) anagrams.
+		letter := self copyFrom: 1 to: 2.
+		
+		set := anagrams collect: [:anagram| letter,anagram ].
+		^set.
+		]! !
+
+!testRun: #TDDBabyStepsAnagramsTest #test04ThreeCharStringAnagramReturnsAllThe6PossibleOrderCombinations stamp: 'pau 4/27/2023 21:55:07'!
+FAILURE!
+!String methodsFor: 'anagram-methods' stamp: 'pau 4/27/2023 21:57:41' prior: 50613207!
+anagrams
+	self = '' ifTrue:[^Set with: ''].
+	self size = 1 ifTrue: [^Set with: self].
+	self size = 2 ifTrue: [^Set with: self with: (self reverse)].
+	self size = 3 ifTrue: [
+		|set anagrams letter|
+		set := Set new.
+		set := set add: self.
+		1 to: (self size) do:[:i |
+		anagrams := (self copyFrom: i to: (self size)) anagrams.
+		letter := self copyFrom: 1 to: i.
+		
+		set := anagrams collect: [:anagram| letter,anagram ].
+		].
+		^set.
+		]! !
+
+----SNAPSHOT----(28 April 2023 09:01:59) CuisUniversity-5706.image priorSource: 8998663!
+
+----QUIT----(28 April 2023 09:02:05) CuisUniversity-5706.image priorSource: 9011002!
+
+----STARTUP---- (5 June 2023 17:35:14) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/CuisUniversity-5706.image!
+
+
+----QUIT----(5 June 2023 17:35:34) CuisUniversity-5706.image priorSource: 9011092!
