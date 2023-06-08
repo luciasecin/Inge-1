@@ -1,0 +1,773 @@
+
+
+----QUIT----(30 May 2023 00:05:32) CuisUniversity-5832.image priorSource: 4928100!
+
+----STARTUP---- (30 May 2023 00:05:33) as /Users/hernan/Documents/Cuis/5.0-64Bits/Cuis-University-Installer/CuisUniversity-5832.image!
+
+
+----QUIT----(30 May 2023 00:05:33) CuisUniversity-5832.image priorSource: 9366537!
+
+----STARTUP---- (7 June 2023 16:55:57) as /home/lucy/Documents/carrito/linux64/linux64/linux64/CuisUniversity-5832.image!
+
+
+Object subclass: #Cart
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+
+!classDefinition: #Cart category: 'TusLibros' stamp: 'cylu 6/7/2023 16:56:57'!
+Object subclass: #Cart
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+
+TestCase subclass: #CartTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+
+!classDefinition: #CartTest category: 'TusLibros' stamp: 'cylu 6/7/2023 16:57:28'!
+TestCase subclass: #CartTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+!CartTest methodsFor: 'nil' stamp: 'cylu 6/7/2023 16:58:03'!
+test01NewCartIsEmpty
+
+	|cart|
+	cart := Cart createCart.
+	
+	self assert: cart listCart isEmpty.! !
+
+!classDefinition: #Cart category: 'TusLibros-Iter1' stamp: 'cylu 6/7/2023 16:58:25'!
+Object subclass: #Cart
+	instanceVariableNames: 'booksInCart'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros-Iter1'!
+!Cart methodsFor: 'nil' stamp: 'cylu 6/7/2023 16:58:22'!
+listCart
+	^booksInCart .! !
+!Cart methodsFor: 'as yet unclassified' stamp: 'cylu 6/7/2023 16:58:39' overrides: 16920235!
+initialize 
+	
+	booksInCart := Dictionary new.! !
+!Cart class methodsFor: 'nil' stamp: 'cylu 6/7/2023 16:58:54'!
+createCart
+
+	^self new.! !
+
+!testRun: #CartTest #test01NewCartIsEmpty stamp: 'cylu 6/7/2023 16:58:57'!
+PASSED!
+!CartTest methodsFor: 'as yet unclassified' stamp: 'cylu 6/7/2023 16:59:53'!
+test02CartHasBookAfterAddingBook
+
+	|cart expectedCart book|
+	cart := Cart createCart.
+	book :=  'Los Juegos del Hambre: En Llamas'.
+	expectedCart := Dictionary new.
+	expectedCart add: book -> 1.
+	
+	cart addToCart: book.
+
+	self assert: cart listCart equals: expectedCart.! !
+!Cart methodsFor: 'nil' stamp: 'cylu 6/7/2023 17:00:18'!
+addToCart: aBookToAdd
+	booksInCart add: aBookToAdd -> 1! !
+
+!testRun: #CartTest #test01NewCartIsEmpty stamp: 'cylu 6/7/2023 17:00:20'!
+PASSED!
+
+!testRun: #CartTest #test02CartHasBookAfterAddingBook stamp: 'cylu 6/7/2023 17:00:20'!
+PASSED!
+!CartTest methodsFor: 'as yet unclassified' stamp: 'cylu 6/7/2023 17:00:37'!
+test03CartHasBookAfterAddingSameBookTwice
+
+	|cart expectedCart book|
+	cart := Cart createCart.
+	book :=  'Los Juegos del Hambre: En Llamas'.
+	expectedCart := Dictionary new.
+	expectedCart add: book -> 2.
+	
+	cart addToCart: book.
+	cart addToCart: book.
+
+	self assert: cart listCart equals: expectedCart.! !
+!Cart methodsFor: 'as yet unclassified' stamp: 'cylu 6/7/2023 17:00:55' prior: 50624426!
+addToCart: aBookToAdd
+	
+	(booksInCart includesKey: aBookToAdd) 
+		ifTrue: [booksInCart at: aBookToAdd put: ((booksInCart at: aBookToAdd) + 1)]
+		ifFalse: [booksInCart add: aBookToAdd -> 1]! !
+
+!testRun: #CartTest #test01NewCartIsEmpty stamp: 'cylu 6/7/2023 17:00:57'!
+PASSED!
+
+!testRun: #CartTest #test02CartHasBookAfterAddingBook stamp: 'cylu 6/7/2023 17:00:57'!
+PASSED!
+
+!testRun: #CartTest #test03CartHasBookAfterAddingSameBookTwice stamp: 'cylu 6/7/2023 17:00:57'!
+PASSED!
+!CartTest methodsFor: 'as yet unclassified' stamp: 'cylu 6/7/2023 17:04:56'!
+test03CartHasBookAfterAddingMoreThanOneOfTheSameBook
+
+	|cart expectedCart book|
+	cart := Cart createCart.
+	book :=  'Los Juegos del Hambre: En Llamas'.
+	expectedCart := Dictionary new.
+	expectedCart add: book -> 3.
+	
+	cart addToCart: book amount: 3.
+
+	self assert: cart listCart equals: expectedCart.! !
+!CartTest methodsFor: 'as yet unclassified' stamp: 'cylu 6/7/2023 17:05:07'!
+test04CartHasBookAfterAddingMoreThanOneOfTheSameBook
+
+	|cart expectedCart book|
+	cart := Cart createCart.
+	book :=  'Los Juegos del Hambre: En Llamas'.
+	expectedCart := Dictionary new.
+	expectedCart add: book -> 3.
+	
+	cart addToCart: book amount: 3.
+
+	self assert: cart listCart equals: expectedCart.! !
+
+!methodRemoval: CartTest #test03CartHasBookAfterAddingMoreThanOneOfTheSameBook stamp: 'cylu 6/7/2023 17:05:08'!
+test03CartHasBookAfterAddingMoreThanOneOfTheSameBook
+
+	|cart expectedCart book|
+	cart := Cart createCart.
+	book :=  'Los Juegos del Hambre: En Llamas'.
+	expectedCart := Dictionary new.
+	expectedCart add: book -> 3.
+	
+	cart addToCart: book amount: 3.
+
+	self assert: cart listCart equals: expectedCart.!
+
+!testRun: #CartTest #test01NewCartIsEmpty stamp: 'cylu 6/7/2023 17:05:36'!
+PASSED!
+
+!testRun: #CartTest #test02CartHasBookAfterAddingBook stamp: 'cylu 6/7/2023 17:05:36'!
+PASSED!
+
+!testRun: #CartTest #test03CartHasBookAfterAddingSameBookTwice stamp: 'cylu 6/7/2023 17:05:36'!
+PASSED!
+
+!testRun: #CartTest #test04CartHasBookAfterAddingMoreThanOneOfTheSameBook stamp: 'cylu 6/7/2023 17:05:36'!
+ERROR!
+
+!testRun: #CartTest #test04CartHasBookAfterAddingMoreThanOneOfTheSameBook stamp: 'cylu 6/7/2023 17:05:36'!
+ERROR!
+!Cart methodsFor: 'as yet unclassified' stamp: 'cylu 6/7/2023 17:05:45'!
+addToCart: book amount: aRenameMe1 
+	self shouldBeImplemented.! !
+!Cart methodsFor: 'as yet unclassified' stamp: 'cylu 6/7/2023 17:06:27' prior: 50624520!
+addToCart: book amount: amountToAdd
+	
+	amountToAdd timesRepeat: [self addToCart: book]! !
+
+!testRun: #CartTest #test04CartHasBookAfterAddingMoreThanOneOfTheSameBook stamp: 'cylu 6/7/2023 17:06:30'!
+PASSED!
+
+!testRun: #CartTest #test01NewCartIsEmpty stamp: 'cylu 6/7/2023 17:06:35'!
+PASSED!
+
+!testRun: #CartTest #test02CartHasBookAfterAddingBook stamp: 'cylu 6/7/2023 17:06:35'!
+PASSED!
+
+!testRun: #CartTest #test03CartHasBookAfterAddingSameBookTwice stamp: 'cylu 6/7/2023 17:06:35'!
+PASSED!
+
+!testRun: #CartTest #test04CartHasBookAfterAddingMoreThanOneOfTheSameBook stamp: 'cylu 6/7/2023 17:06:35'!
+PASSED!
+!CartTest methodsFor: 'test' stamp: 'cylu 6/7/2023 17:07:30'!
+test05CannotAddNonPositiveAmountOfBooks
+
+	|cart expectedCart book|
+	cart := Cart createCart.
+	book :=  'Los Juegos del Hambre: En Llamas'.
+	
+	cart addToCart: book amount: 0.
+
+	self assert: cart listCart equals: expectedCart.! !
+!CartTest methodsFor: 'test' stamp: 'cylu 6/7/2023 17:08:44' prior: 50624546!
+test05CannotAddNonPositiveAmountOfBooks
+
+	|cart book|
+	cart := Cart createCart.
+	book :=  'Los Juegos del Hambre: En Llamas'.
+	
+	cart addToCart: book amount: 0.
+
+	self 
+		should: [cart addToCart: book amount: 0]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = cart nonPositiveAmountErrorMessage.
+			self assert: cart isEmpty ]! !
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'cylu 6/7/2023 17:08:55'!
+FAILURE!
+!Cart class methodsFor: 'as yet unclassified' stamp: 'cylu 6/7/2023 17:09:56'!
+invalidAmountErrorMessage
+
+	^'Can not add less than one book '! !
+!Cart class methodsFor: 'as yet unclassified' stamp: 'cylu 6/7/2023 17:09:59' prior: 50624574!
+invalidAmountErrorMessage
+
+	^'Can not add less than one book.'! !
+!CartTest methodsFor: 'test' stamp: 'cylu 6/7/2023 17:10:11' prior: 50624556!
+test05CannotAddNonPositiveAmountOfBooks
+
+	|cart book|
+	cart := Cart createCart.
+	book :=  'Los Juegos del Hambre: En Llamas'.
+	
+	cart addToCart: book amount: 0.
+
+	self 
+		should: [cart addToCart: book amount: 0]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = cart invalidAmountErrorMessage.
+			self assert: cart isEmpty ]! !
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'cylu 6/7/2023 17:10:12'!
+FAILURE!
+!Cart methodsFor: 'as yet unclassified' stamp: 'cylu 6/7/2023 17:11:12' prior: 50624525!
+addToCart: book amount: amountToAdd
+	
+	(amountToAdd < 0) ifTrue: [self error: self class invalidAmountErrorMessage].
+	amountToAdd timesRepeat: [self addToCart: book]! !
+
+!testRun: #CartTest #test01NewCartIsEmpty stamp: 'cylu 6/7/2023 17:11:13'!
+PASSED!
+
+!testRun: #CartTest #test02CartHasBookAfterAddingBook stamp: 'cylu 6/7/2023 17:11:13'!
+PASSED!
+
+!testRun: #CartTest #test03CartHasBookAfterAddingSameBookTwice stamp: 'cylu 6/7/2023 17:11:13'!
+PASSED!
+
+!testRun: #CartTest #test04CartHasBookAfterAddingMoreThanOneOfTheSameBook stamp: 'cylu 6/7/2023 17:11:13'!
+PASSED!
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'cylu 6/7/2023 17:11:13'!
+FAILURE!
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'cylu 6/7/2023 17:11:13'!
+FAILURE!
+!Cart methodsFor: 'as yet unclassified' stamp: 'cylu 6/7/2023 17:11:34' prior: 50624604!
+addToCart: book amount: amountToAdd
+	
+	(amountToAdd < 1) ifTrue: [self error: self class invalidAmountErrorMessage].
+	amountToAdd timesRepeat: [self addToCart: book]! !
+
+!testRun: #CartTest #test01NewCartIsEmpty stamp: 'cylu 6/7/2023 17:11:37'!
+PASSED!
+
+!testRun: #CartTest #test02CartHasBookAfterAddingBook stamp: 'cylu 6/7/2023 17:11:37'!
+PASSED!
+
+!testRun: #CartTest #test03CartHasBookAfterAddingSameBookTwice stamp: 'cylu 6/7/2023 17:11:37'!
+PASSED!
+
+!testRun: #CartTest #test04CartHasBookAfterAddingMoreThanOneOfTheSameBook stamp: 'cylu 6/7/2023 17:11:37'!
+PASSED!
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'cylu 6/7/2023 17:11:37'!
+ERROR!
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'cylu 6/7/2023 17:11:37'!
+ERROR!
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'cylu 6/7/2023 17:11:43'!
+ERROR!
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'cylu 6/7/2023 17:11:43'!
+ERROR!
+!CartTest methodsFor: 'test' stamp: 'cylu 6/7/2023 17:11:58' prior: 50624585!
+test05CannotAddNonPositiveAmountOfBooks
+
+	|cart book|
+	cart := Cart createCart.
+	book :=  'Los Juegos del Hambre: En Llamas'.
+	
+	cart addToCart: book amount: 0.
+
+	self 
+		should: [cart addToCart: book amount: 0]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cart class invalidAmountErrorMessage.
+			self assert: cart isEmpty ]! !
+!CartTest methodsFor: 'test' stamp: 'cylu 6/7/2023 17:12:00' prior: 50624665!
+test05CannotAddNonPositiveAmountOfBooks
+
+	|cart book|
+	cart := Cart createCart.
+	book :=  'Los Juegos del Hambre: En Llamas'.
+	
+	cart addToCart: book amount: 0.
+
+	self 
+		should: [cart addToCart: book amount: 0]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cart invalidAmountErrorMessage.
+			self assert: cart isEmpty ]! !
+!CartTest methodsFor: 'test' stamp: 'cylu 6/7/2023 17:12:11' prior: 50624680!
+test05CannotAddNonPositiveAmountOfBooks
+
+	|cart book|
+	cart := Cart createCart.
+	book :=  'Los Juegos del Hambre: En Llamas'.
+	
+	cart addToCart: book amount: 0.
+
+	self 
+		should: [cart addToCart: book amount: 0]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cart invalidAmountErrorMessage.
+			self assert: cart isEmpty]! !
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'cylu 6/7/2023 17:12:11'!
+ERROR!
+!CartTest methodsFor: 'test' stamp: 'cylu 6/7/2023 17:12:25' prior: 50624695!
+test05CannotAddNonPositiveAmountOfBooks
+
+	|cart book|
+	cart := Cart createCart.
+	book :=  'Los Juegos del Hambre: En Llamas'.
+	
+	cart addToCart: book amount: 0.
+
+	self 
+		should: [cart addToCart: book amount: 0]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText equals: Cart invalidAmountErrorMessage.
+			self assert: cart isEmpty]! !
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'cylu 6/7/2023 17:12:27'!
+ERROR!
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'cylu 6/7/2023 17:12:30'!
+ERROR!
+!CartTest methodsFor: 'test' stamp: 'cylu 6/7/2023 17:12:50' prior: 50624713!
+test05CannotAddNonPositiveAmountOfBooks
+
+	|cart book|
+	cart := Cart createCart.
+	book :=  'Los Juegos del Hambre: En Llamas'.
+	
+	cart addToCart: book amount: 0.
+
+	self 
+		should: [cart addToCart: book amount: 0]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText equals: Cart invalidAmountErrorMessage.
+			self assert: cart listCart isEmpty]! !
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'cylu 6/7/2023 17:12:50'!
+ERROR!
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'cylu 6/7/2023 17:12:57'!
+ERROR!
+!CartTest methodsFor: 'test' stamp: 'cylu 6/7/2023 17:13:55' prior: 50624735!
+test05CannotAddNonPositiveAmountOfBooks
+
+	|cart book|
+	cart := Cart createCart.
+	book :=  'Los Juegos del Hambre: En Llamas'.
+
+	self 
+		should: [cart addToCart: book amount: 0]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText equals: Cart invalidAmountErrorMessage.
+			self assert: cart listCart isEmpty]! !
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'cylu 6/7/2023 17:13:57'!
+PASSED!
+
+!testRun: #CartTest #test01NewCartIsEmpty stamp: 'cylu 6/7/2023 17:13:57'!
+PASSED!
+
+!testRun: #CartTest #test02CartHasBookAfterAddingBook stamp: 'cylu 6/7/2023 17:13:57'!
+PASSED!
+
+!testRun: #CartTest #test03CartHasBookAfterAddingSameBookTwice stamp: 'cylu 6/7/2023 17:13:57'!
+PASSED!
+
+!testRun: #CartTest #test04CartHasBookAfterAddingMoreThanOneOfTheSameBook stamp: 'cylu 6/7/2023 17:13:57'!
+PASSED!
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'cylu 6/7/2023 17:13:57'!
+PASSED!
+!CartTest methodsFor: 'test' stamp: 'cylu 6/7/2023 17:14:16'!
+test06CannotAddBookNotInStore
+
+	|cart book|
+	cart := Cart createCart.
+	book :=  'Los Juegos del Hambre: En Llamas'.
+
+	self 
+		should: [cart addToCart: book amount: 0]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText equals: Cart invalidAmountErrorMessage.
+			self assert: cart listCart isEmpty]! !
+!CartTest methodsFor: 'test' stamp: 'cylu 6/7/2023 17:14:38' prior: 50624790!
+test06CannotAddBookNotInStore
+
+	|cart book|
+	cart := Cart createCart.
+	book :=  'Book not in store'.
+
+	self 
+		should: [cart addToCart: book amount: 0]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText equals: Cart invalidAmountErrorMessage.
+			self assert: cart listCart isEmpty]! !
+!CartTest methodsFor: 'test' stamp: 'cylu 6/7/2023 17:15:20' prior: 50624804!
+test06CannotAddBookNotInStore
+
+	|cart book|
+	cart := Cart createCart.
+	book :=  'Book not in store'.
+
+	self 
+		should: [cart addToCart: book]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText equals: Cart bookNotInStoreErrorMessage
+			self assert: cart listCart isEmpty]! !
+!CartTest methodsFor: 'test' stamp: 'cylu 6/7/2023 17:15:29' prior: 50624818!
+test06CannotAddBookNotInStore
+
+	|cart book|
+	cart := Cart createCart.
+	book :=  'Book not in store'.
+
+	self 
+		should: [cart addToCart: book]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText equals: Cart bookNotInStoreErrorMessage.
+			self assert: cart listCart isEmpty]! !
+!Cart class methodsFor: 'as yet unclassified' stamp: 'cylu 6/7/2023 17:15:59'!
+bookNotInStoreErrorMessage
+
+	^'cannot add book that is not in the store'! !
+!Cart methodsFor: 'as yet unclassified' stamp: 'cylu 6/7/2023 17:16:37' prior: 50624449!
+addToCart: aBookToAdd
+	
+	aBookToAdd = 'Book not in store.'.
+	(booksInCart includesKey: aBookToAdd) 
+		ifTrue: [booksInCart at: aBookToAdd put: ((booksInCart at: aBookToAdd) + 1)]
+		ifFalse: [booksInCart add: aBookToAdd -> 1]! !
+!Cart methodsFor: 'as yet unclassified' stamp: 'cylu 6/7/2023 17:16:46' prior: 50624850!
+addToCart: aBookToAdd
+	
+	aBookToAdd = 'Book not in store'.
+	(booksInCart includesKey: aBookToAdd) 
+		ifTrue: [booksInCart at: aBookToAdd put: ((booksInCart at: aBookToAdd) + 1)]
+		ifFalse: [booksInCart add: aBookToAdd -> 1]! !
+!Cart methodsFor: 'as yet unclassified' stamp: 'cylu 6/7/2023 17:17:08' prior: 50624860!
+addToCart: aBookToAdd
+	
+	aBookToAdd = 'Book not in store' ifTrue: [self error: self class bookNotInStoreErrorMessage].
+	(booksInCart includesKey: aBookToAdd) 
+		ifTrue: [booksInCart at: aBookToAdd put: ((booksInCart at: aBookToAdd) + 1)]
+		ifFalse: [booksInCart add: aBookToAdd -> 1]! !
+
+!testRun: #CartTest #test01NewCartIsEmpty stamp: 'cylu 6/7/2023 17:17:09'!
+PASSED!
+
+!testRun: #CartTest #test02CartHasBookAfterAddingBook stamp: 'cylu 6/7/2023 17:17:09'!
+PASSED!
+
+!testRun: #CartTest #test03CartHasBookAfterAddingSameBookTwice stamp: 'cylu 6/7/2023 17:17:09'!
+PASSED!
+
+!testRun: #CartTest #test04CartHasBookAfterAddingMoreThanOneOfTheSameBook stamp: 'cylu 6/7/2023 17:17:09'!
+PASSED!
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'cylu 6/7/2023 17:17:09'!
+PASSED!
+
+!testRun: #CartTest #test06CannotAddBookNotInStore stamp: 'cylu 6/7/2023 17:17:09'!
+PASSED!
+
+----SNAPSHOT----(7 June 2023 17:18:03) CuisUniversity-5832.image priorSource: 9366758!
+
+----QUIT----(7 June 2023 17:18:16) CuisUniversity-5832.image priorSource: 9383987!
+
+----STARTUP---- (7 June 2023 17:19:57) as /home/lucy/Documents/carrito/linux64/linux64/linux64/CuisUniversity-5832.image!
+
+
+!testRun: #CartTest #test01NewCartIsEmpty stamp: 'cylu 6/7/2023 17:20:00'!
+PASSED!
+
+!testRun: #CartTest #test02CartHasBookAfterAddingBook stamp: 'cylu 6/7/2023 17:20:00'!
+PASSED!
+
+!testRun: #CartTest #test03CartHasBookAfterAddingSameBookTwice stamp: 'cylu 6/7/2023 17:20:00'!
+PASSED!
+
+!testRun: #CartTest #test04CartHasBookAfterAddingMoreThanOneOfTheSameBook stamp: 'cylu 6/7/2023 17:20:00'!
+PASSED!
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'cylu 6/7/2023 17:20:00'!
+PASSED!
+
+!testRun: #CartTest #test06CannotAddBookNotInStore stamp: 'cylu 6/7/2023 17:20:00'!
+PASSED!
+
+----STARTUP---- (8 June 2023 14:46:17) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/MisLibros/TusLibros-Iter1/linux64/CuisUniversity-5832.image!
+
+!CartTest methodsFor: 'test' stamp: 'pau 6/8/2023 14:49:48'!
+bookLosJuegosDelHambre
+
+	^ 'Los Juegos del Hambre: En Llamas'! !
+!CartTest methodsFor: 'test' stamp: 'pau 6/8/2023 14:49:48' prior: 50624757!
+test05CannotAddNonPositiveAmountOfBooks
+
+	|cart book|
+	cart := Cart createCart.
+	book :=  self bookLosJuegosDelHambre.
+
+	self 
+		should: [cart addToCart: book amount: 0]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText equals: Cart invalidAmountErrorMessage.
+			self assert: cart listCart isEmpty]! !
+!CartTest methodsFor: 'test' stamp: 'pau 6/8/2023 14:49:48' prior: 50624436!
+test03CartHasBookAfterAddingSameBookTwice
+
+	|cart expectedCart book|
+	cart := Cart createCart.
+	book :=  self bookLosJuegosDelHambre.
+	expectedCart := Dictionary new.
+	expectedCart add: book -> 2.
+	
+	cart addToCart: book.
+	cart addToCart: book.
+
+	self assert: cart listCart equals: expectedCart.! !
+!CartTest methodsFor: 'test' stamp: 'pau 6/8/2023 14:49:48' prior: 50624415!
+test02CartHasBookAfterAddingBook
+
+	|cart expectedCart book|
+	cart := Cart createCart.
+	book :=  self bookLosJuegosDelHambre.
+	expectedCart := Dictionary new.
+	expectedCart add: book -> 1.
+	
+	cart addToCart: book.
+
+	self assert: cart listCart equals: expectedCart.! !
+!CartTest methodsFor: 'test' stamp: 'pau 6/8/2023 14:49:48' prior: 50624479!
+test04CartHasBookAfterAddingMoreThanOneOfTheSameBook
+
+	|cart expectedCart book|
+	cart := Cart createCart.
+	book :=  self bookLosJuegosDelHambre.
+	expectedCart := Dictionary new.
+	expectedCart add: book -> 3.
+	
+	cart addToCart: book amount: 3.
+
+	self assert: cart listCart equals: expectedCart.! !
+!CartTest methodsFor: 'test' stamp: 'pau 6/8/2023 14:50:12' prior: 50624941!
+test02CartHasBookAfterAddingBook
+
+	|cart expectedCart|
+	cart := Cart createCart.
+	expectedCart := Dictionary new.
+	
+	expectedCart add: self bookLosJuegosDelHambre -> 1.
+	
+	cart addToCart: self bookLosJuegosDelHambre.
+
+	self assert: cart listCart equals: expectedCart.! !
+
+!testRun: #CartTest #test02CartHasBookAfterAddingBook stamp: 'pau 6/8/2023 14:50:13'!
+PASSED!
+
+!testRun: #CartTest #test01NewCartIsEmpty stamp: 'pau 6/8/2023 14:50:13'!
+PASSED!
+
+!testRun: #CartTest #test02CartHasBookAfterAddingBook stamp: 'pau 6/8/2023 14:50:13'!
+PASSED!
+
+!testRun: #CartTest #test03CartHasBookAfterAddingSameBookTwice stamp: 'pau 6/8/2023 14:50:13'!
+PASSED!
+
+!testRun: #CartTest #test04CartHasBookAfterAddingMoreThanOneOfTheSameBook stamp: 'pau 6/8/2023 14:50:13'!
+PASSED!
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'pau 6/8/2023 14:50:13'!
+PASSED!
+
+!testRun: #CartTest #test06CannotAddBookNotInStore stamp: 'pau 6/8/2023 14:50:13'!
+PASSED!
+!CartTest methodsFor: 'test' stamp: 'pau 6/8/2023 14:50:33' prior: 50624929!
+test03CartHasBookAfterAddingSameBookTwice
+
+	|cart expectedCart |
+	cart := Cart createCart.
+	expectedCart := Dictionary new.
+	expectedCart add: self bookLosJuegosDelHambre -> 2.
+	
+	cart addToCart: self bookLosJuegosDelHambre.
+	cart addToCart: self bookLosJuegosDelHambre.
+
+	self assert: cart listCart equals: expectedCart.! !
+
+!testRun: #CartTest #test03CartHasBookAfterAddingSameBookTwice stamp: 'pau 6/8/2023 14:50:37'!
+PASSED!
+
+!testRun: #CartTest #test01NewCartIsEmpty stamp: 'pau 6/8/2023 14:50:37'!
+PASSED!
+
+!testRun: #CartTest #test02CartHasBookAfterAddingBook stamp: 'pau 6/8/2023 14:50:37'!
+PASSED!
+
+!testRun: #CartTest #test03CartHasBookAfterAddingSameBookTwice stamp: 'pau 6/8/2023 14:50:37'!
+PASSED!
+
+!testRun: #CartTest #test04CartHasBookAfterAddingMoreThanOneOfTheSameBook stamp: 'pau 6/8/2023 14:50:37'!
+PASSED!
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'pau 6/8/2023 14:50:37'!
+PASSED!
+
+!testRun: #CartTest #test06CannotAddBookNotInStore stamp: 'pau 6/8/2023 14:50:37'!
+PASSED!
+!CartTest methodsFor: 'test' stamp: 'pau 6/8/2023 14:50:46' prior: 50624952!
+test04CartHasBookAfterAddingMoreThanOneOfTheSameBook
+
+	|cart expectedCart |
+	cart := Cart createCart.
+	expectedCart := Dictionary new.
+	expectedCart add: self bookLosJuegosDelHambre -> 3.
+	
+	cart addToCart: self bookLosJuegosDelHambre amount: 3.
+
+	self assert: cart listCart equals: expectedCart.! !
+
+!testRun: #CartTest #test04CartHasBookAfterAddingMoreThanOneOfTheSameBook stamp: 'pau 6/8/2023 14:50:48'!
+PASSED!
+
+!testRun: #CartTest #test01NewCartIsEmpty stamp: 'pau 6/8/2023 14:50:48'!
+PASSED!
+
+!testRun: #CartTest #test02CartHasBookAfterAddingBook stamp: 'pau 6/8/2023 14:50:48'!
+PASSED!
+
+!testRun: #CartTest #test03CartHasBookAfterAddingSameBookTwice stamp: 'pau 6/8/2023 14:50:48'!
+PASSED!
+
+!testRun: #CartTest #test04CartHasBookAfterAddingMoreThanOneOfTheSameBook stamp: 'pau 6/8/2023 14:50:48'!
+PASSED!
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'pau 6/8/2023 14:50:48'!
+PASSED!
+
+!testRun: #CartTest #test06CannotAddBookNotInStore stamp: 'pau 6/8/2023 14:50:48'!
+PASSED!
+!CartTest methodsFor: 'test' stamp: 'pau 6/8/2023 14:51:03' prior: 50624915!
+test05CannotAddNonPositiveAmountOfBooks
+
+	|cart |
+	cart := Cart createCart.
+	self 
+		should: [cart addToCart: self bookLosJuegosDelHambre amount: 0]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText equals: Cart invalidAmountErrorMessage.
+			self assert: cart listCart isEmpty]! !
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'pau 6/8/2023 14:51:04'!
+PASSED!
+
+!testRun: #CartTest #test01NewCartIsEmpty stamp: 'pau 6/8/2023 14:51:04'!
+PASSED!
+
+!testRun: #CartTest #test02CartHasBookAfterAddingBook stamp: 'pau 6/8/2023 14:51:04'!
+PASSED!
+
+!testRun: #CartTest #test03CartHasBookAfterAddingSameBookTwice stamp: 'pau 6/8/2023 14:51:04'!
+PASSED!
+
+!testRun: #CartTest #test04CartHasBookAfterAddingMoreThanOneOfTheSameBook stamp: 'pau 6/8/2023 14:51:04'!
+PASSED!
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'pau 6/8/2023 14:51:04'!
+PASSED!
+
+!testRun: #CartTest #test06CannotAddBookNotInStore stamp: 'pau 6/8/2023 14:51:04'!
+PASSED!
+!CartTest methodsFor: 'test' stamp: 'pau 6/8/2023 14:51:18'!
+BookNotInStore
+
+	^ 'Book not in store'! !
+!CartTest methodsFor: 'test' stamp: 'pau 6/8/2023 14:51:18' prior: 50624831!
+test06CannotAddBookNotInStore
+
+	|cart book|
+	cart := Cart createCart.
+	book :=  self BookNotInStore.
+
+	self 
+		should: [cart addToCart: book]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText equals: Cart bookNotInStoreErrorMessage.
+			self assert: cart listCart isEmpty]! !
+!CartTest methodsFor: 'test' stamp: 'pau 6/8/2023 14:51:23' prior: 50625105!
+test06CannotAddBookNotInStore
+
+	|cart |
+	cart := Cart createCart.
+	self 
+		should: [cart addToCart: self BookNotInStore]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText equals: Cart bookNotInStoreErrorMessage.
+			self assert: cart listCart isEmpty]! !
+
+!testRun: #CartTest #test06CannotAddBookNotInStore stamp: 'pau 6/8/2023 14:51:25'!
+PASSED!
+
+!testRun: #CartTest #test01NewCartIsEmpty stamp: 'pau 6/8/2023 14:51:25'!
+PASSED!
+
+!testRun: #CartTest #test02CartHasBookAfterAddingBook stamp: 'pau 6/8/2023 14:51:25'!
+PASSED!
+
+!testRun: #CartTest #test03CartHasBookAfterAddingSameBookTwice stamp: 'pau 6/8/2023 14:51:25'!
+PASSED!
+
+!testRun: #CartTest #test04CartHasBookAfterAddingMoreThanOneOfTheSameBook stamp: 'pau 6/8/2023 14:51:25'!
+PASSED!
+
+!testRun: #CartTest #test05CannotAddNonPositiveAmountOfBooks stamp: 'pau 6/8/2023 14:51:25'!
+PASSED!
+
+!testRun: #CartTest #test06CannotAddBookNotInStore stamp: 'pau 6/8/2023 14:51:25'!
+PASSED!
+
+----QUIT----(8 June 2023 14:52:00) CuisUniversity-5832.image priorSource: 9384075!
