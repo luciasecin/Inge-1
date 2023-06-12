@@ -1,0 +1,4762 @@
+
+
+----QUIT----(30 May 2023 00:05:32) CuisUniversity-5832.image priorSource: 4928100!
+
+----STARTUP---- (30 May 2023 00:05:33) as /Users/hernan/Documents/Cuis/5.0-64Bits/Cuis-University-Installer/CuisUniversity-5832.image!
+
+
+----QUIT----(30 May 2023 00:05:33) CuisUniversity-5832.image priorSource: 9366537!
+
+----STARTUP---- (8 June 2023 19:09:44) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/linux64/CuisUniversity-5832.image!
+
+
+----End fileIn of /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/linux64/PinkTheme.st----!
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:10:58' prior: 50624407 overrides: 16970739!
+background
+	
+	^ `Color r: 1 g: 0.584 b: 0.9`! !
+
+----SNAPSHOT----(8 June 2023 19:11:17) CuisUniversity-5832.image priorSource: 9366758!
+
+----QUIT----(8 June 2023 19:11:20) CuisUniversity-5832.image priorSource: 9370639!
+!PinkTheme commentStamp: '<historical>' prior: 50624381!
+A very pink theme. Easy on those who are used to using pink operating systems and such.!
+
+----STARTUP---- (8 June 2023 19:11:23) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/linux64/CuisUniversity-5832.image!
+
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:12:59' prior: 50624479 overrides: 16970739!
+background
+	
+	^ `Color magenta`! !
+
+----SNAPSHOT----(8 June 2023 19:13:09) CuisUniversity-5832.image priorSource: 9370727!
+
+----STARTUP---- (8 June 2023 19:13:15) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/linux64/CuisUniversity-5832.image!
+
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:13:30' prior: 50624499 overrides: 16970739!
+background
+	
+	^ `Color red`! !
+
+----QUIT----(8 June 2023 19:13:42) CuisUniversity-5832.image priorSource: 9371266!
+
+----STARTUP---- (8 June 2023 19:13:44) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/linux64/CuisUniversity-5832.image!
+
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:14:53' prior: 50624425 overrides: 16970891!
+defaultWindowColor
+	^Color magenta! !
+
+----QUIT----(8 June 2023 19:15:00) CuisUniversity-5832.image priorSource: 9371646!
+
+----STARTUP---- (8 June 2023 19:15:02) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/linux64/CuisUniversity-5832.image!
+
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:16:47' prior: 50624522 overrides: 16970891!
+defaultWindowColor
+	^Color magenta darker! !
+
+----STARTUP---- (8 June 2023 19:16:54) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/linux64/CuisUniversity-5832.image!
+
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:17:23' prior: 50624443 overrides: 16970774!
+paneBackgroundFrom: aColor
+	^ Color hue: 0 chroma: 0.1 luminance: 1.! !
+
+----QUIT----(8 June 2023 19:17:28) CuisUniversity-5832.image priorSource: 9372005!
+
+----STARTUP---- (8 June 2023 19:17:30) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/linux64/CuisUniversity-5832.image!
+
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:17:38' prior: 50624534 overrides: 16970774!
+paneBackgroundFrom: aColor
+	^ Color hue: 0 chroma: 0.5 luminance: 1.! !
+
+----QUIT----(8 June 2023 19:17:41) CuisUniversity-5832.image priorSource: 9372423!
+
+----STARTUP---- (8 June 2023 19:17:44) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/linux64/CuisUniversity-5832.image!
+
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:17:51' prior: 50624547 overrides: 16970774!
+paneBackgroundFrom: aColor
+	^ Color hue: 0 chroma: 0 luminance: 1.! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:18:19' prior: 50624412 overrides: 16970874!
+browser
+	^Color magenta.	! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:18:37' prior: 50624566 overrides: 16970874!
+browser
+	^Color magenta lighter.	! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:19:02' prior: 50624571 overrides: 16970874!
+browser
+	^Color r: 1 g: 0.584 b: 0.8.	! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:19:16' prior: 50624576 overrides: 16970874!
+browser
+	^Color r: 0.9 g: 0.584 b: 0.8.	! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:19:31' prior: 50624581 overrides: 16970874!
+browser
+	^Color r: 0.8 g: 0.584 b: 0.8.	! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:20:17' prior: 50624522 overrides: 16970891!
+defaultWindowColor
+	^Color magenta darker! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:21:29' prior: 50624467 overrides: 16970996!
+textPane
+	^ `Color magenta`! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:22:32' prior: 50624461 overrides: 16970806!
+textHighlight
+	^ Color r: 1 g: 0.584 b: 0.8.! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:23:09' prior: 50624511 overrides: 16970739!
+background
+	
+	^ `Color green`! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:24:15' prior: 50624560 overrides: 16970774!
+paneBackgroundFrom: aColor
+	^Color magenta
+	"^ Color hue: 0 chroma: 0 luminance: 1."! !
+
+----QUIT----(8 June 2023 19:24:24) CuisUniversity-5832.image priorSource: 9372839!
+
+----STARTUP---- (8 June 2023 19:24:26) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/linux64/CuisUniversity-5832.image!
+
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:24:46' prior: 50624611 overrides: 16970774!
+paneBackgroundFrom: aColor
+	^Color magenta darker
+	"^ Color hue: 0 chroma: 0 luminance: 1."! !
+
+----QUIT----(8 June 2023 19:24:53) CuisUniversity-5832.image priorSource: 9374903!
+
+----STARTUP---- (8 June 2023 19:24:55) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/linux64/CuisUniversity-5832.image!
+
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:25:29' prior: 50624624 overrides: 16970774!
+paneBackgroundFrom: aColor
+	
+	^ Color hue: 0 chroma: 0 luminance: 1! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:26:40' prior: 50624606 overrides: 16970739!
+background
+	^ Color green! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:26:42' prior: 50624643 overrides: 16970739!
+background
+	^Color green! !
+
+----QUIT----(8 June 2023 19:26:49) CuisUniversity-5832.image priorSource: 9375326!
+
+----STARTUP---- (8 June 2023 19:26:52) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/linux64/CuisUniversity-5832.image!
+
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:28:56' prior: 50624648 overrides: 16970739!
+background
+	^`Color black`! !
+A very pink theme. Easy on those who are used to using pink operating systems and such.!
+
+----QUIT----(8 June 2023 19:29:36) CuisUniversity-5832.image priorSource: 9376027!
+
+----STARTUP---- (8 June 2023 19:29:38) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/linux64/CuisUniversity-5832.image!
+
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:30:06' prior: 50624659 overrides: 16970739!
+background
+	^`Color green`! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:31:41' prior: 50624670 overrides: 16970739!
+background
+	^`Color magenta darker darker`! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:34:25' prior: 50624675 overrides: 16970739!
+background
+	^`Color magenta darker`! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:36:04' prior: 50624680 overrides: 16970739!
+background
+	^`Color magenta`! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:36:24' prior: 50624685 overrides: 16970739!
+background
+	^`Color magenta lighter`! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:36:49' prior: 50624690 overrides: 16970739!
+background
+	^`Color magenta lighter lighter`! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:37:08' prior: 50624695 overrides: 16970739!
+background
+	^`Color magenta lighter lighter lighter lighter`! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:37:42' prior: 50624700 overrides: 16970739!
+background
+	^`Color magenta`! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:38:13' prior: 50624706 overrides: 16970739!
+background
+	^`Color lightMagenta`! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:38:32' prior: 50624711 overrides: 16970739!
+background
+	^`Color lightMagenta lighter`! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:39:01' prior: 50624716 overrides: 16970739!
+background
+	^`Color lightMagenta lighter`! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:39:27' prior: 50624721 overrides: 16970739!
+background
+	^`Color r: 0.8 g: 0.584 b: 0.8`! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/8/2023 19:39:59' prior: 50624726 overrides: 16970739!
+background
+	^`Color r: 0.9 g: 0.584 b: 0.8`! !
+
+----End fileIn of /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/linux64/TusLibros-18.st----!
+
+TestCase subclass: #CashierTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+
+!classDefinition: #CashierTest category: 'TusLibros' stamp: 'pau 6/8/2023 19:46:26'!
+TestCase subclass: #CashierTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+!CashierTest methodsFor: 'no messages' stamp: 'pau 6/8/2023 19:47:07'!
+test01CheckoutOfAnEmptyCartRaisesError! !
+!CashierTest methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 19:47:40' prior: 50624931!
+test01CheckoutOfAnEmptyCartRaisesError
+	
+	
+	
+	! !
+!CashierTest methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 19:49:51' prior: 50624936!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart catalog |
+	
+	catalog := OrderedCollection with: 'Los juegos del hambre: En llamas'. 
+	
+	cart := Cart acceptingItemsOf: catalog. 
+	
+	
+	
+	! !
+!CashierTest methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 19:50:38' prior: 50624941!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart catalog |
+	
+	catalog := Array with: 'Los juegos del hambre: En llamas'. 
+	
+	cart := Cart acceptingItemsOf: catalog. 
+	
+	
+	
+	! !
+!CashierTest methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 19:50:55'!
+catalog
+
+	^ Array with: 'Los juegos del hambre: En llamas'! !
+!CashierTest methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 19:50:55' prior: 50624950!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart catalog |
+	
+	catalog := self catalog. 
+	
+	cart := Cart acceptingItemsOf: catalog. 
+	
+	
+	
+	! !
+!CashierTest methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 19:51:00' prior: 50624963!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	
+	
+	
+	! !
+!CashierTest methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 19:51:14' prior: 50624971!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	
+	
+	
+	! !
+
+!classDefinition: #Cashier category: 'TusLibros' stamp: 'pau 6/8/2023 19:53:00'!
+Object subclass: #Cashier
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+!CashierTest methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 19:52:49' prior: 50624978!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	
+	self 
+		should: [Cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = cart invalidItemErrorMessage.
+			self assert: cart isEmpty ]
+	
+	
+	
+	! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 19:53:05'!
+ERROR!
+!Cashier class methodsFor: 'instance creation' stamp: 'pau 6/8/2023 19:53:37'!
+checkout: aCart 
+	"DO NOT FORGET TO RENAME COLLABORATORS AND REMOVE THIS COMMENT!!!!"
+	self shouldBeImplemented.
+	^self new initializeCheckout: aCart ! !
+!CashierTest methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 19:54:43' prior: 50624991!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart cashier |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cashier := Cashier new. 
+	
+	self 
+		should: [Cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = cart invalidItemErrorMessage.
+			self assert: cart isEmpty ]
+	
+	
+	
+	! !
+!CashierTest methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 19:55:00' prior: 50625015!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart cashier |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cashier := Cashier new. 
+	
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = cart invalidItemErrorMessage.
+			self assert: cart isEmpty ]
+	
+	
+	
+	! !
+!CashierTest methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 19:55:19' prior: 50625030!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart cashier |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cashier := Cashier new. 
+	
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = 'invalid cart']
+	
+	
+	
+	! !
+!CashierTest methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 19:56:21' prior: 50625045!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart cashier |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cashier := Cashier new. 
+	
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 19:56:26'!
+ERROR!
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/8/2023 19:56:35'!
+checkout: cart 
+	self shouldBeImplemented.! !
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/8/2023 19:56:44' prior: 50625074!
+checkout: cart 
+	! !
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/8/2023 19:57:25' prior: 50625078!
+checkout: cart 
+	^ self class ! !
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/8/2023 19:57:31' prior: 50625082!
+checkout: cart 
+	^ self class errorCannotCheckoutEmptyCart! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 19:57:34'!
+ERROR!
+!Cashier class methodsFor: 'error description' stamp: 'pau 6/8/2023 19:57:45'!
+errorCannotCheckoutEmptyCart
+	self shouldBeImplemented.! !
+!Cashier class methodsFor: 'error description' stamp: 'pau 6/8/2023 19:57:59' prior: 50625094!
+errorCannotCheckoutEmptyCart
+	^'Cannot checkout an empty cart'! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 19:58:01'!
+FAILURE!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 19:58:07'!
+FAILURE!
+
+!methodRemoval: Cashier class #checkout: stamp: 'pau 6/8/2023 19:58:54'!
+checkout: aCart 
+	"DO NOT FORGET TO RENAME COLLABORATORS AND REMOVE THIS COMMENT!!!!"
+	self shouldBeImplemented.
+	^self new initializeCheckout: aCart !
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/8/2023 19:59:12' prior: 50625086!
+checkout: cart 
+	^ self error: self class errorCannotCheckoutEmptyCart! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 19:59:17'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 20:00:22'!
+test02CheckoutACartWithOneBook
+	|cart cashier |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cashier := Cashier new. 
+	
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 20:00:36'!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cashier := Cashier new. 
+	
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+	
+	! !
+
+!methodRemoval: CashierTest #test02CheckoutACartWithOneBook stamp: 'pau 6/8/2023 20:00:36'!
+test02CheckoutACartWithOneBook
+	|cart cashier |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cashier := Cashier new. 
+	
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+	
+	!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 20:01:22' prior: 50625139!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cashier := Cashier new. 
+	
+	cashier checkout: cart. 
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 20:02:09' prior: 50625165!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cashier := Cashier new. 
+	
+	cashier checkout: cart. 
+
+	
+	
+	! !
+!CashierTest methodsFor: 'support' stamp: 'pau 6/8/2023 20:02:21'!
+validBook
+
+	^ 'Los juegos del hambre: En llamas'! !
+!CashierTest methodsFor: 'support' stamp: 'pau 6/8/2023 20:02:21' prior: 50624958!
+catalog
+
+	^ Array with: self validBook! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 20:02:59' prior: 50625173!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cashier := Cashier new. 
+	
+	cart add: self validBook. 
+	 
+	cashier checkout: cart. 
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 20:04:09' prior: 50625190!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cashier := Cashier new. 
+	
+	cart add: self validBook. 
+	 
+	cashier checkout: cart. 
+	
+	self assert: cart isEmpty.  
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 20:04:39'!
+ERROR!
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/8/2023 20:05:02' prior: 50625118!
+checkout: cart 
+	 cart isEmpty ifTrue: [^self error: self class errorCannotCheckoutEmptyCart]. 
+	
+	! !
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/8/2023 20:07:04' prior: 50625213!
+checkout: cart 
+	 cart isEmpty ifTrue: [^self error: self class errorCannotCheckoutEmptyCart]. 
+	
+	"te da el precio del cart??? "
+	
+	! !
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/8/2023 20:07:36' prior: 50625219!
+checkout: cart 
+	 cart isEmpty ifTrue: [^self error: self class errorCannotCheckoutEmptyCart]. 
+	
+	"te da el precio del cart??? 
+	podemos matar un carrito ?? "
+	
+	! !
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/8/2023 20:11:52' prior: 50625226!
+checkout: cart 
+	|cartTotal|
+	cart isEmpty ifTrue: [^self error: self class errorCannotCheckoutEmptyCart]. 
+	
+	cartTotal := self totalOfCart: cart. 
+	
+	cart emptyYourself. 
+	
+	! !
+!Cashier methodsFor: 'nil' stamp: 'pau 6/8/2023 20:14:59'!
+totalOfCart: aCart
+	! !
+!Cart methodsFor: 'nil' stamp: 'pau 6/8/2023 20:15:35'!
+removeItem
+	^items removeFirst ! !
+!Cashier methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 20:15:55' prior: 50625242!
+totalOfCart: aCart! !
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/8/2023 20:18:31' prior: 50625234!
+checkout: cart 
+	|cartTotal |
+	cart isEmpty ifTrue: [^self error: self class errorCannotCheckoutEmptyCart]. 
+	
+	cartTotal := cart totalPrice. 
+	
+	cart emptyYourself. 
+	
+	! !
+!Cart methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 20:21:12'!
+totalPrice
+	^items inject: 0 * peso into: [:subtotal :aBook| (catalog at: aBook) * self occurrencesOf: aBook ]. ! !
+!Cart methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 20:21:31' prior: 50625261!
+totalPrice
+	^items inject: 0 * peso into: [:subtotal :aBook| (catalog at: aBook) * self occurrencesOf: aBook ]. ! !
+!CashierTest methodsFor: 'support' stamp: 'pau 6/8/2023 20:22:40' prior: 50625186!
+catalog
+
+	^Dictionary with: self validBook -> 100*peso! !
+!Cart methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 20:22:53' prior: 50625268!
+totalPrice
+	^items inject: 0 into: [:subtotal :aBook| (catalog at: aBook) * self occurrencesOf: aBook ]. ! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 20:23:45' prior: 50625199!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout|
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cashier := Cashier new. 
+	
+	cart add: self validBook. 
+	 
+	totalAtCheckout := cashier checkout: cart. 
+	
+	self assert: cart isEmpty. 
+	self assert: totalAtCheckout equals: 100*peso. 
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 20:23:46'!
+ERROR!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 20:24:05' prior: 50625286!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout|
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cashier := Cashier new. 
+	
+	cart add: self validBook. 
+	 
+	totalAtCheckout := cashier checkout: cart. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 20:24:12' prior: 50625302!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout|
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cashier := Cashier new. 
+	
+	cart add: self validBook. 
+	 
+	totalAtCheckout := cashier checkout: cart. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 20:24:16'!
+ERROR!
+!CashierTest methodsFor: 'support' stamp: 'pau 6/8/2023 20:24:25' prior: 50625275!
+catalog
+
+	^Dictionary with: self validBook -> (100*peso)! !
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 20:24:28'!
+ERROR!
+
+----End fileIn of /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/linux64/Packages/TerseGuide.pck.st----!
+!Cart methodsFor: 'assertions' stamp: 'pau 6/8/2023 20:26:58' prior: 50624756!
+assertIsValidItem: anItem
+
+	(catalog includesKey: anItem) ifFalse: [ self error: self invalidItemErrorMessage ]! !
+
+!testRun: #CartTest #test01NewCartsAreCreatedEmpty stamp: 'pau 6/8/2023 20:27:01'!
+PASSED!
+
+!testRun: #CartTest #test02CanNotAddItemsThatDoNotBelongToStore stamp: 'pau 6/8/2023 20:27:01'!
+ERROR!
+
+!testRun: #CartTest #test03AfterAddingAnItemTheCartIsNotEmptyAnymore stamp: 'pau 6/8/2023 20:27:01'!
+ERROR!
+
+!testRun: #CartTest #test04CanNotAddNonPositiveNumberOfItems stamp: 'pau 6/8/2023 20:27:01'!
+PASSED!
+
+!testRun: #CartTest #test05CanNotAddMoreThanOneItemNotSellByTheStore stamp: 'pau 6/8/2023 20:27:01'!
+ERROR!
+
+!testRun: #CartTest #test06CartRemembersAddedItems stamp: 'pau 6/8/2023 20:27:01'!
+ERROR!
+
+!testRun: #CartTest #test07CartDoesNotHoldNotAddedItems stamp: 'pau 6/8/2023 20:27:01'!
+PASSED!
+
+!testRun: #CartTest #test08CartRemembersTheNumberOfAddedItems stamp: 'pau 6/8/2023 20:27:01'!
+ERROR!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 20:27:08'!
+ERROR!
+!Cart methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 20:27:59' prior: 50625280!
+totalPrice
+	^items inject: 0 into: [:subtotal :aBook| subtotal +  (catalog at: aBook) * (self occurrencesOf: aBook) ]. ! !
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 20:28:05'!
+ERROR!
+!Cart methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 20:28:23'!
+emptyYourself
+	self shouldBeImplemented.! !
+!Cart methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 20:28:38' prior: 50628309!
+emptyYourself
+	items := OrderedCollection new.! !
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 20:28:40'!
+FAILURE!
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/8/2023 20:29:10' prior: 50625253!
+checkout: cart 
+	|cartTotal |
+	cart isEmpty ifTrue: [^self error: self class errorCannotCheckoutEmptyCart]. 
+	
+	cartTotal := cart totalPrice. 
+	
+	cart emptyYourself. 
+	
+	^cartTotal 
+	
+	! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 20:29:11'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 20:29:11'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 20:30:05'!
+test03CheckoutACartWithTwoDifferentBooksCorrectly
+	|cart cashier  totalAtCheckout|
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cashier := Cashier new. 
+	
+	cart add: self validBook. 
+	 
+	totalAtCheckout := cashier checkout: cart. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 20:30:47' prior: 50628337!
+test03CheckoutACartWithTwoDifferentBooksCorrectly
+	|cart cashier  totalAtCheckout|
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cashier := Cashier new. 
+	
+	cart add: self validBook. 
+	 
+	totalAtCheckout := cashier checkout: cart. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'support' stamp: 'pau 6/8/2023 20:31:39'!
+catalogWithTwoBooks
+
+	^Dictionary with: self validBook -> (100*peso) with: self validBook2 -> (200*peso)! !
+!CashierTest methodsFor: 'support' stamp: 'pau 6/8/2023 20:32:20'!
+validBook2
+
+	^ 'Cazadores de sombras'! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 20:35:05' prior: 50628355!
+test03CheckoutACartWithTwoDifferentBooksCorrectly
+	|cart cashier  totalAtCheckout|
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cashier := Cashier new. 
+	
+	cart add: self validBook; add: self validBook2. 
+	 
+	totalAtCheckout := cashier checkout: cart. 
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/8/2023 20:35:07'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 20:35:07'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 20:35:07'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/8/2023 20:35:07'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/8/2023 20:35:13'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 20:35:13'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 20:35:13'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/8/2023 20:35:13'!
+PASSED!
+
+!methodRemoval: Cashier #totalOfCart: stamp: 'pau 6/8/2023 20:36:13'!
+totalOfCart: aCart!
+
+!methodRemoval: Cart #removeItem stamp: 'pau 6/8/2023 20:36:35'!
+removeItem
+	^items removeFirst !
+!Cashier class methodsFor: 'nil' stamp: 'pau 6/8/2023 20:55:25'!
+checkout: aCart charging: aCreditCard on: aDate registeringOn: aSalesBook 
+	self assertIsNotEmpty: aCart. 
+	self assertIsNotExpired: aCreditCard on: aDate. 
+	
+	^self new initializeCheckout: aCart charging: aCreditCard on: aDate registeringOn: aSalesBook ! !
+!Cashier class methodsFor: 'nil' stamp: 'pau 6/8/2023 20:57:15'!
+assertCannotBeEmpty: aCart
+	aCart isEmpty ifTrue: [self error: self errorCannotCheckoutEmptyCart]. ! !
+!Cashier class methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 20:57:50'!
+assertIsNotExpired: aCreditCart on: aDate 
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:02:32' prior: 50625058!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart cashier validCreditCard |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	validCreditCard := 'valid credict card'. 
+	
+	"cashier := Cashier checkout: cart charging: valid on:  registeringOn: . "
+	
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:03:42' prior: 50628457!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart cashier validCreditCard aSalesBook|
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	validCreditCard := 'valid credict card'. 
+	aSalesBook := OrderedCollection new. 
+	
+	cashier := Cashier checkout: cart charging: validCreditCard on: Time now registeringOn:  aSalesBook. 
+	
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+	
+	! !
+
+!classDefinition: #Cashier category: 'TusLibros' stamp: 'pau 6/8/2023 21:07:39'!
+Object subclass: #Cashier
+	instanceVariableNames: 'salesBook'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+!Cashier methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 21:07:32'!
+initializeCheckout: aCart charging: aCreditCard on: aDate registeringOn: aSalesBook
+	| cart creditCard dateOfOperation |
+	cart := aCart .
+	creditCard := aCreditCard . 
+	dateOfOperation := aDate . 
+	salesBook := aSalesBook! !
+
+!classDefinition: #Cashier category: 'TusLibros' stamp: 'pau 6/8/2023 21:08:00'!
+Object subclass: #Cashier
+	instanceVariableNames: 'salesBook carta'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+
+!classDefinition: #Cashier category: 'TusLibros' stamp: 'pau 6/8/2023 21:08:10'!
+Object subclass: #Cashier
+	instanceVariableNames: 'salesBook carta creditCarda'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+
+!classDefinition: #Cashier category: 'TusLibros' stamp: 'pau 6/8/2023 21:08:11'!
+Object subclass: #Cashier
+	instanceVariableNames: 'salesBook carta creditCarda dateOfOperationa'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+!Cashier methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 21:08:08' prior: 50628500!
+initializeCheckout: aCart charging: aCreditCard on: aDate registeringOn: aSalesBook
+	carta := aCart .
+	creditCarda := aCreditCard . 
+	dateOfOperationa := aDate . 
+	salesBook := aSalesBook! !
+
+!classDefinition: #Cashier category: 'TusLibros' stamp: 'pau 6/8/2023 21:08:17'!
+Object subclass: #Cashier
+	instanceVariableNames: 'salesBook cara creditCarda dateOfOperationa'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+!Cashier methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 21:08:17' prior: 50628532!
+initializeCheckout: aCart charging: aCreditCard on: aDate registeringOn: aSalesBook
+	cara := aCart .
+	creditCarda := aCreditCard . 
+	dateOfOperationa := aDate . 
+	salesBook := aSalesBook! !
+
+!classDefinition: #Cashier category: 'TusLibros' stamp: 'pau 6/8/2023 21:08:45'!
+Object subclass: #Cashier
+	instanceVariableNames: 'salesBook cartToCheackout creditCarda dateOfOperationa'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+!Cashier methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 21:08:45' prior: 50628549!
+initializeCheckout: aCart charging: aCreditCard on: aDate registeringOn: aSalesBook
+	cartToCheackout := aCart .
+	creditCarda := aCreditCard . 
+	dateOfOperationa := aDate . 
+	salesBook := aSalesBook! !
+
+!classDefinition: #Cashier category: 'TusLibros' stamp: 'pau 6/8/2023 21:08:53'!
+Object subclass: #Cashier
+	instanceVariableNames: 'salesBook cartToCheackout creditCard dateOfOperationa'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+!Cashier methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 21:08:53' prior: 50628566!
+initializeCheckout: aCart charging: aCreditCard on: aDate registeringOn: aSalesBook
+	cartToCheackout := aCart .
+	creditCard := aCreditCard . 
+	dateOfOperationa := aDate . 
+	salesBook := aSalesBook! !
+
+!classDefinition: #Cashier category: 'TusLibros' stamp: 'pau 6/8/2023 21:09:01'!
+Object subclass: #Cashier
+	instanceVariableNames: 'salesBook cartToCheackout creditCard dateOfOperation'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+!Cashier methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 21:09:01' prior: 50628584!
+initializeCheckout: aCart charging: aCreditCard on: aDate registeringOn: aSalesBook
+	cartToCheackout := aCart .
+	creditCard := aCreditCard . 
+	dateOfOperation := aDate . 
+	salesBook := aSalesBook! !
+!Cashier methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 21:09:05' prior: 50628602!
+initializeCheckout: aCart charging: aCreditCard on: aDate registeringOn: aSalesBook
+	cartToCheackout := aCart .
+	creditCard := aCreditCard . 
+	dateOfOperation := aDate . 
+	salesBook := aSalesBook. ! !
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/8/2023 21:09:47'!
+checkout
+	|cartTotal |
+	
+	cartTotal := cartToCheackout totalPrice. 
+	
+	cartToCheackout emptyYourself. 
+	
+	^cartTotal 
+	
+	! !
+
+!methodRemoval: Cashier #checkout: stamp: 'pau 6/8/2023 21:10:02'!
+checkout: cart 
+	|cartTotal |
+	cart isEmpty ifTrue: [^self error: self class errorCannotCheckoutEmptyCart]. 
+	
+	cartTotal := cart totalPrice. 
+	
+	cart emptyYourself. 
+	
+	^cartTotal 
+	
+	!
+
+!classDefinition: #Cashier category: 'TusLibros' stamp: 'pau 6/8/2023 21:10:11'!
+Object subclass: #Cashier
+	instanceVariableNames: 'salesBook cart creditCard dateOfOperation'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+!Cashier methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 21:10:11' prior: 50628612!
+initializeCheckout: aCart charging: aCreditCard on: aDate registeringOn: aSalesBook
+	cart := aCart .
+	creditCard := aCreditCard . 
+	dateOfOperation := aDate . 
+	salesBook := aSalesBook. ! !
+!Cashier methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 21:10:11' prior: 50628621!
+checkout
+	|cartTotal |
+	
+	cartTotal := cart totalPrice. 
+	
+	cart emptyYourself. 
+	
+	^cartTotal 
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:10:30' prior: 50628474!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart cashier validCreditCard aSalesBook|
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	validCreditCard := 'valid credict card'. 
+	aSalesBook := OrderedCollection new. 
+	
+	cashier := Cashier checkout: cart charging: validCreditCard on: Time now registeringOn:  aSalesBook. 
+	
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 21:10:31'!
+ERROR!
+!Cashier class methodsFor: 'instance creation' stamp: 'pau 6/8/2023 21:11:14' prior: 50628435!
+checkout: aCart charging: aCreditCard on: aDate registeringOn: aSalesBook 
+	self assertCannotBeEmpty: aCart. 
+	self assertIsNotExpired: aCreditCard on: aDate. 
+	
+	^self new initializeCheckout: aCart charging: aCreditCard on: aDate registeringOn: aSalesBook ! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 21:11:24'!
+ERROR!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 21:11:24'!
+ERROR!
+!Cashier class methodsFor: 'asserts' stamp: 'pau 6/8/2023 21:11:54' prior: 50628446!
+assertCannotBeEmpty: aCart
+	aCart isEmpty ifTrue: [self error: self errorCannotCheckoutEmptyCart]. ! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 21:13:26'!
+ERROR!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 21:13:26'!
+ERROR!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 21:15:03'!
+ERROR!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:15:22' prior: 50628659!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart validCreditCard aSalesBook|
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	validCreditCard := 'valid credict card'. 
+	aSalesBook := OrderedCollection new. 
+	
+	self 
+		should: [Cashier checkout: cart charging: validCreditCard on: Time now registeringOn:  aSalesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:15:37' prior: 50628716!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart validCreditCard aSalesBook|
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	validCreditCard := 'valid credict card'. 
+	aSalesBook := OrderedCollection new. 
+	
+	self 
+		should: [Cashier checkout: cart charging: validCreditCard on: Time now registeringOn:  aSalesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart. 
+			self assert: aSalesBook isEmpty]
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 21:15:38'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 21:15:38'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 21:15:38'!
+ERROR!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/8/2023 21:15:38'!
+ERROR!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:18:28'!
+validCreditCard
+
+	^ 'valid credict card'! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:18:28' prior: 50628734!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart validCreditCard aSalesBook|
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	validCreditCard := self validCreditCard. 
+	aSalesBook := OrderedCollection new. 
+	
+	self 
+		should: [Cashier checkout: cart charging: validCreditCard on: Time now registeringOn:  aSalesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart. 
+			self assert: aSalesBook isEmpty]
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:18:32' prior: 50628770!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart aSalesBook|
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	aSalesBook := OrderedCollection new. 
+	
+	self 
+		should: [Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  aSalesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart. 
+			self assert: aSalesBook isEmpty]
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:18:48'!
+salesBook
+
+	^ OrderedCollection new! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:18:48' prior: 50628789!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart aSalesBook|
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	aSalesBook := self salesBook. 
+	
+	self 
+		should: [Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  aSalesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart. 
+			self assert: aSalesBook isEmpty]
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:18:51' prior: 50628810!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	self 
+		should: [Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart. 
+			self assert: self salesBook isEmpty]
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 21:18:54'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 21:18:54'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 21:18:54'!
+ERROR!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/8/2023 21:18:54'!
+ERROR!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:19:03' prior: 50628827!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	self 
+		should: [Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart. 
+			self assert: self salesBook isEmpty]
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:19:49' prior: 50625314!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout|
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook.
+	
+	 
+	totalAtCheckout := cashier checkout. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 21:19:50'!
+ERROR!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:20:02' prior: 50628872!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout|
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook.
+	
+	 
+	totalAtCheckout := cashier checkout. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:20:24' prior: 50628896!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout|
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook.
+	
+	 
+	totalAtCheckout := cashier checkout. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	
+	self 
+		should: [Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 21:20:24'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 21:20:24'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 21:20:24'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/8/2023 21:20:24'!
+ERROR!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/8/2023 21:20:24'!
+ERROR!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:20:34' prior: 50628916!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout|
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook.
+	
+	totalAtCheckout := cashier checkout. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	
+	self 
+		should: [Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 21:20:35'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 21:20:35'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 21:20:35'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/8/2023 21:20:35'!
+ERROR!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/8/2023 21:20:35'!
+ERROR!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 21:20:44'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:21:09' prior: 50628383!
+test03CheckoutACartWithTwoDifferentBooksCorrectly
+	|cart cashier  totalAtCheckout|
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook. 
+	
+	totalAtCheckout := cashier checkout. 
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:21:13' prior: 50628999!
+test03CheckoutACartWithTwoDifferentBooksCorrectly
+	|cart cashier  totalAtCheckout|
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook. 
+	
+	totalAtCheckout := cashier checkout. 
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	"
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+"
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/8/2023 21:21:14'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 21:21:14'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 21:21:14'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/8/2023 21:21:14'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:22:14' prior: 50628956!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout expectedSalesBook |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook.
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: cashier. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	"self assert: expectedSalesBook equals: "
+	self 
+		should: [Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+
+	
+	
+	! !
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/8/2023 21:23:17' prior: 50628653!
+checkout
+	|cartTotal |
+	
+	cartTotal := cart totalPrice. 
+	
+	cart emptyYourself. 
+	
+	salesBook add: cartTotal. 
+	
+	^cartTotal 
+	
+	! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 21:23:29'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:24:28' prior: 50629057!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout expectedSalesBook salesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn: salesBook.
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+	
+	self 
+		should: [Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 21:24:37'!
+FAILURE!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:24:46' prior: 50629093!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout expectedSalesBook salesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn: salesBook.
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 100*peso. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+	
+	self 
+		should: [Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 21:24:47'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 21:24:47'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 21:24:47'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/8/2023 21:24:47'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:25:00' prior: 50629021!
+test03CheckoutACartWithTwoDifferentBooksCorrectly
+	|cart cashier  totalAtCheckout salesBook |
+	salesBook := self salesBook. 
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook. 
+	
+	totalAtCheckout := cashier checkout. 
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	"
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+"
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:25:09' prior: 50629165!
+test03CheckoutACartWithTwoDifferentBooksCorrectly
+	|cart cashier  totalAtCheckout salesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  salesBook. 
+	
+	totalAtCheckout := cashier checkout. 
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	"
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+"
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:26:02' prior: 50629188!
+test03CheckoutACartWithTwoDifferentBooksCorrectly
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  salesBook. 
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso.  
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	
+	"
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+"
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:26:32' prior: 50629211!
+test03CheckoutACartWithTwoDifferentBooksCorrectly
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  salesBook. 
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso.  
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+	
+	"
+	self 
+		should: [cashier checkout: cart]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+"
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:26:48' prior: 50629237!
+test03CheckoutACartWithTwoDifferentBooksCorrectly
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  salesBook. 
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso.  
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+	
+	self 
+		should: [Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/8/2023 21:26:49'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 21:26:49'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 21:26:49'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/8/2023 21:26:49'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:27:42'!
+test04CheckoutWithAnExpiredCardRaisesError
+
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  salesBook. 
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso.  
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+	
+	self 
+		should: [Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'support' stamp: 'pau 6/8/2023 21:30:33'!
+invalidCreditCard
+
+	^ Date today! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:31:26' prior: 50629307!
+test04CheckoutWithAnExpiredCardRaisesError
+
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart charging: self invalidCreditCard on: Time now registeringOn:  salesBook. 
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso.  
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+	
+	self 
+		should: [Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'support' stamp: 'pau 6/8/2023 21:31:38' prior: 50629336!
+invalidCreditCard
+
+	^ Date yesterday! !
+!CashierTest methodsFor: 'support' stamp: 'pau 6/8/2023 21:32:26' prior: 50628766!
+validCreditCard
+
+	^ Date tomorrow.! !
+!Cashier class methodsFor: 'error description' stamp: 'pau 6/8/2023 21:33:09'!
+errorCannotCheckoutWithAnExpiredCreditCard
+	^'Cannot checkout an empty cart'! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:34:02' prior: 50629340!
+test04CheckoutWithAnExpiredCardRaisesError
+
+	|cart salesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	self 
+		should: [Cashier checkout: cart charging: self invalidCreditCard on: Time now registeringOn:  self salesBook]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAnExpiredCreditCard. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/8/2023 21:34:11'!
+FAILURE!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/8/2023 21:34:59'!
+FAILURE!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/8/2023 21:35:15' prior: 50629383!
+test04CheckoutWithAnExpiredCardRaisesError
+
+	|cart salesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	self 
+		should: [Cashier checkout: cart charging: self invalidCreditCard on: Date today registeringOn:  self salesBook]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAnExpiredCreditCard. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/8/2023 21:35:22'!
+FAILURE!
+!CashierTest methodsFor: 'support' stamp: 'pau 6/8/2023 21:39:44' prior: 50629373!
+validCreditCard
+	|expirationDate|
+	expirationDate := Date today monthIndex @ Date today year. 
+	^ expirationDate! !
+!CashierTest methodsFor: 'support' stamp: 'pau 6/8/2023 21:40:06' prior: 50629369!
+invalidCreditCard
+
+	|expirationDate|
+	expirationDate := (Date today monthIndex -1) @ Date today year. 
+	^ expirationDate! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/8/2023 21:40:07'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/8/2023 21:40:07'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/8/2023 21:40:07'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/8/2023 21:40:07'!
+FAILURE!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/8/2023 21:40:07'!
+FAILURE!
+
+self invalidCreditCard !
+!Cashier class methodsFor: 'asserts' stamp: 'pau 6/8/2023 21:41:50' prior: 50628452!
+assertIsNotExpired: aCreditCart on: aDate 
+	! !
+
+Object subclass: #CreditCard
+	instanceVariableNames: 'expirationDate'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+
+!classDefinition: #CreditCard category: 'TusLibros' stamp: 'pau 6/8/2023 21:42:43'!
+Object subclass: #CreditCard
+	instanceVariableNames: 'expirationDate'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+!CreditCard class methodsFor: 'nil' stamp: 'pau 6/8/2023 21:45:40'!
+expiresIn: aMonth of: aYear
+	^  self new initializeIn: aMonth of: aYear. ! !
+!CreditCard class methodsFor: 'nil' stamp: 'pau 6/8/2023 21:46:23'!
+isExpiredOn: aDate 
+	
+	^ aDate year > year and: [] ! !
+
+CreditCard class
+	instanceVariableNames: 'year month'!
+
+!classDefinition: 'CreditCard class' category: 'TusLibros' stamp: 'pau 6/8/2023 21:46:30'!
+CreditCard class
+	instanceVariableNames: 'year month'!
+
+CreditCard class
+	instanceVariableNames: ''!
+
+!classDefinition: 'CreditCard class' category: 'TusLibros' stamp: 'pau 6/8/2023 21:46:40'!
+CreditCard class
+	instanceVariableNames: ''!
+
+!methodRemoval: CreditCard class #isExpiredOn: stamp: 'pau 6/8/2023 21:46:47'!
+isExpiredOn: aDate 
+	
+	^ aDate year > year and: [] !
+!CreditCard methodsFor: 'nil' stamp: 'pau 6/8/2023 21:46:57'!
+isExpiredOn: aDate 
+	
+	^ aDate year > year and: [] ! !
+
+Object subclass: #CreditCard
+	instanceVariableNames: 'expirationYear expirationMonth'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+
+!classDefinition: #CreditCard category: 'TusLibros' stamp: 'pau 6/8/2023 21:47:13'!
+Object subclass: #CreditCard
+	instanceVariableNames: 'expirationYear expirationMonth'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+!CreditCard methodsFor: 'nil' stamp: 'pau 6/8/2023 21:47:46'!
+initializeIn: aMonth of: aYear
+	expirationYear := aYear. 
+	expirationMonth := aMonth. ! !
+!CreditCard methodsFor: 'as yet unclassified' stamp: 'pau 6/8/2023 21:48:15' prior: 50629506!
+isExpiredOn: aDate 
+	
+	^ aDate year > expirationYear and: [ aDate monthIndex > expirationMonth monthIndex] ! !
+!CashierTest methodsFor: 'support' stamp: 'pau 6/8/2023 21:48:58' prior: 50629440!
+invalidCreditCard
+
+	^ CreditCard expiresIn: Date today month of: Date today year.  ! !
+
+----QUIT----(8 June 2023 21:49:27) CuisUniversity-5832.image priorSource: 9376381!
+
+----STARTUP---- (11 June 2023 20:28:44) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/linux64/linux64/CuisUniversity-5832.image!
+
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/11/2023 20:31:23'!
+FAILURE!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/11/2023 20:31:23'!
+FAILURE!
+!CashierTest methodsFor: 'support' stamp: 'pau 6/11/2023 20:32:10' prior: 50629433!
+validCreditCard
+
+	^ CreditCard expiresIn: Date today month of: Date today year.  ! !
+!CashierTest methodsFor: 'support' stamp: 'pau 6/11/2023 20:32:38' prior: 50629536!
+invalidCreditCard
+
+	^ CreditCard expiresIn: (Date today monthIndex -1) of: Date today year.  ! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/11/2023 20:32:39'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/11/2023 20:32:39'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/11/2023 20:32:39'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/11/2023 20:32:39'!
+FAILURE!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/11/2023 20:32:39'!
+FAILURE!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/11/2023 20:32:48'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/11/2023 20:32:52'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/11/2023 20:32:57'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/11/2023 20:33:01'!
+FAILURE!
+!Cashier class methodsFor: 'asserts' stamp: 'pau 6/11/2023 20:35:36' prior: 50629465!
+assertIsNotExpired: aCreditCart on: aDate 
+	(aCreditCart isExpiredOn: aDate) ifTrue: [self error: self errorCannotCheckoutWithAnExpiredCreditCard]! !
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/11/2023 20:35:38'!
+ERROR!
+
+aDate year > expirationYear!
+
+Year !
+
+Year !
+
+Year !
+
+Year yearNumber: 2023!
+
+y := Year yearNumber: 2023 !
+
+y duration !
+
+y yearNumber !
+
+Date today!
+
+Date today yearNumber !
+!CreditCard methodsFor: 'as yet unclassified' stamp: 'pau 6/11/2023 20:39:42' prior: 50629529!
+isExpiredOn: aDate 
+	
+	^ aDate year yearNumber > expirationYear yearNumber or: [ aDate monthIndex > expirationMonth monthIndex] ! !
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/11/2023 20:39:45'!
+ERROR!
+!CreditCard methodsFor: 'as yet unclassified' stamp: 'pau 6/11/2023 20:39:59' prior: 50629616!
+isExpiredOn: aDate 
+	
+	^ aDate year yearNumber > expirationYear yearNumber or: [ aDate monthIndex > expirationMonth] ! !
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/11/2023 20:40:02'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/11/2023 20:40:04'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/11/2023 20:40:04'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/11/2023 20:40:04'!
+ERROR!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/11/2023 20:40:04'!
+ERROR!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/11/2023 20:40:04'!
+PASSED!
+
+Month!
+
+Month march!
+
+Month current !
+
+Month current !
+
+Month current name !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/11/2023 20:41:44'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/11/2023 20:41:47'!
+ERROR!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/11/2023 20:41:47'!
+ERROR!
+!CashierTest methodsFor: 'support' stamp: 'pau 6/11/2023 20:42:38' prior: 50629556!
+validCreditCard
+
+	^ CreditCard expiresIn: Date today monthIndex of: Date today year.  ! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/11/2023 20:42:43'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/11/2023 20:42:43'!
+ERROR!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/11/2023 20:42:43'!
+ERROR!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/11/2023 20:42:43'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/11/2023 20:42:46'!
+ERROR!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/11/2023 20:43:05' prior: 50629124!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout expectedSalesBook salesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Date today registeringOn: salesBook.
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 100*peso. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+	
+	self 
+		should: [Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/11/2023 20:43:08'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/11/2023 20:43:08'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/11/2023 20:43:08'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/11/2023 20:43:08'!
+ERROR!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/11/2023 20:43:08'!
+ERROR!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/11/2023 20:43:16' prior: 50629264!
+test03CheckoutACartWithTwoDifferentBooksCorrectly
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Date today registeringOn:  salesBook. 
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso.  
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+	
+	self 
+		should: [Cashier checkout: cart charging: self validCreditCard on: Time now registeringOn:  self salesBook]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/11/2023 20:43:17'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/11/2023 20:43:20'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/11/2023 20:43:20'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/11/2023 20:43:20'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/11/2023 20:43:20'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/11/2023 20:47:51' prior: 50628856!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	self 
+		should: [Cashier checkout: cart charging: self validCreditCard on: Date today registeringOn:  self salesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart. 
+			self assert: self salesBook isEmpty]
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/11/2023 20:47:53'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/11/2023 20:47:53'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/11/2023 20:47:53'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/11/2023 20:47:53'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/11/2023 20:47:53'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/11/2023 20:48:42'!
+assertThatCartCannotBePurchasedAfterCheckout: cart
+
+	^ self 
+		should: [Cashier checkout: cart charging: self validCreditCard on: Date today registeringOn:  self salesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart. 
+			self assert: self salesBook isEmpty]! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/11/2023 20:48:42' prior: 50629782!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	self assertThatCartCannotBePurchasedAfterCheckout: cart
+
+	
+	
+	! !
+!PinkTheme methodsFor: 'colors' stamp: 'pau 6/11/2023 20:49:19' prior: 50624596 overrides: 16970996!
+textPane
+	^ `Color magenta lighter`! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/11/2023 20:49:48' prior: 50629690!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout expectedSalesBook salesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Date today registeringOn: salesBook.
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 100*peso. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+	
+	self assertThatCartCannotBePurchasedAfterCheckout: cart.
+
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/11/2023 20:49:58' prior: 50629735!
+test03CheckoutACartWithTwoDifferentBooksCorrectly
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Date today registeringOn:  salesBook. 
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso.  
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+	
+	self assertThatCartCannotBePurchasedAfterCheckout: cart
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/11/2023 20:50:01'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/11/2023 20:50:04'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/11/2023 20:50:06'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/11/2023 20:50:08'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/11/2023 20:50:58' prior: 50629828!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	
+	self assertThatCartCannotBePurchasedAfterCheckout: cart
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/11/2023 20:53:35'!
+test05CardWithoutEnoughMoneyCannotCheckout
+
+	|cart salesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	self 
+		should: [Cashier checkout: cart charging: self invalidCreditCard on: Date today registeringOn:  self salesBook]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAnExpiredCreditCard. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+
+a Cashier!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/11/2023 22:17:41'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/11/2023 22:17:41'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/11/2023 22:17:41'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/11/2023 22:17:41'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/11/2023 22:17:41'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/11/2023 22:17:41'!
+PASSED!
+!CashierTest methodsFor: 'support' stamp: 'pau 6/11/2023 23:54:47'!
+merchantProcessorNotEnoughCredit
+	^ [:aCreditCard | ^false]! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/11/2023 23:57:05' prior: 50629908!
+test05CardWithoutEnoughMoneyCannotCheckout
+
+	|cart salesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	self 
+		should: [Cashier checkout: cart 
+					 charging: self invalidCreditCard 
+					withProcessor: self merchantProcessorNotEnoughCredit 
+					on: Date today 
+					registeringOn:  self salesBook]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAnExpiredCreditCard. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+!Cashier class methodsFor: 'instance creation' stamp: 'pau 6/11/2023 23:58:03'!
+checkout: aCart charging: aCreditCard withProcessor: aMerchantProcesor on: aDate registeringOn: aSalesBook 
+	self assertCannotBeEmpty: aCart. 
+	self assertIsNotExpired: aCreditCard on: aDate. 
+	
+	^self new initializeCheckout: aCart charging: aCreditCard on: aDate registeringOn: aSalesBook ! !
+
+!classDefinition: #Cashier category: 'TusLibros' stamp: 'pau 6/11/2023 23:58:56'!
+Object subclass: #Cashier
+	instanceVariableNames: 'salesBook cart creditCard dateOfOperation merchantProcessor'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+!Cashier methodsFor: 'initialization' stamp: 'pau 6/11/2023 23:58:53'!
+initializeCheckout: aCart charging: aCreditCard withProcessor: aMerchantProcesor on: aDate registeringOn: aSalesBook
+	cart := aCart .
+	creditCard := aCreditCard . 
+	dateOfOperation := aDate . 
+	salesBook := aSalesBook. 
+	merchantProcessor := aMerchantProcesor . ! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:01:56' prior: 50629953!
+test05CardWithoutEnoughMoneyCannotCheckout
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self invalidCreditCard 
+					withProcessor: self merchantProcessorNotEnoughCredit 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAnExpiredCreditCard. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:02:02'!
+ERROR!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:02:19' prior: 50630006!
+test05CardWithoutEnoughMoneyCannotCheckout
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorNotEnoughCredit 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAnExpiredCreditCard. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:02:20'!
+FAILURE!
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/12/2023 00:03:07' prior: 50629083!
+checkout
+	|cartTotal |
+	
+	
+	cartTotal := cart totalPrice. 
+	
+	merchantProcessor value: cartTotal. 
+	
+	cart emptyYourself. 
+	
+	salesBook add: cartTotal. 
+	
+	^cartTotal 
+	
+	! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:03:10'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/12/2023 00:03:10'!
+ERROR!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/12/2023 00:03:10'!
+ERROR!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:03:10'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:03:10'!
+ERROR!
+!CashierTest methodsFor: 'support' stamp: 'pau 6/12/2023 00:05:45' prior: 50629948!
+merchantProcessorNotEnoughCredit
+	^ [:aCreditCard | ^self error: Cashier cannotCheckoutWithACreditCardWithoutEnoughCredit]! !
+!Cashier class methodsFor: 'error description' stamp: 'pau 6/12/2023 00:06:42'!
+errorCannotCheckoutWithACreditCardWithoutEnoughCredit
+	^'Credit card doesnt have enogh credit'! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:07:14'!
+test06CardInabilitatedCannotCheckout
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorNotEnoughCredit 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAnExpiredCreditCard. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:09:03'!
+test06CardDeactivatedCannotCheckout
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorNotEnoughCredit 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAnExpiredCreditCard. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:09:14'!
+ERROR!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:09:35' prior: 50630033!
+test05CardWithoutEnoughMoneyCannotCheckout
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorNotEnoughCredit 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithACreditCardWithoutEnoughCredit. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:09:36'!
+ERROR!
+!Cashier methodsFor: 'initialization' stamp: 'pau 6/12/2023 00:09:45' prior: 50629995!
+initializeCheckout: aCart charging: aCreditCard withProcessor: aMerchantProcesor on: aDate registeringOn: aSalesBook
+	cart := aCart .
+	creditCard := aCreditCard . 
+	dateOfOperation := aDate . 
+	salesBook := aSalesBook. 
+	merchantProcessor := aMerchantProcesor. ! !
+!Cashier class methodsFor: 'instance creation' stamp: 'pau 6/12/2023 00:10:48' prior: 50629975!
+checkout: aCart charging: aCreditCard withProcessor: aMerchantProcesor on: aDate registeringOn: aSalesBook 
+	self assertCannotBeEmpty: aCart. 
+	self assertIsNotExpired: aCreditCard on: aDate. 
+	
+	^self new initializeCheckout: aCart charging: aCreditCard withProcessor: aMerchantProcesor on: aDate registeringOn: aSalesBook ! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:10:49'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/12/2023 00:10:49'!
+ERROR!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/12/2023 00:10:49'!
+ERROR!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:10:49'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:10:49'!
+ERROR!
+
+!testRun: #CashierTest #test06CardDeactivatedCannotCheckout stamp: 'pau 6/12/2023 00:10:49'!
+ERROR!
+
+!testRun: #CashierTest #test06CardInabilitatedCannotCheckout stamp: 'pau 6/12/2023 00:10:49'!
+ERROR!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:10:53'!
+ERROR!
+!CashierTest methodsFor: 'support' stamp: 'pau 6/12/2023 00:11:31' prior: 50630086!
+merchantProcessorNotEnoughCredit
+	^ [:aCreditCard | ^self error: Cashier errorCannotCheckoutWithACreditCardWithoutEnoughCredit]! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:11:33'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/12/2023 00:11:33'!
+ERROR!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/12/2023 00:11:33'!
+ERROR!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:11:33'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:11:33'!
+PASSED!
+
+!testRun: #CashierTest #test06CardDeactivatedCannotCheckout stamp: 'pau 6/12/2023 00:11:33'!
+FAILURE!
+
+!testRun: #CashierTest #test06CardInabilitatedCannotCheckout stamp: 'pau 6/12/2023 00:11:33'!
+FAILURE!
+!CashierTest methodsFor: 'support' stamp: 'pau 6/12/2023 00:12:53'!
+merchantProcessorValidCreditCard
+	^ [:aCreditCard | ]! !
+!CashierTest methodsFor: 'asserts' stamp: 'pau 6/12/2023 00:13:28' prior: 50629814!
+assertThatCartCannotBePurchasedAfterCheckout: cart
+
+	^ self 
+		should: [Cashier checkout: cart 
+				charging: self validCreditCard 
+				on: Date today registeringOn:  self salesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart. 
+			self assert: self salesBook isEmpty]! !
+!CashierTest methodsFor: 'asserts' stamp: 'pau 6/12/2023 00:13:56' prior: 50630263!
+assertThatCartCannotBePurchasedAfterCheckout: cart
+
+	^ self 
+		should: [Cashier checkout: cart 
+				charging: self validCreditCard 
+				withProcessor: self merchantProcessorValidCreditCard 
+				on: Date today registeringOn:  self salesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart. 
+			self assert: self salesBook isEmpty]! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:13:57'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/12/2023 00:13:57'!
+ERROR!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/12/2023 00:13:57'!
+ERROR!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:13:57'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:13:57'!
+PASSED!
+
+!testRun: #CashierTest #test06CardDeactivatedCannotCheckout stamp: 'pau 6/12/2023 00:13:57'!
+FAILURE!
+
+!testRun: #CashierTest #test06CardInabilitatedCannotCheckout stamp: 'pau 6/12/2023 00:13:57'!
+FAILURE!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:15:07' prior: 50629900!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	
+	self should: [Cashier checkout: cart 
+				charging: self validCreditCard 
+				withProcessor: self merchantProcessorValidCreditCard 
+				on: Date today registeringOn:  self salesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart. 
+			self assert: self salesBook isEmpty]
+
+	
+	
+	! !
+
+!methodRemoval: CashierTest #assertThatCartCannotBePurchasedAfterCheckout: stamp: 'pau 6/12/2023 00:15:12'!
+assertThatCartCannotBePurchasedAfterCheckout: cart
+
+	^ self 
+		should: [Cashier checkout: cart 
+				charging: self validCreditCard 
+				withProcessor: self merchantProcessorValidCreditCard 
+				on: Date today registeringOn:  self salesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart. 
+			self assert: self salesBook isEmpty]!
+!CashierTest methodsFor: 'asserts' stamp: 'pau 6/12/2023 00:16:00'!
+assertCartCannotBePurchasedAfterCheckout: aCart
+
+	self should: [Cashier checkout: aCart 
+				charging: self validCreditCard 
+				withProcessor: self merchantProcessorValidCreditCard 
+				on: Date today registeringOn:  self salesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart. 
+			self assert: self salesBook isEmpty]! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:16:13' prior: 50629841!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout expectedSalesBook salesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Date today registeringOn: salesBook.
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 100*peso. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart.
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/12/2023 00:16:14'!
+ERROR!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:16:39' prior: 50630368!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout expectedSalesBook |
+	cart := Cart acceptingItemsOf: self catalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Date today registeringOn: self salesBook.
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 100*peso. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	self assert: expectedSalesBook equals: self salesBook. 
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart.
+
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:16:47' prior: 50630393!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout expectedSalesBook salesBook |
+	
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Date today registeringOn: salesBook.
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 100*peso. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart.
+
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:17:08' prior: 50630413!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout expectedSalesBook |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Date today registeringOn: self salesBook.
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 100*peso. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	self assert: expectedSalesBook equals: self salesBook. 
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart.
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/12/2023 00:17:09'!
+ERROR!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:17:43' prior: 50630435!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout expectedSalesBook |
+	
+	cart := Cart acceptingItemsOf: self catalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn: self salesBook.
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 100*peso. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	self assert: expectedSalesBook equals: self salesBook. 
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart.
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/12/2023 00:17:52'!
+FAILURE!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:18:46' prior: 50630459!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout expectedSalesBook salesBook|
+	
+	salesBook := self salesBook . 
+	cart := Cart acceptingItemsOf: self catalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 100*peso. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart.
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/12/2023 00:18:47'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:18:47'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/12/2023 00:18:47'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/12/2023 00:18:47'!
+ERROR!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:18:47'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:18:47'!
+PASSED!
+
+!testRun: #CashierTest #test06CardDeactivatedCannotCheckout stamp: 'pau 6/12/2023 00:18:47'!
+FAILURE!
+
+!testRun: #CashierTest #test06CardInabilitatedCannotCheckout stamp: 'pau 6/12/2023 00:18:47'!
+FAILURE!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:19:05' prior: 50629863!
+test03CheckoutACartWithTwoDifferentBooksCorrectly
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart charging: self validCreditCard on: Date today registeringOn:  salesBook. 
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso.  
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/12/2023 00:19:06'!
+ERROR!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:19:22' prior: 50630535!
+test03CheckoutACartWithTwoDifferentBooksCorrectly
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+			
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso.  
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/12/2023 00:19:23'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:19:23'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/12/2023 00:19:23'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/12/2023 00:19:23'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:19:23'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:19:23'!
+PASSED!
+
+!testRun: #CashierTest #test06CardDeactivatedCannotCheckout stamp: 'pau 6/12/2023 00:19:23'!
+FAILURE!
+
+!testRun: #CashierTest #test06CardInabilitatedCannotCheckout stamp: 'pau 6/12/2023 00:19:23'!
+FAILURE!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:19:46' prior: 50629410!
+test04CheckoutWithAnExpiredCardRaisesError
+
+	|cart salesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	self 
+		should: [Cashier checkout: cart 
+			charging: self invalidCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAnExpiredCreditCard. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:19:47'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:19:47'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/12/2023 00:19:47'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/12/2023 00:19:47'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:19:47'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:19:47'!
+PASSED!
+
+!testRun: #CashierTest #test06CardDeactivatedCannotCheckout stamp: 'pau 6/12/2023 00:19:47'!
+FAILURE!
+
+!testRun: #CashierTest #test06CardInabilitatedCannotCheckout stamp: 'pau 6/12/2023 00:19:47'!
+FAILURE!
+
+!methodRemoval: CashierTest #test06CardInabilitatedCannotCheckout stamp: 'pau 6/12/2023 00:20:10'!
+test06CardInabilitatedCannotCheckout
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorNotEnoughCredit 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAnExpiredCreditCard. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:20:57'!
+test06CardReportedCannotCheckout
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorNotEnoughCredit 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAnExpiredCreditCard. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+
+!methodRemoval: CashierTest #test06CardDeactivatedCannotCheckout stamp: 'pau 6/12/2023 00:20:57'!
+test06CardDeactivatedCannotCheckout
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorNotEnoughCredit 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAnExpiredCreditCard. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	!
+!CashierTest methodsFor: 'support' stamp: 'pau 6/12/2023 00:21:29'!
+merchantProcessorReportedCard
+	^ [:aCreditCard | ^self error: Cashier errorCannotCheckoutWithAReportedCreditCard]! !
+!Cashier class methodsFor: 'error description' stamp: 'pau 6/12/2023 00:22:04'!
+errorCannotCheckoutWithAReportedCreditCard
+	^'Cannot checkout with a card that was reported lost or stolen'! !
+
+!testRun: #CashierTest #test06CardReportedCannotCheckout stamp: 'pau 6/12/2023 00:22:14'!
+FAILURE!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:22:29' prior: 50630685!
+test06CardReportedCannotCheckout
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorNotEnoughCredit 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAReportedCreditCard . 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test06CardReportedCannotCheckout stamp: 'pau 6/12/2023 00:22:30'!
+FAILURE!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:22:49' prior: 50630748!
+test06CardReportedCannotCheckout
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorReportedCard 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAReportedCreditCard . 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test06CardReportedCannotCheckout stamp: 'pau 6/12/2023 00:22:50'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:22:50'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/12/2023 00:22:50'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/12/2023 00:22:50'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:22:50'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:22:50'!
+PASSED!
+
+!testRun: #CashierTest #test06CardReportedCannotCheckout stamp: 'pau 6/12/2023 00:22:50'!
+PASSED!
+
+!methodRemoval: Cashier class #checkout:charging:on:registeringOn: stamp: 'pau 6/12/2023 00:23:03'!
+checkout: aCart charging: aCreditCard on: aDate registeringOn: aSalesBook 
+	self assertCannotBeEmpty: aCart. 
+	self assertIsNotExpired: aCreditCard on: aDate. 
+	
+	^self new initializeCheckout: aCart charging: aCreditCard on: aDate registeringOn: aSalesBook !
+
+!methodRemoval: Cashier #initializeCheckout:charging:on:registeringOn: stamp: 'pau 6/12/2023 00:23:11'!
+initializeCheckout: aCart charging: aCreditCard on: aDate registeringOn: aSalesBook
+	cart := aCart .
+	creditCard := aCreditCard . 
+	dateOfOperation := aDate . 
+	salesBook := aSalesBook. !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:23:53'!
+test07MerchantProcessorAprovesCard
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorReportedCard 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAReportedCreditCard . 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+
+!methodRemoval: CashierTest #test07MerchantProcessorAprovesCard stamp: 'pau 6/12/2023 00:24:08'!
+test07MerchantProcessorAprovesCard
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorReportedCard 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAReportedCreditCard . 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:30:28'!
+cartWithCatalog
+
+	^ Cart acceptingItemsOf: self catalog! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:30:28' prior: 50630485!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout expectedSalesBook salesBook|
+	
+	salesBook := self salesBook . 
+	cart := self cartWithCatalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 100*peso. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart.
+
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:30:28' prior: 50630318!
+test01CheckoutOfAnEmptyCartRaisesError
+	|cart |
+	
+	cart := self cartWithCatalog. 
+	
+	self should: [Cashier checkout: cart 
+				charging: self validCreditCard 
+				withProcessor: self merchantProcessorValidCreditCard 
+				on: Date today registeringOn:  self salesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart. 
+			self assert: self salesBook isEmpty]
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:30:32' prior: 50630914!
+test01CheckoutOfAnEmptyCartRaisesError
+	self should: [Cashier checkout: self cartWithCatalog 
+				charging: self validCreditCard 
+				withProcessor: self merchantProcessorValidCreditCard 
+				on: Date today registeringOn:  self salesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart. 
+			self assert: self salesBook isEmpty]
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:30:36' prior: 50630932!
+test01CheckoutOfAnEmptyCartRaisesError
+	
+	self should: [Cashier checkout: self cartWithCatalog 
+				charging: self validCreditCard 
+				withProcessor: self merchantProcessorValidCreditCard 
+				on: Date today registeringOn:  self salesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart. 
+			self assert: self salesBook isEmpty]
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:30:36'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:30:36'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/12/2023 00:30:36'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/12/2023 00:30:36'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:30:36'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:30:36'!
+PASSED!
+
+!testRun: #CashierTest #test06CardReportedCannotCheckout stamp: 'pau 6/12/2023 00:30:36'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:31:03' prior: 50630949!
+test01CheckoutOfAnEmptyCartRaisesError
+	
+	self should: [Cashier checkout: self cartWithCatalog 
+				charging: self validCreditCard 
+				withProcessor: self merchantProcessorValidCreditCard 
+				on: Date today registeringOn:  self salesBook.
+				]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart. 
+			self assert: self salesBook isEmpty]
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:31:17'!
+emptyCartWithCatalog
+
+	^ Cart acceptingItemsOf: self catalog! !
+!CashierTest methodsFor: 'as yet unclassified' stamp: 'pau 6/12/2023 00:31:17' prior: 50630891!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout expectedSalesBook salesBook|
+	
+	salesBook := self salesBook . 
+	cart := self emptyCartWithCatalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 100*peso. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart.
+
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'as yet unclassified' stamp: 'pau 6/12/2023 00:31:17' prior: 50630989!
+test01CheckoutOfAnEmptyCartRaisesError
+	
+	self should: [Cashier checkout: self emptyCartWithCatalog 
+				charging: self validCreditCard 
+				withProcessor: self merchantProcessorValidCreditCard 
+				on: Date today registeringOn:  self salesBook.
+				]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutEmptyCart. 
+			self assert: self salesBook isEmpty]
+
+	
+	
+	! !
+
+!methodRemoval: CashierTest #cartWithCatalog stamp: 'pau 6/12/2023 00:31:18'!
+cartWithCatalog
+
+	^ Cart acceptingItemsOf: self catalog!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:31:19'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:31:19'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/12/2023 00:31:19'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/12/2023 00:31:19'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:31:19'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:31:19'!
+PASSED!
+
+!testRun: #CashierTest #test06CardReportedCannotCheckout stamp: 'pau 6/12/2023 00:31:19'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:33:06'!
+test07CartCannotBeRepurchasedAfterCheckout
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorReportedCard 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAReportedCreditCard . 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:33:37' prior: 50631078!
+test07CartCannotBeRepurchasedAfterCheckout
+
+	|cart cashier  totalAtCheckout expectedSalesBook salesBook|
+	
+	salesBook := self salesBook . 
+	cart := self emptyCartWithCatalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart.! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:33:59' prior: 50631101!
+test07CartCannotBeRepurchasedAfterCheckout
+
+	|cart cashier salesBook|
+	
+	salesBook := self salesBook . 
+	cart := self emptyCartWithCatalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart.! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:34:19' prior: 50631118!
+test07CartCannotBeRepurchasedAfterCheckout
+
+	|cart cashier|
+	 
+	cart := self emptyCartWithCatalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  self salesBook.
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart.! !
+
+!testRun: #CashierTest #test07CartCannotBeRepurchasedAfterCheckout stamp: 'pau 6/12/2023 00:34:27'!
+FAILURE!
+
+!testRun: #CashierTest #test07CartCannotBeRepurchasedAfterCheckout stamp: 'pau 6/12/2023 00:34:58'!
+FAILURE!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:35:38' prior: 50631134!
+test07CartCannotBeRepurchasedAfterCheckout
+
+	|cart cashier|
+	 
+	cart := self emptyCartWithCatalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  self salesBook.
+	cashier checkout. 
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart.! !
+
+!testRun: #CashierTest #test07CartCannotBeRepurchasedAfterCheckout stamp: 'pau 6/12/2023 00:35:39'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:35:39'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/12/2023 00:35:39'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/12/2023 00:35:39'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:35:39'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:35:39'!
+PASSED!
+
+!testRun: #CashierTest #test06CardReportedCannotCheckout stamp: 'pau 6/12/2023 00:35:39'!
+PASSED!
+
+!testRun: #CashierTest #test07CartCannotBeRepurchasedAfterCheckout stamp: 'pau 6/12/2023 00:35:39'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:35:44' prior: 50631155!
+test07CartCannotBeRepurchasedAfterCheckout
+
+	|cart cashier|
+	 
+	cart := self emptyCartWithCatalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  self salesBook.
+	
+	cashier checkout. 
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart.! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:36:02'!
+test04CartCannotBeRepurchasedAfterCheckout
+
+	|cart cashier|
+	 
+	cart := self emptyCartWithCatalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  self salesBook.
+	
+	cashier checkout. 
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart.! !
+
+!methodRemoval: CashierTest #test07CartCannotBeRepurchasedAfterCheckout stamp: 'pau 6/12/2023 00:36:02'!
+test07CartCannotBeRepurchasedAfterCheckout
+
+	|cart cashier|
+	 
+	cart := self emptyCartWithCatalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  self salesBook.
+	
+	cashier checkout. 
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart.!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:36:08'!
+test05CheckoutWithAnExpiredCardRaisesError
+
+	|cart salesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	self 
+		should: [Cashier checkout: cart 
+			charging: self invalidCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAnExpiredCreditCard. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+
+!methodRemoval: CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:36:08'!
+test04CheckoutWithAnExpiredCardRaisesError
+
+	|cart salesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	self 
+		should: [Cashier checkout: cart 
+			charging: self invalidCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAnExpiredCreditCard. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:36:18'!
+test06CardWithoutEnoughMoneyCannotCheckout
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorNotEnoughCredit 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithACreditCardWithoutEnoughCredit. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+
+!methodRemoval: CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:36:18'!
+test05CardWithoutEnoughMoneyCannotCheckout
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorNotEnoughCredit 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithACreditCardWithoutEnoughCredit. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:36:24'!
+test07CardReportedCannotCheckout
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorReportedCard 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAReportedCreditCard . 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+
+!methodRemoval: CashierTest #test06CardReportedCannotCheckout stamp: 'pau 6/12/2023 00:36:24'!
+test06CardReportedCannotCheckout
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorReportedCard 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAReportedCreditCard . 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:36:46' prior: 50631010!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout expectedSalesBook salesBook|
+	
+	salesBook := self salesBook . 
+	cart := self emptyCartWithCatalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 100*peso. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:36:53' prior: 50630562!
+test03CheckoutACartWithTwoDifferentBooksCorrectly
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+			
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso.  
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+
+	
+
+	
+	
+	! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:37:46'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:37:46'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/12/2023 00:37:46'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/12/2023 00:37:46'!
+PASSED!
+
+!testRun: #CashierTest #test04CartCannotBeRepurchasedAfterCheckout stamp: 'pau 6/12/2023 00:37:46'!
+PASSED!
+
+!testRun: #CashierTest #test05CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:37:46'!
+PASSED!
+
+!testRun: #CashierTest #test06CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:37:46'!
+PASSED!
+
+!testRun: #CashierTest #test07CardReportedCannotCheckout stamp: 'pau 6/12/2023 00:37:46'!
+PASSED!
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/12/2023 00:38:30'!
+debitTotalUsingMerchantProcessor: cartTotal
+
+	^ merchantProcessor value: cartTotal! !
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/12/2023 00:38:30' prior: 50630060!
+checkout
+	|cartTotal |
+	
+	
+	cartTotal := cart totalPrice. 
+	
+	self debitTotalUsingMerchantProcessor: cartTotal. 
+	
+	cart emptyYourself. 
+	
+	salesBook add: cartTotal. 
+	
+	^cartTotal 
+	
+	! !
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/12/2023 00:38:49' prior: 50631455!
+checkout
+	|cartTotal |
+	
+	
+	cartTotal := cart totalPrice. 
+	
+	self debitTotalUsingMerchantProcessor: cartTotal. 
+	
+	cart emptyYourself. 
+	
+	
+	salesBook add: cartTotal. 
+	
+	^cartTotal 
+	
+	! !
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/12/2023 00:39:09'!
+emptyCart
+
+	^ cart emptyYourself! !
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/12/2023 00:39:09' prior: 50631464!
+checkout
+	|cartTotal |
+	
+	
+	cartTotal := cart totalPrice. 
+	
+	self debitTotalUsingMerchantProcessor: cartTotal. 
+	
+	self emptyCart. 
+	
+	
+	salesBook add: cartTotal. 
+	
+	^cartTotal 
+	
+	! !
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/12/2023 00:39:19' prior: 50631476!
+checkout
+	|cartTotal |
+	
+	
+	cartTotal := cart totalPrice. 
+	
+	self debitTotalUsingMerchantProcessor: cartTotal. 
+	
+	self emptyCart. 
+	
+	salesBook add: cartTotal. 
+	
+	^cartTotal 
+	
+	! !
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/12/2023 00:39:38'!
+registerOperation: cartTotal
+
+	^ salesBook add: cartTotal! !
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/12/2023 00:39:38' prior: 50631485!
+checkout
+	|cartTotal |
+	
+	
+	cartTotal := cart totalPrice. 
+	
+	self debitTotalUsingMerchantProcessor: cartTotal. 
+	
+	self emptyCart. 
+	
+	self registerOperation: cartTotal. 
+	
+	^cartTotal 
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:41:02'!
+test02CheckoutTotalOfACartWithOneBookIsCorrectAndIsRegistered
+	|cart cashier  totalAtCheckout expectedSalesBook salesBook|
+	
+	salesBook := self salesBook . 
+	cart := self emptyCartWithCatalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 100*peso. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+
+	
+
+	
+	
+	! !
+
+!methodRemoval: CashierTest #test02CheckoutACartWithOneBookCorrectly stamp: 'pau 6/12/2023 00:41:02'!
+test02CheckoutACartWithOneBookCorrectly
+	|cart cashier  totalAtCheckout expectedSalesBook salesBook|
+	
+	salesBook := self salesBook . 
+	cart := self emptyCartWithCatalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+	
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 100*peso. 
+	
+	self assert: totalAtCheckout equals: 100*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+
+	
+
+	
+	
+	!
+
+!testRun: #CashierTest #test02CheckoutTotalOfACartWithOneBookIsCorrectAndIsRegistered stamp: 'pau 6/12/2023 00:41:10'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:41:10'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutTotalOfACartWithOneBookIsCorrectAndIsRegistered stamp: 'pau 6/12/2023 00:41:10'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/12/2023 00:41:10'!
+PASSED!
+
+!testRun: #CashierTest #test04CartCannotBeRepurchasedAfterCheckout stamp: 'pau 6/12/2023 00:41:10'!
+PASSED!
+
+!testRun: #CashierTest #test05CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:41:10'!
+PASSED!
+
+!testRun: #CashierTest #test06CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:41:10'!
+PASSED!
+
+!testRun: #CashierTest #test07CardReportedCannotCheckout stamp: 'pau 6/12/2023 00:41:10'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:41:43'!
+test03CheckoutTotalOfACartWithTwoBookIsCorrectAndIsRegistered
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+			
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso.  
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+
+	
+
+	
+	
+	! !
+
+!methodRemoval: CashierTest #test03CheckoutACartWithTwoDifferentBooksCorrectly stamp: 'pau 6/12/2023 00:41:43'!
+test03CheckoutACartWithTwoDifferentBooksCorrectly
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+			
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso.  
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+
+	
+
+	
+	
+	!
+
+!testRun: #CashierTest #test03CheckoutTotalOfACartWithTwoBookIsCorrectAndIsRegistered stamp: 'pau 6/12/2023 00:41:46'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:41:46'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutTotalOfACartWithOneBookIsCorrectAndIsRegistered stamp: 'pau 6/12/2023 00:41:46'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutTotalOfACartWithTwoBookIsCorrectAndIsRegistered stamp: 'pau 6/12/2023 00:41:46'!
+PASSED!
+
+!testRun: #CashierTest #test04CartCannotBeRepurchasedAfterCheckout stamp: 'pau 6/12/2023 00:41:46'!
+PASSED!
+
+!testRun: #CashierTest #test05CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:41:46'!
+PASSED!
+
+!testRun: #CashierTest #test06CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:41:47'!
+PASSED!
+
+!testRun: #CashierTest #test07CardReportedCannotCheckout stamp: 'pau 6/12/2023 00:41:47'!
+PASSED!
+
+!methodRemoval: CashierTest #test07CardReportedCannotCheckout stamp: 'pau 6/12/2023 00:43:32'!
+test07CardReportedCannotCheckout
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorReportedCard 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAReportedCreditCard . 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	!
+!Cashier methodsFor: 'checkout' stamp: 'pau 6/12/2023 00:44:24' prior: 50631449!
+debitTotalUsingMerchantProcessor: cartTotal
+
+	^ merchantProcessor value: creditCard value: cartTotal! !
+!CashierTest methodsFor: 'support' stamp: 'pau 6/12/2023 00:44:44' prior: 50630228!
+merchantProcessorNotEnoughCredit
+	^ [:aCreditCard :anAmountToDebit| ^self error: Cashier errorCannotCheckoutWithACreditCardWithoutEnoughCredit]! !
+!CashierTest methodsFor: 'support' stamp: 'pau 6/12/2023 00:44:55' prior: 50630731!
+merchantProcessorReportedCard
+	^ [:aCreditCard :anAmountToDebit| ^self error: Cashier errorCannotCheckoutWithAReportedCreditCard]! !
+!CashierTest methodsFor: 'support' stamp: 'pau 6/12/2023 00:45:41' prior: 50630258!
+merchantProcessorValidCreditCard
+	^ [:aCreditCard :anAmountToDebit| | totalCredit | 
+						totalCredit := totalCredit - anAmountToDebit]! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:45:46'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutTotalOfACartWithOneBookIsCorrectAndIsRegistered stamp: 'pau 6/12/2023 00:45:46'!
+ERROR!
+
+!testRun: #CashierTest #test03CheckoutTotalOfACartWithTwoBookIsCorrectAndIsRegistered stamp: 'pau 6/12/2023 00:45:46'!
+ERROR!
+
+!testRun: #CashierTest #test04CartCannotBeRepurchasedAfterCheckout stamp: 'pau 6/12/2023 00:45:46'!
+ERROR!
+
+!testRun: #CashierTest #test05CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:45:46'!
+PASSED!
+
+!testRun: #CashierTest #test06CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:45:46'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutTotalOfACartWithOneBookIsCorrectAndIsRegistered stamp: 'pau 6/12/2023 00:45:49'!
+ERROR!
+!CashierTest methodsFor: 'support' stamp: 'pau 6/12/2023 00:46:41' prior: 50631698!
+merchantProcessorValidCreditCard
+	^ [:aCreditCard :anAmountToDebit| | totalDebited | 
+		totalDebited :=anAmountToDebit]! !
+!CashierTest methodsFor: 'support' stamp: 'pau 6/12/2023 00:46:53' prior: 50631731!
+merchantProcessorValidCreditCard
+	^ [:aCreditCard :anAmountToDebit| | totalToDebit| 
+		totalToDebit :=anAmountToDebit]! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:46:58'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutTotalOfACartWithOneBookIsCorrectAndIsRegistered stamp: 'pau 6/12/2023 00:46:58'!
+PASSED!
+
+!testRun: #CashierTest #test03CheckoutTotalOfACartWithTwoBookIsCorrectAndIsRegistered stamp: 'pau 6/12/2023 00:46:58'!
+PASSED!
+
+!testRun: #CashierTest #test04CartCannotBeRepurchasedAfterCheckout stamp: 'pau 6/12/2023 00:46:58'!
+PASSED!
+
+!testRun: #CashierTest #test05CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:46:58'!
+PASSED!
+
+!testRun: #CashierTest #test06CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:46:58'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:50:33'!
+test07CheckoutTotalOfACartWithTwoBookIsCorrectAndIsRegistered
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+			
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso.  
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+
+	
+
+	
+	
+	! !
+
+!methodRemoval: CashierTest #test03CheckoutTotalOfACartWithTwoBookIsCorrectAndIsRegistered stamp: 'pau 6/12/2023 00:50:33'!
+test03CheckoutTotalOfACartWithTwoBookIsCorrectAndIsRegistered
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+			
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso.  
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+
+	
+
+	
+	
+	!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:50:42'!
+test03CartCannotBeRepurchasedAfterCheckout
+
+	|cart cashier|
+	 
+	cart := self emptyCartWithCatalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  self salesBook.
+	
+	cashier checkout. 
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart.! !
+
+!methodRemoval: CashierTest #test04CartCannotBeRepurchasedAfterCheckout stamp: 'pau 6/12/2023 00:50:42'!
+test04CartCannotBeRepurchasedAfterCheckout
+
+	|cart cashier|
+	 
+	cart := self emptyCartWithCatalog. 
+	cart add: self validBook. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  self salesBook.
+	
+	cashier checkout. 
+	
+	self assertCartCannotBePurchasedAfterCheckout: cart.!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:50:49'!
+test04CheckoutWithAnExpiredCardRaisesError
+
+	|cart salesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	self 
+		should: [Cashier checkout: cart 
+			charging: self invalidCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAnExpiredCreditCard. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+
+!methodRemoval: CashierTest #test05CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:50:49'!
+test05CheckoutWithAnExpiredCardRaisesError
+
+	|cart salesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	self 
+		should: [Cashier checkout: cart 
+			charging: self invalidCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithAnExpiredCreditCard. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:50:54'!
+test05CardWithoutEnoughMoneyCannotCheckout
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorNotEnoughCredit 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithACreditCardWithoutEnoughCredit. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	! !
+
+!methodRemoval: CashierTest #test06CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:50:54'!
+test06CardWithoutEnoughMoneyCannotCheckout
+
+	|cart salesBook cashier |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+					 charging: self validCreditCard 
+					withProcessor: self merchantProcessorNotEnoughCredit 
+					on: Date today 
+					registeringOn:  self salesBook. 
+	self 
+		should: [cashier checkout]
+		raise: Error - MessageNotUnderstood
+		withExceptionDo: [ :anError |
+			self assert: anError messageText = Cashier errorCannotCheckoutWithACreditCardWithoutEnoughCredit. 
+			self assert: salesBook isEmpty ]
+
+	
+
+	
+	
+	!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:51:01'!
+test06CheckoutTotalOfACartWithTwoBookIsCorrectAndIsRegistered
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+			
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso.  
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+
+	
+
+	
+	
+	! !
+
+!methodRemoval: CashierTest #test07CheckoutTotalOfACartWithTwoBookIsCorrectAndIsRegistered stamp: 'pau 6/12/2023 00:51:01'!
+test07CheckoutTotalOfACartWithTwoBookIsCorrectAndIsRegistered
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+			
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso.  
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+
+	
+
+	
+	
+	!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:51:37'!
+test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor
+
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+			
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso.  
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+
+	
+
+	
+	
+	! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:52:36' prior: 50631982!
+test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor
+
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook merchantProcessor |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	merchantProcessor := self merchantProcessorValidCreditCard. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+			
+	"self assert:" 
+! !
+
+!testRun: #CashierTest #test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor stamp: 'pau 6/12/2023 00:52:50'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 00:52:50'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutTotalOfACartWithOneBookIsCorrectAndIsRegistered stamp: 'pau 6/12/2023 00:52:50'!
+PASSED!
+
+!testRun: #CashierTest #test03CartCannotBeRepurchasedAfterCheckout stamp: 'pau 6/12/2023 00:52:50'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 00:52:50'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 00:52:50'!
+PASSED!
+
+!testRun: #CashierTest #test06CheckoutTotalOfACartWithTwoBookIsCorrectAndIsRegistered stamp: 'pau 6/12/2023 00:52:50'!
+PASSED!
+
+!testRun: #CashierTest #test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor stamp: 'pau 6/12/2023 00:52:50'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:53:07' prior: 50632006!
+test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor
+
+	|cart cashier merchantProcessor |
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	merchantProcessor := self merchantProcessorValidCreditCard. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn: self salesBook.
+			
+	"self assert:" 
+! !
+!CashierTest methodsFor: 'support' stamp: 'pau 6/12/2023 01:00:35' prior: 50631738!
+merchantProcessorValidCreditCard
+	^ [:aCreditCard :anAmountToDebit| | totalToDebit| 
+		totalToDebit :=anAmountToDebit ]! !
+
+Object subclass: #Cashier
+	instanceVariableNames: 'salesBook cart creditCard dateOfOperation merchantProcessor'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+
+!classDefinition: #Cashier category: 'TusLibros' stamp: 'pau 6/12/2023 01:01:26'!
+Object subclass: #Cashier
+	instanceVariableNames: 'salesBook cart creditCard dateOfOperation merchantProcessor'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+
+!methodRemoval: CashierTest #test06CheckoutTotalOfACartWithTwoBookIsCorrectAndIsRegistered stamp: 'pau 6/12/2023 01:01:39'!
+test06CheckoutTotalOfACartWithTwoBookIsCorrectAndIsRegistered
+	|cart cashier  totalAtCheckout salesBook expectedSalesBook |
+	salesBook := self salesBook. 
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	 
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn:  salesBook.
+			
+	totalAtCheckout := cashier checkout. 
+	expectedSalesBook := OrderedCollection with: 300*peso.  
+	
+	self assert: totalAtCheckout equals: 300*peso. 
+	self assert: expectedSalesBook equals: salesBook. 
+
+	
+
+	
+	
+	!
+!CashierTest methodsFor: 'support' stamp: 'pau 6/12/2023 01:03:12' prior: 50632074!
+merchantProcessorValidCreditCard
+	^ [:aCreditCard :anAmountToDebit| | credit| 
+		
+		credit := 500*peso - anAmountToDebit ]! !
+
+!classDefinition: #CashierTest category: 'TusLibros' stamp: 'pau 6/12/2023 01:04:38'!
+TestCase subclass: #CashierTest
+	instanceVariableNames: 'creditInCard'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+!CashierTest methodsFor: 'support' stamp: 'pau 6/12/2023 01:04:36' prior: 50632119!
+merchantProcessorValidCreditCard
+	^ [:aCreditCard :anAmountToDebit|
+		creditInCard := 500*peso - anAmountToDebit ]! !
+!CashierTest methodsFor: 'support' stamp: 'pau 6/12/2023 01:04:56' prior: 50632133!
+merchantProcessorValidCreditCard
+	^ [:aCreditCard :anAmountToDebit|
+		creditInCard := creditInCard - anAmountToDebit ]! !
+!CashierTest methodsFor: 'nil' stamp: 'pau 6/12/2023 01:05:19' overrides: 16961394!
+setUp
+	creditInCard :=500*peso.! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 01:05:58' prior: 50632056!
+test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor
+
+	|cart cashier merchantProcessor |
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	merchantProcessor := self merchantProcessorValidCreditCard. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn: self salesBook.
+			
+	self assert: creditInCard == 200*peso.
+! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 01:06:13' prior: 50632151!
+test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor
+
+	|cart cashier merchantProcessor |
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	merchantProcessor := self merchantProcessorValidCreditCard. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn: self salesBook.
+	
+	cashier checkout .
+	
+	self assert: creditInCard == 200*peso.
+! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 01:06:18' prior: 50632170!
+test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor
+
+	|cart cashier |
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn: self salesBook.
+	
+	cashier checkout .
+	
+	self assert: creditInCard == 200*peso.
+! !
+
+!testRun: #CashierTest #test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor stamp: 'pau 6/12/2023 01:06:22'!
+ERROR!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 01:06:31' prior: 50632189!
+test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor
+
+	|cart cashier |
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn: self salesBook.
+	
+	cashier checkout .
+	
+	self assert: creditInCard == (200*peso).
+! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 01:06:33' prior: 50632210!
+test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor
+
+	|cart cashier |
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn: self salesBook.
+	
+	cashier checkout .
+	
+	self assert: creditInCard = (200*peso).
+! !
+
+!testRun: #CashierTest #test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor stamp: 'pau 6/12/2023 01:06:36'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 01:06:36'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutTotalOfACartWithOneBookIsCorrectAndIsRegistered stamp: 'pau 6/12/2023 01:06:36'!
+PASSED!
+
+!testRun: #CashierTest #test03CartCannotBeRepurchasedAfterCheckout stamp: 'pau 6/12/2023 01:06:36'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 01:06:36'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 01:06:36'!
+PASSED!
+
+!testRun: #CashierTest #test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor stamp: 'pau 6/12/2023 01:06:36'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 01:07:09' prior: 50632227!
+test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor
+
+	|cart cashier |
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn: self salesBook.
+	
+	cashier checkout.
+	
+	self assert: creditInCard = (200*peso).
+! !
+
+TestCase subclass: #CashierTest
+	instanceVariableNames: 'creditInCard cardUsed'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+
+!classDefinition: #CashierTest category: 'TusLibros' stamp: 'pau 6/12/2023 01:07:22'!
+TestCase subclass: #CashierTest
+	instanceVariableNames: 'creditInCard cardUsed'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'TusLibros'!
+!CashierTest methodsFor: 'setUp' stamp: 'pau 6/12/2023 01:07:42' prior: 50632147 overrides: 16961394!
+setUp
+	creditInCard :=500*peso.
+	cardUsed := self validCreditCard.! !
+!CashierTest methodsFor: 'support' stamp: 'pau 6/12/2023 01:08:03' prior: 50632140!
+merchantProcessorValidCreditCard
+	^ [:aCreditCard :anAmountToDebit|
+		creditInCard := creditInCard - anAmountToDebit.
+		cardUsed := aCreditCard ]! !
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 01:08:04'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutTotalOfACartWithOneBookIsCorrectAndIsRegistered stamp: 'pau 6/12/2023 01:08:04'!
+PASSED!
+
+!testRun: #CashierTest #test03CartCannotBeRepurchasedAfterCheckout stamp: 'pau 6/12/2023 01:08:04'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 01:08:04'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 01:08:04'!
+PASSED!
+
+!testRun: #CashierTest #test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor stamp: 'pau 6/12/2023 01:08:04'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 01:08:25' prior: 50632270!
+test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor
+
+	|cart cashier |
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn: self salesBook.
+	
+	cashier checkout.
+	
+	self assert: creditInCard = (200*peso).
+	self assert: cardUsed == self validCreditCard .
+! !
+
+!testRun: #CashierTest #test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor stamp: 'pau 6/12/2023 01:08:25'!
+FAILURE!
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 01:09:22' prior: 50632334!
+test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor
+
+	|cart cashier creditCardToUse|
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	creditCardToUse := self validCreditCard. 
+	
+	cashier := Cashier checkout: cart 
+			charging: self validCreditCard 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn: self salesBook.
+	
+	cashier checkout.
+	
+	self assert: creditInCard = (200*peso).
+	self assert: cardUsed == self validCreditCard .
+! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 01:09:32' prior: 50632357!
+test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor
+
+	|cart cashier creditCardToUse|
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	creditCardToUse := self validCreditCard. 
+	
+	cashier := Cashier checkout: cart 
+			charging: creditCardToUse 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn: self salesBook.
+	
+	cashier checkout.
+	
+	self assert: creditInCard = (200*peso).
+	self assert: cardUsed == self validCreditCard .
+! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 01:09:53' prior: 50632377!
+test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor
+
+	|cart cashier creditCardToUse|
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	creditCardToUse := self validCreditCard. 
+	
+	cashier := Cashier checkout: cart 
+			charging: creditCardToUse 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn: self salesBook.
+	
+	cashier checkout.
+	
+	self assert: creditInCard = (200*peso).
+	self assert: cardUsed == self validCreditCard .
+! !
+!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 01:10:04' prior: 50632397!
+test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor
+
+	|cart cashier creditCardToUse|
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	creditCardToUse := self validCreditCard. 
+	
+	cashier := Cashier checkout: cart 
+			charging: creditCardToUse 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn: self salesBook.
+	
+	cashier checkout.
+	
+	self assert: creditInCard = (200*peso).
+	self assert: cardUsed == creditCardToUse .
+! !
+
+!testRun: #CashierTest #test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor stamp: 'pau 6/12/2023 01:10:05'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'pau 6/12/2023 01:10:05'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutTotalOfACartWithOneBookIsCorrectAndIsRegistered stamp: 'pau 6/12/2023 01:10:05'!
+PASSED!
+
+!testRun: #CashierTest #test03CartCannotBeRepurchasedAfterCheckout stamp: 'pau 6/12/2023 01:10:05'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'pau 6/12/2023 01:10:05'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'pau 6/12/2023 01:10:05'!
+PASSED!
+
+!testRun: #CashierTest #test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor stamp: 'pau 6/12/2023 01:10:05'!
+PASSED!
+
+----SNAPSHOT----(12 June 2023 01:11:33) CuisUniversity-5832.image priorSource: 9532502!
+
+----SNAPSHOT----(12 June 2023 01:11:50) CuisUniversity-5832.image priorSource: 9625978!
+
+----QUIT----(12 June 2023 01:12:07) CuisUniversity-5832.image priorSource: 9626067!
