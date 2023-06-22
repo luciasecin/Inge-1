@@ -4760,3 +4760,325 @@ PASSED!
 ----SNAPSHOT----(12 June 2023 01:11:50) CuisUniversity-5832.image priorSource: 9625978!
 
 ----QUIT----(12 June 2023 01:12:07) CuisUniversity-5832.image priorSource: 9626067!
+
+----STARTUP---- (12 June 2023 14:17:16) as /home/lucy/Documents/tuslibros/linux64/CuisUniversity-5832.image!
+
+
+!testRun: #CartTest #test01NewCartsAreCreatedEmpty stamp: 'cylu 6/12/2023 14:18:06'!
+PASSED!
+
+!testRun: #CartTest #test02CanNotAddItemsThatDoNotBelongToStore stamp: 'cylu 6/12/2023 14:18:06'!
+ERROR!
+
+!testRun: #CartTest #test03AfterAddingAnItemTheCartIsNotEmptyAnymore stamp: 'cylu 6/12/2023 14:18:06'!
+ERROR!
+
+!testRun: #CartTest #test04CanNotAddNonPositiveNumberOfItems stamp: 'cylu 6/12/2023 14:18:06'!
+PASSED!
+
+!testRun: #CartTest #test05CanNotAddMoreThanOneItemNotSellByTheStore stamp: 'cylu 6/12/2023 14:18:06'!
+ERROR!
+
+!testRun: #CartTest #test06CartRemembersAddedItems stamp: 'cylu 6/12/2023 14:18:06'!
+ERROR!
+
+!testRun: #CartTest #test07CartDoesNotHoldNotAddedItems stamp: 'cylu 6/12/2023 14:18:06'!
+PASSED!
+
+!testRun: #CartTest #test08CartRemembersTheNumberOfAddedItems stamp: 'cylu 6/12/2023 14:18:06'!
+ERROR!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'cylu 6/12/2023 14:18:06'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutTotalOfACartWithOneBookIsCorrectAndIsRegistered stamp: 'cylu 6/12/2023 14:18:06'!
+PASSED!
+
+!testRun: #CashierTest #test03CartCannotBeRepurchasedAfterCheckout stamp: 'cylu 6/12/2023 14:18:06'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'cylu 6/12/2023 14:18:06'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'cylu 6/12/2023 14:18:06'!
+PASSED!
+
+!testRun: #CashierTest #test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor stamp: 'cylu 6/12/2023 14:18:06'!
+PASSED!
+
+!testRun: #CartTest #test01NewCartsAreCreatedEmpty stamp: 'cylu 6/12/2023 14:18:13'!
+PASSED!
+
+!testRun: #CartTest #test02CanNotAddItemsThatDoNotBelongToStore stamp: 'cylu 6/12/2023 14:18:13'!
+ERROR!
+
+!testRun: #CartTest #test03AfterAddingAnItemTheCartIsNotEmptyAnymore stamp: 'cylu 6/12/2023 14:18:13'!
+ERROR!
+
+!testRun: #CartTest #test04CanNotAddNonPositiveNumberOfItems stamp: 'cylu 6/12/2023 14:18:13'!
+PASSED!
+
+!testRun: #CartTest #test05CanNotAddMoreThanOneItemNotSellByTheStore stamp: 'cylu 6/12/2023 14:18:13'!
+ERROR!
+
+!testRun: #CartTest #test06CartRemembersAddedItems stamp: 'cylu 6/12/2023 14:18:13'!
+ERROR!
+
+!testRun: #CartTest #test07CartDoesNotHoldNotAddedItems stamp: 'cylu 6/12/2023 14:18:13'!
+PASSED!
+
+!testRun: #CartTest #test08CartRemembersTheNumberOfAddedItems stamp: 'cylu 6/12/2023 14:18:13'!
+ERROR!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'cylu 6/12/2023 14:18:13'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutTotalOfACartWithOneBookIsCorrectAndIsRegistered stamp: 'cylu 6/12/2023 14:18:13'!
+PASSED!
+
+!testRun: #CashierTest #test03CartCannotBeRepurchasedAfterCheckout stamp: 'cylu 6/12/2023 14:18:13'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'cylu 6/12/2023 14:18:13'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'cylu 6/12/2023 14:18:13'!
+PASSED!
+
+!testRun: #CashierTest #test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor stamp: 'cylu 6/12/2023 14:18:13'!
+PASSED!
+
+!testRun: #CartTest #test01NewCartsAreCreatedEmpty stamp: 'cylu 6/12/2023 14:18:25'!
+PASSED!
+
+!testRun: #CartTest #test02CanNotAddItemsThatDoNotBelongToStore stamp: 'cylu 6/12/2023 14:18:25'!
+ERROR!
+
+!testRun: #CartTest #test03AfterAddingAnItemTheCartIsNotEmptyAnymore stamp: 'cylu 6/12/2023 14:18:25'!
+ERROR!
+
+!testRun: #CartTest #test04CanNotAddNonPositiveNumberOfItems stamp: 'cylu 6/12/2023 14:18:25'!
+PASSED!
+
+!testRun: #CartTest #test05CanNotAddMoreThanOneItemNotSellByTheStore stamp: 'cylu 6/12/2023 14:18:25'!
+ERROR!
+
+!testRun: #CartTest #test06CartRemembersAddedItems stamp: 'cylu 6/12/2023 14:18:25'!
+ERROR!
+
+!testRun: #CartTest #test07CartDoesNotHoldNotAddedItems stamp: 'cylu 6/12/2023 14:18:25'!
+PASSED!
+
+!testRun: #CartTest #test08CartRemembersTheNumberOfAddedItems stamp: 'cylu 6/12/2023 14:18:25'!
+ERROR!
+
+!testRun: #CartTest #test02CanNotAddItemsThatDoNotBelongToStore stamp: 'cylu 6/12/2023 14:18:27'!
+ERROR!
+
+!testRun: #CartTest #test02CanNotAddItemsThatDoNotBelongToStore stamp: 'cylu 6/12/2023 14:19:25'!
+ERROR!
+
+!testRun: #CartTest #test02CanNotAddItemsThatDoNotBelongToStore stamp: 'cylu 6/12/2023 14:19:25'!
+ERROR!
+
+!testRun: #CartTest #test02CanNotAddItemsThatDoNotBelongToStore stamp: 'cylu 6/12/2023 14:19:44'!
+ERROR!
+!CartTest methodsFor: 'support' stamp: 'cylu 6/12/2023 14:22:00' prior: 50624908!
+defaultCatalog
+
+	^Dictionary with: self itemSellByTheStore -> (100*peso)! !
+
+!testRun: #CartTest #test01NewCartsAreCreatedEmpty stamp: 'cylu 6/12/2023 14:22:03'!
+PASSED!
+
+!testRun: #CartTest #test02CanNotAddItemsThatDoNotBelongToStore stamp: 'cylu 6/12/2023 14:22:03'!
+PASSED!
+
+!testRun: #CartTest #test03AfterAddingAnItemTheCartIsNotEmptyAnymore stamp: 'cylu 6/12/2023 14:22:03'!
+PASSED!
+
+!testRun: #CartTest #test04CanNotAddNonPositiveNumberOfItems stamp: 'cylu 6/12/2023 14:22:03'!
+PASSED!
+
+!testRun: #CartTest #test05CanNotAddMoreThanOneItemNotSellByTheStore stamp: 'cylu 6/12/2023 14:22:03'!
+PASSED!
+
+!testRun: #CartTest #test06CartRemembersAddedItems stamp: 'cylu 6/12/2023 14:22:03'!
+PASSED!
+
+!testRun: #CartTest #test07CartDoesNotHoldNotAddedItems stamp: 'cylu 6/12/2023 14:22:03'!
+PASSED!
+
+!testRun: #CartTest #test08CartRemembersTheNumberOfAddedItems stamp: 'cylu 6/12/2023 14:22:03'!
+PASSED!
+
+!testRun: #CartTest #test01NewCartsAreCreatedEmpty stamp: 'cylu 6/12/2023 14:22:07'!
+PASSED!
+
+!testRun: #CartTest #test02CanNotAddItemsThatDoNotBelongToStore stamp: 'cylu 6/12/2023 14:22:07'!
+PASSED!
+
+!testRun: #CartTest #test03AfterAddingAnItemTheCartIsNotEmptyAnymore stamp: 'cylu 6/12/2023 14:22:07'!
+PASSED!
+
+!testRun: #CartTest #test04CanNotAddNonPositiveNumberOfItems stamp: 'cylu 6/12/2023 14:22:07'!
+PASSED!
+
+!testRun: #CartTest #test05CanNotAddMoreThanOneItemNotSellByTheStore stamp: 'cylu 6/12/2023 14:22:07'!
+PASSED!
+
+!testRun: #CartTest #test06CartRemembersAddedItems stamp: 'cylu 6/12/2023 14:22:07'!
+PASSED!
+
+!testRun: #CartTest #test07CartDoesNotHoldNotAddedItems stamp: 'cylu 6/12/2023 14:22:07'!
+PASSED!
+
+!testRun: #CartTest #test08CartRemembersTheNumberOfAddedItems stamp: 'cylu 6/12/2023 14:22:07'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'cylu 6/12/2023 14:22:07'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutTotalOfACartWithOneBookIsCorrectAndIsRegistered stamp: 'cylu 6/12/2023 14:22:07'!
+PASSED!
+
+!testRun: #CashierTest #test03CartCannotBeRepurchasedAfterCheckout stamp: 'cylu 6/12/2023 14:22:07'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'cylu 6/12/2023 14:22:07'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'cylu 6/12/2023 14:22:07'!
+PASSED!
+
+!testRun: #CashierTest #test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor stamp: 'cylu 6/12/2023 14:22:07'!
+PASSED!
+!CashierTest methodsFor: 'tests' stamp: 'cylu 6/12/2023 14:23:43'!
+test06CheckoutTotalOfACartWithTwoBookIsProcessedWithMerchantProcessor
+
+	|cart cashier creditCardToUse|
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	creditCardToUse := self validCreditCard. 
+	
+	cashier := Cashier checkout: cart 
+			charging: creditCardToUse 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn: self salesBook.
+	
+	cashier checkout.
+	
+	self assert: creditInCard = (200*peso).
+	self assert: cardUsed == creditCardToUse .
+! !
+
+!methodRemoval: CashierTest #test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor stamp: 'cylu 6/12/2023 14:23:43'!
+test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor
+
+	|cart cashier creditCardToUse|
+	
+	cart := Cart acceptingItemsOf: self catalogWithTwoBooks. 
+	cart add: self validBook; add: self validBook2. 
+	
+	creditCardToUse := self validCreditCard. 
+	
+	cashier := Cashier checkout: cart 
+			charging: creditCardToUse 
+			withProcessor: self merchantProcessorValidCreditCard 
+			on: Date today registeringOn: self salesBook.
+	
+	cashier checkout.
+	
+	self assert: creditInCard = (200*peso).
+	self assert: cardUsed == creditCardToUse .
+!
+
+!testRun: #CartTest #test01NewCartsAreCreatedEmpty stamp: 'cylu 6/12/2023 14:26:10'!
+PASSED!
+
+!testRun: #CartTest #test02CanNotAddItemsThatDoNotBelongToStore stamp: 'cylu 6/12/2023 14:26:10'!
+PASSED!
+
+!testRun: #CartTest #test03AfterAddingAnItemTheCartIsNotEmptyAnymore stamp: 'cylu 6/12/2023 14:26:10'!
+PASSED!
+
+!testRun: #CartTest #test04CanNotAddNonPositiveNumberOfItems stamp: 'cylu 6/12/2023 14:26:10'!
+PASSED!
+
+!testRun: #CartTest #test05CanNotAddMoreThanOneItemNotSellByTheStore stamp: 'cylu 6/12/2023 14:26:10'!
+PASSED!
+
+!testRun: #CartTest #test06CartRemembersAddedItems stamp: 'cylu 6/12/2023 14:26:10'!
+PASSED!
+
+!testRun: #CartTest #test07CartDoesNotHoldNotAddedItems stamp: 'cylu 6/12/2023 14:26:10'!
+PASSED!
+
+!testRun: #CartTest #test08CartRemembersTheNumberOfAddedItems stamp: 'cylu 6/12/2023 14:26:10'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'cylu 6/12/2023 14:26:10'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutTotalOfACartWithOneBookIsCorrectAndIsRegistered stamp: 'cylu 6/12/2023 14:26:10'!
+PASSED!
+
+!testRun: #CashierTest #test03CartCannotBeRepurchasedAfterCheckout stamp: 'cylu 6/12/2023 14:26:10'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'cylu 6/12/2023 14:26:10'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'cylu 6/12/2023 14:26:10'!
+PASSED!
+
+!testRun: #CashierTest #test06CheckoutTotalOfACartWithTwoBookIsProcessedWithMerchantProcessor stamp: 'cylu 6/12/2023 14:26:10'!
+PASSED!
+
+----SNAPSHOT----(12 June 2023 14:27:59) CuisUniversity-5832.image priorSource: 9626156!
+
+!testRun: #CartTest #test01NewCartsAreCreatedEmpty stamp: 'cylu 6/12/2023 14:29:21'!
+PASSED!
+
+!testRun: #CartTest #test02CanNotAddItemsThatDoNotBelongToStore stamp: 'cylu 6/12/2023 14:29:21'!
+PASSED!
+
+!testRun: #CartTest #test03AfterAddingAnItemTheCartIsNotEmptyAnymore stamp: 'cylu 6/12/2023 14:29:21'!
+PASSED!
+
+!testRun: #CartTest #test04CanNotAddNonPositiveNumberOfItems stamp: 'cylu 6/12/2023 14:29:21'!
+PASSED!
+
+!testRun: #CartTest #test05CanNotAddMoreThanOneItemNotSellByTheStore stamp: 'cylu 6/12/2023 14:29:21'!
+PASSED!
+
+!testRun: #CartTest #test06CartRemembersAddedItems stamp: 'cylu 6/12/2023 14:29:21'!
+PASSED!
+
+!testRun: #CartTest #test07CartDoesNotHoldNotAddedItems stamp: 'cylu 6/12/2023 14:29:21'!
+PASSED!
+
+!testRun: #CartTest #test08CartRemembersTheNumberOfAddedItems stamp: 'cylu 6/12/2023 14:29:21'!
+PASSED!
+
+!testRun: #CashierTest #test01CheckoutOfAnEmptyCartRaisesError stamp: 'cylu 6/12/2023 14:29:21'!
+PASSED!
+
+!testRun: #CashierTest #test02CheckoutTotalOfACartWithOneBookIsCorrectAndIsRegistered stamp: 'cylu 6/12/2023 14:29:21'!
+PASSED!
+
+!testRun: #CashierTest #test03CartCannotBeRepurchasedAfterCheckout stamp: 'cylu 6/12/2023 14:29:21'!
+PASSED!
+
+!testRun: #CashierTest #test04CheckoutWithAnExpiredCardRaisesError stamp: 'cylu 6/12/2023 14:29:21'!
+PASSED!
+
+!testRun: #CashierTest #test05CardWithoutEnoughMoneyCannotCheckout stamp: 'cylu 6/12/2023 14:29:21'!
+PASSED!
+
+!testRun: #CashierTest #test06CheckoutTotalOfACartWithTwoBookIsProcessedWithMerchantProcessor stamp: 'cylu 6/12/2023 14:29:21'!
+PASSED!
+
+----QUIT----(12 June 2023 14:29:29) CuisUniversity-5832.image priorSource: 9636026!

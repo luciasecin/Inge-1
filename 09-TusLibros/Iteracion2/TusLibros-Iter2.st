@@ -1,9 +1,9 @@
-!classDefinition: #CartTest category: 'TusLibros'!
+!classDefinition: #CartTest category: 'TusLibros-Iter2'!
 TestCase subclass: #CartTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
-	category: 'TusLibros'!
+	category: 'TusLibros-Iter2'!
 
 !CartTest methodsFor: 'tests' stamp: 'HernanWilkinson 6/17/2013 17:08'!
 test01NewCartsAreCreatedEmpty
@@ -97,10 +97,10 @@ createCart
 	
 	^Cart acceptingItemsOf: self defaultCatalog! !
 
-!CartTest methodsFor: 'support' stamp: 'HernanWilkinson 6/17/2013 17:43'!
+!CartTest methodsFor: 'support' stamp: 'cylu 6/12/2023 14:22:00'!
 defaultCatalog
-	
-	^ Array with: self itemSellByTheStore! !
+
+	^Dictionary with: self itemSellByTheStore -> (100*peso)! !
 
 !CartTest methodsFor: 'support' stamp: 'HernanWilkinson 6/17/2013 17:44'!
 itemNotSellByTheStore
@@ -113,12 +113,12 @@ itemSellByTheStore
 	^ 'validBook'! !
 
 
-!classDefinition: #CashierTest category: 'TusLibros'!
+!classDefinition: #CashierTest category: 'TusLibros-Iter2'!
 TestCase subclass: #CashierTest
 	instanceVariableNames: 'creditInCard cardUsed'
 	classVariableNames: ''
 	poolDictionaries: ''
-	category: 'TusLibros'!
+	category: 'TusLibros-Iter2'!
 
 !CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 00:31:17'!
 test01CheckoutOfAnEmptyCartRaisesError
@@ -231,8 +231,8 @@ test05CardWithoutEnoughMoneyCannotCheckout
 	
 	! !
 
-!CashierTest methodsFor: 'tests' stamp: 'pau 6/12/2023 01:10:04'!
-test06CheckoutTotalOfACartWithTwoBookIsProcessWithMerchantProcessor
+!CashierTest methodsFor: 'tests' stamp: 'cylu 6/12/2023 14:23:43'!
+test06CheckoutTotalOfACartWithTwoBookIsProcessedWithMerchantProcessor
 
 	|cart cashier creditCardToUse|
 	
@@ -327,12 +327,12 @@ setUp
 	cardUsed := self validCreditCard.! !
 
 
-!classDefinition: #Cart category: 'TusLibros'!
+!classDefinition: #Cart category: 'TusLibros-Iter2'!
 Object subclass: #Cart
 	instanceVariableNames: 'catalog items'
 	classVariableNames: ''
 	poolDictionaries: ''
-	category: 'TusLibros'!
+	category: 'TusLibros-Iter2'!
 
 !Cart methodsFor: 'error messages' stamp: 'HernanWilkinson 6/17/2013 17:45'!
 invalidItemErrorMessage
@@ -404,7 +404,7 @@ totalPrice
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
-!classDefinition: 'Cart class' category: 'TusLibros'!
+!classDefinition: 'Cart class' category: 'TusLibros-Iter2'!
 Cart class
 	instanceVariableNames: ''!
 
@@ -414,12 +414,12 @@ acceptingItemsOf: aCatalog
 	^self new initializeAcceptingItemsOf: aCatalog ! !
 
 
-!classDefinition: #Cashier category: 'TusLibros'!
+!classDefinition: #Cashier category: 'TusLibros-Iter2'!
 Object subclass: #Cashier
 	instanceVariableNames: 'salesBook cart creditCard dateOfOperation merchantProcessor'
 	classVariableNames: ''
 	poolDictionaries: ''
-	category: 'TusLibros'!
+	category: 'TusLibros-Iter2'!
 
 !Cashier methodsFor: 'checkout' stamp: 'pau 6/12/2023 00:39:38'!
 checkout
@@ -465,7 +465,7 @@ registerOperation: cartTotal
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
-!classDefinition: 'Cashier class' category: 'TusLibros'!
+!classDefinition: 'Cashier class' category: 'TusLibros-Iter2'!
 Cashier class
 	instanceVariableNames: ''!
 
@@ -503,12 +503,12 @@ checkout: aCart charging: aCreditCard withProcessor: aMerchantProcesor on: aDate
 	^self new initializeCheckout: aCart charging: aCreditCard withProcessor: aMerchantProcesor on: aDate registeringOn: aSalesBook ! !
 
 
-!classDefinition: #CreditCard category: 'TusLibros'!
+!classDefinition: #CreditCard category: 'TusLibros-Iter2'!
 Object subclass: #CreditCard
 	instanceVariableNames: 'expirationYear expirationMonth'
 	classVariableNames: ''
 	poolDictionaries: ''
-	category: 'TusLibros'!
+	category: 'TusLibros-Iter2'!
 
 !CreditCard methodsFor: 'initialization' stamp: 'pau 6/8/2023 21:47:46'!
 initializeIn: aMonth of: aYear
@@ -523,7 +523,7 @@ isExpiredOn: aDate
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
-!classDefinition: 'CreditCard class' category: 'TusLibros'!
+!classDefinition: 'CreditCard class' category: 'TusLibros-Iter2'!
 CreditCard class
 	instanceVariableNames: ''!
 
