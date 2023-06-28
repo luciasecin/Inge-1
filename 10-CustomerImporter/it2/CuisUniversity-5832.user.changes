@@ -1,0 +1,5255 @@
+
+
+----QUIT----(30 May 2023 00:05:32) CuisUniversity-5832.image priorSource: 4928100!
+
+----STARTUP---- (30 May 2023 00:05:33) as /Users/hernan/Documents/Cuis/5.0-64Bits/Cuis-University-Installer/CuisUniversity-5832.image!
+
+
+----QUIT----(30 May 2023 00:05:33) CuisUniversity-5832.image priorSource: 9366537!
+
+----STARTUP---- (26 June 2023 19:11:36) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/customerImporter/customImIt2/linux64 (1)/linux64/CuisUniversity-5832.image!
+
+
+----End fileIn of /home/paula/Documents/COMPUTACION/Inge1-1c2023/customerImporter/customerIm-it1/linux64/PinkTheme.st----!
+
+----End fileIn of /home/paula/Documents/COMPUTACION/Inge1-1c2023/2023-1c/10-CustomerImporter/CustomerImporter-35.st----!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 19:13:57'!
+PASSED!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:17:44'!
+parseCustomer: customerData into: newCustomer
+
+	newCustomer firstName: customerData second.
+			newCustomer lastName: customerData third.
+			newCustomer identificationType: customerData fourth.
+			newCustomer identificationNumber: customerData fifth! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:17:44' prior: 50624744 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+	| newCustomer line |
+
+	line := readStream nextLine.
+	[ line notNil ] whileTrue: [
+		(line beginsWith: 'C') ifTrue: [ | customerData |
+			customerData := line findTokens: $,.
+			newCustomer := Customer new.
+			self parseCustomer: customerData into: newCustomer.
+			session persist: newCustomer ].
+
+		(line beginsWith: 'A') ifTrue: [ | addressData newAddress |
+			addressData := line findTokens: $,.
+			newAddress := Address new.
+			newCustomer addAddress: newAddress.
+			newAddress streetName: addressData second.
+			newAddress streetNumber: addressData third asNumber .
+			newAddress town: addressData fourth.
+			newAddress zipCode: addressData fifth asNumber .
+			newAddress province: addressData sixth ].
+
+		line := readStream nextLine. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:20:07' prior: 50624898!
+parseCustomer: customerData into: newCustomer
+	
+	| newCustomer1 |
+	newCustomer1 := Customer new. 
+	newCustomer firstName: customerData second.
+	newCustomer lastName: customerData third.
+	newCustomer identificationType: customerData fourth.
+	newCustomer identificationNumber: customerData fifth! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:20:56'!
+parseCustomer: customerData
+	
+	| newCustomer |
+	newCustomer := Customer new. 
+	newCustomer firstName: customerData second.
+	newCustomer lastName: customerData third.
+	newCustomer identificationType: customerData fourth.
+	newCustomer identificationNumber: customerData fifth! !
+
+!methodRemoval: CustomerImporter #parseCustomer:into: stamp: 'pau 6/26/2023 19:21:00'!
+parseCustomer: customerData into: newCustomer
+	
+	| newCustomer1 |
+	newCustomer1 := Customer new. 
+	newCustomer firstName: customerData second.
+	newCustomer lastName: customerData third.
+	newCustomer identificationType: customerData fourth.
+	newCustomer identificationNumber: customerData fifth!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:21:37' prior: 50624910 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+	| newCustomer line |
+
+	line := readStream nextLine.
+	[ line notNil ] whileTrue: [
+		(line beginsWith: 'C') ifTrue: [ | customerData |
+			customerData := line findTokens: $,.
+			newCustomer := self parseCustomer: customerData .
+			session persist: newCustomer ].
+
+		(line beginsWith: 'A') ifTrue: [ | addressData newAddress |
+			addressData := line findTokens: $,.
+			newAddress := Address new.
+			newCustomer addAddress: newAddress.
+			newAddress streetName: addressData second.
+			newAddress streetNumber: addressData third asNumber .
+			newAddress town: addressData fourth.
+			newAddress zipCode: addressData fifth asNumber .
+			newAddress province: addressData sixth ].
+
+		line := readStream nextLine. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:21:56' prior: 50624950!
+parseCustomer: customerData
+	
+	| newCustomer |
+	newCustomer := Customer new. 
+	newCustomer firstName: customerData second.
+	newCustomer lastName: customerData third.
+	newCustomer identificationType: customerData fourth.
+	newCustomer identificationNumber: customerData fifth. 
+	
+	^newCustomer! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 19:21:57'!
+PASSED!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:22:47'!
+parseAddress: newAddress fromLine: addressData AndAddTo: newCustomer
+
+	newCustomer addAddress: newAddress.
+			newAddress streetName: addressData second.
+			newAddress streetNumber: addressData third asNumber .
+			newAddress town: addressData fourth.
+			newAddress zipCode: addressData fifth asNumber .
+			newAddress province: addressData sixth! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:22:47' prior: 50624975 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+	| newCustomer line |
+
+	line := readStream nextLine.
+	[ line notNil ] whileTrue: [
+		(line beginsWith: 'C') ifTrue: [ | customerData |
+			customerData := line findTokens: $,.
+			newCustomer := self parseCustomer: customerData .
+			session persist: newCustomer ].
+
+		(line beginsWith: 'A') ifTrue: [ | addressData newAddress |
+			addressData := line findTokens: $,.
+			newAddress := Address new.
+			self parseAddress: newAddress fromLine: addressData AndAddTo: newCustomer ].
+
+		line := readStream nextLine. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:23:29'!
+parseAddress: addressData AndAddTo: newCustomer
+	
+	| newAddress |
+	newAddress := Address new. 
+	
+	newCustomer addAddress: newAddress.
+			newAddress streetName: addressData second.
+			newAddress streetNumber: addressData third asNumber .
+			newAddress town: addressData fourth.
+			newAddress zipCode: addressData fifth asNumber .
+			newAddress province: addressData sixth! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:23:42' prior: 50625052!
+parseAddress: addressData AndAddTo: newCustomer
+	
+	| newAddress |
+	newAddress := Address new. 
+	newCustomer addAddress: newAddress.
+			newAddress streetName: addressData second.
+			newAddress streetNumber: addressData third asNumber .
+			newAddress town: addressData fourth.
+			newAddress zipCode: addressData fifth asNumber .
+			newAddress province: addressData sixth. 
+	^newAddress ! !
+
+!methodRemoval: CustomerImporter #parseAddress:fromLine:AndAddTo: stamp: 'pau 6/26/2023 19:23:49'!
+parseAddress: newAddress fromLine: addressData AndAddTo: newCustomer
+
+	newCustomer addAddress: newAddress.
+			newAddress streetName: addressData second.
+			newAddress streetNumber: addressData third asNumber .
+			newAddress town: addressData fourth.
+			newAddress zipCode: addressData fifth asNumber .
+			newAddress province: addressData sixth!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:24:07' prior: 50625032 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+	| newCustomer line |
+
+	line := readStream nextLine.
+	[ line notNil ] whileTrue: [
+		(line beginsWith: 'C') ifTrue: [ | customerData |
+			customerData := line findTokens: $,.
+			newCustomer := self parseCustomer: customerData .
+			session persist: newCustomer ].
+
+		(line beginsWith: 'A') ifTrue: [ | addressData newAddress |
+			addressData := line findTokens: $,.
+			newAddress := self parseAddress: addressData AndAddTo: newCustomer ].
+
+		line := readStream nextLine. ].
+
+	! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 19:24:12'!
+PASSED!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:28:10' prior: 50625097 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+	| newCustomer line |
+
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [ | data |
+		data := line findTokens: $,.
+		(line beginsWith: 'C') ifTrue: [ | customerData |
+			customerData := line findTokens: $,.
+			newCustomer := self parseCustomer: customerData .
+			session persist: newCustomer ].
+
+		(line beginsWith: 'A') ifTrue: [ | addressData newAddress |
+			addressData := line findTokens: $,.
+			newAddress := self parseAddress: addressData AndAddTo: newCustomer ].
+		
+		line := readStream nextLine. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:28:39' prior: 50625119 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+	| newCustomer line |
+
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [ | data |
+		data := line findTokens: $,.
+		(line beginsWith: 'C') ifTrue: [ | customerData |
+			data := line findTokens: $,.
+			newCustomer := self parseCustomer: data .
+			session persist: newCustomer ].
+
+		(line beginsWith: 'A') ifTrue: [ | newAddress |
+			data := line findTokens: $,.
+			newAddress := self parseAddress: data AndAddTo: newCustomer ].
+		
+		line := readStream nextLine. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:28:44' prior: 50625140 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+	| newCustomer line |
+
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [ | data |
+		data := line findTokens: $,.
+		(line beginsWith: 'C') ifTrue: [
+			data := line findTokens: $,.
+			newCustomer := self parseCustomer: data .
+			session persist: newCustomer ].
+
+		(line beginsWith: 'A') ifTrue: [ | newAddress |
+			data := line findTokens: $,.
+			newAddress := self parseAddress: data AndAddTo: newCustomer ].
+		
+		line := readStream nextLine. ].
+
+	! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 19:28:54'!
+PASSED!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:29:03' prior: 50625160 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+	| newCustomer line |
+
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [ | data |
+		data := line findTokens: $,.
+		(line beginsWith: 'C') ifTrue: [
+			newCustomer := self parseCustomer: data .
+			session persist: newCustomer ].
+
+		(line beginsWith: 'A') ifTrue: [ | newAddress |
+			newAddress := self parseAddress: data AndAddTo: newCustomer ].
+		
+		line := readStream nextLine. ].
+
+	! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 19:29:09'!
+PASSED!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:29:20' prior: 50625182 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+	| newCustomer line |
+
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [ | data |
+		data := line findTokens: $,.
+		(line beginsWith: 'C') ifTrue: [
+			newCustomer := self parseCustomer: data .
+			session persist: newCustomer ].
+
+		(line beginsWith: 'A') ifTrue: [ | newAddress |
+			self parseAddress: data AndAddTo: newCustomer ].
+		
+		line := readStream nextLine. ].
+
+	! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 19:29:26'!
+PASSED!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:29:35' prior: 50625067!
+parseAddress: addressData AndAddTo: newCustomer
+	
+	| newAddress |
+	newAddress := Address new. 
+	newCustomer addAddress: newAddress.
+			newAddress streetName: addressData second.
+			newAddress streetNumber: addressData third asNumber .
+			newAddress town: addressData fourth.
+			newAddress zipCode: addressData fifth asNumber .
+			newAddress province: addressData sixth. ! !
+!CustomerImporter methodsFor: 'nil' stamp: 'pau 6/26/2023 19:34:32'!
+parseIfCustomerFrom: data to: newCustomer
+
+	"(data first = 'C') ifTrue: [
+		newCustomer := self parseCustomer: data .
+		session persist: newCustomer ]."! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:35:29' prior: 50625202 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+	| newCustomer line |
+
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [ | data |
+		data := line findTokens: $,.
+		(line beginsWith: 'C') ifTrue: [
+			newCustomer := self parseCustomer: data .
+			session persist: newCustomer ].
+
+		(line beginsWith: 'A') ifTrue: [ | newAddress |
+			self parseAddress: data AndAddTo: newCustomer ].
+		
+		line := readStream nextLine. ].
+
+	! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 19:35:33'!
+PASSED!
+!CustomerImporter methodsFor: 'as yet unclassified' stamp: 'pau 6/26/2023 19:36:46' prior: 50625235!
+parseIfCustomerFrom: data to: newCustomer
+	
+	"(data first = 'C') ifTrue: [
+		newCustomer := self parseCustomer: data .
+		session persist: newCustomer ]."! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:37:15' prior: 50625244 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+	| newCustomer line |
+
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [ | data |
+		data := line findTokens: $,.
+		
+		(line beginsWith: 'C') ifTrue: [
+			newCustomer := self parseCustomer: data .
+			session persist: newCustomer ].
+
+		(line beginsWith: 'A') ifTrue: [ | newAddress |
+			self parseAddress: data AndAddTo: newCustomer ].
+		
+		line := readStream nextLine. ].
+
+	! !
+!CustomerImporter methodsFor: 'as yet unclassified' stamp: 'pau 6/26/2023 19:38:03'!
+parseIfCustomerFrom: data 
+	
+	(data first = 'C') ifTrue: [ | newCustomer |
+		newCustomer := self parseCustomer: data .
+		session persist: newCustomer. 
+		^newCustomer ].! !
+
+!methodRemoval: CustomerImporter #parseIfCustomerFrom:to: stamp: 'pau 6/26/2023 19:38:38'!
+parseIfCustomerFrom: data to: newCustomer
+	
+	"(data first = 'C') ifTrue: [
+		newCustomer := self parseCustomer: data .
+		session persist: newCustomer ]."!
+
+!methodRemoval: CustomerImporter #parseIfCustomerFrom: stamp: 'pau 6/26/2023 19:38:42'!
+parseIfCustomerFrom: data 
+	
+	(data first = 'C') ifTrue: [ | newCustomer |
+		newCustomer := self parseCustomer: data .
+		session persist: newCustomer. 
+		^newCustomer ].!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 19:39:34'!
+test02ImportEmptyCVS
+
+	CustomerImporter valueFrom: self validImportData into: session..
+
+	self assertImportedRightNumberOfCustomers.
+	self assertPepeSanchezWasImportedCorrecty.
+	self assertJuanPerezWasImportedCorrectly ! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 19:39:43'!
+test02ImportEmptyCSV
+
+	CustomerImporter valueFrom: self validImportData into: session..
+
+	self assertImportedRightNumberOfCustomers.
+	self assertPepeSanchezWasImportedCorrecty.
+	self assertJuanPerezWasImportedCorrectly ! !
+
+!methodRemoval: ImportTest #test02ImportEmptyCVS stamp: 'pau 6/26/2023 19:39:45'!
+test02ImportEmptyCVS
+
+	CustomerImporter valueFrom: self validImportData into: session..
+
+	self assertImportedRightNumberOfCustomers.
+	self assertPepeSanchezWasImportedCorrecty.
+	self assertJuanPerezWasImportedCorrectly !
+!ImportTest methodsFor: 'test data' stamp: 'pau 6/26/2023 19:40:29'!
+emptyImportData
+
+	^ ReadStream on:''! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 19:40:45' prior: 50625321!
+test02ImportEmptyCSV
+
+	CustomerImporter valueFrom: self emptyImportData into: session.! !
+
+!testRun: #ImportTest #test02ImportEmptyCSV stamp: 'pau 6/26/2023 19:40:46'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 19:40:46'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSV stamp: 'pau 6/26/2023 19:40:47'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 19:45:28' prior: 50625344!
+test02ImportEmptyCSV
+
+	| customer |
+	CustomerImporter valueFrom: self emptyImportData into: session.
+	
+	customer := session selectAllOfType: Customer. 
+	! !
+
+session!
+
+session selectAllOfType: Customer!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 19:49:51' prior: 50625358!
+test02ImportEmptyCSV
+
+	
+	
+	self should: [
+		CustomerImporter valueFrom: self emptyImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter cannotReadAnEmptyFile]. 
+	
+	
+	
+	! !
+!CustomerImporter class methodsFor: 'nil' stamp: 'pau 6/26/2023 19:50:29'!
+cannotReadAnEmptyFile
+	^'cannot read an empty file'! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:51:28' prior: 50625272 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+	| newCustomer line |
+	
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [ | data |
+		data := line findTokens: $,.
+		
+		(line beginsWith: 'C') ifTrue: [
+			newCustomer := self parseCustomer: data .
+			session persist: newCustomer ].
+
+		(line beginsWith: 'A') ifTrue: [ | newAddress |
+			self parseAddress: data AndAddTo: newCustomer ].
+		
+		line := readStream nextLine. ].
+
+	! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 19:51:35'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSV stamp: 'pau 6/26/2023 19:51:35'!
+PASSED!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:51:44' prior: 50625383 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+	| newCustomer line |
+	
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [ | data |
+		data := line findTokens: $,.
+		
+		(line beginsWith: 'C') ifTrue: [
+			newCustomer := self parseCustomer: data .
+			session persist: newCustomer ].
+
+		(line beginsWith: 'A') ifTrue: [
+			self parseAddress: data AndAddTo: newCustomer ].
+		
+		line := readStream nextLine. ].
+
+	! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 19:51:45'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSV stamp: 'pau 6/26/2023 19:51:46'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 19:52:25'!
+test03ImportCSVwithWrongFormatRaiseError
+
+	
+	
+	self should: [
+		CustomerImporter valueFrom: self emptyImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter cannotReadAnEmptyFile]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'test data' stamp: 'pau 6/26/2023 19:52:45'!
+invalidImportData
+
+	^ ReadStream on:
+'	C,Pepe,Sanchez,D,22333444
+	A,San Martin,3322,Olivos,1636,BsAs
+	A,Maipu,888,Florida,1122,Buenos Aires
+	C,Juan,Perez,C,23-25666777-9
+	A,Alem,1122,CABA,1001,CABA'! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 19:53:45' prior: 50625431!
+test03ImportCSVwithWrongFormatRaiseError
+
+	
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter cannotInvalidFormat]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseError stamp: 'pau 6/26/2023 19:53:48'!
+FAILURE!
+!CustomerImporter class methodsFor: 'as yet unclassified' stamp: 'pau 6/26/2023 19:54:19'!
+cannotInvalidFormat
+	^'cannot read this file'! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:55:47' prior: 50625408 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+	| newCustomer line1 |
+	
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	line1 := readStream nextLine.
+	
+	[ line1 notNil ] whileTrue: [ | data |
+		data := line1 findTokens: $,.
+		
+		(line1 beginsWith: 'C') ifTrue: [
+			newCustomer := self parseCustomer: data .
+			session persist: newCustomer ].
+
+		(line1 beginsWith: 'A') ifTrue: [
+			self parseAddress: data AndAddTo: newCustomer ].
+		
+		line1 := readStream nextLine. ].
+
+	! !
+
+Object subclass: #CustomerImporter
+	instanceVariableNames: 'session readStream line'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'CustomerImporter'!
+
+!classDefinition: #CustomerImporter category: 'CustomerImporter' stamp: 'pau 6/26/2023 19:56:38'!
+Object subclass: #CustomerImporter
+	instanceVariableNames: 'session readStream line'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'CustomerImporter'!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:57:06' prior: 50625472 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+	| newCustomer |
+	
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [ | data |
+		data := line findTokens: $,.
+		
+		(line beginsWith: 'C') ifTrue: [
+			newCustomer := self parseCustomer: data .
+			session persist: newCustomer ].
+
+		(line beginsWith: 'A') ifTrue: [
+			self parseAddress: data AndAddTo: newCustomer ].
+		
+		line := readStream nextLine. ].
+
+	! !
+
+Object subclass: #CustomerImporter
+	instanceVariableNames: 'session readStream line newCustomer'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'CustomerImporter'!
+
+Object subclass: #CustomerImporter
+	instanceVariableNames: 'session readStream line newCustomer1'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'CustomerImporter'!
+
+!classDefinition: #CustomerImporter category: 'CustomerImporter' stamp: 'pau 6/26/2023 19:57:21'!
+Object subclass: #CustomerImporter
+	instanceVariableNames: 'session readStream line newCustomer1'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'CustomerImporter'!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:57:45' prior: 50625505 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [ | data |
+		data := line findTokens: $,.
+		
+		(line beginsWith: 'C') ifTrue: [
+			self parseCustomer: data .
+			session persist: newCustomer1 ].
+
+		(line beginsWith: 'A') ifTrue: [
+			self parseAddress: data ].
+		
+		line := readStream nextLine. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:57:59'!
+parseAddress: addressData
+	
+	| newAddress |
+	newAddress := Address new. 
+	newCustomer1 addAddress: newAddress.
+			newAddress streetName: addressData second.
+			newAddress streetNumber: addressData third asNumber .
+			newAddress town: addressData fourth.
+			newAddress zipCode: addressData fifth asNumber .
+			newAddress province: addressData sixth. ! !
+
+!methodRemoval: CustomerImporter #parseAddress:AndAddTo: stamp: 'pau 6/26/2023 19:58:02'!
+parseAddress: addressData AndAddTo: newCustomer
+	
+	| newAddress |
+	newAddress := Address new. 
+	newCustomer addAddress: newAddress.
+			newAddress streetName: addressData second.
+			newAddress streetNumber: addressData third asNumber .
+			newAddress town: addressData fourth.
+			newAddress zipCode: addressData fifth asNumber .
+			newAddress province: addressData sixth. !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 19:58:39' prior: 50625002!
+parseCustomer: customerData
+	
+	
+	newCustomer1 := Customer new. 
+	newCustomer1 firstName: customerData second.
+	newCustomer1 lastName: customerData third.
+	newCustomer1 identificationType: customerData fourth.
+	newCustomer1 identificationNumber: customerData fifth. 
+	! !
+
+!classDefinition: #CustomerImporter category: 'CustomerImporter' stamp: 'pau 6/26/2023 19:58:59'!
+Object subclass: #CustomerImporter
+	instanceVariableNames: 'session readStream line newCustomer'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'CustomerImporter'!
+!CustomerImporter methodsFor: 'as yet unclassified' stamp: 'pau 6/26/2023 19:58:59' prior: 50625560!
+parseAddress: addressData
+	
+	| newAddress |
+	newAddress := Address new. 
+	newCustomer addAddress: newAddress.
+			newAddress streetName: addressData second.
+			newAddress streetNumber: addressData third asNumber .
+			newAddress town: addressData fourth.
+			newAddress zipCode: addressData fifth asNumber .
+			newAddress province: addressData sixth. ! !
+!CustomerImporter methodsFor: 'as yet unclassified' stamp: 'pau 6/26/2023 19:58:59' prior: 50625544 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [ | data |
+		data := line findTokens: $,.
+		
+		(line beginsWith: 'C') ifTrue: [
+			self parseCustomer: data .
+			session persist: newCustomer ].
+
+		(line beginsWith: 'A') ifTrue: [
+			self parseAddress: data ].
+		
+		line := readStream nextLine. ].
+
+	! !
+!CustomerImporter methodsFor: 'as yet unclassified' stamp: 'pau 6/26/2023 19:58:59' prior: 50625589!
+parseCustomer: customerData
+	
+	
+	newCustomer := Customer new. 
+	newCustomer firstName: customerData second.
+	newCustomer lastName: customerData third.
+	newCustomer identificationType: customerData fourth.
+	newCustomer identificationNumber: customerData fifth. 
+	! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 19:59:03'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSV stamp: 'pau 6/26/2023 19:59:03'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseError stamp: 'pau 6/26/2023 19:59:03'!
+FAILURE!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseError stamp: 'pau 6/26/2023 19:59:03'!
+FAILURE!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 20:06:58' prior: 50625451!
+test03ImportCSVwithWrongFormatRaiseError
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter cannotInvalidFormat]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseError stamp: 'pau 6/26/2023 20:06:59'!
+FAILURE!
+
+readStream!
+
+----End fileIn of /home/paula/Documents/COMPUTACION/Inge1-1c2023/customerImporter/customImIt2/linux64 (1)/linux64/Packages/TerseGuide.pck.st----!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:13:49'!
+isCustomerRecord
+
+	^ line beginsWith: 'C'! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:13:49' prior: 50625625 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [ | data |
+		data := line findTokens: $,.
+		
+		(self isCustomerRecord) ifTrue: [
+			self parseCustomer: data .
+			session persist: newCustomer ].
+
+		(line beginsWith: 'A') ifTrue: [
+			self parseAddress: data ].
+		
+		line := readStream nextLine. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:14:02' prior: 50628606 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [ | data |
+		data := line findTokens: $,.
+		
+		self isCustomerRecord ifTrue: [
+			self parseCustomer: data .
+			session persist: newCustomer ].
+
+		(line beginsWith: 'A') ifTrue: [
+			self parseAddress: data ].
+		
+		line := readStream nextLine. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:14:18'!
+isAddressRecord
+
+	^ line beginsWith: 'A'! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:14:18' prior: 50628623 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [ | data |
+		data := line findTokens: $,.
+		
+		self isCustomerRecord ifTrue: [
+			self parseCustomer: data .
+			session persist: newCustomer ].
+
+		(self isAddressRecord) ifTrue: [
+			self parseAddress: data ].
+		
+		line := readStream nextLine. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:14:23' prior: 50628644 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [ | data |
+		data := line findTokens: $,.
+		
+		self isCustomerRecord ifTrue: [
+			self parseCustomer: data .
+			session persist: newCustomer ].
+
+		self isAddressRecord ifTrue: [
+			self parseAddress: data ].
+		
+		line := readStream nextLine. ].
+
+	! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 20:14:25'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSV stamp: 'pau 6/26/2023 20:14:25'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseError stamp: 'pau 6/26/2023 20:14:25'!
+FAILURE!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseError stamp: 'pau 6/26/2023 20:14:25'!
+FAILURE!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:14:44' prior: 50628661 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [ | record |
+		record := line findTokens: $,.
+		
+		self isCustomerRecord ifTrue: [
+			self parseCustomer: record .
+			session persist: newCustomer ].
+
+		self isAddressRecord ifTrue: [
+			self parseAddress: record ].
+		
+		line := readStream nextLine. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:15:03' prior: 50628690 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [ | record1 |
+		record1 := line findTokens: $,.
+		
+		self isCustomerRecord ifTrue: [
+			self parseCustomer: record1 .
+			session persist: newCustomer ].
+
+		self isAddressRecord ifTrue: [
+			self parseAddress: record1 ].
+		
+		line := readStream nextLine. ].
+
+	! !
+
+Object subclass: #CustomerImporter
+	instanceVariableNames: 'session readStream line newCustomer record'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'CustomerImporter'!
+
+!classDefinition: #CustomerImporter category: 'CustomerImporter' stamp: 'pau 6/26/2023 20:15:10'!
+Object subclass: #CustomerImporter
+	instanceVariableNames: 'session readStream line newCustomer record'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'CustomerImporter'!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:15:24' prior: 50628708 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [
+		record := line findTokens: $,.
+		
+		self isCustomerRecord ifTrue: [
+			self parseCustomer: record .
+			session persist: newCustomer ].
+
+		self isAddressRecord ifTrue: [
+			self parseAddress: record ].
+		
+		line := readStream nextLine. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:17:49'!
+parseAddress
+	
+	| newAddress |
+	newAddress := Address new. 
+	newCustomer addAddress: record.
+			newAddress streetName: record second.
+			newAddress streetNumber: record third asNumber .
+			newAddress town: record fourth.
+			newAddress zipCode: record fifth asNumber .
+			newAddress province: record sixth. ! !
+
+!methodRemoval: CustomerImporter #parseAddress: stamp: 'pau 6/26/2023 20:17:57'!
+parseAddress: addressData
+	
+	| newAddress |
+	newAddress := Address new. 
+	newCustomer addAddress: newAddress.
+			newAddress streetName: addressData second.
+			newAddress streetNumber: addressData third asNumber .
+			newAddress town: addressData fourth.
+			newAddress zipCode: addressData fifth asNumber .
+			newAddress province: addressData sixth. !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:18:18'!
+parseCustomer
+	
+	newCustomer := Customer new. 
+	newCustomer firstName: record second.
+	newCustomer lastName: record third.
+	newCustomer identificationType: record fourth.
+	newCustomer identificationNumber: record fifth. 
+	! !
+
+!methodRemoval: CustomerImporter #parseCustomer: stamp: 'pau 6/26/2023 20:18:22'!
+parseCustomer: customerData
+	
+	
+	newCustomer := Customer new. 
+	newCustomer firstName: customerData second.
+	newCustomer lastName: customerData third.
+	newCustomer identificationType: customerData fourth.
+	newCustomer identificationNumber: customerData fifth. 
+	!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:18:34' prior: 50628740 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [
+		record := line findTokens: $,.
+		
+		self isCustomerRecord ifTrue: [
+			self parseCustomer.
+			session persist: newCustomer ].
+
+		self isAddressRecord ifTrue: [
+			self parseAddress. ].
+		
+		line := readStream nextLine. ].
+
+	! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 20:18:36'!
+ERROR!
+
+!testRun: #ImportTest #test02ImportEmptyCSV stamp: 'pau 6/26/2023 20:18:36'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseError stamp: 'pau 6/26/2023 20:18:36'!
+FAILURE!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 20:18:39'!
+ERROR!
+
+line!
+
+record !
+
+record!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:22:29' prior: 50628756!
+parseAddress
+	
+	| newAddress |
+	newAddress := Address new. 
+	newCustomer addAddress: newAddress.
+			newAddress streetName: record second.
+			newAddress streetNumber: record third asNumber .
+			newAddress town: record fourth.
+			newAddress zipCode: record fifth asNumber .
+			newAddress province: record sixth. ! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 20:22:47'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSV stamp: 'pau 6/26/2023 20:22:48'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseError stamp: 'pau 6/26/2023 20:22:48'!
+FAILURE!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseError stamp: 'pau 6/26/2023 20:22:48'!
+FAILURE!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:23:20'!
+splitLineIntoRecord
+
+	^ record := line findTokens: $,! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:23:20' prior: 50628804 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [
+		self splitLineIntoRecord.
+		
+		self isCustomerRecord ifTrue: [
+			self parseCustomer.
+			session persist: newCustomer ].
+
+		self isAddressRecord ifTrue: [
+			self parseAddress. ].
+		
+		line := readStream nextLine. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:24:03'!
+importRecord
+
+	self isCustomerRecord ifTrue: [
+			self parseCustomer.
+			session persist: newCustomer ].
+
+		self isAddressRecord ifTrue: [
+			self parseAddress. ]! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:24:03' prior: 50628862 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	line := readStream nextLine.
+	
+	[ line notNil ] whileTrue: [
+		self splitLineIntoRecord.
+		
+		self importRecord.
+		
+		line := readStream nextLine. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:25:44' prior: 50628886 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	
+	
+	[ line := readStream nextLine. line notNil ] whileTrue: [
+		
+		self splitLineIntoRecord.
+		self importRecord.
+		line := readStream nextLine. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:26:07'!
+isThereALineToRead
+
+	line := readStream nextLine. line notNil! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:26:07' prior: 50628899 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	
+	
+	[ self isThereALineToRead ] whileTrue: [
+		
+		self splitLineIntoRecord.
+		self importRecord.
+		line := readStream nextLine. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:26:12' prior: 50628916 overrides: 16902254!
+value
+
+	"
+	self importCustomers
+	"
+
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	
+	
+	[ self isThereALineToRead ] whileTrue: [
+		
+		self splitLineIntoRecord.
+		self importRecord. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:26:20' prior: 50628910!
+isThereALineToRead
+
+	line := readStream nextLine. 
+	^line notNil! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 20:26:26'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSV stamp: 'pau 6/26/2023 20:26:27'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseError stamp: 'pau 6/26/2023 20:26:27'!
+FAILURE!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseError stamp: 'pau 6/26/2023 20:26:27'!
+FAILURE!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:28:24' prior: 50628928 overrides: 16902254!
+value
+
+	(readStream isEmpty) ifTrue:[self error: (self class cannotReadAnEmptyFile )]. 
+	
+	
+	[ self isThereALineToRead ] whileTrue: [
+		
+		self splitLineIntoRecord.
+		self importRecord. ].
+
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 20:29:42' prior: 50625665!
+test03ImportCSVwithWrongFormatRaiseError
+"dos comas seguidas "
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter cannotInvalidFormat]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 20:35:45' prior: 50628965!
+test03ImportCSVwithWrongFormatRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter cannotInvalidFormat]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseError stamp: 'pau 6/26/2023 20:35:45'!
+FAILURE!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 20:42:28' prior: 50628877!
+importRecord
+
+	self isCustomerRecord ifTrue: [
+			self parseCustomer.
+			session persist: newCustomer 
+			]
+	ifFalse: [
+		self isAddressRecord ifTrue: [
+						self parseAddress. ]
+		ifFalse: [ self error: (self class errorWrongType)
+						]].
+	! !
+!CustomerImporter class methodsFor: 'as yet unclassified' stamp: 'pau 6/26/2023 20:43:14'!
+errorWrongType
+	^'this type doesnt exists '! !
+!CustomerImporter class methodsFor: 'as yet unclassified' stamp: 'pau 6/26/2023 20:43:42' prior: 50629005!
+errorWrongType
+	^'this type doesnt exists'! !
+!CustomerImporter class methodsFor: 'as yet unclassified' stamp: 'pau 6/26/2023 20:44:00' prior: 50629010!
+errorWrongType
+	^'type doesnt exists'! !
+!CustomerImporter class methodsFor: 'as yet unclassified' stamp: 'pau 6/26/2023 20:44:21'!
+errorCannotInvalidFormat
+	^'cannot read this file'! !
+!ImportTest methodsFor: 'as yet unclassified' stamp: 'pau 6/26/2023 20:44:21' prior: 50628976!
+test03ImportCSVwithWrongFormatRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorCannotInvalidFormat]. 
+	
+	
+	
+	! !
+
+!methodRemoval: CustomerImporter class #cannotInvalidFormat stamp: 'pau 6/26/2023 20:44:21'!
+cannotInvalidFormat
+	^'cannot read this file'!
+!CustomerImporter class methodsFor: 'as yet unclassified' stamp: 'pau 6/26/2023 20:44:33'!
+errorCannotReadAnEmptyFile
+	^'cannot read an empty file'! !
+!ImportTest methodsFor: 'as yet unclassified' stamp: 'pau 6/26/2023 20:44:33' prior: 50625367!
+test02ImportEmptyCSV
+
+	
+	
+	self should: [
+		CustomerImporter valueFrom: self emptyImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorCannotReadAnEmptyFile]. 
+	
+	
+	
+	! !
+!CustomerImporter methodsFor: 'as yet unclassified' stamp: 'pau 6/26/2023 20:44:33' prior: 50628956 overrides: 16902254!
+value
+
+	(readStream isEmpty) ifTrue:[self error: (self class errorCannotReadAnEmptyFile )]. 
+	
+	
+	[ self isThereALineToRead ] whileTrue: [
+		
+		self splitLineIntoRecord.
+		self importRecord. ].
+
+	! !
+
+!methodRemoval: CustomerImporter class #cannotReadAnEmptyFile stamp: 'pau 6/26/2023 20:44:33'!
+cannotReadAnEmptyFile
+	^'cannot read an empty file'!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 20:44:50' prior: 50629025!
+test03ImportCSVwithWrongFormatRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorWrongType ]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseError stamp: 'pau 6/26/2023 20:44:51'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 20:44:52'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSV stamp: 'pau 6/26/2023 20:44:52'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseError stamp: 'pau 6/26/2023 20:44:52'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 20:46:02'!
+test04ImportCSVwithWrongFormatRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorWrongType ]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 20:46:47' prior: 50629049!
+test02ImportEmptyCSV
+
+	self should: [
+		CustomerImporter valueFrom: self emptyImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorCannotReadAnEmptyFile.
+									self assert: ((session selectAllOfType: Customer) isEmpty )]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 20:46:54' prior: 50629114!
+test02ImportEmptyCSV
+
+	self should: [
+		CustomerImporter valueFrom: self emptyImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorCannotReadAnEmptyFile.
+									self assert: (session selectAllOfType: Customer) isEmpty ]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test02ImportEmptyCSV stamp: 'pau 6/26/2023 20:46:57'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 20:46:58'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSV stamp: 'pau 6/26/2023 20:46:58'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseError stamp: 'pau 6/26/2023 20:46:58'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithWrongFormatRaiseError stamp: 'pau 6/26/2023 20:46:58'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 20:47:24'!
+test02ImportEmptyCSVRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self emptyImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorCannotReadAnEmptyFile.
+									self assert: (session selectAllOfType: Customer) isEmpty ]. 
+	
+	
+	
+	! !
+
+!methodRemoval: ImportTest #test02ImportEmptyCSV stamp: 'pau 6/26/2023 20:47:24'!
+test02ImportEmptyCSV
+
+	self should: [
+		CustomerImporter valueFrom: self emptyImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorCannotReadAnEmptyFile.
+									self assert: (session selectAllOfType: Customer) isEmpty ]. 
+	
+	
+	
+	!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 20:47:38'!
+test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorWrongType ]. 
+	
+	
+	
+	! !
+
+!methodRemoval: ImportTest #test03ImportCSVwithWrongFormatRaiseError stamp: 'pau 6/26/2023 20:47:38'!
+test03ImportCSVwithWrongFormatRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorWrongType ]. 
+	
+	
+	
+	!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 20:47:53' prior: 50629178!
+test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorWrongType.
+									self assert: (session selectAllOfType: Customer) isEmpty]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 20:49:03'!
+test04ImportCSVwithEmptyLineRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorWrongType ]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 20:51:49'!
+test04ImportCSVwithTwoCommasFormatRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWith2Commas into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorWrongType ]. 
+	
+	
+	
+	! !
+
+!methodRemoval: ImportTest #test04ImportCSVwithWrongFormatRaiseError stamp: 'pau 6/26/2023 20:51:56'!
+test04ImportCSVwithWrongFormatRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorWrongType ]. 
+	
+	
+	
+	!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 20:52:12'!
+test05ImportCSVwithTwoCommasFormatRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWith2Commas into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorWrongType ]. 
+	
+	
+	
+	! !
+
+!methodRemoval: ImportTest #test04ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 20:52:12'!
+test04ImportCSVwithTwoCommasFormatRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWith2Commas into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorWrongType ]. 
+	
+	
+	
+	!
+!ImportTest methodsFor: 'test data' stamp: 'pau 6/26/2023 20:52:49'!
+invalidImportDataWith2Commas
+
+	^ ReadStream on:
+'C,Pepe,Sanchez,D,22333444,,
+A,San Martin,3322,Olivos,1636,BsAs
+A,Maipu,888,Florida,1122,Buenos Aires
+C,Juan,Perez,C,23-25666777-9
+A,Alem,1122,CABA,1001,CABA'! !
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 20:52:57'!
+FAILURE!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 20:53:56'!
+test06ImportCSVwithTypeThatStartsWithCRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWith2Commas into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorWrongType ]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 20:54:38'!
+FAILURE!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 20:54:38'!
+FAILURE!
+
+'hoa,,sajsk,,sasjak' findTokens: $, keep:$,!
+
+c := $,.!
+
+'hoa,,sajsk,,sasjak' findTokens: c keep: c!
+
+'hoa,,sajsk,,sasjak' includesSubString: ',,' !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:00:34' prior: 50629061 overrides: 16902254!
+value
+
+	(readStream isEmpty) ifTrue:[self error: (self class errorCannotReadAnEmptyFile )]. 
+	(readStream includesSubString: ',,') ifTrue: [].
+	
+	[ self isThereALineToRead ] whileTrue: [
+		
+		self splitLineIntoRecord.
+		self importRecord. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:01:46' prior: 50629331 overrides: 16902254!
+value
+
+	(readStream isEmpty) ifTrue:[self error: (self class errorCannotReadAnEmptyFile )]. 
+	(readStream includesSubString: ',,') ifTrue: [ self error: (self class errorWrongFormat) ].
+	
+	[ self isThereALineToRead ] whileTrue: [
+		
+		self splitLineIntoRecord.
+		self importRecord. ].
+
+	! !
+!CustomerImporter class methodsFor: 'as yet unclassified' stamp: 'pau 6/26/2023 21:02:05'!
+errorInvalidFormat
+	^'cannot read this file'! !
+
+!methodRemoval: CustomerImporter class #errorCannotInvalidFormat stamp: 'pau 6/26/2023 21:02:09'!
+errorCannotInvalidFormat
+	^'cannot read this file'!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:02:30' prior: 50629343 overrides: 16902254!
+value
+
+	(readStream isEmpty) ifTrue:[self error: (self class errorCannotReadAnEmptyFile )]. 
+	(readStream includesSubString: ',,') ifTrue: [ self error: (self class errorInvalidFormat) ].
+	
+	[ self isThereALineToRead ] whileTrue: [
+		
+		self splitLineIntoRecord.
+		self importRecord. ].
+
+	! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:02:32'!
+ERROR!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:02:32'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:02:32'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:02:32'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:02:32'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:02:32'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:02:32'!
+ERROR!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:03:50' prior: 50629365 overrides: 16902254!
+value
+
+	(readStream isEmpty) ifTrue:[self error: (self class errorCannotReadAnEmptyFile )]. 
+	
+	[ self isThereALineToRead ] whileTrue: [
+		
+		self splitLineIntoRecord.
+		self importRecord. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:04:09' prior: 50628938!
+isThereALineToRead
+
+	line := readStream nextLine. 
+	(line includesSubString: ',,') ifTrue: [ self error: (self class errorInvalidFormat) ].
+	^line notNil! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:04:11'!
+ERROR!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:04:11'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:04:11'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:04:11'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:04:11'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:04:11'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:04:11'!
+ERROR!
+
+line!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:05:24' prior: 50629411!
+isThereALineToRead
+
+	line := readStream nextLine. 
+	
+	line ifNotNil: [(line includesSubString: ',,') ifTrue: [ self error: (self class errorInvalidFormat) ].].
+	
+	^line notNil! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:05:26'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:05:26'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:05:26'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:05:26'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:05:26'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:05:26'!
+PASSED!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:05:48' prior: 50629442!
+isThereALineToRead
+
+	line := readStream nextLine. 
+	
+	^line notNil! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:06:15' prior: 50628856!
+splitLineIntoRecord
+	
+	(line includesSubString: ',,') ifTrue: [ self error: (self class errorInvalidFormat) ].
+	record := line findTokens: $,! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:06:19'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:06:20'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:06:20'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:06:20'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:06:20'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:06:20'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:06:54' prior: 50629304!
+test06ImportCSVwithTypeThatStartsWithCRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithCustomerAsType into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorWrongType ]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'test data' stamp: 'pau 6/26/2023 21:07:25'!
+invalidImportDataWithCustomerAsType
+
+	^ ReadStream on:
+'Customer,Pepe,Sanchez,D,22333444,,
+A,San Martin,3322,Olivos,1636,BsAs
+A,Maipu,888,Florida,1122,Buenos Aires
+C,Juan,Perez,C,23-25666777-9
+A,Alem,1122,CABA,1001,CABA'! !
+!ImportTest methodsFor: 'test data' stamp: 'pau 6/26/2023 21:07:30' prior: 50629519!
+invalidImportDataWithCustomerAsType
+
+	^ ReadStream on:
+'Customer,Pepe,Sanchez,D,22333444,
+A,San Martin,3322,Olivos,1636,BsAs
+A,Maipu,888,Florida,1122,Buenos Aires
+C,Juan,Perez,C,23-25666777-9
+A,Alem,1122,CABA,1001,CABA'! !
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:07:38'!
+FAILURE!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:08:10' prior: 50628639!
+isAddressRecord
+
+	^ line first= 'A'! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:08:18' prior: 50628601!
+isCustomerRecord
+
+	^ line first = 'C'! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:08:19'!
+ERROR!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:08:20'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:08:20'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:08:20'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:08:20'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:08:20'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:08:20'!
+ERROR!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:09:03' prior: 50629401 overrides: 16902254!
+value
+
+	(readStream isEmpty) ifTrue:[self error: (self class errorCannotReadAnEmptyFile )]. 
+	
+	[ self isThereALineToRead ] whileTrue: [
+		
+		self splitLineIntoRecord.
+		
+		self importRecord. ].
+
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:09:24' prior: 50629543!
+isAddressRecord
+
+	^ record first= 'A'! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:09:30' prior: 50629548!
+isCustomerRecord
+
+	^ record first = 'C'! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:09:31'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:09:32'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:09:32'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:09:32'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:09:32'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:09:32'!
+PASSED!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:11:07' prior: 50628994!
+importRecord
+
+	self isCustomerRecord ifTrue: [
+			self parseCustomer.
+			session persist: newCustomer 
+			]
+	ifFalse: [
+		( newCustomer isNotNil and: [self isAddressRecord]) ifTrue: [
+						self parseAddress. ]
+		ifFalse: [ self error: (self class errorWrongType)
+						]].
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:11:12' prior: 50629616!
+importRecord
+
+	self isCustomerRecord ifTrue: [
+			self parseCustomer.
+			session persist: newCustomer 
+			]
+	ifFalse: [
+		(newCustomer isNotNil and: [self isAddressRecord]) ifTrue: [
+						self parseAddress. ]
+		ifFalse: [ self error: (self class errorWrongType)
+						]].
+	! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:11:17'!
+ERROR!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:11:17'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:11:17'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:11:17'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:11:17'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:11:17'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:11:17'!
+ERROR!
+
+Object new isNil!
+
+Object new isNotNil!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:12:38' prior: 50629628!
+importRecord
+
+	self isCustomerRecord ifTrue: [
+			self parseCustomer.
+			session persist: newCustomer 
+			]
+	ifFalse: [
+		(newCustomer isNil negated and: [self isAddressRecord]) ifTrue: [
+						self parseAddress. ]
+		ifFalse: [ self error: (self class errorWrongType)
+						]].
+	! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:12:40'!
+ERROR!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:12:40'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:12:40'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:12:40'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:12:40'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:12:40'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:12:40'!
+ERROR!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:13:07' prior: 50629664!
+importRecord
+
+	self isCustomerRecord ifTrue: [
+			self parseCustomer.
+			session persist: newCustomer 
+			]
+	ifFalse: [
+		((newCustomer isNil negated) and: [self isAddressRecord]) ifTrue: [
+						self parseAddress. ]
+		ifFalse: [ self error: (self class errorWrongType)
+						]].
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:14:23'!
+test07ImportCSVwithNoCustomers
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutCustomers into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage = CustomerImporter errorNoCustomerForAddress ]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'test data' stamp: 'pau 6/26/2023 21:14:45'!
+invalidImportDataWithoutCustomers
+
+	^ ReadStream on:
+'A,San Martin,3322,Olivos,1636,BsAs
+A,Maipu,888,Florida,1122,Buenos Aires
+C,Juan,Perez,C,23-25666777-9
+A,Alem,1122,CABA,1001,CABA'! !
+!ImportTest methodsFor: 'test data' stamp: 'pau 6/26/2023 21:14:51' prior: 50629721!
+invalidImportDataWithoutCustomers
+
+	^ ReadStream on:
+'A,San Martin,3322,Olivos,1636,BsAs
+A,Maipu,888,Florida,1122,Buenos Aires'! !
+!CustomerImporter class methodsFor: 'as yet unclassified' stamp: 'pau 6/26/2023 21:15:21'!
+errorNoCustomerForAddress
+	^'cannot load an address without a customer'! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:15:26'!
+ERROR!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:15:26'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:15:26'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:15:26'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:15:26'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:15:26'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:15:26'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:15:26'!
+ERROR!
+
+false negated!
+
+false not!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:16:16' prior: 50629699!
+importRecord
+
+	self isCustomerRecord ifTrue: [
+			self parseCustomer.
+			session persist: newCustomer 
+			]
+	ifFalse: [
+		((newCustomer isNil not) and: [self isAddressRecord]) ifTrue: [
+						self parseAddress. ]
+		ifFalse: [ self error: (self class errorWrongType)
+						]].
+	! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:16:18'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:16:19'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:16:19'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:16:19'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:16:19'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:16:19'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:16:19'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:17:02'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:18:06' prior: 50629710!
+test07ImportCSVwithNoCustomers
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutCustomers into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  errorMessage messageText = CustomerImporter errorNoCustomerForAddress ]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:18:06'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:18:07'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:18:07'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:18:08'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:18:08'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:18:08'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:18:08'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:18:08'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:18:35' prior: 50629807!
+test07ImportCSVwithNoCustomers
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutCustomers into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals:  CustomerImporter errorNoCustomerForAddress ]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:18:36'!
+FAILURE!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:18:54' prior: 50629505!
+test06ImportCSVwithTypeThatStartsWithCRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithCustomerAsType into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals:  CustomerImporter errorWrongType ]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:18:58' prior: 50629263!
+test05ImportCSVwithTwoCommasFormatRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWith2Commas into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|   self assert: (errorMessage messageText) equals:  CustomerImporter errorWrongType ]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:19:03' prior: 50629222!
+test04ImportCSVwithEmptyLineRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|   self assert: (errorMessage messageText) equals:  CustomerImporter errorWrongType ]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:19:10' prior: 50629206!
+test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|   self assert: (errorMessage messageText) equals: CustomerImporter errorWrongType.
+									self assert: (session selectAllOfType: Customer) isEmpty]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:19:16' prior: 50629153!
+test02ImportEmptyCSVRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self emptyImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| CustomerImporter errorCannotReadAnEmptyFile.
+									self assert: (session selectAllOfType: Customer) isEmpty ]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:19:16'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:19:17'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:19:17'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:19:17'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:19:17'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:19:17'!
+FAILURE!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:19:17'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:19:17'!
+FAILURE!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:19:25' prior: 50629924!
+test02ImportEmptyCSVRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self emptyImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals: CustomerImporter errorCannotReadAnEmptyFile.
+									self assert: (session selectAllOfType: Customer) isEmpty ]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:19:25'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:19:26'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:19:26'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:19:26'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:19:26'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:19:26'!
+FAILURE!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:19:26'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:19:26'!
+FAILURE!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:19:34'!
+FAILURE!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:20:07' prior: 50629876!
+test05ImportCSVwithTwoCommasFormatRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWith2Commas into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|   self assert: (errorMessage messageText) equals:  CustomerImporter errorInvalidFormat ]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:20:07'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:20:08'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:20:08'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:20:08'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:20:08'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:20:08'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:20:08'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:20:08'!
+FAILURE!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:20:08'!
+FAILURE!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:21:08' prior: 50629769!
+importRecord
+
+	self isCustomerRecord ifTrue: [
+			self parseCustomer.
+			session persist: newCustomer 
+			]
+	ifFalse: [
+		([self isAddressRecord]) ifTrue: [
+			(newCustomer isNil) ifTrue: [ self error: (self class errorNoCustomerForAddress )].
+			self parseAddress. ]
+		ifFalse: [ self error: (self class errorWrongType)
+						]].
+	! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:21:09'!
+ERROR!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:21:09'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:21:09'!
+FAILURE!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:21:09'!
+FAILURE!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:21:09'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:21:09'!
+FAILURE!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:21:09'!
+FAILURE!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:21:31' prior: 50630055!
+importRecord
+
+	self isCustomerRecord ifTrue: [
+			self parseCustomer.
+			session persist: newCustomer 
+			]
+	ifFalse: [
+		([self isAddressRecord]) ifTrue: [
+			(newCustomer isNil) ifTrue: [ self error: (self class errorNoCustomerForAddress )].
+			self parseAddress. 
+		]
+		ifFalse: [ self error: (self class errorWrongType)
+						]].
+	! !
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:21:52'!
+FAILURE!
+
+errorMessage messageText!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:23:09'!
+FAILURE!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:23:15'!
+ERROR!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:23:15'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:23:15'!
+FAILURE!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:23:15'!
+FAILURE!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:23:15'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:23:15'!
+FAILURE!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:23:15'!
+FAILURE!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:23:38' prior: 50630092!
+importRecord
+
+	self isCustomerRecord ifTrue: [
+			self parseCustomer.
+			session persist: newCustomer 
+			]
+	ifFalse: [
+		(self isAddressRecord) ifTrue: [
+			(newCustomer isNil) ifTrue: [ self error: (self class errorNoCustomerForAddress )].
+			self parseAddress. 
+		]
+		ifFalse: [ self error: (self class errorWrongType)
+						]].
+	! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:23:39'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:23:40'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:23:40'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:23:40'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:23:40'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:23:40'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:23:40'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:24:57'!
+test08ImportCSVWithNoStreetNumber
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutCustomers into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals:  CustomerImporter errorNoCustomerForAddress ]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:25:12' prior: 50630172!
+test08ImportCSVWithNoStreetNumber
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutStreetNumber into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals:  CustomerImporter errorNoCustomerForAddress ]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:25:30' prior: 50630184!
+test08ImportCSVWithNoStreetNumber
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutStreetNumber into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals:  CustomerImporter errorInvalidFormat]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'test data' stamp: 'pau 6/26/2023 21:25:46'!
+invalidImportDataWithoutStreetNumber
+
+	^ ReadStream on:
+'C,Pepe,Sanchez,D,22333444,
+A,San Martin,,Olivos,1636,BsAs
+A,Maipu,888,Florida,1122,Buenos Aires
+C,Juan,Perez,C,23-25666777-9
+A,Alem,1122,CABA,1001,CABA'! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:25:48'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:25:49'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:25:49'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:25:49'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:25:49'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:25:49'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:25:49'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/26/2023 21:25:49'!
+PASSED!
+!ImportTest methodsFor: 'test data' stamp: 'pau 6/26/2023 21:25:58' prior: 50630208!
+invalidImportDataWithoutStreetNumber
+
+	^ ReadStream on:
+'C,Pepe,Sanchez,D,22333444,
+A,San Martin,Olivos,1636,BsAs
+A,Maipu,888,Florida,1122,Buenos Aires
+C,Juan,Perez,C,23-25666777-9
+A,Alem,1122,CABA,1001,CABA'! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:26:00'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:26:00'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:26:00'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:26:00'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:26:00'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:26:00'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:26:00'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/26/2023 21:26:00'!
+FAILURE!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/26/2023 21:26:01'!
+FAILURE!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:27:46'!
+test09ImportCSVWithExtraField
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutStreetNumber into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals:  CustomerImporter errorInvalidFormat]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:27:57' prior: 50630283!
+test09ImportCSVWithExtraField
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithExtraField into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals:  CustomerImporter errorInvalidFormat]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'test data' stamp: 'pau 6/26/2023 21:28:59'!
+invalidImportDataWithExtraField
+
+	^ ReadStream on:
+'C,Pepe,Pepito,Sanchez,D,22333444,
+A,San Martin,3322,Olivos,1636,BsAs
+A,Maipu,888,Florida,1122,Buenos Aires
+C,Juan,Perez,C,23-25666777-9
+A,Alem,1122,CABA,1001,CABA'! !
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/26/2023 21:29:07'!
+FAILURE!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:30:23' prior: 50628832!
+parseAddress
+	
+	| newAddress |
+	(record size ~= 5) ifTrue: [self error: (self class errorInvalidFormat )].
+	newAddress := Address new. 
+	newCustomer addAddress: newAddress.
+			newAddress streetName: record second.
+			newAddress streetNumber: record third asNumber .
+			newAddress town: record fourth.
+			newAddress zipCode: record fifth asNumber .
+			newAddress province: record sixth. ! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:30:40' prior: 50628782!
+parseCustomer
+	
+	(record size ~= 4) ifTrue: [self error: (self class errorInvalidFormat )].
+	newCustomer := Customer new. 
+	newCustomer firstName: record second.
+	newCustomer lastName: record third.
+	newCustomer identificationType: record fourth.
+	newCustomer identificationNumber: record fifth. 
+	! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:30:41'!
+ERROR!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:30:41'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:30:41'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:30:41'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:30:41'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:30:41'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:30:41'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/26/2023 21:30:41'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/26/2023 21:30:41'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:30:41'!
+ERROR!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/26/2023 21:31:13'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:31:13'!
+ERROR!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:31:13'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:31:13'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:31:13'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:31:13'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:31:13'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:31:13'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/26/2023 21:31:13'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/26/2023 21:31:13'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:31:13'!
+ERROR!
+
+record size!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/26/2023 21:32:17'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:32:17'!
+ERROR!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:32:17'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:32:17'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:32:17'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:32:17'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:32:17'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:32:17'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/26/2023 21:32:17'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/26/2023 21:32:17'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:32:17'!
+ERROR!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:32:45' prior: 50630336!
+parseCustomer
+	
+	(record size ~= 5) ifTrue: [self error: (self class errorInvalidFormat )].
+	newCustomer := Customer new. 
+	newCustomer firstName: record second.
+	newCustomer lastName: record third.
+	newCustomer identificationType: record fourth.
+	newCustomer identificationNumber: record fifth. 
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/26/2023 21:32:54' prior: 50630320!
+parseAddress
+	
+	| newAddress |
+	(record size ~= 6) ifTrue: [self error: (self class errorInvalidFormat )].
+	newAddress := Address new. 
+	newCustomer addAddress: newAddress.
+			newAddress streetName: record second.
+			newAddress streetNumber: record third asNumber .
+			newAddress town: record fourth.
+			newAddress zipCode: record fifth asNumber .
+			newAddress province: record sixth. ! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:32:56'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:32:56'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:32:56'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:32:56'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:32:56'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:32:56'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:32:56'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/26/2023 21:32:56'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/26/2023 21:32:56'!
+PASSED!
+
+'pepe' asNumber!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:35:06'!
+test10ImportCSVWithStringOnNumberField
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithStringInNumberField into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals:  CustomerImporter errorInvalidFormat]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'test data' stamp: 'pau 6/26/2023 21:35:36'!
+invalidImportDataWithStringInNumberField
+
+	^ ReadStream on:
+'C,Pepe,Sanchez,D,holas,
+A,San Martin,3322,Olivos,1636,BsAs
+A,Maipu,888,Florida,1122,Buenos Aires
+C,Juan,Perez,C,23-25666777-9
+A,Alem,1122,CABA,1001,CABA'! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:35:38'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:35:38'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:35:38'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:35:38'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:35:38'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:35:38'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:35:38'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/26/2023 21:35:38'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/26/2023 21:35:38'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberField stamp: 'pau 6/26/2023 21:35:39'!
+FAILURE!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberField stamp: 'pau 6/26/2023 21:35:39'!
+FAILURE!
+!ImportTest methodsFor: 'test data' stamp: 'pau 6/26/2023 21:35:54' prior: 50630520!
+invalidImportDataWithStringInNumberField
+
+	^ ReadStream on:
+'C,Pepe,Sanchez,D,22333444,
+A,San Martin,holas,Olivos,1636,BsAs
+A,Maipu,888,Florida,1122,Buenos Aires
+C,Juan,Perez,C,23-25666777-9
+A,Alem,1122,CABA,1001,CABA'! !
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:35:55'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:35:56'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:35:56'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:35:56'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:35:56'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:35:56'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:35:56'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/26/2023 21:35:56'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/26/2023 21:35:56'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberField stamp: 'pau 6/26/2023 21:35:56'!
+FAILURE!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberField stamp: 'pau 6/26/2023 21:35:56'!
+FAILURE!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberField stamp: 'pau 6/26/2023 21:39:30'!
+FAILURE!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberField stamp: 'pau 6/26/2023 21:39:50'!
+FAILURE!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:41:37' prior: 50630508!
+test10ImportCSVWithStringOnNumberField
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithStringInNumberField into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (session selectAllOfType: Customer) isEmpty]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:41:42' prior: 50630618!
+test10ImportCSVWithStringOnNumberField
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithStringInNumberField into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (session selectAllOfType: Customer) isEmpty]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberField stamp: 'pau 6/26/2023 21:41:51'!
+FAILURE!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:42:19' prior: 50630630!
+test10ImportCSVWithStringOnNumberField
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithStringInNumberField into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: ((session selectAllOfType: Customer) isEmpty)]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberField stamp: 'pau 6/26/2023 21:42:21'!
+FAILURE!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberField stamp: 'pau 6/26/2023 21:42:27'!
+FAILURE!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:43:11'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:44:00' prior: 50629906!
+test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|   self assert: (errorMessage messageText) equals: CustomerImporter errorWrongType.
+									self assert: (session selectAllOfType: Customer) isEmpty]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:44:05'!
+PASSED!
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/26/2023 21:44:06'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:44:06'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:44:06'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:44:06'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:44:06'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/26/2023 21:44:06'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/26/2023 21:44:06'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/26/2023 21:44:07'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/26/2023 21:44:07'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberField stamp: 'pau 6/26/2023 21:44:07'!
+FAILURE!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberField stamp: 'pau 6/26/2023 21:44:07'!
+FAILURE!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:44:33' prior: 50629891!
+test04ImportCSVwithEmptyLineRaiseError
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|   self assert: (errorMessage messageText) equals:  CustomerImporter errorWrongType ]. 
+	
+	
+	
+	! !
+
+!methodRemoval: ImportTest #test04ImportCSVwithEmptyLineRaiseError stamp: 'pau 6/26/2023 21:44:48'!
+test04ImportCSVwithEmptyLineRaiseError
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|   self assert: (errorMessage messageText) equals:  CustomerImporter errorWrongType ]. 
+	
+	
+	
+	!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:45:25'!
+test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|   self assert: (errorMessage messageText) equals: CustomerImporter errorWrongType.
+									self assert: (session selectAllOfType: Customer) isEmpty]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:45:37' prior: 50630743!
+test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithEmptyLine into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|   self assert: (errorMessage messageText) equals: CustomerImporter errorWrongType.
+									self assert: (session selectAllOfType: Customer) isEmpty]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'test data' stamp: 'pau 6/26/2023 21:46:02'!
+invalidImportDataWithEmptyLine
+
+	^ ReadStream on:
+'C,Pepe,Sanchez,D,22333444,
+A,San Martin,3322,Olivos,1636,BsAs
+A,Maipu,888,Florida,1122,Buenos Aires
+C,Juan,Perez,C,23-25666777-9
+A,Alem,1122,CABA,1001,CABA'! !
+!ImportTest methodsFor: 'test data' stamp: 'pau 6/26/2023 21:46:07' prior: 50630771!
+invalidImportDataWithEmptyLine
+
+	^ ReadStream on:
+'C,Pepe,Sanchez,D,22333444,
+
+A,San Martin,3322,Olivos,1636,BsAs
+A,Maipu,888,Florida,1122,Buenos Aires
+C,Juan,Perez,C,23-25666777-9
+A,Alem,1122,CABA,1001,CABA'! !
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/26/2023 21:46:21'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:46:26'!
+FAILURE!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/26/2023 21:46:26'!
+FAILURE!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:47:04' prior: 50630757!
+test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithEmptyLine into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| self assert: (session selectAllOfType: Customer) isEmpty]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:47:23' prior: 50630802!
+test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithEmptyLine into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| 
+		"Se importa el customer with no addresses"
+		self assert: (session selectAllOfType: Customer) isEmpty]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:49:33' prior: 50630814!
+test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithEmptyLine into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| 
+		"Se importa el customer with no addresses"
+		self assert: ( "C,Pepe,Sanchez,D,22333444, "7)
+		self assert: (session selectAllOfType: Customer) isEmpty]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:55:09' prior: 50630827!
+test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithEmptyLine into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| 
+		"Se importa el customer with no addresses"
+		self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+		]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:55:50' prior: 50630842!
+test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithEmptyLine into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| 
+		"Se importa el customer with no addresses"
+		self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+		]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:56:09' prior: 50630857!
+test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithEmptyLine into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| 
+		"Se importa el customer with no addresses"
+		self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+		]. 
+	
+	
+	
+	! !
+!Customer methodsFor: 'addresses' stamp: 'pau 6/26/2023 21:57:07'!
+numberOfAddressesRegistered
+	^addresses size! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/26/2023 21:57:29' prior: 50630872!
+test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithEmptyLine into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| 
+		"Se importa el customer with no addresses"
+		self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+		]. 
+	
+	
+	
+	! !
+
+----SNAPSHOT----(27 June 2023 12:28:44) CuisUniversity-5832.image priorSource: 9366758!
+
+----QUIT----(27 June 2023 12:28:50) CuisUniversity-5832.image priorSource: 9576194!
+
+----STARTUP---- (28 June 2023 16:06:28) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/customerImporter/customImIt2/linux64 (1)/linux64/CuisUniversity-5832.image!
+
+
+!testRun: #ImportTest #test01Import stamp: 'pau 6/28/2023 16:06:54'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:06:54'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:06:54'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:06:54'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:06:54'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:06:54'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/28/2023 16:06:54'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:06:54'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:06:54'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberField stamp: 'pau 6/28/2023 16:06:55'!
+FAILURE!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberField stamp: 'pau 6/28/2023 16:06:55'!
+FAILURE!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:07:30'!
+test01ImportValidTextFileWith2Customers
+
+	CustomerImporter valueFrom: self validImportData into: session..
+
+	self assertImportedRightNumberOfCustomers.
+	self assertPepeSanchezWasImportedCorrecty.
+	self assertJuanPerezWasImportedCorrectly ! !
+
+!methodRemoval: ImportTest #test01Import stamp: 'pau 6/28/2023 16:07:30'!
+test01Import
+
+	CustomerImporter valueFrom: self validImportData into: session..
+
+	self assertImportedRightNumberOfCustomers.
+	self assertPepeSanchezWasImportedCorrecty.
+	self assertJuanPerezWasImportedCorrectly !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:12:58' prior: 50630892!
+test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithEmptyLine into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| 
+		"Se importa el customer with no addresses"
+			self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+		]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:13:36' prior: 50630974!
+test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithEmptyLine into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| 
+		
+			self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+			self assert: (session selectAllOfType: Customer ) size equals: 1. 
+		]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:13:38'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:13:38'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:13:39'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:13:39'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:13:39'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:13:39'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:13:39'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/28/2023 16:13:39'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:13:39'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:13:39'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberField stamp: 'pau 6/28/2023 16:13:40'!
+FAILURE!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberField stamp: 'pau 6/28/2023 16:13:40'!
+FAILURE!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:14:01'!
+_test10ImportCSVWithStringOnNumberField
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithStringInNumberField into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: ((session selectAllOfType: Customer) isEmpty)]. 
+	
+	
+	
+	! !
+
+!methodRemoval: ImportTest #test10ImportCSVWithStringOnNumberField stamp: 'pau 6/28/2023 16:14:01'!
+test10ImportCSVWithStringOnNumberField
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithStringInNumberField into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: ((session selectAllOfType: Customer) isEmpty)]. 
+	
+	
+	
+	!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:14:05'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:14:11'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:14:11'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:14:11'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:14:11'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:14:11'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:14:11'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/28/2023 16:14:11'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:14:11'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:14:11'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:14:29' prior: 50630009!
+test05ImportCSVwithTwoCommasFormatRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWith2Commas into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|   
+					self assert: (errorMessage messageText) equals:  CustomerImporter errorInvalidFormat ]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'test data' stamp: 'pau 6/28/2023 16:15:10' prior: 50629291!
+invalidImportDataWith2Commas
+
+	^ ReadStream on:
+'C,Pepe,Sanchez,D,22333444
+A,San Martin,3322,Olivos,1636,BsAs,,
+A,Maipu,888,Florida,1122,Buenos Aires
+C,Juan,Perez,C,23-25666777-9
+A,Alem,1122,CABA,1001,CABA'! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:15:49' prior: 50631104!
+test05ImportCSVwithTwoCommasFormatRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWith2Commas into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|   
+					self assert: (errorMessage messageText) equals:  CustomerImporter errorInvalidFormat. 
+					self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+					self assert: (session selectAllOfType: Customer ) size equals: 1. ]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:15:50'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:15:50'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:15:51'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:15:51'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:15:51'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:15:52'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:15:52'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/28/2023 16:15:52'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:15:52'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:15:52'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:15:59' prior: 50631130!
+test05ImportCSVwithTwoCommasFormatRaiseError
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWith2Commas into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|   
+					self assert: (errorMessage messageText) equals:  CustomerImporter errorInvalidFormat. 
+					self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+					self assert: (session selectAllOfType: Customer ) size equals: 1. ]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:16:17' prior: 50630989!
+test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithEmptyLine into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| 
+		
+			self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+			"pepe no tiene addres"
+			self assert: (session selectAllOfType: Customer ) size equals: 1. 
+		]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:16:19' prior: 50631204!
+test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithEmptyLine into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| 
+		
+			self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+			"pepe no tiene address"
+			self assert: (session selectAllOfType: Customer ) size equals: 1. 
+		]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:17:22' prior: 50631221!
+test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithEmptyLine into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| | pepeCustomer | 
+		
+			pepeCustomer := self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+			
+			self assert: (session selectAllOfType: Customer ) size equals: 1. 
+		]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:18:04' prior: 50631238!
+test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithEmptyLine into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| | pepeCustomer | 
+		
+			pepeCustomer := self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+			self assert: pepeCustomer numberOfAddressesRegistered equals: 0. 
+			self assert: (session selectAllOfType: Customer ) size equals: 1. 
+		]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:18:05'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:18:05'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:18:06'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:18:06'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:18:06'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:18:07'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:18:07'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/28/2023 16:18:07'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:18:07'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:18:07'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:18:41' prior: 50631186!
+test05ImportCSVwithTwoCommasFormatRaiseError
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWith2Commas into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|   | pepeCustomer | 
+		
+			pepeCustomer := self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+			self assert: pepeCustomer numberOfAddressesRegistered equals: 0. 
+			self assert: (session selectAllOfType: Customer ) size equals: 1. . ]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:18:43'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:18:43'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:18:44'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:18:44'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:18:44'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:18:44'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:18:44'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/28/2023 16:18:44'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:18:44'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:18:44'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:19:22' prior: 50629860!
+test06ImportCSVwithTypeThatStartsWithCRaiseError
+"dos comas seguidas dir before customer arranca con customer linea vacia en el medio del archivo "
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithCustomerAsType into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals:  CustomerImporter errorWrongType. 
+									self assert: (session selectAllOfType: Customer) isEmpty]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:19:23'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:19:23'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:19:24'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:19:24'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:19:24'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:19:24'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:19:24'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/28/2023 16:19:24'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:19:25'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:19:25'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:19:30' prior: 50631362!
+test06ImportCSVwithTypeThatStartsWithCRaiseError
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithCustomerAsType into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals:  CustomerImporter errorWrongType. 
+									self assert: (session selectAllOfType: Customer) isEmpty]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:19:43' prior: 50629845!
+test07ImportCSVwithNoCustomers
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutCustomers into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals:  CustomerImporter errorNoCustomerForAddress ]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:20:05'!
+test07ImportCSVwithAddressesButNoCustomers
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutCustomers into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals:  CustomerImporter errorNoCustomerForAddress ]. 
+	
+	
+	
+	! !
+
+!methodRemoval: ImportTest #test07ImportCSVwithNoCustomers stamp: 'pau 6/28/2023 16:20:05'!
+test07ImportCSVwithNoCustomers
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutCustomers into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals:  CustomerImporter errorNoCustomerForAddress ]. 
+	
+	
+	
+	!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:20:38'!
+assertNoCustomersInSession
+
+	^ self assert: (session selectAllOfType: Customer) isEmpty! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:20:38' prior: 50630666!
+test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|   self assert: (errorMessage messageText) equals: CustomerImporter errorWrongType.
+									self assertNoCustomersInSession]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:20:38' prior: 50631414!
+test06ImportCSVwithTypeThatStartsWithCRaiseError
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithCustomerAsType into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals:  CustomerImporter errorWrongType. 
+									self assertNoCustomersInSession]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:20:38' prior: 50629964!
+test02ImportEmptyCSVRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self emptyImportData into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals: CustomerImporter errorCannotReadAnEmptyFile.
+									self assertNoCustomersInSession ]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:20:54' prior: 50631441!
+test07ImportCSVwithAddressesButNoCustomers
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutCustomers into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals:  CustomerImporter errorNoCustomerForAddress.
+									self assertNoCustomersInSession ]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:20:55'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:20:55'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:20:56'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:20:56'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:20:56'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:20:56'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:20:56'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:20:57'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:20:57'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:20:57'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:21:05' prior: 50630196!
+test08ImportCSVWithNoStreetNumber
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutStreetNumber into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals:  CustomerImporter errorInvalidFormat]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:21:49' prior: 50631562!
+test08ImportCSVWithNoStreetNumber
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutStreetNumber into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| | pepeCustomer |  self assert: (errorMessage messageText) equals:  CustomerImporter errorInvalidFormat.
+				pepeCustomer := self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+				self assert: pepeCustomer numberOfAddressesRegistered equals: 0. 
+				self assert: (session selectAllOfType: Customer ) size equals: 1. 
+			]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:21:58' prior: 50631574!
+test08ImportCSVWithNoStreetNumber
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutStreetNumber into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| | pepeCustomer |  
+				
+				self assert: (errorMessage messageText) equals:  CustomerImporter errorInvalidFormat.
+				pepeCustomer := self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+				self assert: pepeCustomer numberOfAddressesRegistered equals: 0. 
+				self assert: (session selectAllOfType: Customer ) size equals: 1. 
+			]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:21:59'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:22:00'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:22:00'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:22:00'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:22:01'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:22:01'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:22:01'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:22:01'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:22:01'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:22:01'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:22:42' prior: 50630295!
+test09ImportCSVWithExtraField
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithExtraField into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: (errorMessage messageText) equals:  CustomerImporter errorInvalidFormat.
+									self assertNoCustomersInSession. ]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:22:43'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:22:43'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:22:44'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:22:44'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:22:44'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:22:44'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:22:45'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:22:45'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:22:45'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:22:45'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:22:56'!
+test10ImportCSVWithStringOnNumberField
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithStringInNumberField into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: ((session selectAllOfType: Customer) isEmpty)]. 
+	
+	
+	
+	! !
+
+!methodRemoval: ImportTest #_test10ImportCSVWithStringOnNumberField stamp: 'pau 6/28/2023 16:22:56'!
+_test10ImportCSVWithStringOnNumberField
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithStringInNumberField into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: ((session selectAllOfType: Customer) isEmpty)]. 
+	
+	
+	
+	!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:23:08' prior: 50631698!
+test10ImportCSVWithStringOnNumberField
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithStringInNumberField into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: ((session selectAllOfType: Customer) isEmpty)]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberField stamp: 'pau 6/28/2023 16:23:09'!
+FAILURE!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:23:54'!
+test10ImportCSVWithStringOnNumberFieldOnAddressEntry
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithStringInNumberField into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: ((session selectAllOfType: Customer) isEmpty)]. 
+	
+	
+	
+	! !
+
+!methodRemoval: ImportTest #test10ImportCSVWithStringOnNumberField stamp: 'pau 6/28/2023 16:23:54'!
+test10ImportCSVWithStringOnNumberField
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithStringInNumberField into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: ((session selectAllOfType: Customer) isEmpty)]. 
+	
+	
+	
+	!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:25:01' prior: 50631735!
+test10ImportCSVWithStringOnNumberFieldOnAddressEntry
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithStringInNumberField into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assert: ((session selectAllOfType: Customer) isEmpty)]. 
+	
+	
+	
+	! !
+
+----SNAPSHOT----(28 June 2023 16:25:36) CuisUniversity-5832.image priorSource: 9576283!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:26:00' prior: 50631759!
+test10ImportCSVWithStringOnNumberFieldOnAddressEntry
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithStringInNumberField into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  | pepeCustomer | 
+		
+			pepeCustomer := self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+			self assert: pepeCustomer numberOfAddressesRegistered equals: 0. 
+			self assert: (session selectAllOfType: Customer ) size equals: 1. ]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:26:01'!
+FAILURE!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:26:12' prior: 50631774!
+test10ImportCSVWithStringOnNumberFieldOnAddressEntry
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithStringInNumberField into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  | pepeCustomer | 
+		
+			pepeCustomer := self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+			self assert: pepeCustomer numberOfAddressesRegistered equals: 0. 
+			self assert: (session selectAllOfType: Customer ) size equals: 1. ]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:26:16'!
+FAILURE!
+
+129192 isString!
+
+'129192' isString!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 16:33:44' prior: 50630463!
+parseAddress
+	
+	| newAddress streetNumber zipCode |
+	(record size ~= 6) ifTrue: [self error: (self class errorInvalidFormat )].
+	streetNumber := record second asNumber .
+	zipCode := record fifth asNumber. 
+	newAddress := Address new. 
+	newCustomer addAddress: newAddress.
+			newAddress streetName: record second.
+			newAddress streetNumber: record third asNumber .
+			newAddress town: record fourth.
+			newAddress zipCode: record fifth asNumber .
+			newAddress province: record sixth. ! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 16:33:58' prior: 50631822!
+parseAddress
+	
+	| newAddress streetNumber zipCode |
+	(record size ~= 6) ifTrue: [self error: (self class errorInvalidFormat )].
+	streetNumber := record second asNumber .
+	zipCode := record fifth asNumber. 
+	newAddress := Address new. 
+	newCustomer addAddress: newAddress.
+			newAddress streetName: record second.
+			newAddress streetNumber: streetNumber .
+			newAddress town: record fourth.
+			newAddress zipCode: record fifth asNumber .
+			newAddress province: record sixth. ! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 16:34:07' prior: 50631841!
+parseAddress
+	
+	| newAddress streetNumber zipCode |
+	(record size ~= 6) ifTrue: [self error: (self class errorInvalidFormat )].
+	streetNumber := record second asNumber .
+	zipCode := record fifth asNumber. 
+	newAddress := Address new. 
+	newCustomer addAddress: newAddress.
+			newAddress streetName: record second.
+			newAddress streetNumber: streetNumber .
+			newAddress town: record fourth.
+			newAddress zipCode: zipCode .
+			newAddress province: record sixth. ! !
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:34:09'!
+ERROR!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:34:09'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:34:10'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:34:10'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:34:10'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:34:10'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:34:10'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:34:11'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:34:11'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:34:11'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:34:11'!
+ERROR!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:34:32'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:34:37'!
+ERROR!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:34:37'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:34:37'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:34:37'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:34:38'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:34:38'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:34:38'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:34:38'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:34:38'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:34:38'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:34:39'!
+ERROR!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 16:35:38' prior: 50631859!
+parseAddress
+	
+	| newAddress streetNumber zipCode |
+	(record size ~= 6) ifTrue: [self error: (self class errorInvalidFormat )].
+	streetNumber := record second asNumber .
+	zipCode := record fifth asNumber. 
+	newAddress := Address new. 
+	newCustomer addAddress: newAddress.
+	newAddress streetName: record second.
+	newAddress streetNumber: streetNumber .
+	newAddress town: record fourth.
+	newAddress zipCode: zipCode .
+	newAddress province: record sixth. ! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 16:35:42' prior: 50631957!
+parseAddress
+	
+	| newAddress streetNumber zipCode |
+	(record size ~= 6) ifTrue: [self error: (self class errorInvalidFormat )].
+	streetNumber := record second asNumber .
+	zipCode := record fifth asNumber. 
+	
+	newAddress := Address new. 
+	newCustomer addAddress: newAddress.
+	newAddress streetName: record second.
+	newAddress streetNumber: streetNumber .
+	newAddress town: record fourth.
+	newAddress zipCode: zipCode .
+	newAddress province: record sixth. ! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 16:37:19' prior: 50631975!
+parseAddress
+	
+	| newAddress streetNumber zipCode |
+	(record size ~= 6) ifTrue: [self error: (self class errorInvalidFormat )].
+	streetNumber := record third asNumber .
+	zipCode := record fifth asNumber. 
+	
+	newAddress := Address new. 
+	newCustomer addAddress: newAddress.
+	newAddress streetName: record second.
+	newAddress streetNumber: streetNumber .
+	newAddress town: record fourth.
+	newAddress zipCode: zipCode .
+	newAddress province: record sixth. ! !
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:37:25'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:37:28'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:37:29'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:37:29'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:37:29'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:37:29'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:37:30'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:37:30'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:37:30'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:37:30'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:37:30'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:37:31'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:42:13'!
+assertDontImportCustomersAndFailsWith: anErrorMessage
+
+	[:errorMessage|  self assert: (errorMessage messageText) equals: CustomerImporter errorCannotReadAnEmptyFile.
+									self assertNoCustomersInSession ]! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:42:32' prior: 50632051!
+assertDontImportCustomersAndFailsWith: anErrorMessage
+
+	^[:errorMessage|  self assert: (errorMessage messageText) equals: anErrorMessage.
+									self assertNoCustomersInSession ]! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:42:56' prior: 50631499!
+test02ImportEmptyCSVRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self emptyImportData into: session.]
+		raise: Error
+	      withExceptionDo: (self assertDontImportCustomersAndFailsWith: CustomerImporter errorCannotReadAnEmptyFile). 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:42:57'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:42:58'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:42:58'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:42:58'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:42:59'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:42:59'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:42:59'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:42:59'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:42:59'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:43:00'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:43:00'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:43:31' prior: 50631471!
+test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportData into: session.]
+		raise: Error
+	      withExceptionDo:( self assertDontImportCustomersAndFailsWith: CustomerImporter errorWrongType).
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:43:32'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:43:32'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:43:33'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:43:33'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:43:33'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:43:33'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:43:33'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:43:33'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:43:34'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:43:34'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:43:34'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:44:04' prior: 50631485!
+test06ImportCSVwithTypeThatStartsWithCRaiseError
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithCustomerAsType into: session.]
+		raise: Error
+	      withExceptionDo: CustomerImporter errorWrongType.
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:44:05'!
+ERROR!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:44:20' prior: 50632171!
+test06ImportCSVwithTypeThatStartsWithCRaiseError
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithCustomerAsType into: session.]
+		raise: Error
+	      withExceptionDo: (self assertDontImportCustomersAndFailsWith: CustomerImporter errorWrongType).
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:44:21'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:44:21'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:44:21'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:44:22'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:44:22'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:44:22'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:44:22'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:44:22'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:44:23'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:44:23'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:44:23'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:44:41' prior: 50631513!
+test07ImportCSVwithAddressesButNoCustomers
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutCustomers into: session.]
+		raise: Error
+	      withExceptionDo: (self assertDontImportCustomersAndFailsWith:  CustomerImporter errorNoCustomerForAddress). 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:44:42'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:44:43'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:44:43'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:44:43'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:44:44'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:44:44'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:44:44'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:44:44'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:44:44'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:44:45'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:44:45'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:45:04' prior: 50631651!
+test09ImportCSVWithExtraField
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithExtraField into: session.]
+		raise: Error
+	      withExceptionDo: (self assertDontImportCustomersAndFailsWith: CustomerImporter errorInvalidFormat)
+	
+	
+	! !
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:45:05'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:45:06'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:45:06'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:45:06'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:45:06'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:45:07'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:45:07'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:45:07'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:45:07'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:45:07'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:45:08'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:45:12' prior: 50632285!
+test09ImportCSVWithExtraField
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithExtraField into: session.]
+		raise: Error
+	      withExceptionDo: (self assertDontImportCustomersAndFailsWith: CustomerImporter errorInvalidFormat)
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:46:03' prior: 50631595!
+test08ImportCSVWithNoStreetNumber
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutStreetNumber into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| | pepeCustomer |  
+				self assert: (errorMessage messageText) equals:  CustomerImporter errorInvalidFormat.
+				
+				pepeCustomer := self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+				self assert: pepeCustomer numberOfAddressesRegistered equals: 0. 
+				self assert: (session selectAllOfType: Customer ) size equals: 1. 
+			]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:46:43'!
+assertPepeIsOnlyCustomerAndHasNoAddresses
+
+	| pepeCustomer | 
+		
+			pepeCustomer := self assertCustomerWithIdentificationType: 'D' number: '22333444' hasFirstName: 'Pepe' lastName: 'Sanchez'.
+			self assert: pepeCustomer numberOfAddressesRegistered equals: 0. 
+			self assert: (session selectAllOfType: Customer ) size equals: 1! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:46:43' prior: 50631309!
+test05ImportCSVwithTwoCommasFormatRaiseError
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWith2Commas into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|   self assertPepeIsOnlyCustomerAndHasNoAddresses. . ]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:46:43' prior: 50631797!
+test10ImportCSVWithStringOnNumberFieldOnAddressEntry
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithStringInNumberField into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage|  self assertPepeIsOnlyCustomerAndHasNoAddresses. ]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:46:43' prior: 50631255!
+test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything
+
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithEmptyLine into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| self assertPepeIsOnlyCustomerAndHasNoAddresses. 
+		]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:46:47'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:46:47'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:46:48'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:46:48'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:46:48'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:46:49'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:46:49'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:46:49'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:46:49'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:46:49'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:46:50'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:47:04' prior: 50632345!
+test08ImportCSVWithNoStreetNumber
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutStreetNumber into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| 
+				self assert: (errorMessage messageText) equals:  CustomerImporter errorInvalidFormat.
+				
+				self assertPepeIsOnlyCustomerAndHasNoAddresses. 
+			]. 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:47:05'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:47:06'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:47:06'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:47:06'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:47:06'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:47:07'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:47:07'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:47:07'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:47:07'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:47:07'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:47:08'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:50:34'!
+shouldNotImport: data andRaise: anError
+
+	self should: [
+		CustomerImporter valueFrom: data into: session.]
+		raise: Error
+	      withExceptionDo: (self assertDontImportCustomersAndFailsWith: CustomerImporter errorCannotReadAnEmptyFile). 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:50:47' prior: 50632504!
+shouldNotImport: textFile andRaise: anError
+
+	self should: [
+		CustomerImporter valueFrom: textFile into: session.]
+		raise: Error
+	      withExceptionDo: (self assertDontImportCustomersAndFailsWith: CustomerImporter errorCannotReadAnEmptyFile). 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:50:58' prior: 50632515!
+shouldNotImport: textFile andRaise: anError
+
+	self should: [
+		CustomerImporter valueFrom: textFile into: session.]
+		raise: Error
+	      withExceptionDo: (self assertDontImportCustomersAndFailsWith: anError). 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:51:00'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:51:00'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:51:00'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:51:01'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:51:01'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:51:01'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:51:01'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:51:01'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:51:02'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:51:02'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:51:35' prior: 50632070!
+test02ImportEmptyCSVRaiseErrorAndDontImportAnything
+
+	self shouldNotImport:  self emptyImportData  
+		andRaise:  CustomerImporter errorCannotReadAnEmptyFile.
+	
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'assertions' stamp: 'pau 6/28/2023 16:52:01'!
+shouldNotImportCustomersFrom: textFile andRaise: anError
+
+	self should: [
+		CustomerImporter valueFrom: textFile into: session.]
+		raise: Error
+	      withExceptionDo: (self assertDontImportCustomersAndFailsWith: anError). 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'as yet unclassified' stamp: 'pau 6/28/2023 16:52:01' prior: 50632571!
+test02ImportEmptyCSVRaiseErrorAndDontImportAnything
+
+	self shouldNotImportCustomersFrom:  self emptyImportData  
+		andRaise:  CustomerImporter errorCannotReadAnEmptyFile.
+	
+	
+	
+	
+	! !
+
+!methodRemoval: ImportTest #shouldNotImport:andRaise: stamp: 'pau 6/28/2023 16:52:01'!
+shouldNotImport: textFile andRaise: anError
+
+	self should: [
+		CustomerImporter valueFrom: textFile into: session.]
+		raise: Error
+	      withExceptionDo: (self assertDontImportCustomersAndFailsWith: anError). 
+	
+	
+	
+	!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:52:32' prior: 50632120!
+test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything
+
+	self shouldNotImportCustomersFrom:  self invalidImportData
+	andRaise: CustomerImporter errorWrongType.
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:52:35' prior: 50632608!
+test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything
+
+	self shouldNotImportCustomersFrom:  self invalidImportData
+		andRaise: CustomerImporter errorWrongType.
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:53:15' prior: 50632185!
+test06ImportCSVwithTypeThatStartsWithCRaiseError
+
+	self shouldNotImportCustomersFrom: self invalidImportDataWithCustomerAsType
+		andRaise: CustomerImporter errorWrongType.
+	
+	
+	! !
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:53:16'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:53:17'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:53:17'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:53:17'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:53:18'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:53:18'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:53:18'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:53:18'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:53:18'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:53:18'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:53:19'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:53:46' prior: 50632235!
+test07ImportCSVwithAddressesButNoCustomers
+	
+	self shouldNotImportCustomersFrom:  self invalidImportDataWithoutCustomers 
+		andRaise: CustomerImporter errorNoCustomerForAddress.
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:55:06' prior: 50632334!
+test09ImportCSVWithExtraField
+	
+	self shouldNotImportCustomersFrom:  self invalidImportDataWithExtraField 
+		andRaise: CustomerImporter errorInvalidFormat. 
+	
+	
+	! !
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:55:23'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:55:29'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:55:29'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:55:29'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:55:30'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:55:30'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:55:30'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:55:30'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:55:31'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:55:31'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:55:31'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:58:30'!
+shouldImportPepeWithNoAddressesFrom: textFile 
+
+	self should: [
+		CustomerImporter valueFrom: textFile into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| self assertPepeIsOnlyCustomerAndHasNoAddresses. 
+		]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:59:09' prior: 50632402!
+test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything
+
+	self shouldImportPepeWithNoAddressesFrom: self invalidImportDataWithEmptyLine.
+		
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:59:10'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:59:11'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:59:11'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:59:11'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:59:12'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:59:12'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:59:12'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:59:12'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:59:13'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:59:13'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:59:13'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:59:30' prior: 50632379!
+test05ImportCSVwithTwoCommasFormatRaiseError
+
+	self shouldImportPepeWithNoAddressesFrom: self invalidImportDataWith2Commas.
+	
+	
+	! !
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:59:31'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 16:59:32'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:59:32'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:59:32'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 16:59:32'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 16:59:33'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 16:59:33'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 16:59:33'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 16:59:33'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 16:59:33'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:59:34'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 16:59:58' prior: 50632390!
+test10ImportCSVWithStringOnNumberFieldOnAddressEntry
+	
+	self shouldImportPepeWithNoAddressesFrom:  self invalidImportDataWithStringInNumberField.
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 16:59:59'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 17:00:00'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:00:00'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:00:00'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:00:01'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 17:00:01'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 17:00:01'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 17:00:01'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 17:00:01'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 17:00:01'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 17:00:02'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 17:00:21' prior: 50632452!
+test08ImportCSVWithNoStreetNumber
+	
+	self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutStreetNumber into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| 
+				
+				self assert: (errorMessage messageText) equals:  CustomerImporter errorInvalidFormat.
+				self assertPepeIsOnlyCustomerAndHasNoAddresses. 
+			]. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 17:02:44'!
+shouldImportPepeWithNoAddressesFromandRaise
+
+	^ self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutStreetNumber into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| 
+				
+				self assert: (errorMessage messageText) equals:  CustomerImporter errorInvalidFormat.
+				self assertPepeIsOnlyCustomerAndHasNoAddresses. 
+			]! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 17:02:44' prior: 50632879!
+test08ImportCSVWithNoStreetNumber
+	
+	self shouldImportPepeWithNoAddressesFromandRaise. 
+	
+	
+	
+	! !
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 17:03:29'!
+shouldImportPepeWithNoAddressesFrom: textFile andRaise: anError
+
+	^ self should: [
+		CustomerImporter valueFrom: textFile into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| 
+				
+				self assert: (errorMessage messageText) equals:  anError.
+				self assertPepeIsOnlyCustomerAndHasNoAddresses. 
+			]! !
+
+!methodRemoval: ImportTest #shouldImportPepeWithNoAddressesFromandRaise stamp: 'pau 6/28/2023 17:03:33'!
+shouldImportPepeWithNoAddressesFromandRaise
+
+	^ self should: [
+		CustomerImporter valueFrom: self invalidImportDataWithoutStreetNumber into: session.]
+		raise: Error
+	      withExceptionDo: [:errorMessage| 
+				
+				self assert: (errorMessage messageText) equals:  CustomerImporter errorInvalidFormat.
+				self assertPepeIsOnlyCustomerAndHasNoAddresses. 
+			]!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 17:04:12' prior: 50632907!
+test08ImportCSVWithNoStreetNumber
+	
+	self shouldImportPepeWithNoAddressesFrom: self invalidImportDataWithoutStreetNumber 
+		andRaise: CustomerImporter errorInvalidFormat . 
+	
+	
+	
+	! !
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 17:04:13'!
+PASSED!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 17:04:14'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:04:14'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:04:14'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:04:15'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 17:04:15'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 17:04:15'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 17:04:15'!
+PASSED!
+
+!testRun: #ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 17:04:15'!
+PASSED!
+
+!testRun: #ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 17:04:16'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 17:04:16'!
+PASSED!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 17:04:46'!
+test8importCSVWithAnAddressThatHasNoStreetNumber
+	
+	self shouldImportPepeWithNoAddressesFrom: self invalidImportDataWithoutStreetNumber 
+		andRaise: CustomerImporter errorInvalidFormat . 
+	
+	
+	
+	! !
+
+!methodRemoval: ImportTest #test08ImportCSVWithNoStreetNumber stamp: 'pau 6/28/2023 17:04:46'!
+test08ImportCSVWithNoStreetNumber
+	
+	self shouldImportPepeWithNoAddressesFrom: self invalidImportDataWithoutStreetNumber 
+		andRaise: CustomerImporter errorInvalidFormat . 
+	
+	
+	
+	!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 17:04:55'!
+test08importCSVWithAnAddressThatHasNoStreetNumber
+	
+	self shouldImportPepeWithNoAddressesFrom: self invalidImportDataWithoutStreetNumber 
+		andRaise: CustomerImporter errorInvalidFormat . 
+	
+	
+	
+	! !
+
+!methodRemoval: ImportTest #test8importCSVWithAnAddressThatHasNoStreetNumber stamp: 'pau 6/28/2023 17:04:55'!
+test8importCSVWithAnAddressThatHasNoStreetNumber
+	
+	self shouldImportPepeWithNoAddressesFrom: self invalidImportDataWithoutStreetNumber 
+		andRaise: CustomerImporter errorInvalidFormat . 
+	
+	
+	
+	!
+!ImportTest methodsFor: 'tests' stamp: 'pau 6/28/2023 17:05:15'!
+test09importCSVWithACustomerThatHasAnExtraField
+	
+	self shouldNotImportCustomersFrom:  self invalidImportDataWithExtraField 
+		andRaise: CustomerImporter errorInvalidFormat. 
+	
+	
+	! !
+
+!methodRemoval: ImportTest #test09ImportCSVWithExtraField stamp: 'pau 6/28/2023 17:05:15'!
+test09ImportCSVWithExtraField
+	
+	self shouldNotImportCustomersFrom:  self invalidImportDataWithExtraField 
+		andRaise: CustomerImporter errorInvalidFormat. 
+	
+	
+	!
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 17:05:20'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:05:20'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:05:20'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:05:20'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 17:05:21'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 17:05:21'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 17:05:21'!
+PASSED!
+
+!testRun: #ImportTest #test08importCSVWithAnAddressThatHasNoStreetNumber stamp: 'pau 6/28/2023 17:05:21'!
+PASSED!
+
+!testRun: #ImportTest #test09importCSVWithACustomerThatHasAnExtraField stamp: 'pau 6/28/2023 17:05:21'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 17:05:22'!
+PASSED!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 17:06:36' prior: 50629477!
+splitLineIntoRecord
+	
+	(line includesSubString: ',,') ifTrue: [ self error: (self class errorInvalidFormat) ].
+	
+	record := line findTokens: $,! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 17:07:46'!
+assertCorrectUseOfSeparators
+
+	^ (line includesSubString: ',,') ifTrue: [ self error: (self class errorInvalidFormat) ]! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 17:07:46' prior: 50633075!
+splitLineIntoRecord
+	
+	self assertCorrectUseOfSeparators.
+	
+	record := line findTokens: $,! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 17:09:18' prior: 50630450!
+parseCustomer
+	
+	(record size ~= 5) ifTrue: [self error: (self class errorInvalidFormat )].
+	
+	newCustomer := Customer new. 
+	newCustomer firstName: record second.
+	newCustomer lastName: record third.
+	newCustomer identificationType: record fourth.
+	newCustomer identificationNumber: record fifth. 
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 17:10:30'!
+assertValidNumberOfFieldsForCustomer
+
+	^ (record size ~= 5) ifTrue: [self error: (self class errorInvalidFormat )]! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 17:10:30' prior: 50633095!
+parseCustomer
+	
+	self assertValidNumberOfFieldsForCustomer.
+	
+	newCustomer := Customer new. 
+	newCustomer firstName: record second.
+	newCustomer lastName: record third.
+	newCustomer identificationType: record fourth.
+	newCustomer identificationNumber: record fifth. 
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 17:10:54'!
+assertCorrectNumberOfFieldsForAddress
+
+	^ (record size ~= 6) ifTrue: [self error: (self class errorInvalidFormat )]! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 17:10:54' prior: 50631993!
+parseAddress
+	
+	| newAddress streetNumber zipCode |
+	self assertCorrectNumberOfFieldsForAddress.
+	streetNumber := record third asNumber .
+	zipCode := record fifth asNumber. 
+	
+	newAddress := Address new. 
+	newCustomer addAddress: newAddress.
+	newAddress streetName: record second.
+	newAddress streetNumber: streetNumber .
+	newAddress town: record fourth.
+	newAddress zipCode: zipCode .
+	newAddress province: record sixth. ! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 17:11:18' prior: 50633132!
+parseAddress
+	
+	| newAddress streetNumber zipCode |
+	self assertCorrectNumberOfFieldsForAddress.
+	
+	newAddress := Address new. 
+	newCustomer addAddress: newAddress.
+	newAddress streetName: record second.
+	streetNumber := record third asNumber .
+	newAddress streetNumber: streetNumber .
+	newAddress town: record fourth.
+	zipCode := record fifth asNumber.
+	newAddress zipCode: zipCode .
+	newAddress province: record sixth. ! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 17:11:21' prior: 50633149!
+parseAddress
+	
+	| newAddress streetNumber zipCode |
+	self assertCorrectNumberOfFieldsForAddress.
+	
+	newAddress := Address new. 
+	newCustomer addAddress: newAddress.
+	newAddress streetName: record second.
+	streetNumber := record third asNumber .
+	newAddress streetNumber: streetNumber .
+	newAddress town: record fourth.
+	zipCode := record fifth asNumber.
+	newAddress zipCode: zipCode .
+	newAddress province: record sixth. ! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 17:12:14' prior: 50633166!
+parseAddress
+	
+	| newAddress streetNumber zipCode |
+	self assertCorrectNumberOfFieldsForAddress.
+	
+	streetNumber := record third asNumber .
+	zipCode := record fifth asNumber.
+	
+	newAddress := Address new. 
+	newCustomer addAddress: newAddress.
+	newAddress streetName: record second.
+	newAddress streetNumber: streetNumber .
+	newAddress town: record fourth.
+	newAddress zipCode: zipCode .
+	newAddress province: record sixth. ! !
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 17:12:16'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:12:16'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:12:16'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:12:17'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 17:12:17'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 17:12:17'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 17:12:17'!
+PASSED!
+
+!testRun: #ImportTest #test08importCSVWithAnAddressThatHasNoStreetNumber stamp: 'pau 6/28/2023 17:12:17'!
+PASSED!
+
+!testRun: #ImportTest #test09importCSVWithACustomerThatHasAnExtraField stamp: 'pau 6/28/2023 17:12:18'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 17:12:18'!
+PASSED!
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 17:12:59' prior: 50630136!
+importRecord
+
+	self isCustomerRecord 
+		ifTrue: [
+			self parseCustomer.
+			session persist: newCustomer ]
+		ifFalse: [
+			(self isAddressRecord) ifTrue: [
+				(newCustomer isNil) ifTrue: [ self error: (self class errorNoCustomerForAddress )].
+				self parseAddress. 
+			]
+	ifFalse: [ self error: (self class errorWrongType)
+						]].
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 17:13:18'!
+assertTheresAlreadyOneCustomerImported
+
+	^ (newCustomer isNil) ifTrue: [ self error: (self class errorNoCustomerForAddress )]! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 17:13:18' prior: 50633236!
+importRecord
+
+	self isCustomerRecord 
+		ifTrue: [
+			self parseCustomer.
+			session persist: newCustomer ]
+		ifFalse: [
+			(self isAddressRecord) ifTrue: [
+				self assertTheresAlreadyOneCustomerImported.
+				self parseAddress. 
+			]
+	ifFalse: [ self error: (self class errorWrongType)
+						]].
+	! !
+!CustomerImporter methodsFor: 'evaluating' stamp: 'pau 6/28/2023 17:13:38' prior: 50633256!
+importRecord
+
+	self isCustomerRecord 
+		ifTrue: [
+			self parseCustomer.
+			session persist: newCustomer ]
+		ifFalse: [
+			(self isAddressRecord) ifTrue: [
+				self assertTheresAlreadyOneCustomerImported.
+				self parseAddress. 
+			]
+	ifFalse: [ self error: (self class errorWrongType)]
+			].
+	! !
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 17:13:40'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:13:40'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:13:40'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:13:41'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 17:13:41'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 17:13:41'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 17:13:41'!
+PASSED!
+
+!testRun: #ImportTest #test08importCSVWithAnAddressThatHasNoStreetNumber stamp: 'pau 6/28/2023 17:13:41'!
+PASSED!
+
+!testRun: #ImportTest #test09importCSVWithACustomerThatHasAnExtraField stamp: 'pau 6/28/2023 17:13:42'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 17:13:42'!
+PASSED!
+!CustomerImporter methodsFor: 'evaluating-private' stamp: 'pau 6/28/2023 17:15:09'!
+parseCustomerAndAddToSession
+
+	self parseCustomer.
+			session persist: newCustomer! !
+!CustomerImporter methodsFor: 'evaluating-private' stamp: 'pau 6/28/2023 17:15:09' prior: 50633269!
+importRecord
+
+	self isCustomerRecord 
+		ifTrue: [
+			self parseCustomerAndAddToSession ]
+		ifFalse: [
+			(self isAddressRecord) ifTrue: [
+				self assertTheresAlreadyOneCustomerImported.
+				self parseAddress. 
+			]
+	ifFalse: [ self error: (self class errorWrongType)]
+			].
+	! !
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 17:15:19'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:15:20'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:15:20'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:15:20'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 17:15:20'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 17:15:20'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 17:15:21'!
+PASSED!
+
+!testRun: #ImportTest #test08importCSVWithAnAddressThatHasNoStreetNumber stamp: 'pau 6/28/2023 17:15:21'!
+PASSED!
+
+!testRun: #ImportTest #test09importCSVWithACustomerThatHasAnExtraField stamp: 'pau 6/28/2023 17:15:21'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 17:15:21'!
+PASSED!
+!CustomerImporter methodsFor: 'evaluating-private' stamp: 'pau 6/28/2023 17:16:07'!
+readAddressAndAddToSessionIfThereIsACorrespondingCustomer
+
+	self assertTheresAlreadyOneCustomerImported.
+				self parseAddress! !
+!CustomerImporter methodsFor: 'evaluating-private' stamp: 'pau 6/28/2023 17:16:07' prior: 50633323!
+importRecord
+
+	self isCustomerRecord 
+		ifTrue: [
+			self parseCustomerAndAddToSession ]
+		ifFalse: [
+			(self isAddressRecord) ifTrue: [
+				self readAddressAndAddToSessionIfThereIsACorrespondingCustomer. 
+			]
+	ifFalse: [ self error: (self class errorWrongType)]
+			].
+	! !
+
+!testRun: #ImportTest #test01ImportValidTextFileWith2Customers stamp: 'pau 6/28/2023 17:16:21'!
+PASSED!
+
+!testRun: #ImportTest #test02ImportEmptyCSVRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:16:21'!
+PASSED!
+
+!testRun: #ImportTest #test03ImportCSVwithWrongFormatRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:16:21'!
+PASSED!
+
+!testRun: #ImportTest #test04ImportCSVwithEmptyLineRaiseErrorAndDontImportAnything stamp: 'pau 6/28/2023 17:16:22'!
+PASSED!
+
+!testRun: #ImportTest #test05ImportCSVwithTwoCommasFormatRaiseError stamp: 'pau 6/28/2023 17:16:22'!
+PASSED!
+
+!testRun: #ImportTest #test06ImportCSVwithTypeThatStartsWithCRaiseError stamp: 'pau 6/28/2023 17:16:22'!
+PASSED!
+
+!testRun: #ImportTest #test07ImportCSVwithAddressesButNoCustomers stamp: 'pau 6/28/2023 17:16:22'!
+PASSED!
+
+!testRun: #ImportTest #test08importCSVWithAnAddressThatHasNoStreetNumber stamp: 'pau 6/28/2023 17:16:23'!
+PASSED!
+
+!testRun: #ImportTest #test09importCSVWithACustomerThatHasAnExtraField stamp: 'pau 6/28/2023 17:16:23'!
+PASSED!
+
+!testRun: #ImportTest #test10ImportCSVWithStringOnNumberFieldOnAddressEntry stamp: 'pau 6/28/2023 17:16:23'!
+PASSED!
+
+----SNAPSHOT----(28 June 2023 17:17:08) CuisUniversity-5832.image priorSource: 9603843!
