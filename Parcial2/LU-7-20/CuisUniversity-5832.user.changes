@@ -1,0 +1,73 @@
+
+
+----QUIT----(30 May 2023 00:05:32) CuisUniversity-5832.image priorSource: 4928100!
+
+----STARTUP---- (30 May 2023 00:05:33) as /Users/hernan/Documents/Cuis/5.0-64Bits/Cuis-University-Installer/CuisUniversity-5832.image!
+
+
+----QUIT----(30 May 2023 00:05:33) CuisUniversity-5832.image priorSource: 9366537!
+
+----STARTUP---- (6 July 2023 21:47:54) as /home/paula/Documents/COMPUTACION/Inge1-1c2023/2doParcialImagen/linux64/linux64/CuisUniversity-5832.image!
+
+
+----End fileIn of /home/paula/Documents/COMPUTACION/Inge1-1c2023/2doParcialImagen/resolucion/linux64/ISW1-2023-1C-2doParcial.st----!
+
+!testRun: #DrivingAssistantTests #test01WhenCarIsTurnedOnWithTheDrivingAssistantOnManualModeTheInitialStateIsCorrect stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingAssistantTests #test02WhenCarIsTurnedOnWhitTheDrivingAssistantOnAutomaticModeTheInitialStateIsCorrect stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingAssistantTests #test03WhenCarIsTurnedOnWhitTheDrivingAssistantOnSemiAutomaticModeTheInitialStateIsCorrect stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingAssistantTests #test04OnManualModeDrivingAssistantIsOnSafeModeWithObjectAtMoreThan2DMF stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingAssistantTests #test05OnManualModeDrivingAssistantIsOnWarningModeWithObjectAtLessThan2DMF stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingAssistantTests #test06OnManualModeDrivingAssistantIsOnDangerModeWithObjectAtLessThanDMF stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingAssistantTests #test07OnAutomaticModeDrivingAssistantIsOnSafeModeWithObjectAtMoreThan2DMF stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingAssistantTests #test08OnAutomaticModeDrivingAssistantIsOnWarningModeWithObjectAtLessThan2DMF stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingAssistantTests #test09OnAutomaticModeDrivingAssistantOnAutomaticIsOnDangerModeWithObjectAtLessThatDMF stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingAssistantTests #test10OnSemiAutomaticModeDrivingAssistantIsOnSafeModeWithObjectAtMoreThat2DMF stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingAssistantTests #test11OnSemiAutomaticModeDrivingAssistantIsOnWarningModeWithObjectAtLessThan2DMF stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingAssistantTests #test12OnSemiAutomaticModeDrivingAssistantIsOnDangerModeWhenObjectIsAtLessThanDMF stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingAssistantTests #test13DrivingAssistantOnManualModeIsOnSafeZoneAndMovesToDangerZoneWhenObjectClose stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingAssistantTests #test14DrivingAssistantOnAutomaticModeIsOnDangerZoneAndMovesToSafeZoneWithObjectiveVelocity stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingAssistantTests #test15DrivingAssistantOnSemiAutomaticModeIsOnDangerZoneAndMovesToSafeZoneWithObjectiveVelocity stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingSystemModeTests #test01ObjetiveVelocityOfAManualModeRaiseError stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingSystemModeTests #test02CannotCreateAutomaticModeWithNegativeVelocity stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingSystemModeTests #test03CannotCreateAutomaticModeWithZeroVelocity stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingSystemModeTests #test04CannotCreateSemiAutomaticModeWithNegativeVelocity stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
+
+!testRun: #DrivingSystemModeTests #test05CannotCreateSemiAutomaticModeWithZeroVelocity stamp: 'pau 7/6/2023 21:48:33'!
+PASSED!
